@@ -1,0 +1,441 @@
+//header
+.header {
+    position: fixed;
+    z-index: 20;
+    height: 55px;
+    background: $secondaryColor;
+    width: 100%;
+    top: 0;
+    @include box-shadow(0px 2px 5px RGBA(0, 0, 0, .3)); // 虛擬底色 - navigation
+    @include screen('notebook') {
+        width: 100%;
+    }
+    @include screen('mobile'){
+        height: 60px;
+    }
+
+    %mobileCtrlBtn {
+        width: 60px !important;
+        height: 60px !important;
+        position: absolute;
+        top: 0px;
+        display: block;
+        font-size: 0em;
+        padding: 15px;
+        margin: 0;
+        min-width: auto;
+        min-height: auto;
+        background: transparent;
+        border: none;
+        @include box-sizing;
+        @include screen('tablet') {
+            display: block !important;
+        }
+    }
+    >.container {
+        max-width: 100%;
+        overflow: visible;
+        position: relative; // menu
+        padding-top: 10px;
+        @include gutter();
+        @include screen('mobile'){
+            padding: 0;
+        }
+        .sidebarCtrl {
+            display: none;
+            right: 0px;
+            background: url('../images/sidebarCtrl_white.png') no-repeat center;
+            box-shadow: none;
+            @extend %mobileCtrlBtn;
+            span {
+                position: absolute;
+                background:$secondaryColor;
+                width: 50%;
+                height: 4px;
+                top: 35%;
+                left: 50%;
+                margin-left: -25%;
+                display: block;
+                &:nth-child(2) {
+                    top: 50%;
+                }
+                &:nth-child(3) {
+                    top: 65%;
+                }
+            }
+        }
+        .accesskey {
+            color: #1b1b1b;
+        }
+        // search
+        .searchCtrl {
+            display: none;
+            right: 0px;
+            font-size: 0em;
+            @extend %mobileCtrlBtn;
+            &:before {
+                width: 40px;
+                height: 40px;
+                background: url(../images/basic/icon_search.png) no-repeat center center;
+                background-size: 32px;
+                opacity: .6;
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                display: block;
+            }
+        }
+    }
+    h1 {
+        float: left;
+        width: 220px;
+        height: 50px;
+        margin: -5px 0 0 20px;
+        padding: 0;
+        @include box-sizing;
+        a {
+            display: inline-block;
+        }
+        img {
+            display: block;
+            max-width: 220px;
+            max-height: 50px;
+        }
+        @include screen('mobile') {
+            padding: 2px 60px;
+            width: 100%;
+            text-align: center;
+            height: 60px;
+            margin: -5px 0 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: auto;
+                height: auto;
+                max-height: 50px;
+                margin: 0px auto; // transform: scale(.8);
+            }
+        }
+        @media(max-width: 345px) {
+            padding: 2px 60px 2px 50px;
+            img {
+                width: auto;
+                height: auto;
+                max-height: 50px;
+                margin: 0px auto;
+                transform: scale(.8);
+            }
+        }
+    }
+    // 導覽列
+    .navigation {
+        //float: right;
+        text-align: center;
+        >ul {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            font-size: .938em;
+            list-style: none;
+            vertical-align: middle;
+            &.left_nav {
+                display: inline-block;
+                // @include screen('mobile') {
+                //     display: none;
+                // }
+            }
+            @include screen('tablet') {
+                display: none;
+            }
+        }
+        li {
+            float: left;
+            margin: 0 .2em;
+            a {
+                display: inline-block;
+                padding: .5em;
+                text-decoration: none;
+                color: #f0f0f0;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    // language
+    .language {
+        display: inline-block;
+        margin-top: 0px;
+        margin-right: 10px;
+        position: relative;
+        float: right;
+        padding: .5em 0;
+        @include screen('tablet') {
+            display: none;
+        }
+        select{
+            background: rgba(0,0,0,0) url(../images/icon/icon_arrow_down_invert.svg) no-repeat right center;
+            color: #fff; 
+            border:none;
+            background-size: 12px;
+            padding-right: 20px;
+        }
+        a {
+            color: #fff;
+            display: block;
+            background-color:$secondaryColor;
+            border-radius: 50px;
+            width: 130px;
+            font-size: .938em;
+            padding: 4px 30px 3px 15px;
+            //background-image: url(../images/language_icon.png);
+            background-repeat: no-repeat;
+            background-position: right center;
+            margin-bottom: 3px;
+            text-align: left;
+            @include box-sizing(border-box);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: block;
+            position: absolute;
+            top: auto;
+            left: 0;
+            li {
+                margin-bottom: 0px;
+                width: 100%;
+                a {
+                    background-image: none;
+                    color: #333;
+                    text-align: left;
+                    padding: 4px 15px 3px;
+                    display: block;
+                    transition: .5s;
+                    &:hover {
+                        background-color: $secondaryColor;
+                        color: #000 !important;
+                    }
+                }
+            }
+        }
+    }
+    .login {
+        display: inline-block;
+        margin-top: 0px;
+        margin-right: 20px;
+        float: right;
+        @include screen('tablet') {
+            margin-right: 10px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            margin: 0;
+            display: none;
+        }
+        @include screen('mobile') {
+            
+        }
+        .btn {
+            @include box-sizing(border-box);
+            padding: 4px 20px!important;
+            color: #fff;
+            border:none;
+            @include btn_setting($btn-bg:$primaryColor, $btn-font-color:#fff);
+            @include screen('mobile') {
+                min-width: auto;
+                padding: 4px 10px 3px !important;
+            }
+        }
+    }
+    // .login_mobile_btn {
+    //     display: none;
+    //     @include screen('mobile') {
+    //         display: block;
+    //     }
+    // }
+    //menu
+    .menu {
+        display: none;
+    }
+}
+//search
+.search {
+    min-width: 25%;
+    max-width: 50%;
+    float: right;
+    vertical-align: middle;
+    padding: 0em .3em 0em;
+    @include box-sizing;
+    label {
+        font-size: 0em;
+    }
+    .form_grp {
+        margin-bottom: 0;
+        margin-right: 0 !important;
+        input {
+            margin: -0.2em 0 0;
+            padding: .2em 35px .2em .5em;
+            &[type="submit"] {
+                font-size: 0em;
+                width: 30px !important;
+                height: 30px;
+                max-width: auto;
+                min-width: auto;
+                background: url(../images/basic/icon_search.png) no-repeat center center;
+                background-size: 20px;
+                border: none;
+                display: inline-block;
+                margin-left: -40px !important;
+                margin-top: -2px !important;
+                opacity: .8;
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .btn_grp {
+        padding: .2em;
+        margin-bottom: 0;
+        input,
+        input[type="submit"] {
+            margin: 0;
+            padding: .4em 1em .4em !important;
+            font-size: .813em;
+        }
+    }
+    .keywordHot {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: .5em;
+        padding: .1em 0 .3em;
+        ul {
+            display: inline-block;
+            font-size: .813em;
+            line-height: 1.65em;
+            margin: 0;
+            padding: 0;
+            &:before {
+                display: inline-block;
+                content: "熱門關鍵字：";
+                color: #999;
+                float: left;
+            }
+            li {
+                margin: 0 .6em 0 0;
+                padding: 0;
+                display: inline-block;
+            }
+            a {
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    // m_search
+    &.m_search {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto;
+        padding: .2em .3em .5em;
+        display: block;
+        height: auto;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 98;
+        background: #333;
+        label {
+            font-size: 0em;
+            line-height: 0;
+        }
+        .form_grp {
+            width: 65%;
+            height: auto;
+            padding: 0 0 0 5% !important;
+            margin-top: 0;
+            text-align: right;
+            float: left;
+            height: 50px;
+            position: relative;
+            @include box-sizing();
+            input {
+                width: 100%;
+                margin: -0.2em 0 0;
+                padding: .5em 45px .4em .5em;
+                &[type="submit"] {
+                    font-size: 0em;
+                    width: 36px !important;
+                    height: 36px;
+                    padding: 0;
+                    max-width: auto;
+                    min-width: auto;
+                    background: url(../images/basic/icon_search.png) no-repeat center center;
+                    background-size: 24px;
+                    border: none;
+                    display: inline-block; // margin-left: -50px !important;
+                    position: absolute;
+                    right: 5px;
+                    top: 22px;
+                    opacity: .8; // outline:1px solid red;
+                    &:hover,
+                    &:focus {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .btn_grp {
+            display: inline-block;
+            padding: .2em;
+            margin-bottom: 0;
+            width: 20%;
+            margin-top: 20px;
+            padding-left: 5%;
+            @include box-sizing();
+            input {
+                width: 80% !important;
+                padding: .6em 1em .7em !important;
+                margin: 0;
+            }
+        }
+        .keywordHot {
+            padding-left: 5%;
+            margin-top: 10px;
+            @include clearfix;
+            a {
+                color: #FFF;
+                &:hover,
+                &:focus {
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+}
+// header fix
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+    background: #1b1b1b;
+    z-index: 7;
+    .menu {
+        >ul {
+            >li {
+                >a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

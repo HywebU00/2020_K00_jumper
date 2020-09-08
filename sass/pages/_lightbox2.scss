@@ -1,0 +1,1072 @@
+body.fix {
+    height: 100%;
+    overflow: hidden !important;
+    width: 100%;
+    position: fixed;
+}
+//共用燈箱設定
+.login_lightbox,
+.related_lightbox,
+.lightboxstyle,
+.exportstyle,
+.forwardstyle,
+.referencestyle, .mystudymenu_lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 99;
+    //display: none;
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+.close {
+    background: url('../images/icon_close.svg') no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+}
+.mainleftblock .lightboxstyle {
+    .close {
+        display: block !important;
+        z-index: 9;
+    }
+}
+// 登入
+.login_lightbox {
+    .loginblock {
+        //max-width: 50vw;
+        width: 510px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 45px 25px 25px;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: auto;
+        @media(max-width: 767px) {
+            max-width: 100vh;
+            top: 45%;
+            left: 25%;
+            transform: translate(-15%, -50%);
+            padding: 35px 20px 35px 20px;
+        }
+        @include screen('xs_mobile') {
+            transform: translate(0, 0);
+            padding: 50px 20px 35px 20px;
+            left: 0;
+            top: 0;
+            border-radius: 0;
+            height: 100%;
+            width: 100%;
+            max-width: auto;
+            min-width: auto;
+            @include box-sizing;
+        }
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+        input[type="submit"]{
+            width: 100%;
+        }
+        h2 {
+            font-size: 1.875em;
+            text-align: center;
+            border-bottom: 2px solid$primaryColor;
+            margin: 0px auto 20px;
+            padding: 0 0 20px;
+            color: $primaryColor;
+        }
+        p{
+            text-align: center;
+
+        }
+        a{
+
+        }
+
+        .form_content{
+            text-align: center;
+        }
+        .cannot_login{
+            font-size:.938em;
+            color: lighten($color-word,30);
+            display: inline-block;
+            margin:1em 0;
+            &:hover{
+                color:$color-word;
+            }
+            &:after{
+                content:"";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: lighten($color-word,30);
+            }
+        }
+        .login_instructions{
+            font-size: .938em;
+            a{
+                display: inline-block;
+                &:after{
+                content:"";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: $primaryColor;
+                }
+            }
+            
+        }
+        .form_grp {
+            label {
+                font-size: 1em;
+                width: 3em;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: calc(100% - 4em);
+            }
+            @include screen('tablet') {
+                label {
+                    font-size: 1em;
+                    width: 100%;
+                    text-align: left;
+                }
+                input[type="text"],
+                input[type="password"] {
+                    width: 100%;
+                }
+            }
+        }
+        .btn_grp {
+            padding: 0;
+        }
+        .unable_login {
+            margin: 20px 0;
+            padding: 0;
+            text-align: center;
+            h3 {
+                position: relative;
+                text-align: left;
+                margin: 10px 0 !important;
+                padding: 0 !important;
+                font-size: 1.25em;
+                border: none !important;
+                span {
+                    background-color: #fff;
+                    padding: 5px 15px;
+                    position: relative;
+                    z-index: 99;
+                    display: inline-block;
+                    margin-left: 20px;
+                    color: #333;
+                }
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #666;
+                    position: absolute;
+                    top: 15px;
+                    z-index: 9;
+                }
+            }
+        }
+        @media(max-width: 400px) {
+            .btn,
+            .btn-green,
+            .btn-blue,
+            .btn-yellow,
+            .btn-orange,
+            .btn-red,
+            .btn-purple,
+            form button,
+            form input[type="button"],
+            form input[type="submit"],
+            form input[type="reset"],
+            form .upload_grp .upload_btn {
+                margin: 0 0 10px;
+            }
+        }
+    }
+}
+.logintab {
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        li {
+            width: 48%;
+            float: left;
+            list-style: none;
+            margin: 0 .2em !important;
+            a {
+                display: block !important;
+                color: $primaryColor!important;
+                border: 2px solid $primaryColor;
+                padding: .5em !important;
+                text-align: center;
+                &:hover, &.active {
+                    background-color: $primaryColor!important;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
+.account_content {
+    clear: both;
+    p {
+        margin: 10px 0 !important;
+    }
+}
+.qrcode_content {
+    text-align: center;
+    display: none;
+    padding-top: 30px;
+    .qrcode {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 15px;
+        width: 60%;
+        margin: 0 auto 10px;
+        img {
+            display: block;
+            width: 128px;
+            height: 128px;
+            margin: 0 auto;
+        }
+        .reorganize {
+            background-image: url('../images/icon_reorganize.png');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            display: block;
+            padding: 5px 5px 5px 30px;
+            width: 70px;
+            margin: 0 auto;
+            text-align: left;
+        }
+    }
+    .means {
+        margin: 10px 10px 20px;
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        &:before {
+            content: 'i';
+            width: 25px;
+            height: 25px;
+            background-color: #666;
+            color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 25px;
+            position: absolute;
+            left: -30px;
+        }
+    }
+    .qrcode_btn {
+        a {
+            background-color: $primaryColor;
+            color: #fff;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+            &:hover {
+                background-color:$primaryColor;
+            }
+        }
+    }
+}
+// 相關連結
+.related_lightbox {
+    .relatedbox {
+        max-width: 80vh;
+        // max-height: 60vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 35px 20px 35px 20px;
+        background-color: #fff;
+        border-radius: 5px; // @include box-sizing();
+        @media(max-width: 767px) {
+            top: 45%;
+        }
+        @media(max-width: 575px) {
+            max-width: 90vh;
+            left: 30%;
+            transform: translate(-20%, -50%);
+            padding: 35px 20px 35px 10px;
+        }
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+        h2 {
+            font-size: 1.875em;
+            text-align: left;
+            border-bottom: 2px solid $primaryColor;
+            margin: 0px auto 20px;
+            padding: 0 0 20px;
+            color: $primaryColor;
+        }
+        .relatedlist {
+            margin: 25px 0 0 15px;
+            height: 50vh;
+            overflow-y: auto;
+            padding-right: 0px;
+            scrollbar-face-color: #eee; //（軸面顏色） 
+            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
+            scrollbar-3dlight-color: #fff; //左立體邊顏色
+            scrollbar-darkshadow-color: #fff; //右立體邊顏色
+            scrollbar-arrow-color: #666; //箭頭顏色
+            scrollbar-track-color: #fff; //軸軌顏色
+            @include box-sizing();
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    width: 48%;
+                    margin-bottom: 8px;
+                    margin-right: .8%;
+                    &:nth-child(2n) {
+                        margin-right: 0;
+                    }
+                    @media(max-width:767px) {
+                        width: 100%;
+                        margin-right: 0;
+                    }
+                    a {
+                        padding: 10px 15px 10px 35px;
+                        display: block;
+                        background-color: #eee;
+                        border-radius: 5px;
+                        transition: .5s;
+                        position: relative;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background-color: $primaryColor;
+                            left: 15px;
+                            top: 20px;
+                            transition: .5s;
+                        }
+                        &:hover {
+                            padding: 10px 15px 10px 45px;
+                            background-color: $lightColor;
+                            color: #000;
+                            &:before {
+                                left: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 首頁相關連結
+.related_lightbox {
+    .relatedboxmp {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            background-image: url('../images/icon_close03.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            width: 46px;
+            height: 48px;
+            display: block;
+            cursor: pointer;
+        }
+        h2 {
+            font-size: 1.875em;
+            text-align: left;
+            border-bottom: 2px solid $primaryColor;
+            margin: 0px auto 20px;
+            padding: 0 0 20px;
+            color: $primaryColor;
+        }
+        .relatedlist {
+            margin: 0;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 100px;
+            @include screen('mobile') {
+                padding: 100px 50px;
+            }
+            scrollbar-face-color: #eee; //（軸面顏色） 
+            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
+            scrollbar-3dlight-color: #fff; //左立體邊顏色
+            scrollbar-darkshadow-color: #fff; //右立體邊顏色
+            scrollbar-arrow-color: #666; //箭頭顏色
+            scrollbar-track-color: #fff; //軸軌顏色
+            @include box-sizing();
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    margin-right: .8%;
+                    font-size: 1.5em;
+                    @media (min-width: 1200px) {
+                        width: 30%;
+                        margin-bottom: 20px;
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @include screen('notebook') {
+                        width: 48%;
+                        margin-bottom: 15px;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @include screen('xs_mobile') {
+                        width: 100%;
+                        margin-right: 0;
+                    }
+                    a {
+                        padding: 10px 15px 10px 35px;
+                        display: block;
+                        color: #fff;
+                        text-align: left;
+                        transition: .5s;
+                        position: relative;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            left: 15px;
+                            top: 20px;
+                            transition: .5s;
+                        }
+                        &:hover {
+                            padding: 10px 15px 10px 45px;
+                            color: #000;
+                            background-color: $lightColor;
+                            border-radius: 50px;
+                            &:before {
+                                left: 25px;
+                                background-color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//// 燈箱總樣式
+.lightboxstyle {
+    overflow-y: scroll;
+    .lightboxstyle_block {
+        width: 80vh;
+        position: relative;
+        padding: 20px 20px 25px 20px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 5px;
+        @include box-sizing();
+        @include screen('mobile') {
+            width: 70vh;
+        }
+        @include screen('xs_mobile') {
+            padding: 50px 20px 0px 20px;
+            width: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            border-radius: 0;
+            margin: 0;
+            @include box-sizing;
+        }
+        &.block_extend {
+            width: 90vh;
+            @include screen('mobile') {
+                width: 80vh;
+            }
+            @include screen('xs_mobile') {
+                width: 100%;
+            }
+        }
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+        h2 {
+            font-size: 1.375em;
+            text-align: left;
+            border-bottom: 2px solid $primaryColor;
+            margin: 0px auto 20px;
+            padding: 0 30px 10px 0;
+            color: $primaryColor;
+            line-height: 1.3em;
+        }
+        //表格資料
+        .lightbox_data {
+            width: 100% !important;
+            overflow-x: hidden;
+            scrollbar-face-color: #eee; //（軸面顏色） 
+            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
+            scrollbar-3dlight-color: #fff; //左立體邊顏色
+            scrollbar-darkshadow-color: #fff; //右立體邊顏色
+            scrollbar-arrow-color: #666; //箭頭顏色
+            scrollbar-track-color: #fff; //軸軌顏色
+            //table
+            table {
+               border: 1px dotted $color-gray;
+                th {
+                   border: 1px dotted $color-gray;
+                    text-align: left;
+                    padding: 10px;
+                    span {
+                        margin: 0 5px;
+                        img {
+                            vertical-align: middle;
+                        }
+                    }
+                    a {
+                        color: $primaryColor;
+                        &:hover {
+                            color: $color-blue;
+                        }
+                    }
+                }
+                td {
+                    border: none;
+                    padding: 10px 10px 4px;
+                    border: 1px dotted $color-gray;
+                    vertical-align: top;
+                }
+                label {
+                    margin: 0;
+                    padding: 0 0 0 30px;
+                    input {
+                        border-radius: 3px !important;
+                        margin-right: 6px;
+                        margin-left: -28px;
+                    }
+                }
+            }
+            .more {
+                margin: 0 auto;
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 8px;
+                    background-image: none;
+                    background-color: #F3F3F3 !important;
+                    color: #333;
+                    border-radius: 0;
+                    &:hover {
+                        color: $aHover;
+                    }
+                }
+            }
+            //匯出格式
+            .radio_grp {
+                label {
+                    margin: 0 0 8px;
+                    padding-left: 23px;
+                    padding-top: 3px;
+                    input {
+                        margin-right: 6px;
+                        margin-left: -20px;
+                    }
+                }
+            }
+            //轉寄他人  引用
+            .form_grid {
+                .form_title {
+                    // white-space: nowrap;
+                    // padding-left: 0;
+                    @include screen('mobile') {
+                        padding-left: 0px;
+                    }
+                }
+                .form_content {
+                    @media(max-width: 767px) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    img.captcha {
+                        margin-right: 5px;
+                    }
+                    textarea {
+                        height: 7em;
+                    }
+                }
+                button {
+                    margin: -10px 0px 0px;
+                }
+                .btn {
+                    padding: 0.4em 1em !important;
+                }
+            }
+            .form_grid .form_title,
+            .form_grid .form_content {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .select_date {
+                width: 45% !important;
+                @include screen('mobile') {
+                    width: 47% !important;
+                }
+                @media(max-width: 580px) {
+                    width: 99% !important;
+                }
+            }
+            //listdata
+            .listdata {
+                p {
+                    margin: 0 0 10px !important;
+                    padding: 0 !important;
+                }
+                ul {
+                    margin: 10px 0;
+                    padding: 0;
+                    li {
+                        display: block;
+                        margin: 0 0 8px;
+                        background-image: url('../images/icon_point.png');
+                        background-repeat: no-repeat;
+                        ;
+                        background-position: 0 5px;
+                        padding-left: 20px;
+                        em {
+                            font-style: normal;
+                            color: $color-orange;
+                        }
+                    }
+                }
+            }
+            //星星
+            .score_star {
+                position: relative;
+                text-align: left;
+                width: 180px;
+                height: 34px;
+                z-index: 0;
+                >img {
+                    position: absolute;
+                    z-index: 99;
+                    width: 180px;
+                    height: 34px;
+                }
+                .score_color {
+                    position: absolute;
+                    z-index: 9;
+                    top: 0;
+                    left: 0;
+                    width: 180px;
+                    height: 34px;
+                    overflow: hidden;
+                }
+            }
+            //
+            .form_contentinline {
+                padding: 0;
+                text-align: left;
+                margin: 10px 0;
+                select {
+                    width: auto;
+                    display: inline-block;
+                    margin-right: 5px;
+                    @include screen('mobile') {
+                        width: 49%;
+                        margin-right: 0px;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 100%;
+                        margin-right: 0px;
+                    }
+                }
+            }
+            // 書名
+            .bookname {
+                margin: 30px 0 10px;
+                font-size: 1.5em;
+                color: $primaryColor;
+                line-height: 1.2em;
+                background-image: url('../images/icon_book.png');
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                padding: 0 0 0 30px;
+            }
+        }
+        .lightbox_image{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    //館藏位置燈箱
+    .lightboxstyle_block2 {
+        max-width: 90vh;
+        // max-height: 60vh;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px 20px 25px 20px;
+        background-color: #fff;
+        border-radius: 5px; // @include box-sizing();
+        @media(max-width: 768px) {
+            max-width: 100vh;
+            left: 27%;
+            transform: translate(-20%, -50%);
+            padding: 35px 20px 35px 20px;
+        }
+        @include screen('xs_mobile') {
+            transform: translate(0, 0);
+            padding: 50px 20px 35px 20px;
+            width: auto;
+            left: 0;
+            top: 0;
+            border-radius: 0;
+            height: 100%;
+        }
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        h2 {
+            font-size: 1.562em;
+            text-align: left;
+            border-bottom: 2px solid $primaryColor;
+            margin: 0px auto 10px;
+            padding: 0 0 10px;
+            color: $primaryColor;
+        }
+        //表格資料
+        .lightbox_data {
+            max-height: 70vh;
+            width: 90vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            @media(max-width: 768px) {
+                width: 100% !important;
+                max-height: 40vh;
+            }
+            @include screen('xs_mobile') {
+                width: 100% !important;
+                max-height: 55vh;
+            }
+            scrollbar-face-color: #eee; //（軸面顏色） 
+            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
+            scrollbar-3dlight-color: #fff; //左立體邊顏色
+            scrollbar-darkshadow-color: #fff; //右立體邊顏色
+            scrollbar-arrow-color: #666; //箭頭顏色
+            scrollbar-track-color: #fff; //軸軌顏色
+            p {
+                padding: 0;
+                margin: 0 0 5px;
+            }
+            //table
+            table {
+                border: 1px dotted $color-gray;
+                th {
+                    border: 1px dotted $color-gray;
+                    padding: 10px;
+                    span {
+                        margin: 0 5px;
+                        img {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                td {
+                    border: none;
+                    padding: 10px 10px 4px;
+                    border: 1px dotted $color-gray;
+                }
+                label {
+                    margin: 0;
+                    input {
+                        border-radius: 3px !important;
+                        margin-right: 6px;
+                    }
+
+                }
+            }
+            .more {
+                margin: 0 auto;
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 8px;
+                    background-image: none;
+                    background-color: #F3F3F3 !important;
+                    color: #333;
+                    border-radius: 0;
+                    &:hover {
+                        color: $aHover;
+                    }
+                }
+            }
+            //
+            .form_grid .form_title,
+            .form_grid .form_content {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .select_date {
+                width: 45% !important;
+                @include screen('mobile') {
+                    width: 47% !important;
+                }
+                @media(max-width: 580px) {
+                    width: 99% !important;
+                }
+            }
+            //轉寄他人  引用
+            .form_contentinline {
+                padding: 0;
+                text-align: left;
+                margin: 10px 0;
+                select {
+                    width: auto;
+                    display: inline-block;
+                    margin-right: 5px;
+                    @include screen('mobile') {
+                        width: 49%;
+                        margin-right: 0px;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 100%;
+                        margin-right: 0px;
+                    }
+                }
+            }
+            //
+            .bookname {
+                margin: 30px 0 10px;
+                font-size: 1.5em;
+                color: $primaryColor;
+                line-height: 1.2em;
+                background-image: url('../images/icon_book.png');
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                padding: 0 0 0 30px;
+            }
+            //
+        }
+    }
+}
+// 更多評論燈箱start
+.commentcontent_lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    // padding-left: 15%;
+    display: none;
+    // @include screen('mobile') {
+    //     padding-left: 0;
+    // }
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .8);
+    }
+    .close2 {
+        background-image: url('../images/icon_close03.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        width: 46px;
+        height: 48px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        left: 7%;
+        top: 50px;
+        z-index: 99999;
+        margin-left: -23px;
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+    .close3 {
+        display: block !important;
+        padding: 10px 10px 5px;
+        display: block;
+        cursor: pointer;
+        background-color: #f3f3f3;
+        position: relative;
+        z-index: 99999;
+    }
+    .bookcomment2 {
+        z-index: 999999;
+        background-color: #fff;
+        position: absolute;
+        .commentblock {
+            border: none !important;
+            padding: 20px;
+            margin-right: 0 !important;
+            h4 {
+                white-space: normal !important;
+            }
+        }
+    }
+}
+// 帳戶與紀錄燈箱
+@include screen('mobile') {
+    .mystudymenu_lightbox {
+        .mystudybox {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 20px;
+                background-image: url('../images/icon_close03.png');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                width: 46px;
+                height: 48px;
+                display: block;
+                cursor: pointer;
+            }
+        }
+        // 
+        .member_data2 {
+            clear: both;
+            float: none;
+            padding: 0px 30px;
+            box-shadow: none;
+            position: relative;
+            top: 100px;
+            text-align: left;
+            >ul {
+                margin: 0;
+                padding: 0;
+                >li {
+                    list-style-type: none;
+                    border-bottom: 1px solid #d2d2d2;
+                    display: block;
+                    float: none;
+                    clear: both;
+                    overflow: hidden;
+                    margin: 0;
+                    font-size: 1.125em !important;
+                    >a {
+                        padding: 12px 15px 10px;
+                        display: block;
+                        color: #fff;
+                        transition: .5s;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            right: 20px;
+                            top: 9px;
+                            border: 2px solid #fff;
+                            width: 10px;
+                            height: 10px;
+                            border-right-color: transparent;
+                            border-bottom-color: transparent;
+                            transform: rotate(225deg);
+                            transition: .5s;
+                        }
+                        &.turnicon {
+                            &:after {
+                                transform: rotate(45deg);
+                                top: 18px;
+                                border-color: #333;
+                                border-right-color: transparent;
+                                border-bottom-color: transparent;
+                            }
+                        }
+                        &:hover {
+                            color: #000;
+                            background-color: #eee;
+                        }
+                    }
+                    ul {
+                        margin: 10px 0 10px;
+                        padding: 0;
+                        float: none;
+                        clear: both;
+                        li {
+                            font-size: 0.983em;
+                            list-style-type: none;
+                            float: none;
+                            clear: both;
+                            margin: 0;
+                            a {
+                                color: #fff;
+                                padding: 7px 10px 7px 30px;
+                                position: relative;
+                                display: block;
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 5px;
+                                    height: 5px;
+                                    border-radius: 50%;
+                                    top: 16px;
+                                    left: 17px;
+                                    background-color: #fff;
+                                }
+                                &:hover {
+                                    color: #000;
+                                    background-color: #ffc;
+                                    &:before {
+                                        background-color: #333;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 
+    }
+}

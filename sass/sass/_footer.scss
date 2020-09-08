@@ -1,0 +1,51 @@
+footer{
+	padding:2em 0;
+	background: $secondaryColor;
+	.container{
+		@include gutter();
+		color:#fff;
+	}
+	ul{
+		@include li-reset;
+		a{
+			color:#fff;
+		}
+	}
+	li{
+		margin:.5em 0;
+
+	}
+	nav{
+		font-size: .938em;
+		@include screen('mobile'){
+			display: none;
+		}
+		>ul{
+			display: flex;
+			flex-wrap: wrap;
+			>li{
+				flex:0 1 calc(100% / 3);
+				@include screen('xs_mobile'){
+					flex:0 0 100%;
+				}
+				>a{
+					display: inline-block;
+					font-size: 1.125em;
+					color:$primaryColor;
+					margin: .5em 0 ;
+				}
+				>ul{
+					>li{
+						@include screen('xs_mobile'){
+							display: inline-block;
+							margin-right: .5em;
+						}
+					} 	
+				}
+			}
+		}
+	}
+	.footer_info{
+		font-size: .813em;
+	}
+}

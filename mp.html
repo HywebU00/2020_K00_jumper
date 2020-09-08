@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jumper</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- favicon -->
+    <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head> -->
+
+<body>
+    <div class="wrapper">
+        <!-- 手機版menu -->
+        <aside class="sidebar" style="display: none">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li>個人專區
+                            <ul>
+                                <li><a href="#">我的收藏</a></li>
+                                <li><a href="#">常用資源</a></li>
+                                <li><a href="#">查詢記錄</a></li>
+                                <li><a href="#">專題選擇策略</a></li>
+                            </ul>
+                        </li>
+                        <li>圖書館服務
+                            <ul>
+                                <li><a href="#">圖書館首頁</a></li>
+                                <li><a href="#">整合查詢首頁</a></li>
+                                <li><a href="#">館藏查詢</a></li>
+                                <li><a href="#">電子資源</a></li>
+                                <li><a href="#">電子期刊</a></li>
+                                <li><a href="#">常見問答</a></li>
+                            </ul>
+                        </li>
+                        <li>語系/Languages
+                            <ul>
+                                <li><a href="#">中文CN</a></li>
+                                <li><a href="#">英文EN</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn_login">登入</button>
+                    <button type="button" class="btn_logout">登出</button>
+                </div>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header start -->
+        <header class="header">
+            <div class="container">
+                <!-- 點擊側欄選單button  21行的aside.sidebar display:block-->
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <h1><a href="index.html"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#">圖書館首頁</a></li>
+                        <li><a href="#">整合查詢首頁</a></li>
+                        <li><a href="#">館藏查詢</a></li>
+                        <li><a href="#">電子資源</a></li>
+                        <li><a href="#">電子期刊</a></li>
+                        <li><a href="#">常見問答</a></li>
+                    </ul>        
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <select name="" id="">
+                            <option value="">中文CH</option>
+                            <option value="">英文EN</option>
+                        </select>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- login start -->
+                    <div class="login  loginbtn">
+                        <!-- 點擊登入button，則登入燈箱 display:block -->
+                        <button type="button" class="btn btn-sm">登入</button>
+                    </div>
+                    <!-- 登入燈箱start -->
+                    <div class="login_lightbox" style="display: none">
+                        <div class="overlay"></div>
+                        <div class="loginblock">
+                            <div class="close"></div>
+                            <h2>讀者登入</h2>
+                            <p>登入國立彰化師範大學<br />請輸入您的個人的讀者證號與密碼</p>
+                            <form>
+                                <div class="form_content">
+                                    <div class="form_grp form_inline">
+                                    <label for="username">帳號：</label>
+                                    <input name="username" type="text" placeholder="請輸入文字">
+                                    </div>
+                                    <div class="form_grp form_inline">
+                                        <label for="password">密碼：</label>
+                                        <input name="password" type="password" placeholder="請輸入密碼">
+                                    </div>
+                                    <div class="btn_grp">
+                                        <input name="" type="submit" value="確認" />
+                                    </div>
+                                    <a href="#" class="cannot_login">無法登入嗎？</a>
+                                </div>          
+                            </form>
+                            <div class="login_instructions">
+                                <p>限在校教職員工學生使用，帳號密碼同校園入口網<br/>
+                            (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)</p>
+                                <a href="#">以訪客身份瀏覽</a>   
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- 登入燈箱end-->
+                </nav>
+            </div>
+        </header>
+        <div class="main mp">
+            <section class="col-12 search_block">
+                <div class="container">
+                    <div class="main_logo">
+                        <img src="images/logo.png" alt="網站標題" />
+                    </div>
+                    <div class="col">
+                        <!-- 搜尋 -->
+                        <div class="search_system">
+                            <!-- 頁籤 -->
+                            <!-- 點擊 tabs > ul > li > h2 > a 對應的tab-content show-->
+                            <div class="tabSet">
+                                <ul class="tabs">
+                                    <li class="active">
+                                        <h2><a href="#tab1">館藏查詢</a></h2>
+                                    </li>
+                                    <li>
+                                        <h2><a href="#tab2">整合查詢</a></h2>
+                                    </li>
+                                    <li>
+                                        <h2><a href="#tab3">資料庫/期刊/電子書</a></h2>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 頁籤內容 1 -->
+                            <div class="tab-content" id="tab1">
+                                <form action="">
+                                    <div class="form_grp form_inline">
+
+                                        <!-- 點擊 input[type="text"] 時 
+                                            1.加上class name"show_recent_searches"
+                                            2.搜尋推薦字區塊 display:block -->
+                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
+
+                                        <input name="" type="submit" title="查詢" value="查詢" />
+                                        <a href="#" class="advanced_search">進階查詢</a>
+
+                                        <!-- 搜尋推薦字 -->
+                                        <div class="recent_searches" style="display: none;">
+                                            <ul class="promptword">
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                            </ul>
+                                            <div class="title">查詢記錄</div>
+                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                                            <ul class="record_list">
+                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- 搜尋推薦字 END-->
+                                    </div>
+                                    
+                                </form>
+                                <div class="explanation">
+                                    可查詢本館館藏資料，包含圖書、期刊、DVD、多媒體資料等。
+                                </div>
+                            </div>
+                            <!-- 頁籤內容 2 -->
+                             <div class="tab-content" id="tab2" style="display:none;">
+                                <form action="">
+                                    <div class="form_grp form_inline">
+                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
+                                        <input name="" type="submit" title="查詢" value="查詢" />
+                                        <a href="#" class="advanced_search">進階查詢</a>
+                                        <!-- 搜尋推薦字 -->
+                                        <div class="recent_searches" style="display: none;">
+                                            <ul class="promptword">
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                            </ul>
+                                            <div class="title">查詢記錄</div>
+                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                                            <ul class="record_list">
+                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- 搜尋推薦字 END-->
+                                    </div>
+                                    <div class="check_grp form_inline">
+                                        <label><input name="" type="checkbox" value="">集中式整合查詢</label>
+                                        <label><input name="" type="checkbox" value="">分散式查詢</label>
+                                    </div>
+                                </form>
+                                <div class="explanation">
+                                    可檢索或瀏覽目前圖書館訂購的資料庫、電子期刊、電子書的列表及簡介等相關資訊。
+                                </div>
+                            </div>
+                            <!-- 頁籤內容 3 -->
+                            <div class="tab-content" id="tab3" style="display:none;">
+                                <form action="">
+                                    <div class="form_grp form_inline">
+                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
+                                        <input name="" type="submit" title="查詢" value="查詢" />
+                                        <a href="#" class="advanced_search">進階查詢</a>
+                                        <!-- 搜尋推薦字 -->
+                                        <div class="recent_searches" style="display: none;">
+                                            <ul class="promptword">
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                                <li><a href="#">文學推薦字</a></li>
+                                            </ul>
+                                            <div class="title">查詢記錄</div>
+                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                                            <ul class="record_list">
+                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- 搜尋推薦字 END-->
+                                    </div>
+                                    <div class="check_grp form_inline">
+                                        <label><input name="" type="checkbox" value="">集中式整合查詢</label>
+                                        <label><input name="" type="checkbox" value="">分散式查詢</label>
+                                    </div>
+                                </form>
+                                <div class="explanation">
+                                    可檢索或瀏覽目前圖書館訂購的資料庫、電子期刊、電子書的列表及簡介等相關資訊。
+                                </div>
+                            </div>
+                        </div><!-- search END -->
+                    </div>
+                </div>
+            </section>
+            <section class="col-4-4-4 feature_block">
+                <div class="container">
+                    <div class="col">
+                        <div class="featured_data">
+                            <h2>熱門查詢</h2>
+                            <ul>
+                                <li><a href="#">熱門查詢關鍵字ㄧ</a></li>
+                                <li><a href="#">熱門查詢關鍵字二</a></li>
+                                <li><a href="#">熱門查詢關鍵字三</a></li>
+                                <li><a href="#">熱門查詢關鍵字四</a></li>
+                                <li><a href="#">熱門查詢關鍵字五</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div class="featured_data">
+                            <h2>熱門資料庫</h2>
+                            <ul>
+                                <li><a href="#">資料庫 A</a></li>
+                                <li><a href="#">資料庫 B</a></li>
+                                <li><a href="#">資料庫 C</a></li>
+                                <li><a href="#">資料庫 D</a></li>
+                            </ul>
+                            <div class="more">
+                                <a href="#">瀏覽適合我的資料庫</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="featured_data">
+                            <h2>熱門電子期刊</h2>
+                            <ul>
+                                <li><a href="#">期刊 A</a></li>
+                                <li><a href="#">期刊 B 期刊 B 期刊 B 期刊 B 期刊 B 期刊 B 期刊 B</a></li>
+                                <li><a href="#">期刊 C</a></li>
+                                <li><a href="#">期刊 D</a></li>
+                            </ul>
+                            <div class="more">
+                               <a href="#">瀏覽適合我的電子期刊</a> 
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        <footer class="col-6-6">
+                <div class="container">
+                    <nav class="col">
+                        <ul>
+                            <li>
+                                <a href="#">常用連結</a>
+                                <ul>
+                                    <li><a href="#">圖書館首頁</a></li>
+                                    <li><a href="#">最新消息</a></li>
+                                    <li><a href="#">Facebook粉絲團</a></li>
+                                    <li><a href="#">常見問題</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">服務項目</a>
+                                <ul>
+                                    <li><a href="#">圖書借閱紀錄查詢</a></li>
+                                    <li><a href="#">館際合作</a></li>
+                                    <li><a href="#">各式申請表單</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">關於本館</a>
+                                <ul>
+                                    <li><a href="#">交通資訊導引</a></li>
+                                    <li><a href="#">準則與規範</a></li>
+                                    <li><a href="#">網路隱私權政策</a></li>
+                                    <li><a href="#">智慧財產權聲明</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="col footer_info">
+                        <p class="copyright">
+                            Copyright © 2014 National Taipei University of Technology Library, All rights reserved.
+                        </p>
+                        <p>電話：02-2771-2171 # 3100 傳真：02-2776-2383 e-mail：library@ntut.edu.tw<br />
+                            地址：10608 臺北市大安區忠孝東路三段一號<br />
+                            開放時間：週一～六 8：30-22：00；週日 09:00-17:00
+                        </p>
+                    </div>
+                </div>
+            </footer>
+    </div>
+</body>
+
+</html>
