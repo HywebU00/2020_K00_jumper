@@ -1,7 +1,7 @@
 
 $form_title_width :150px;       // 表單title寬度
 
-@mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:$btn-radius) {
+@mixin formStyle($f_color:$color-word, $f_border:$color-input, $f_radius:$rounded-angle) {
     color: $f_color;
     font-size: 1em;
     border: 1px solid $f_border;
@@ -370,11 +370,10 @@ select:focus {
 //
 //---------------------------------------------下拉選單--------//
 select {
-    line-height: 2.4em;
-    height: 2.4em;
-    padding: 0 24px 0 .5em;
+    height: 40px;
+    padding: 0 34px 0 .8em;
     border: 1px solid $color-gray;
-    background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+    background: #fff url(../images/icon/icon_arrow_down.svg) no-repeat right 10px center;
     background-size: 16px;
     option {
         outline: none;
@@ -403,6 +402,9 @@ input[type="radio"] {
 }
 input[type="radio"] {
     border-radius: 50%;
+}
+input[type="checkbox"] {
+    border-radius: 4px;
 }
 input[type="checkbox"]:checked, input[type="checkbox"]:focus,
 input[type="radio"]:checked, input[type="radio"]:focus {
@@ -475,7 +477,7 @@ input[type="file"] {
 img.captcha {
     display: inline-block;
     vertical-align: middle;
-    max-height: 2.5em;
+    max-height: 44px;
     margin-bottom: .3em;
     &+input {
         display: inline-block;

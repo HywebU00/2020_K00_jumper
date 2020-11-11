@@ -93,58 +93,71 @@
         }
 
         li {
-            padding: 0 1em;
 
             @include screen('mobile') {
                 padding: 0 .5em;
             }
 
             &.active {
-                border-bottom: 3px solid $primaryColor;
+                position: relative;
+                &:before{
+                    content:"";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    display: block;
+                    width:100%;
+                    height: 4px;
+                    border-radius: $rounded-angle $rounded-angle 0 0;
+                    background: $primaryColor;
+                }
 
                 a {
                     color: $color-word;
                 }
             }
+            h2{
+                font-size: 1em;
+                margin:0;
+            }
 
-            h2 {
+            a {
+                color: $color-word-light;
+                padding:.8em 1em;
+                display: block;
                 font-size: 1.125em;
-
-                @include screen('mobile') {
+                font-weight: bold;
+                @include screen('mobile'){
                     font-size: 1em;
                 }
-
-                a {
-                    color: lighten($color-word, 40);
-
-                }
             }
+            
         }
     }
 }
 
 .search_block {
-    .container {
-        @include screen('mobile') {
-            @include gutter();
-        }
-    }
+    // .container {
+    //     @include screen('mobile') {
+    //         @include gutter();
+    //     }
+    // }
     .form_grp{
         position: relative;
     }
     .recent_searches {
-        width: calc(100% - 185px);
+        width: calc(100% - 194px);
         background-color: rgba(255, 255, 255, 1);
         border: 1px solid $color-gray;
         box-shadow: 0px 1px 2px rgba(0,0,0, .3);
         padding: 20px;
         @include box-sizing;
         position: absolute;
-        display: none;
+        //display: none;
         z-index: 10;
         top:43px;
-        left: .1em;
-        border-radius: 0 0 .2em .2em;
+        left: 0;
+        border-radius: 0 0 $rounded-angle $rounded-angle;
         @include screen('mobile'){
             width: calc(100% - 5px);
             top:50px;
@@ -281,19 +294,21 @@
     }
 
     .tab-content {
-        padding: 1.5em 2em;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        border: 1px solid $color-lightgray;
+        padding: 2em 1.8em;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
         width: 100%;
-
-        @include screen('mobile') {
-            box-shadow: none;
-            border: none;
-            padding: 0;
-        }
+        border-radius: 0 0 $rounded-angle $rounded-angle;
+        // @include screen('mobile') {
+        //     box-shadow: none;
+        //     border: none;
+        //     padding: 0;
+        // }
 
         .check_grp {
-            margin: .5em 1;
+            margin: .5em 0;
+            @include screen('mobile'){
+                display: none;
+            }
         }
 
         // &+.tab-content{
@@ -305,22 +320,48 @@
     }
 
     .form_grp {
-        margin: 1em 0;
+        margin:0 0 1em 0;
     }
 
     .form_inline {
         display: flex;
         align-items: center;
-
-        input[type="text"] {
-            flex: 1 1 auto;
-            margin: .25em .1em;
-            &.show_recent_searches{
-                box-shadow: 0px -1px 2px rgba(0,0,0, .3);
-                border-radius: .2em .2em 0 0;
+        position: relative;
+        input{
+            margin: 0 .5em 0 0;
+            &[type="text"]{
+                flex: 1 1 auto;
+                height: 44px;
+                &.show_recent_searches{
+                    box-shadow: 0px -1px 2px rgba(0,0,0, .3);
+                    border-radius: $rounded-angle $rounded-angle 0 0;
+                }
+                @include screen('mobile'){
+                    width: 100%;
+                    margin:0;
+                }
             }
-        }
-
+            &[type="submit"]{
+                height: 44px;
+                @include screen('mobile'){
+                    position: absolute;
+                    margin:0;
+                    top:0;
+                    right: 0;
+                    border-radius: $rounded-angle;
+                    font-size: 0em;
+                    width: 44px !important;
+                    height: 44px;
+                    background:$primaryColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
+                    background-size: 20px;
+                    outline: 1px solid transparent;
+                    border:none;
+                    display:block;
+                    min-width: 0em !important;
+                    @include box-sizing;
+                }
+            }
+        } 
         .advanced_search {
             background: none;
             color: $color-word;
@@ -328,7 +369,8 @@
             border: none;
             display: inline-block;
             margin: 0 1em;
-
+            line-height: 1;
+            align-self:flex-end;
             @include screen('mobile') {
                 display: none;
             }
@@ -350,6 +392,9 @@
             }
             
         }
+    }
+    .explanation{
+        margin-top: 1.5em;
     }
 }
 
@@ -385,12 +430,23 @@
         }
 
         .featured_data {
-            border-top: 3px solid $primaryColor;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
             height: 100%;
-
+            border-radius: $rounded-angle;
+            position: relative;
+            padding: 10px 0 30px 0;
+            box-shadow:$box;
+            &:before{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 10px;
+                background: $primaryColor;
+                top:0;
+                left: 0;
+            }
             h2 {
-                border-bottom: 1px solid $color-line;
                 margin: 0;
                 padding: 15px;
                 font-size: 1.25em;
@@ -402,11 +458,10 @@
             }
 
             li {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                padding: 5px 0;
-
+                padding: 4px 0;
+                margin-bottom: 10px;
+                border-bottom: 1px solid $color-line;
+                @include text-overflow;
                 a {
                     color: $color-word;
 
@@ -415,29 +470,29 @@
                     }
                 }
             }
-            .more{
-                padding:0 15px 15px;
-                a{
-                    position: relative;
-                    &:after {
-                        content: "";
-                        width: 6px;
-                        height: 6px;
-                        border: 2px solid $primaryColor;
-                        transform: rotate(45deg);
-                        position: absolute;
-                        right: -10px;
-                        top: 8px;
-                        border-left: none;
-                        border-bottom: none;
-                        transition: .1s ease-out;
-                    }
-                    &:hover{
-                        &:after{
-                            right:-12px;
-                        }
-                    }
+            a.more{
+                position: absolute;
+                right: 35px;
+                bottom:15px;
+                color: $color-word;
+                &:after {
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    border: 2px solid $primaryColor;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    right: -10px;
+                    top: 7px;
+                    border-left: none;
+                    border-bottom: none;
+                    transition: .1s ease-out;
                 }
+                &:hover{
+                    &:after{
+                        right:-14px;
+                    }
+                }  
             }
         }
     }

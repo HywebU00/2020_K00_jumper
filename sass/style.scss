@@ -44,8 +44,9 @@
 
 // 頁面
 @import "pages/_template";       //版型初始設定
-@import "pages/_mp"; 
-@import "pages/_lightbox2.scss";         //首頁
+@import "pages/_mp"; 			 //首頁
+@import "pages/_lightbox.scss";
+@import "pages/_login.scss";         
 // @import "page/_lp";           //LP
 // @import "page/_np";           //NP
 // @import "page/_cp";           //CP

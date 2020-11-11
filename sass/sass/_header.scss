@@ -36,7 +36,7 @@
         max-width: 100%;
         overflow: visible;
         position: relative; // menu
-        padding-top: 10px;
+        padding-top: 8px;
         @include gutter();
         @include screen('mobile'){
             padding: 0;
@@ -88,11 +88,11 @@
         }
     }
     h1 {
-        float: left;
         width: 220px;
         height: 50px;
         margin: -5px 0 0 20px;
         padding: 0;
+        float: left;
         @include box-sizing;
         a {
             display: inline-block;
@@ -107,27 +107,38 @@
             width: 100%;
             text-align: center;
             height: 60px;
-            margin: -5px 0 8px;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             img {
-                width: auto;
-                height: auto;
-                max-height: 50px;
-                margin: 0px auto; // transform: scale(.8);
+                display: none;
+                // width: auto;
+                // height: auto;
+                // max-height: 50px;
+                // margin: 0px auto; // transform: scale(.8);
+            }   
+        }
+        span{
+            display: none;
+            font-size: 1em;
+            color:#fff;
+            font-size: 0.5em;
+            font-weight: normal;
+            @include screen('mobile'){
+                display: block;
             }
         }
-        @media(max-width: 345px) {
-            padding: 2px 60px 2px 50px;
-            img {
-                width: auto;
-                height: auto;
-                max-height: 50px;
-                margin: 0px auto;
-                transform: scale(.8);
-            }
-        }
+        // @media(max-width: 345px) {
+        //     padding: 2px 60px 2px 50px;
+        //     img {
+        //         width: auto;
+        //         height: auto;
+        //         max-height: 50px;
+        //         margin: 0px auto;
+        //         transform: scale(.8);
+        //     }
+        // }
     }
     // 導覽列
     .navigation {
@@ -140,15 +151,28 @@
             font-size: .938em;
             list-style: none;
             vertical-align: middle;
+            max-width: 805px;
+            height: 55px;
             &.left_nav {
                 display: inline-block;
                 // @include screen('mobile') {
                 //     display: none;
                 // }
             }
+            @media screen and (max-width: 1170px){
+                max-width: 650px;
+                overflow: hidden;
+            }
+            @media screen and (max-width: 1100px){
+                max-width: 550px;
+            }
+            @media screen and (max-width: 1030px){
+                max-width: 500px;
+            }
             @include screen('tablet') {
                 display: none;
             }
+
         }
         li {
             float: left;
@@ -176,35 +200,38 @@
             display: none;
         }
         select{
-            background: rgba(0,0,0,0) url(../images/icon/icon_arrow_down_invert.svg) no-repeat right center;
+            background: rgba(0,0,0,0) url(../images/icon/icon_arrow_down_invert.svg) no-repeat right 5px center;
             color: #fff; 
             border:none;
             background-size: 12px;
             padding-right: 20px;
+            height: 2.4em;
+            line-height: 2.4em;
+            min-width: 6.5em;
         }
         a {
             color: #fff;
             display: block;
-            background-color:$secondaryColor;
-            border-radius: 50px;
-            width: 130px;
+            width: 90px;
             font-size: .938em;
             padding: 4px 30px 3px 15px;
             //background-image: url(../images/language_icon.png);
             background-repeat: no-repeat;
             background-position: right center;
-            margin-bottom: 3px;
             text-align: left;
             @include box-sizing(border-box);
         }
         ul {
             margin: 0;
-            padding: 0;
+            padding: 5px 0;
             list-style-type: none;
             display: block;
             position: absolute;
+            background: #fff;
+            box-shadow: $box;
             top: auto;
             left: 0;
+            border-radius: $rounded-angle;
             li {
                 margin-bottom: 0px;
                 width: 100%;
@@ -215,9 +242,10 @@
                     padding: 4px 15px 3px;
                     display: block;
                     transition: .5s;
+
                     &:hover {
-                        background-color: $secondaryColor;
-                        color: #000 !important;
+                        background-color: rgba($primaryColor, .25);
+                        color: $color-word;
                     }
                 }
             }
