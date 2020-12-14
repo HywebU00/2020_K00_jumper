@@ -3,6 +3,7 @@
 		.loginblock{
 			padding: 0;
 			width: 1040px;
+			min-height: 630px;
 			position: relative;
 			@include screen('tablet'){
 				width: 520px;
@@ -13,7 +14,7 @@
 		}
 		.function_grp{
 			position: absolute;
-			bottom:30px;
+			bottom:20px;
 			width: 520px;
 			display: flex;
 			justify-content: center;
@@ -30,6 +31,9 @@
 				margin:.5em;
 				@include screen('xs_mobile'){
 					min-width: auto;
+				}
+				select{
+					margin-bottom: 0;
 				}
 			}
 			button,
@@ -48,6 +52,13 @@
 			button,
 			input{
 				margin:.5em;
+			}
+			.btn{
+				transition: all .3s;
+				&:hover{
+					color:#fff;
+					background-color: $primaryColor;
+				}
 			}
 
 		}
@@ -115,4 +126,71 @@
 			}
 		}
 	}
+
+	.signin_separator{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: .875em;
+		&:before{
+			content: attr(data-content);
+			background-color: #fff;
+		    color: $color-word-light;
+		    display: inline-block;
+		    padding: 0 3px;
+		    position: relative;
+		    z-index: 1;
+		}
+		&:after{
+			content:"";
+			display: block;
+			position: absolute;
+			left: 0;
+			top:50%;
+			height: 1px;
+			width: 100%;
+			background-color: $color-line; 
+			z-index: 0;
+		}
+	}
+	.social_signin{
+		display: flex;
+		justify-content: center;
+		margin: .5em 0;
+		a{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 60px;
+			height: 60px;
+			background-color: #fff;
+			border-radius: 50%;
+			box-shadow: 0 0 2px rgba(0,0,0,.3);
+			margin:0 .5em;
+			transition: all .3s;
+			box-sizing: border-box;
+			&:hover{
+				box-shadow: 0 0 6px rgba(0,0,0,.5);
+			}
+			img{
+				width: 30px;
+			}
+		}
+	}
+	.notSignin{
+		text-align: center;
+		font-size: .875em;
+		margin:1em 0;
+		.cannot_signin{
+			color: $color-word-light;
+			padding: 0 .5em;
+			text-decoration: underline;
+		}
+		.customer{
+			padding: 0 .5em;
+			text-decoration: underline;
+		}
+	}
+	
 }

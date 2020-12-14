@@ -19,6 +19,8 @@ body {
 .wrapper {
     width: 100%;
     margin: 0px auto;
+    position: relative;
+    padding:55px 0 0 0;
     @include screen('mobile') {
         background: #FFF;
         overflow: hidden;
@@ -36,9 +38,6 @@ body {
     margin: 0 auto;
     padding: 0;
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
-    @include screen('mobile') {
-        padding-top: 55px;
-    }
     h2 {
         line-height: 1.25em;
     }

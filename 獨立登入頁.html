@@ -22,7 +22,10 @@
                 <div class="container">
                     <!-- 登入燈箱start -->
                     <div class="login_lightbox">
-                        <div class="overlay"></div>
+                        <div class="overlay">
+                            <!-- 背景大圖 可讓客戶選擇是否上傳圖片 -->
+                            <img src="images/login_bg.jpg" alt="">
+                        </div>
 
                         <div class="loginblock">
 
@@ -46,12 +49,17 @@
                                     
                                 </div>
                                 <div class="img-container">
+                                    <!-- 登入區塊左側背景圖  可讓客戶選擇是否上傳圖片 -->
                                     <img src="images/lib_free.png" alt="">
                                 </div>
                             </div>
 
                             <div class="login_form">
-                                <p>登入<span class="name">國立彰化師範大學</span><br />請輸入您的個人的讀者證號與密碼</p>
+                                <h2>登入<span class="name">國立彰化師範大學</span></h2>
+                                <div class="login_instructions">
+                                    <p>限在校教職員工學生使用，帳號密碼同校園入口網<br />
+                                        (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)</p>
+                                </div>
                                 <div class="error">登入失敗，請重新輸入帳號密碼</div>
                                 <form>
                                     <div class="form_content">
@@ -71,14 +79,19 @@
                                         <div class="btn_grp">
                                             <input name="" type="submit" value="確認" />
                                         </div>
-                                        <a href="#" class="cannot_login">無法登入嗎？</a>
                                     </div>
                                 </form>
-                                <div class="login_instructions">
-                                    <p>限在校教職員工學生使用，帳號密碼同校園入口網<br />
-                                        (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)</p>
-                                    <a href="#">以訪客身份瀏覽</a>
+                                <div class="notSignin">
+                                    <a href="#" class="cannot_signin">無法登入嗎？</a>
+                                    <a href="#" class="customer">以訪客身份瀏覽</a>
                                 </div>
+                                <div class="signin_separator" data-content="使用第三方登入"></div>
+                                <div class="social_signin">
+                                    <a href="#"><img src="images/icon_google.svg" alt=""></a>
+                                    <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
+                                </div>
+                                
+                                    
                                 <div class="copyright">
                                     <img src="images/ebsco.png" alt="">
                                     <img src="images/logo_hyweb.png" alt="">
@@ -92,8 +105,8 @@
                                 <button type="button" class="btn">回圖書館首頁</button>
                                 <div class="language">
                                     <select name="" id="">
-                                        <option value="">中文CH</option>
-                                        <option value="">英文EN</option>
+                                        <option value="">中文</option>
+                                        <option value="">English</option>
                                     </select>
                                 </div>
                             </div>

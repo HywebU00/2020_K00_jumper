@@ -1,3 +1,10 @@
+body.fix{
+    height: 100%;
+    overflow: hidden !important;
+    width: 100%;
+    position: fixed;
+}
+
 // 相簿列表
 .album {
     .lightbox {

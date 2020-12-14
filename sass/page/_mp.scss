@@ -86,6 +86,15 @@
         }
     }
 
+    
+}
+
+.search_block {
+    // .container {
+    //     @include screen('mobile') {
+    //         @include gutter();
+    //     }
+    // }
     .tabSet {
         ul {
             @include li-reset;
@@ -134,21 +143,13 @@
             
         }
     }
-}
-
-.search_block {
-    // .container {
-    //     @include screen('mobile') {
-    //         @include gutter();
-    //     }
-    // }
     .form_grp{
         position: relative;
     }
     .recent_searches {
         width: calc(100% - 194px);
         background-color: rgba(255, 255, 255, 1);
-        border: 1px solid $color-gray;
+        border: 1px solid $color-input;
         box-shadow: 0px 1px 2px rgba(0,0,0, .3);
         padding: 20px;
         @include box-sizing;
@@ -279,124 +280,6 @@
     }
 }
 
-.search_system {
-    width: 80%;
-    max-width: 800px;
-    margin: 2em auto;
-    position: relative;
-
-    @include screen('tablet') {
-        width: 100%;
-    }
-
-    .tabSet {
-        margin: 0 auto;
-    }
-
-    .tab-content {
-        padding: 2em 1.8em;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-        width: 100%;
-        border-radius: 0 0 $rounded-angle $rounded-angle;
-        // @include screen('mobile') {
-        //     box-shadow: none;
-        //     border: none;
-        //     padding: 0;
-        // }
-
-        .check_grp {
-            margin: .5em 0;
-            @include screen('mobile'){
-                display: none;
-            }
-        }
-
-        // &+.tab-content{
-        //     position:absolute;
-        //     left:0;
-        //     right:0;
-        //     top:55px;
-        //}
-    }
-
-    .form_grp {
-        margin:0 0 1em 0;
-    }
-
-    .form_inline {
-        display: flex;
-        align-items: center;
-        position: relative;
-        input{
-            margin: 0 .5em 0 0;
-            &[type="text"]{
-                flex: 1 1 auto;
-                height: 44px;
-                &.show_recent_searches{
-                    box-shadow: 0px -1px 2px rgba(0,0,0, .3);
-                    border-radius: $rounded-angle $rounded-angle 0 0;
-                }
-                @include screen('mobile'){
-                    width: 100%;
-                    margin:0;
-                }
-            }
-            &[type="submit"]{
-                height: 44px;
-                @include screen('mobile'){
-                    position: absolute;
-                    margin:0;
-                    top:0;
-                    right: 0;
-                    border-radius: $rounded-angle;
-                    font-size: 0em;
-                    width: 44px !important;
-                    height: 44px;
-                    background:$primaryColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
-                    background-size: 20px;
-                    outline: 1px solid transparent;
-                    border:none;
-                    display:block;
-                    min-width: 0em !important;
-                    @include box-sizing;
-                }
-            }
-        } 
-        .advanced_search {
-            background: none;
-            color: $color-word;
-            text-shadow: none;
-            border: none;
-            display: inline-block;
-            margin: 0 1em;
-            line-height: 1;
-            align-self:flex-end;
-            @include screen('mobile') {
-                display: none;
-            }
-
-            &:after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: $color-word;
-            }
-
-            &:hover {
-                color: $primaryColor;
-
-                &:after {
-                    background: $primaryColor;
-                }
-            }
-            
-        }
-    }
-    .explanation{
-        margin-top: 1.5em;
-    }
-}
 
 .feature_block {
     margin: 2em 0;

@@ -1,6 +1,6 @@
 .pagination {
-    margin: .5em auto;
-    padding: 0;
+    margin: 0 auto;
+    padding: 2em 0;
     display: block;
     text-align: center;
     font-size: .938em;
@@ -28,13 +28,11 @@
                 white-space: nowrap;
                 font-size: 1em;
                 color: $color-word;
-                @include gradient (#F7F7F7, #EAEAEA, vertical);
-                border: #ccc solid 1px;
+                background: $color-lightgray;
                 &:hover,
                 &:focus {
                     background: $primaryColor;
                     color: #fff !important;
-                    border: $primaryColor solid 1px;
                 }
             }
             &.active {
@@ -72,16 +70,23 @@
                     }
                 }
             }
-            &.first {
-                a:before {
-                    @extend %arrow;
-                    margin-left: -6px;
-                    transform: rotate(-135deg);
-                }
-                a:after {
-                    @extend %arrow;
-                    margin-left: 0px;
-                    transform: rotate(-135deg);
+            // &.first {
+            //     a:before {
+            //         @extend %arrow;
+            //         margin-left: -6px;
+            //         transform: rotate(-135deg);
+            //     }
+            //     a:after {
+            //         @extend %arrow;
+            //         margin-left: 0px;
+            //         transform: rotate(-135deg);
+            //     }
+            // }
+            &.prev_10,
+            &.next_10{
+                a{
+                    font-weight: normal;
+                    padding:6px 15px;
                 }
             }
             &.prev {
@@ -98,26 +103,27 @@
                     transform: rotate(45deg);
                 }
             }
-            &.last {
-                a:before {
-                    @extend %arrow;
-                    margin-left: -3px;
-                    transform: rotate(45deg);
-                }
-                a:after {
-                    @extend %arrow;
-                    margin-left: -9px;
-                    transform: rotate(45deg);
-                }
-            }
+            // &.last {
+            //     a:before {
+            //         @extend %arrow;
+            //         margin-left: -3px;
+            //         transform: rotate(45deg);
+            //     }
+            //     a:after {
+            //         @extend %arrow;
+            //         margin-left: -9px;
+            //         transform: rotate(45deg);
+            //     }
+            // }
         }
     }
     .total {
         padding: 0em;
         display: inline-block;
         vertical-align: middle;
-        select {
+        input[type="text"] {
             margin: 0px .5em;
+            width: 55px;
             @include screen('mobile') {
                 margin: 0px;
             }
