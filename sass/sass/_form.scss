@@ -606,6 +606,7 @@ abbr[title] {
                 height: 44px;
                 margin: 0 .5em;
                 transition: all .3s;
+                border-radius: 30px;
                 @include screen('mobile'){
                     position: absolute;
                     margin:0;

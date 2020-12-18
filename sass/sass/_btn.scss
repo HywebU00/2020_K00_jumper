@@ -1,8 +1,8 @@
 // 按鈕設定
 $btn-font-color:$color-word;
 $btn-border:darken($color-word, 5);
-$btn-padding:.4em 1.2em;
-$btn-radius:30px;
+$btn-padding:.5em 1em;
+$btn-radius:$rounded-angle;
 // 按鈕外框
 .btn_grp {
     text-align: center;
@@ -14,7 +14,7 @@ $btn-radius:30px;
     background-color: $btn-bg;
     border: 1px solid $btn-bg;
     color: $btn-font-color;
-    @include border-radius($btn-radius);
+    //@include border-radius($btn-radius);
     //@include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
     &:hover, &:focus {
         background-color: darken($btn-bg, 10); // Old browsers
@@ -56,6 +56,7 @@ $btn-radius:30px;
     @include box-sizing;
     @include btn_setting;
     text-shadow:none;
+    border-radius: 30px;
     &:hover,
     &:focus {
         color: $btn-font-color;
@@ -64,51 +65,51 @@ $btn-radius:30px;
 }
 //按鈕顏色
 //@include btn_setting(按鈕顏色,字的顏色);
-.btn-green {
-    @extend %btn;
-    @include btn_setting($color-green, #FFF);
-}
-.btn-blue {
-    @extend %btn;
-    @include btn_setting($color-blue, #FFF);
-}
-.btn-yellow {
-    @extend %btn;
-    @include btn_setting(lighten($color-yellow, 5), #FFF);
-}
-.btn-orange {
-    @extend %btn;
-    @include btn_setting(lighten($color-orange, 10), #FFF);
-}
-.btn-red {
-    @extend %btn;
-    @include btn_setting($color-red, #FFF);
-}
-.btn-purple {
-    @extend %btn;
-    @include btn_setting(lighten($color-purple, 5), #FFF);
-}
-.btn-submit {
-    @extend %btn;
-    @include btn_setting(lighten($primaryColor, 5), #FFF);
-}
-.btn-reset {
-    @extend %btn;
-    color:lighten($color-word,15);
-}
-.btn-primary {
-    @extend .btn-orange;
-}
-// 按鈕大小
-.btn-xl {
-    font-size: $font-size * 1.5; //24px
-}
-.btn-lg {
-    font-size: $font-size * 1.25; //20px
-}
-.btn-sm {
-    font-size: $font-size * .938; //15px
-}
-.btn-xs {
-    font-size: $font-size * .75; //12px
-}
+// .btn-green {
+//     @extend %btn;
+//     @include btn_setting($color-green, #FFF);
+// }
+// .btn-blue {
+//     @extend %btn;
+//     @include btn_setting($color-blue, #FFF);
+// }
+// .btn-yellow {
+//     @extend %btn;
+//     @include btn_setting(lighten($color-yellow, 5), #FFF);
+// }
+// .btn-orange {
+//     @extend %btn;
+//     @include btn_setting(lighten($color-orange, 10), #FFF);
+// }
+// .btn-red {
+//     @extend %btn;
+//     @include btn_setting($color-red, #FFF);
+// }
+// .btn-purple {
+//     @extend %btn;
+//     @include btn_setting(lighten($color-purple, 5), #FFF);
+// }
+// .btn-submit {
+//     @extend %btn;
+//     @include btn_setting(lighten($primaryColor, 5), #FFF);
+// }
+// .btn-reset {
+//     @extend %btn;
+//     color:lighten($color-word,15);
+// }
+// .btn-primary {
+//     @extend .btn-orange;
+// }
+// // 按鈕大小
+// .btn-xl {
+//     font-size: $font-size * 1.5; //24px
+// }
+// .btn-lg {
+//     font-size: $font-size * 1.25; //20px
+// }
+// .btn-sm {
+//     font-size: $font-size * .938; //15px
+// }
+// .btn-xs {
+//     font-size: $font-size * .75; //12px
+// }

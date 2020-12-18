@@ -88,68 +88,92 @@
                         <li><a href="#">常見問答</a></li>
                     </ul>
                     <!-- 語言設定 -->
-                    <div class="language">
+                    <!-- <div class="language">
                         <select name="" id="">
                             <option value="">中文CH</option>
                             <option value="">英文EN</option>
                         </select>
-                    </div>
-                    <!-- <div class="language">
-                        <a href="#">中文CH</a>
-                        <ul style="display: block;">
-                            <li><a href="#">英文EN</a></li>
-                        </ul>
                     </div> -->
+                    <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul style="display: none;">
+                            <li><a href="#">中文</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
                     <!-- login start -->
                     <div class="login loginbtn">
                         <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
                         <button type="button" class="btn">個人專區</button>
                     </div>
                 </nav>
-                <!-- 登入燈箱start -->
-                <div class="login_lightbox" style="display: none;">
-                    <div class="overlay"></div>
-                    <div class="loginblock">
-                        <div class="close"></div>
-                        <p>登入<span class="name">國立彰化師範大學</span><br />請輸入您的個人的讀者證號與密碼</p>
-                        <form>
-                            <div class="form_content">
-                                <div class="form_grp form_inline">
-                                    <label for="username">帳號</label>
-                                    <input name="username" type="text">
-                                </div>
-                                <div class="form_grp form_inline">
-                                    <label for="password">密碼</label>
-                                    <input name="password" type="password">
-                                </div>
-                                <div class="form_grp form_inline">
-                                    <img src="images/captcha.png" alt="" class="captcha">
-                                    <button type="button" class="renew"><i class="i_renew"></i></button>
-                                    <input name="" type="text" value="" placeholder="請輸入圖形驗證碼">
-                                </div>
-                                <div class="btn_grp">
-                                    <input name="" type="submit" value="確認" />
-                                </div>
-                                <a href="#" class="cannot_login">無法登入嗎？</a>
-                            </div>
-                        </form>
-                        <div class="login_instructions">
-                            <p>限在校教職員工學生使用，帳號密碼同校園入口網<br />
-                                (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)</p>
-                            <a href="#">以訪客身份瀏覽</a>
-                        </div>
-                        <div class="copyright">
-                            <img src="images/ebsco.png" alt="">
-                            <img src="images/logo_hyweb.png" alt="">
-                            <p>Embedded EBSCO Discovery Service<br />
-                                System Designed by Hyweb Technology Co., Ltd.<br />
-                                ©2020 All Rights Reserved</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- 登入燈箱end-->
             </div>
         </header>
+        <!-- 登入燈箱start -->
+        <div class="login_lightbox" style="display: none;">
+            <div class="overlay"></div>
+            <div class="loginblock">
+                <div class="close"></div>
+                <div class="login_form">
+                    <h2>登入<span class="name">國立彰化師範大學</span></h2>
+                    <div class="login_instructions">
+                        <div class="pc">限在校教職員工學生使用，帳號密碼同校園入口網<br />
+                            (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)
+                        </div>
+                        <div class="mobile">
+                            請輸入您的個人的讀者證號與密碼
+                        </div>
+                    </div>
+                    <div class="error">登入失敗，請重新輸入帳號密碼</div>
+                    <form>
+                        <div class="form_content">
+                            <div class="form_grp form_inline">
+                                <label for="username">帳號</label>
+                                <input name="username" type="text">
+                            </div>
+                            <div class="form_grp form_inline">
+                                <label for="password">密碼</label>
+                                <input name="password" type="password">
+                            </div>
+                            <div class="form_grp form_inline">
+                                <img src="images/captcha.png" alt="" class="captcha">
+                                <button type="button" class="renew"><i class="i_renew"></i></button>
+                                <input name="" type="text" value="" placeholder="請輸入圖形驗證碼">
+                            </div>
+                            <div class="btn_grp">
+                                <input name="" type="submit" value="確認" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="notSignin">
+                        <a href="#" class="cannot_signin">無法登入嗎？</a>
+                        <a href="#" class="customer">以訪客身份瀏覽</a>
+                    </div>
+                    <div class="divider">使用第三方登入</div>
+                    <div class="social_slider">
+                        <a href="#"><img src="images/icon_google.svg" alt=""></a>
+                        <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
+                    </div>
+                    <div class="copyright">
+                        <img src="images/ebsco.png" alt="">
+                        <img src="images/logo_hyweb.png" alt="">
+                        <p>Embedded EBSCO Discovery Service<br />
+                            System Designed by Hyweb Technology Co., Ltd.<br />
+                            ©2020 All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="function_grp">
+                    <button type="button" class="btn">回圖書館首頁</button>
+                    <div class="language">
+                        <select name="" id="">
+                            <option value="">中文</option>
+                            <option value="">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 登入燈箱end-->
         <div class="main lp">
             <section class="col-12 search_block">
                 <div class="container">
@@ -267,6 +291,7 @@
             <section class="main_content">
                 <div class="container">
                     <div class="filter_search">
+                        <div class="close"></div>
                         <h2>調整查詢</h2>
                         <!-- ".filter_search > .option" 手機版才會出現，和搜尋結果(".search_result")下的".option"功能相同-->
                         <div class="option">
@@ -354,12 +379,11 @@
                                     <input type="number" value="2020" min="2" max="2020" />
                                 </div>
                                 <div class="range_slider">
-                                    
                                     <input value="1" min="1" max="2019" step="1" type="range" />
                                     <input value="2020" min="2" max="2020" step="1" type="range" />
                                 </div>
                             </div>
-                            <button type="button" class="btn">確定</button>
+                            <button type="button" class="submit">確定</button>
                         </div>
                         <div class="sort_list">
                             <ul>
@@ -387,7 +411,7 @@
                                             <li><a href="#">物理光電/化學/數學<span>(5)</span></li>
                                             <li><a href="#">生物醫學<span>(5)</span></a></li>
                                         </ul>
-                                        <button type="button" class="btn">看更多</button>
+                                        <button type="button" class="more">看更多</button>
                                     </div>
                                 </li>
                                 <li>
@@ -497,7 +521,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="data_all">
+                        <div class="function_panel">
                             <div class="result_amount">
                                 查詢結果：
                                 <div class="search_word">文學</div>
@@ -603,7 +627,10 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    <button type="button" class="btn_normal">詳目</button>
+                                    <button type="button" class="btn_normal full-text">Full Text Finder</button>
                                 </div>
+                                
                             </div>
                             <div class="list_block">
                                 <div class="list_num">2</div>

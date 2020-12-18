@@ -3,7 +3,7 @@
 		.loginblock{
 			padding: 0;
 			width: 1040px;
-			min-height: 630px;
+			//min-height: 630px;
 			position: relative;
 			@include screen('tablet'){
 				width: 520px;
@@ -11,57 +11,13 @@
 			@include screen('xs_mobile'){
 			    width: calc(100% - 30px);
 			}
+			@media (max-width: 768px) and (max-height: 600px){
+				height: 100%;
+				border-radius: 0;
+				overflow-y: scroll;
+			}
 		}
-		.function_grp{
-			position: absolute;
-			bottom:20px;
-			width: 520px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			@include screen('tablet'){
-				position: static;
-				padding-bottom: 30px;
-				width: 100%;
-			}
-			.language{
-				font-size: 1em;
-				font-weight: normal;
-				width: 148px;
-				margin:.5em;
-				@include screen('xs_mobile'){
-					min-width: auto;
-				}
-				select{
-					margin-bottom: 0;
-				}
-			}
-			button,
-			input,
-			select{
-				border-radius: 30px;
-				background-color: #fff;
-				border:2px solid $primaryColor;
-				padding: .5em 1.5em;
-				min-width: 148px;
-				@include screen('xs_mobile'){
-					padding: .5em 1em;
-					min-width: auto;
-				}
-			}
-			button,
-			input{
-				margin:.5em;
-			}
-			.btn{
-				transition: all .3s;
-				&:hover{
-					color:#fff;
-					background-color: $primaryColor;
-				}
-			}
-
-		}
+		
 		.main_img{
 			position: relative;
 			padding: 1.5em 2em;
@@ -80,12 +36,13 @@
 				background: rgba(255,255,255, .85);
 				border-radius: $rounded-angle;
 				padding: 1em .5em; 
-				line-height: 1.5;
 				max-height: 22.5em;
 				.text_content{
 					padding:0 .5em; 
 					overflow-y: auto;
 					max-height: 20.5em;
+					line-height: 1.6em;
+					font-size: .938em;
 				}
 			}
 			.img-container{
@@ -101,6 +58,9 @@
 				}
 			}
 		}
+		.function_grp{
+			display: flex;
+		}
 
 		.login_form{
 			//@include make-xs-column(12); 
@@ -111,85 +71,14 @@
 			@include screen('tablet'){
 				padding-bottom: 0;
 			}
+			@include screen('xs_mobile'){
+				padding: 20px 30px 0;
+			}
 		}
 
 		.login_instructions{
-			>p{
-				@include screen('mobile'){
-					display: none;
-				}
-			}	
-		}
-		.copyright{
-			@include screen('tablet'){
-				display: none;
-			}
-		}
-	}
-
-	.signin_separator{
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: .875em;
-		&:before{
-			content: attr(data-content);
-			background-color: #fff;
-		    color: $color-word-light;
-		    display: inline-block;
-		    padding: 0 3px;
-		    position: relative;
-		    z-index: 1;
-		}
-		&:after{
-			content:"";
-			display: block;
-			position: absolute;
-			left: 0;
-			top:50%;
-			height: 1px;
-			width: 100%;
-			background-color: $color-line; 
-			z-index: 0;
-		}
-	}
-	.social_signin{
-		display: flex;
-		justify-content: center;
-		margin: .5em 0;
-		a{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 60px;
-			height: 60px;
-			background-color: #fff;
-			border-radius: 50%;
-			box-shadow: 0 0 2px rgba(0,0,0,.3);
-			margin:0 .5em;
-			transition: all .3s;
-			box-sizing: border-box;
-			&:hover{
-				box-shadow: 0 0 6px rgba(0,0,0,.5);
-			}
-			img{
-				width: 30px;
-			}
-		}
-	}
-	.notSignin{
-		text-align: center;
-		font-size: .875em;
-		margin:1em 0;
-		.cannot_signin{
-			color: $color-word-light;
-			padding: 0 .5em;
-			text-decoration: underline;
-		}
-		.customer{
-			padding: 0 .5em;
-			text-decoration: underline;
+			margin-bottom: 10px;
+			
 		}
 	}
 	

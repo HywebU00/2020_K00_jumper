@@ -192,7 +192,8 @@
         margin-right: 10px;
         position: relative;
         float: right;
-        padding: .5em 0;
+        padding-top: .3em;
+        font-size: 1em;
         @include screen('tablet') {
             display: none;
         }
@@ -209,14 +210,16 @@
         a {
             color: #fff;
             display: block;
-            width: 90px;
+            width: 110px;
             font-size: .938em;
-            padding: 4px 30px 3px 15px;
-            //background-image: url(../images/language_icon.png);
-            background-repeat: no-repeat;
-            background-position: right center;
+            padding: 4px 30px 4px 15px;
             text-align: left;
+            background-color: rgba(255,255,255, 0.1);
             @include box-sizing(border-box);
+            &:hover,
+            &:focus{
+                background-color: rgba(255,255,255, 0.2);
+            }
         }
         ul {
             margin: 0;
@@ -251,7 +254,7 @@
     .login {
         display: inline-block;
         margin-top: 0px;
-        margin-right: 20px;
+        margin-right: 10px;
         float: right;
         @include screen('tablet') {
             margin-right: 10px;
@@ -269,6 +272,8 @@
             padding: 4px 20px!important;
             color: #fff;
             border:none;
+            font-size: .938em;
+            font-weight: bold;
             @include btn_setting($btn-bg:$primaryColor, $btn-font-color:#fff);
             @include screen('mobile') {
                 min-width: auto;
