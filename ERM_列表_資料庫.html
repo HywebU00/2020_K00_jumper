@@ -69,7 +69,7 @@
         <!-- header start -->
         <header class="header">
             <div class="container">
-                <!-- 點擊側欄選單button  21行的aside.sidebar display:block-->
+                <!-- click側欄選單button".sidebarCtrl", ".aside.sidebar" show-->
                 <button type="button" class="sidebarCtrl">側欄選單</button>
                 <h1>
                     <a href="index.html">
@@ -81,26 +81,33 @@
                     <ul>
                         <li><a href="#">首頁</a></li>
                         <li><a href="#">查看所有電子資源</a></li>
-                        <!-- <li><a href="#">資料庫講習</a></li> -->
                         <li><a href="#">校外連線</a></li>
-                        <!-- <li><a href="#">VPN 安裝使用說明</a></li>
-                        <li><a href="#">教育訓練簡報</a></li> -->
                         <li><a href="#">常見問答</a></li>
                     </ul>
-                    <!-- 語言設定 -->
-                    <div class="language">
-                        <a href="#">語言選擇</a>
-                        <ul style="display: none;">
-                            <li><a href="#">中文</a></li>
-                            <li><a href="#">English</a></li>
+                    <div class="more_list_block">
+                        <!-- click button, 則下方 ul display:block -->
+                        <button type="button" class="more">查看更多</button>
+                        <ul class="more_list" style="display:none">
+                            <li><a href="#">資料庫講習</a></li>
+                            <li><a href="#">VPN 安裝使用說明</a></li>
+                            <li><a href="#">教育訓練簡報</a></li>
                         </ul>
                     </div>
-                    <!-- login start -->
-                    <div class="login loginbtn">
-                        <!-- 點擊登入button，則登入燈箱 display:block -->
-                        <button type="button" class="btn">個人專區</button>
-                    </div>
                 </nav>
+                <div class="nav_right">
+                        <!-- login start -->
+                        <div class="login loginbtn">
+                            <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
+                            <button type="button" class="btn">個人專區</button>
+                        </div>
+                        <div class="language">
+                            <a href="#">語言選擇</a>
+                            <ul style="display: none;">
+                                <li><a href="#">中文</a></li>
+                                <li><a href="#">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
             </div>
         </header>
         <!-- 登入燈箱start -->

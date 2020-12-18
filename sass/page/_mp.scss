@@ -10,11 +10,7 @@
 }
 
 .mp {
-    margin-top: 5em;
-
-    @include screen('tablet') {
-        margin-top: 60px;
-    }
+    margin-top: 2em;
 
     @include screen('mobile') {
         margin-top: 0;
@@ -35,6 +31,16 @@
     }
 
     
+}
+.mp_logo{
+    text-align: center;
+    @include screen('tablet'){
+        display: none;
+    }
+    img{
+        width: 450px;
+        height: auto;
+    }
 }
 
 .search_block {

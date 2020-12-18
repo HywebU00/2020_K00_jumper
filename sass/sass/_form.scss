@@ -663,6 +663,7 @@ abbr[title] {
                 content: "熱門關鍵字：";
                 color: $color-word-light;
                 float: left;
+                font-weight: bold;
             }
             li {
                 //margin: 0 .6em 0 0;
@@ -672,6 +673,7 @@ abbr[title] {
                     content: "、";
                     display: inline-block;
                     margin-right: -2px;
+                    color:$color-word-light;
                 }
                 &:last-of-type{
                     &:after{
@@ -680,7 +682,7 @@ abbr[title] {
                 }
             }
             a {
-                color:$color-word;
+                color:$color-word-light;
                 &:hover,
                 &:focus {
                     text-decoration: underline;

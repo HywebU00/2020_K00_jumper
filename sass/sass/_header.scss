@@ -33,10 +33,15 @@
         max-width: 100%;
         overflow: visible;
         position: relative; // menu
-        padding-top: 8px;
+        //padding-top: 8px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         @include gutter();
         @include screen('mobile'){
             padding: 0;
+            display: block;
         }
         .sidebarCtrl {
             display: none;
@@ -64,32 +69,14 @@
         .accesskey {
             color: #1b1b1b;
         }
-        // search
-        .searchCtrl {
-            display: none;
-            right: 0px;
-            font-size: 0em;
-            @extend %mobileCtrlBtn;
-            &:before {
-                width: 40px;
-                height: 40px;
-                background: url(../images/basic/icon_search.png) no-repeat center center;
-                background-size: 32px;
-                opacity: .6;
-                content: "";
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                display: block;
-            }
-        }
     }
     h1 {
         width: 220px;
-        height: 50px;
+        height: auto;
         margin: 0 0 0 20px;
         padding: 0;
-        float: left;
+        //float: left;
+        flex: 0 0 220px;
         @include box-sizing;
         a {
             display: inline-block;
@@ -140,31 +127,30 @@
     // 導覽列
     .navigation {
         //float: right;
+        flex: 1 1 auto;
         text-align: center;
+        font-size: .938em;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         >ul {
+
             display: inline-flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
             padding: 0;
             margin: 0;
-            font-size: .938em;
             list-style: none;
-            max-width: 800px;
-            height: 38px;
+            max-width: 520px;
+            height: 100%;
             overflow: hidden; 
-            &.left_nav {
-                display: inline-block;
-                // @include screen('mobile') {
-                //     display: none;
-                // }
+            @media screen and (max-width: 1200px){
+                max-width: 430px;
             }
-            @media screen and (max-width: 1170px){
-                max-width: 650px;
-            }
-            @media screen and (max-width: 1100px){
-                max-width: 550px;
-            }
-            @media screen and (max-width: 1030px){
-                max-width: 500px;
+             @media screen and (max-width: 1200px){
+                max-width: 430px;
             }
             @include screen('tablet') {
                 display: none;
@@ -172,18 +158,89 @@
 
         }
         li {
-            float: left;
-            margin: 0 .2em;
+            //float: left;
+            height: 100%;
             a {
-                display: inline-block;
-                padding: .5em;
+                display: flex;
+                align-items: center;
+                padding: .5em 1em;
                 text-decoration: none;
                 color: #f0f0f0;
+                height: 100%;
+                background: $secondaryColor;
+                transition: .3s;
                 &:hover {
+                    color: #fff;
+                    background: lighten($secondaryColor, 5);
+                }
+            }
+        }
+    }
+    .more_list_block{
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        @include screen('tablet'){
+            display: none;
+        }
+        .more{
+            height: 100%;
+            padding: .5em 1.5em .5em 1em;
+            border-radius: 0;
+            background: none;
+            position: relative;
+            margin:0;
+            border:none;
+            color:#ccc;
+            background: $secondaryColor;
+            &:hover{
+                color: #fff;
+                background: lighten($secondaryColor, 5);
+            }
+            &:before{
+                content:"";
+                position: absolute;
+                right: .5em;
+                top: calc(50% - 6px);
+                display: block;
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-width: 1px 1px 0 0;
+                border-style: solid;
+                border-color: #ccc;
+                transform: rotate(135deg);  
+            }
+        }
+        .more_list{
+            position: absolute;
+            right:0;
+            top: 46px;
+            width: 180px;
+            background: $color-lightgray;
+            box-shadow: $box;
+            border-radius: $rounded-angle;
+            @include li-reset;
+            padding: .8em 0; 
+            li{
+                display: block;
+                width: 100%;
+                margin:0;
+                text-align: left;
+            }
+            a{
+                color: $color-word;
+                display: block;
+                padding: .5em 1em;
+                &:hover{
+                    background-color: $primaryColor;
                     color: #fff;
                 }
             }
         }
+    }
+    .nav_right{
+        flex: 0 0 auto;
     }
     // language
     .language {
@@ -191,7 +248,6 @@
         margin-top: 0px;
         margin-right: 10px;
         position: relative;
-        float: right;
         padding-top: .3em;
         font-size: 1em;
         @include screen('tablet') {
@@ -255,7 +311,6 @@
         display: inline-block;
         margin-top: 0px;
         margin-right: 10px;
-        float: right;
         @include screen('tablet') {
             margin-right: 10px;
             position: absolute;
