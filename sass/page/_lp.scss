@@ -66,6 +66,10 @@
             transition: all .5s;
             display: none;
         }
+        &.show_up{
+            top:0;
+            display: block;
+        }
 
         .close {
             position: absolute;

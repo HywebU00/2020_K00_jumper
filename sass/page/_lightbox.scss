@@ -12,7 +12,7 @@ body.fix {
 .exportstyle,
 .forwardstyle,
 .referencestyle,
-.mystudymenu_lightbox {
+.filter_lightbox {
     position: fixed;
     top: 0;
     right: 0;
@@ -38,8 +38,8 @@ body.fix {
             height: 100%;
         }
     }
-}
 
+}
 .close {
     background: url('../images/icon_close.svg') no-repeat center;
     background-size: contain;
@@ -48,6 +48,8 @@ body.fix {
     display: block;
     cursor: pointer;
 }
+
+
 
 .mainleftblock .lightboxstyle {
     .close {
@@ -449,3 +451,6 @@ body.fix {
     }
 
 }
+
+
+
