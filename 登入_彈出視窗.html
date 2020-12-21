@@ -57,7 +57,6 @@
             </div>
             <div class="menu_overlay"></div>
         </aside>
-
         <!-- 手機版menu 未登入狀態 language與logout button在menu上方 -->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
@@ -68,13 +67,11 @@
                     <button type="button" class="btn_login">登入</button>
                     <!-- 語言設定 start-->
                     <div class="language">
-
                         <select name="" id="">
                             <option value="">中文CH</option>
                             <option value="">英文EN</option>
                         </select>
                     </div>
-                    
                     <ul>
                         <li>圖書館服務
                             <ul>
@@ -88,7 +85,6 @@
                             </ul>
                         </li>
                     </ul>
-                    
                 </div>
             </div>
             <div class="menu_overlay"></div>
@@ -123,23 +119,23 @@
                     </div>
                 </nav>
                 <div class="nav_right">
-                        <!-- login start -->
-                        <div class="login loginbtn">
-                            <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
-                            <button type="button" class="btn">登入</button>
-                        </div>
-                        <div class="language">
-                            <a href="#">語言選擇</a>
-                            <ul style="display: none;">
-                                <li><a href="#">中文</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
-                        </div>
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
+                        <button type="button" class="btn">登入</button>
                     </div>
+                    <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul style="display: none;">
+                            <li><a href="#">中文</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- 登入燈箱start -->
-        <div class="login_lightbox" style="display: none;">
+        <div class="login_lightbox" style="display: block;">
             <div class="overlay"></div>
             <div class="loginblock">
                 <div class="close"></div>
@@ -180,6 +176,8 @@
                     </div>
                     <div class="divider">使用第三方登入</div>
                     <div class="social_slider">
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" title="前一則" style="display: block;">Previous</button>
+                        <button class="slick-next slick-arrow" aria-label="Next" type="button" title="後一則" style="display: block;">Next</button>
                         <a href="#"><img src="images/icon_google.svg" alt=""></a>
                         <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
                     </div>
@@ -205,7 +203,7 @@
         <!-- 登入燈箱end-->
         <div class="main mp">
             <section class="mp_logo">
-                    <img src="images/logo.png" alt="logo">
+                <img src="images/logo.png" alt="logo">
             </section>
             <section class="col-12 search_block">
                 <div class="container">
@@ -267,7 +265,6 @@
                                     <div class="check_grp form_inline">
                                         <label><input name="" type="checkbox" value="">集中式整合查詢</label>
                                         <label><input name="" type="checkbox" value="">分散式查詢<a href="#" class="database_link">(瀏覽資料庫)</a></label>
-
                                     </div>
                                 </form>
                                 <div class="keywordHot">

@@ -513,24 +513,25 @@ abbr[title] {
         width: 100%;
     }
     @include screen('mobile'){
-        margin:1em auto;
+        margin: 0 auto;
     }
 
     .tabSet {
         margin: 0 auto;
+        @include screen('mobile') {
+            background: $color-lightgray;
+        }
     }
 
     .tab-content {
         padding: 1.8em;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+        box-shadow: $box;
         width: 100%;
         border-radius: 0 0 $rounded-angle $rounded-angle;
         background:#fff;
-        // @include screen('mobile') {
-        //     box-shadow: none;
-        //     border: none;
-        //     padding: 0;
-        // }
+        @include screen('mobile') {
+            box-shadow: none;
+        }
 
         .check_grp {
             margin: .5em 0;

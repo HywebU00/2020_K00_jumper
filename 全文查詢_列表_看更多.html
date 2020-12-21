@@ -15,7 +15,7 @@
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
 
-<body>
+<body class="fix">
     <div class="wrapper">
         <!-- 手機版menu 已登入狀態 ".language"與".btn_logout"在menu底端 -->
         <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
@@ -78,6 +78,7 @@
                     </a>
                 </h1>
                 <nav class="navigation">
+                    
                     <ul>
                         <li><a href="#">首頁</a></li>
                         <li><a href="#">查看所有電子資源</a></li>
@@ -389,10 +390,11 @@
                             </div>
                             <button type="button" class="submit">確定</button>
                         </div>
-                        <div class="sort_list_more">
+                        <div class="filter_lightbox">
                                 <div class="overlay">
                                     <div class="checkblock">
-                                        div.
+                                        <div class="close"></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -555,8 +557,8 @@
                                     </div>
                                 </div>
                                 <!-- click ".filter_search_btn" 時 
-                                    1. ".filter_search" display:block 
-                                    2. css style="top:0" 
+                                    1. <.filter_search> addclass .show_up 
+                                    2. <body> addclass .fix 
                                 -->
                                 <!-- ".filter_search_btn" 是手機版才會出現的btn -->
                                 <button type="button" class="filter_search_btn">

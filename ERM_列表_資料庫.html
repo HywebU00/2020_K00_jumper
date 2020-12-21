@@ -95,19 +95,19 @@
                     </div>
                 </nav>
                 <div class="nav_right">
-                        <!-- login start -->
-                        <div class="login loginbtn">
-                            <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
-                            <button type="button" class="btn">個人專區</button>
-                        </div>
-                        <div class="language">
-                            <a href="#">語言選擇</a>
-                            <ul style="display: none;">
-                                <li><a href="#">中文</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
-                        </div>
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
+                        <button type="button" class="btn">個人專區</button>
                     </div>
+                    <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul style="display: none;">
+                            <li><a href="#">中文</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- 登入燈箱start -->
@@ -152,6 +152,8 @@
                     </div>
                     <div class="divider">使用第三方登入</div>
                     <div class="social_slider">
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" title="前一則" style="display: block;">Previous</button>
+                        <button class="slick-next slick-arrow" aria-label="Next" type="button" title="後一則" style="display: block;">Next</button>
                         <a href="#"><img src="images/icon_google.svg" alt=""></a>
                         <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
                     </div>
@@ -423,8 +425,8 @@
                                     </div>
                                 </div>
                                 <!-- click ".filter_search_btn" 時 
-                                    1. ".filter_search" display:block 
-                                    2. css style="top:0" 
+                                    1. <.filter_search> addclass .show_up 
+                                    2. <body> addclass .fix 
                                 -->
                                 <!-- ".filter_search_btn" 是手機版才會出現的btn -->
                                 <button type="button" class="filter_search_btn">
@@ -508,7 +510,6 @@
                                             <div>已購買，可取得全文</div>
                                         </li>
                                     </ul>
-                                    
                                 </div>
                             </div>
                             <div class="list_block">
