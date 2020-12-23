@@ -58,45 +58,37 @@ body.fix {
     }
 }
 
+%lightbox_block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #fff;
+    border-radius: $rounded-angle;
+    //overflow: auto;
+    box-shadow: $box;
+    @include screen('xs_mobile') {
+        padding: 40px 20px 20px;
+        width: calc(100% - 30px);
+        max-width: auto;
+        min-width: auto;
+        @include box-sizing;
+    }
+    .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+}
+
 // 登入
 .login_lightbox {
     .loginblock {
-        //max-width: 50vw;
+        @extend %lightbox_block;
         width: 520px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         padding: 30px 40px;
-        background-color: #fff;
-        border-radius: $rounded-angle;
-        overflow: auto;
-        box-shadow: $box;
-
-        // @media(max-width: 767px) {
-        //     max-width: 100vh;
-        //     top: 45%;
-        //     left: 25%;
-        //     transform: translate(-15%, -50%);
-        //     padding: 35px 20px 35px 20px;
-        // }
-        @include screen('xs_mobile') {
-            //transform: translate(0, 0);
-            padding: 40px 20px 20px;
-            // left: 0;
-            // top: 0;
-            //height: 100%;
-            width: calc(100% - 30px);
-            max-width: auto;
-            min-width: auto;
-            @include box-sizing;
-        }
-
-        .close {
-            position: absolute;
-            right: 15px;
-            top: 10px;
-        }
+        overflow-y: scroll;
 
         .name {
             color: $primaryColor;
@@ -117,18 +109,12 @@ body.fix {
         h2 {
             font-size: 1.125em;
             text-align: center;
-            // border-bottom: 2px solid $primaryColor;
-            // margin: 0px auto 20px;
-            // padding: 0 0 20px;
-            // color: $primaryColor;
         }
 
         p {
             text-align: center;
 
         }
-
-        a {}
 
         .form_content {
             text-align: center;
@@ -449,7 +435,20 @@ body.fix {
             line-height: 1.5;
         }
     }
+}
 
+.filter_lightbox{
+    .checkblock{
+        @extend %lightbox_block;
+        width: 350px;
+        max-height: 85vh;
+        height: 650px;
+    }
+}
+
+.scroll_content{
+    overflow-y: scroll;
+    height: 450px;
 }
 
 
