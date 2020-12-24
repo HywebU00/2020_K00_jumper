@@ -1,8 +1,8 @@
-body.fix {
-    height: 100%;
+.fix {
+    height: 100% !important;
     overflow: hidden !important;
-    width: 100%;
-    position: fixed;
+    width: 100% !important;
+    position: fixed !important;
 }
 
 //共用燈箱設定
@@ -19,8 +19,8 @@ body.fix {
     bottom: 0;
     left: 0;
     background-color: rgba(51, 51, 51, .4);
-    z-index: 99;
-    overflow-y: scroll;
+    z-index: 200;
+    overflow-y: auto;
 
     //display: none;
     .overlay {
@@ -71,7 +71,6 @@ body.fix {
     @include screen('xs_mobile') {
         padding: 40px 20px 20px;
         width: calc(100% - 30px);
-        max-width: auto;
         min-width: auto;
         @include box-sizing;
     }
@@ -438,18 +437,52 @@ body.fix {
 }
 
 .filter_lightbox{
+    overflow: hidden;
+    display: none;
     .checkblock{
+        position: relative;
         @extend %lightbox_block;
         width: 350px;
-        max-height: 85vh;
-        height: 650px;
+        //max-height: 85%;
+        height: 85%;
+        @include screen('tablet'){
+            width: 100%;
+            //max-height: 100%;
+            height: 100%;
+            border-radius: 0; 
+            padding:1em;
+        }
+        @include screen('xs_mobile'){
+
+        }
+        form{
+            height: 100%;
+        }
+        .btn_grp{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 0;
+            width: 100%;
+            @include screen('tablet'){
+                position: fixed;
+                background: $color-lightgray;
+                box-shadow: $box;
+                padding: .5em 0;
+            }     
+        }
+    }
+    .scroll_content{
+        overflow-y: scroll;
+        height: calc( 100% - 100px);
+        padding: 1em 0;
+        // @include screen('tablet'){
+        //     height: calc( 100% - 110px);
+        // }
     }
 }
 
-.scroll_content{
-    overflow-y: scroll;
-    height: 450px;
-}
+
 
 
 
