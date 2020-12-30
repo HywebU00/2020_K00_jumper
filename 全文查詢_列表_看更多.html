@@ -14,7 +14,7 @@
     <!-- favicon -->
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
-
+<!-- lightbox開啟時 <body> add classname "fix" -->
 <body class="fix">
     <div class="wrapper">
         <!-- 手機版menu 已登入狀態 ".language"與".btn_logout"在menu底端 -->
@@ -294,7 +294,8 @@
             </section>
             <section class="main_content">
                 <div class="container">
-                    <!-- ".filter_lightbox"(lightbox) 開啟的狀態下 ".filter_search"(後分類區塊) add classname "fix"-->
+                    <!-- 1. lightbox (".filter_lightbox") 開啟的狀態下 ".filter_search"(後分類區塊) add classname "fix"
+                        2. 關閉 lightbox (".filter_lightbox"),則 ".filter_search" remove classname "fix"-->
                     <div class="filter_search fix" style="display: block; top:0;">
                         <div class="close"></div>
                         <h2>調整查詢</h2>
@@ -417,8 +418,8 @@
                                             <li><a href="#">生物醫學<span>(5)</span></a></li>
                                         </ul>
                                         <!-- 點擊 看更多button 則 
-                                            1.".filter_lighten" display:block 
-                                            2."filter_search" add classname ".fix"-->
+                                            1.".filter_lightbox" display:block 
+                                            2."filter_search" add classname "fix"-->
                                         <button type="button" class="more">看更多</button>
                                     </div>
                                 </li>
@@ -463,81 +464,80 @@
                     <!-- 點擊看更多的彈出視窗 -->
                     <!-- ".filter_lightbox" 預設是 display:none -->
                     <div class="filter_lightbox" style="display:block">
-                        <div class="overlay">
-                            <div class="checkblock">
-                                <div class="close"></div>
-                                <h3>主題</h3>
-                                <form action="">
-                                    <div class="check_grp scroll_content">
-                                        <label>
-                                            <input type="checkbox" name="" value="" checked="">心理學<span>(11)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">商學企管<span>(15)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">電子電機/資訊電腦科學<span>(5)</span></label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">演講／講座／研討會
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">語言學習<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
-                                        </label>
-                                    </div>
-                                    <div class="btn_grp">
-                                        <button class="btn btn-reset">取消</button>
-                                        <button class="btn btn-submit">確定</button>
-                                    </div>
-                                </form>
-                            </div>
+                        <div class="overlay"></div>
+                        <div class="checkblock">
+                            <div class="close"></div>
+                            <h3>主題</h3>
+                            <form action="">
+                                <div class="check_grp scroll_content">
+                                    <label>
+                                        <input type="checkbox" name="" value="" checked="">心理學<span>(11)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">商學企管<span>(15)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">電子電機/資訊電腦科學<span>(5)</span></label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">演講／講座／研討會
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">語言學習<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
+                                    </label>
+                                </div>
+                                <div class="btn_grp">
+                                    <button class="btn btn-reset">取消</button>
+                                    <button class="btn btn-submit">確定</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <!-- 彈出視窗 END -->
@@ -634,7 +634,7 @@
                                 </div>
                                 <!-- click ".filter_search_btn" 時 
                                     1. <.filter_search> addclass .show_up 
-                                    2. <body> addclass .fix 
+                                    2. <body> addclass ".fix" 
                                 -->
                                 <!-- ".filter_search_btn" 是手機版才會出現的btn -->
                                 <button type="button" class="filter_search_btn">
