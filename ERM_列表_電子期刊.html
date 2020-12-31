@@ -298,10 +298,10 @@
                     -->
                     <button type="button" class="active_m">資料庫<span>(3)</span></button>
                     <ul class="tabs">
-                        <li class="active">
+                        <li>
                             <a href="#tab1">資料庫<span>(3)</span></a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="#tab2">電子期刊<span>(174)</span></a>
                         </li>
                         <li>
@@ -324,7 +324,7 @@
                             <!--click ".name" 則開啟 ".option_list"-->
                             <div class="option_list" style="display: none;">
                                 <ul>
-                                    <li><a href="#">日期晚到近</a></li>
+                                    <li><a href="#">核心資料庫</a></li>
                                     <li><a href="#">日期近到晚</a></li>
                                     <li><a href="#" class="here">熱門預約</a></li>
                                     <li><a href="#">熱門點閱</a></li>
@@ -332,77 +332,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="conditions">
-                            <h3>目前篩選條件</h3>
-                            <ul>
-                                <li>
-                                    <h4>主題</h4>
-                                    <ul>
-                                        <li>
-                                            <button type="button" class="del_btn">刪除</button>
-                                            <span>心理學</span>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="del_btn">刪除</button>
-                                            <span>社會科學</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h4>資料類型</h4>
-                                    <ul>
-                                        <li>
-                                            <button type="button" class="del_btn">刪除</button>
-                                            <span>電子期刊</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <button type="button" class="del_all">清除全部</button>
-                        </div>
-                        <div class="sort_list">
-                            <ul>
-                                <li>
-                                    <h3>
-                                        <a href="javascript:;" class="turnicon">主題</a>
-                                    </h3>
-                                    <div class="accordion_content" style="display: block">
-                                        <ul>
-                                            <li><a href="#">心理學<span>(11)</span></a></li>
-                                            <li><a href="#">商學企管<span>(15)</span></a></li>
-                                            <li><a href="#">電子電機/資訊電腦科學<span>(5)</span></a></li>
-                                            <li><a href="#">運動與休閒<span>(5)</span></a></li>
-                                            <li><a href="#">語言學習<span>(5)</span></a></li>
-                                            <li><a href="#">藝術人文<span>(5)</span></a></li>
-                                            <li><a href="#">歷史地理<span>(5)</span></a></li>
-                                            <li><a href="#">台灣研究<span>(5)</span></a></li>
-                                            <li><a href="#">物理光電/化學/數學<span>(5)</span></li>
-                                            <li><a href="#">生物醫學<span>(5)</span></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h3>
-                                        <a href="javascript:;">資料類型</a>
-                                    </h3>
-                                    <div class="accordion_content">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h3>
-                                        <a href="javascript:;">學院精選資料庫</a>
-                                    </h3>
-                                    <div class="accordion_content">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h3>
-                                        <a href="javascript:;">狀態</a>
-                                    </h3>
-                                    <div class="accordion_content">
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="focus">
+                            <h3>狀態</h3>
+                            <div>
+                                <ul>
+                                    <li><label for=""><input type="checkbox">JCR</label></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="search_result">
@@ -452,46 +388,54 @@
                                 <div class="list_num">1</div>
                                 <a class="bookmark"><img src="images/icon/icon_bookmark_saved.svg" alt=""></a>
                                 <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
+                                    <h3><a href="#"> Academy of Management Journal</a></h3>
                                     <ul>
                                         <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <div class="title">ISSN/ISBN：</div>
+                                            <div>0001-4273</div>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文收錄年代：</div>
+                                            <div>1990-2010</div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
+                                            <a href="#" class="link">F=7.41888</a>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="list_block">
                                 <div class="list_num">2</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark_saved.svg" alt=""></a>
                                 <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
+                                    <h3><a href="#"> Academy of Management Journal</a></h3>
                                     <ul>
                                         <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <div class="title">ISSN/ISBN：</div>
+                                            <div>0001-4273</div>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文收錄年代：</div>
+                                            <div>1990-2010</div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
+                                            <a href="#" class="link">F=7.41888</a>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                     </ul>
                                 </div>
@@ -500,46 +444,26 @@
                                 <div class="list_num">3</div>
                                 <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
+                                    <h3><a href="#"> Academy of Management Journal</a></h3>
                                     <ul>
                                         <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <div class="title">ISSN/ISBN：</div>
+                                            <div>0001-4273</div>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文收錄年代：</div>
+                                            <div>1990-2010</div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="list_block">
-                                <div class="list_num">1234</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
-                                <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
-                                    <ul>
-                                        <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <a href="#" class="link">F=7.41888</a>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                     </ul>
                                 </div>

@@ -605,6 +605,13 @@
             >li {
                 margin-bottom: .5em;
                 display: flex;
+                a{
+                   color:$linkColor;
+                   text-decoration: underline;
+                }
+                .btn_normal{
+                    margin:0 .5em;
+                }
 
                 .title {
                     flex: 0 0 auto;
@@ -612,6 +619,9 @@
                     line-height: 1.5;
                 }
             }
+        }
+        .link{
+            font-weight: bold;
         }
 
         %btn_icon{
