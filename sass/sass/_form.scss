@@ -524,13 +524,31 @@ abbr[title] {
     }
 
     .tab-content {
-        padding: 1.8em;
+        padding: 30px 25px;
         box-shadow: $box;
         width: 100%;
         border-radius: 0 0 $rounded-angle $rounded-angle;
         background:#fff;
         @include screen('mobile') {
             box-shadow: none;
+        }
+
+        &.scrolldown_fix{
+            position: fixed;
+            left: 0;
+            top: 55px;
+            z-index: 50;
+            border-radius: 0;
+            padding: 15px 20px;
+            .form_grp{
+                margin: 0 auto;
+                +a{
+                    display: none;
+                }
+            }
+            .check_grp{
+                display: none;
+            }
         }
 
         .check_grp {

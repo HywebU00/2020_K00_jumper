@@ -1,0 +1,30 @@
+// 手風琴
+.accordion_header {
+    position: relative;
+
+    >a {
+        display: block;
+        color: $color-word;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 3px;
+            border: 1px solid $color-dark;
+            width: 10px;
+            height: 10px;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            transform: rotate(225deg);
+            transition: .5s;
+        }
+
+        &.turnicon {
+            &:after {
+                transform: rotate(45deg);
+                top: 8px;
+            }
+        }
+    }
+}
