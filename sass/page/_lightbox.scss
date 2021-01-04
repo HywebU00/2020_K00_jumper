@@ -35,7 +35,6 @@ body.fix {
             height: 100%;
         }
     }
-
 }
 
 .close {
@@ -88,7 +87,8 @@ body.fix {
         color: $primaryColor;
         padding: .2em .5em;
         transition: .2s;
-        &:hover{
+
+        &:hover {
             background: $primaryColor;
             color: #fff;
         }
@@ -513,7 +513,8 @@ body.fix {
         height: 90%;
         padding: 10px 0;
         overflow: hidden;
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             height: 95%;
         }
 
@@ -543,9 +544,10 @@ body.fix {
     }
 
     .detail_top {
-        h3{
+        h3 {
             line-height: 1.5;
         }
+
         a {
             color: $linkColor;
             text-decoration: underline;
@@ -564,8 +566,9 @@ body.fix {
         }
 
         h4 {
-            flex: 0 0 150px;
+            flex: 0 0 170px;
             margin: .5em 0;
+            padding-right: 10px;
 
             @include screen('mobile') {
                 flex-basis: 100%;
@@ -581,9 +584,8 @@ body.fix {
                 color: $linkColor;
                 text-decoration: underline;
                 margin-right: .8em;
-                &:hover{
 
-                }
+                &:hover {}
             }
         }
     }
@@ -592,8 +594,10 @@ body.fix {
         @include li-reset;
         display: flex;
         flex-wrap: wrap;
+
         li {
-                margin:.5em;
+            margin: .5em;
+
             a {
                 display: flex;
                 justify-content: center;
@@ -606,15 +610,18 @@ body.fix {
                 background: #fff;
                 transition: .3s;
                 box-shadow: $box;
-                &:hover{
+
+                &:hover {
                     transform: scale(1.06);
                     background: $primaryColor;
-                    img{
+
+                    img {
                         opacity: 1;
-                        filter:invert(1);
+                        filter: invert(1);
                     }
-                    .function_name{
-                        color:#fff;
+
+                    .function_name {
+                        color: #fff;
                     }
                 }
             }
@@ -627,11 +634,11 @@ body.fix {
 
             img {
                 object-fit: contain;
-                opacity:.7;
+                opacity: .7;
                 transition: .3s;
             }
 
-            .function_name{
+            .function_name {
                 width: 100%;
                 text-align: center;
                 font-size: .875em;
@@ -642,15 +649,73 @@ body.fix {
 
         }
     }
-    .relative_link{
+
+    .relative_link {
+
         //@include li-reset;
-        li{
-            margin:.25em 0;
+        li {
+            margin: .25em 0;
         }
-        a{
+
+        a {
             color: $linkColor;
             text-decoration: underline;
 
+        }
+    }
+
+    .sourceblock {
+        border-top: 1px solid $color-line;
+        &:last-child{
+            border-bottom: 1px solid $color-line;
+        }
+        .accordion_header {
+            .accordion_toggle {
+                display: block;
+                width: 40px;
+                height: 30px;
+                position: absolute;
+                right: 0;
+                top: 1em;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                    border: 1px solid $color-dark;
+                    width: 10px;
+                    height: 10px;
+                    border-right-color: transparent;
+                    border-bottom-color: transparent;
+                    transform: rotate(225deg);
+                    transition: .5s;
+                }
+
+                &.turnicon {
+                    &:after {
+                        transform: rotate(45deg);
+                        top: 8px;
+                    }
+                }
+            }
+            .source{
+                padding: 1em 0;
+                line-height: 1.8;
+                a{
+                    color: $linkColor;
+                    text-decoration: underline;
+                }
+            }
+            .web_link{
+                display: block;                
+            }
+
+        }
+        .accordion_content{
+            background: $color-lightgray;
+            margin-bottom: 1em;
+            padding: 1em;
         }
     }
 

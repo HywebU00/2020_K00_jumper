@@ -185,7 +185,7 @@
                         <!-- 搜尋 -->
                         <div class="search_system">
                             <!-- 頁籤 -->
-                            <!-- 點擊 tabs > ul > li > a 對應的tab-content show-->
+                            <!-- 點擊 tabs > ul > li  > a 對應的tab-content show-->
                             <div class="tabSet">
                                 <ul class="tabs">
                                     <li>
@@ -294,16 +294,15 @@
             </section>
             <div class="main_tabSet">
                 <div class="container">
-                    <!-- 手機版頁籤變成下拉選單 button文字內容顯示選取中的選項；
-                        "ul.tabs"在手機版時預設是 display:none (為了不影響桌機版，寫在css中);
-                        click "button.active_m" 則 ".tabs" display:block;
+                    <!-- 手機版頁籤變成下拉選單 button文字內容顯示選取中的選項 
+                        click "button.active_m" 則 ".tabs" display:block
                     -->
                     <button type="button" class="active_m">資料庫<span>(3)</span></button>
                     <ul class="tabs">
-                        <li class="active">
+                        <li>
                             <a href="#tab1">資料庫<span>(3)</span></a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="#tab2">電子期刊<span>(174)</span></a>
                         </li>
                         <li>
@@ -326,7 +325,7 @@
                             <!--click ".name" 則開啟 ".option_list"-->
                             <div class="option_list" style="display: none;">
                                 <ul>
-                                    <li><a href="#">日期晚到近</a></li>
+                                    <li><a href="#">核心資料庫</a></li>
                                     <li><a href="#">日期近到晚</a></li>
                                     <li><a href="#" class="here">熱門預約</a></li>
                                     <li><a href="#">熱門點閱</a></li>
@@ -334,69 +333,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="conditions">
-                            <h3>目前篩選條件</h3>
-                            <ul>
-                                <li>
-                                    <h4>主題</h4>
-                                    <ul>
-                                        <li>
-                                            <button type="button" class="del_btn">刪除</button>
-                                            <span>心理學</span>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="del_btn">刪除</button>
-                                            <span>社會科學</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h4>資料類型</h4>
-                                    <ul>
-                                        <li>
-                                            <button type="button" class="del_btn">刪除</button>
-                                            <span>電子期刊</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <button type="button" class="del_all">清除全部</button>
-                        </div>
-                        <div class="sort_list">
-                            <ul>
-                                <li>
-                                    <h3 class="turnicon">主題</h3>
-                                    <div class="accordion_content" style="display: block">
-                                        <ul>
-                                            <li><a href="#">心理學<span>(11)</span></a></li>
-                                            <li><a href="#">商學企管<span>(15)</span></a></li>
-                                            <li><a href="#">電子電機/資訊電腦科學<span>(5)</span></a></li>
-                                            <li><a href="#">運動與休閒<span>(5)</span></a></li>
-                                            <li><a href="#">語言學習<span>(5)</span></a></li>
-                                            <li><a href="#">藝術人文<span>(5)</span></a></li>
-                                            <li><a href="#">歷史地理<span>(5)</span></a></li>
-                                            <li><a href="#">台灣研究<span>(5)</span></a></li>
-                                            <li><a href="#">物理光電/化學/數學<span>(5)</span></li>
-                                            <li><a href="#">生物醫學<span>(5)</span></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h3>資料類型</h3>
-                                    <div class="accordion_content">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h3>學院精選資料庫</h3>
-                                    <div class="accordion_content">
-                                    </div>
-                                </li>
-                                <li>
-                                    <h3>狀態</h3>
-                                    <div class="accordion_content">
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="focus">
+                            <h3>狀態</h3>
+                            <div>
+                                <ul>
+                                    <li><label for=""><input type="checkbox">JCR</label></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="search_result">
@@ -428,7 +371,7 @@
                                 </div>
                                 <!-- click ".filter_search_btn" 時 
                                     1. <.filter_search> addclass .show_up 
-                                    2. <body> addclass ".fix" 
+                                    2. <body> addclass .fix 
                                 -->
                                 <!-- ".filter_search_btn" 是手機版才會出現的btn -->
                                 <button type="button" class="filter_search_btn">
@@ -446,46 +389,54 @@
                                 <div class="list_num">1</div>
                                 <a class="bookmark"><img src="images/icon/icon_bookmark_saved.svg" alt=""></a>
                                 <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
+                                    <h3><a href="#"> Academy of Management Journal</a></h3>
                                     <ul>
                                         <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <div class="title">ISSN/ISBN：</div>
+                                            <div>0001-4273</div>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文收錄年代：</div>
+                                            <div>1990-2010</div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
+                                            <a href="#" class="link">F=7.41888</a>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="list_block">
                                 <div class="list_num">2</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark_saved.svg" alt=""></a>
                                 <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
+                                    <h3><a href="#"> Academy of Management Journal</a></h3>
                                     <ul>
                                         <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <div class="title">ISSN/ISBN：</div>
+                                            <div>0001-4273</div>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文收錄年代：</div>
+                                            <div>1990-2010</div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
+                                            <a href="#" class="link">F=7.41888</a>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
+                                        </li>
+                                        <li>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                     </ul>
                                 </div>
@@ -494,46 +445,26 @@
                                 <div class="list_num">3</div>
                                 <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
+                                    <h3><a href="#"> Academy of Management Journal</a></h3>
                                     <ul>
                                         <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <div class="title">ISSN/ISBN：</div>
+                                            <div>0001-4273</div>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文收錄年代：</div>
+                                            <div>1990-2010</div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="list_block">
-                                <div class="list_num">1234</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
-                                <div class="list_data">
-                                    <h3><a href="#">Columbia University 西文電子書 (IGP 平台)</a></h3>
-                                    <button type="button" class="btn_primary recommend">推薦</button>
-                                    <button type="button" class="btn_primary new">新進資源</button>
-                                    <button type="button" class="btn_primary test">試用</button>
-                                    <ul>
-                                        <li>
-                                            <div class="title">資源簡介：</div>
-                                            <div>哥倫比亞大學出版社 Columbia University Press 創立於 1893 年，是美國第四老的大學附屬出版社，其目的為推廣 經濟上、歷史上、文學上、科學上及其他學科之研究，也鼓勵文學創作之出版能涵蓋原始研究文獻。出版...<a href="#" class="more">詳全文</a></div>
+                                            <a href="#" class="link">F=7.41888</a>
                                         </li>
                                         <li>
-                                            <div class="title">語言別：</div>
-                                            <div>英文</div>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                         <li>
-                                            <div class="title">資料來源：</div>
-                                            <div>已購買，可取得全文</div>
+                                            <div class="title">全文：</div>
+                                            <div>1990-2010 收錄在<a href="#"> Wiley Library</a><button type="button" class="btn_normal">期刊連結</button></div>
                                         </li>
                                     </ul>
                                 </div>
@@ -574,111 +505,185 @@
                     <h2 class="title">詳細書目</h2>
                     <div class="scroll_content">
                         <section class="detail_top">
-                            <h3>AGRICOLA--ProQuest（農業/植物學資料庫</h3>
-                            <div>資源連結：
-                                <a href="https://search.proquest.com/?accountid=10046&selectids=1007418">https://search.proquest.com/?accountid=10046&selectids=1007418</a>
+                            <h3>Academy of Management Journal</h3>
+                        </section>
+                        <section class="sourceblock">
+                            <!-- 手風琴開啟狀態:
+                                1. ".accordion_toggle" add classname "turnicon" 
+                            -->
+                            <div class="accordion_header">
+                                <a href="#" class="accordion_toggle turnicon"></a>
+                                <div class="source">資料來源：<a href="#">EBSCOhost-ESC (Business Source Complete)</a>
+                                    <a href="#" class="web_link">https://search.proquest.com/?accountid=10046&selectids=1007418</a>
+                                </div>
+                                
+                            </div>
+                            <div class="accordion_content">
+                                <h3>書目資料</h3>
+                                <ul class="info_list">
+                                    <li>
+                                        <h4>ISSN：</h4>
+                                        <div class="content">0001-4273</div>
+                                    </li>
+                                    <li>
+                                        <h4>代理商/出版商：</h4>
+                                        <div class="content">2014-10-31
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>更新日期：</h4>
+                                        <div class="content">2014-10-31</div>
+                                    </li>
+                                    <li>
+                                        <h4>全文收錄年代：</h4>
+                                        <div class="content">Mar 1963-</div>
+                                    </li>
+                                    <li>
+                                        <h4>期刊聯合目錄：</h4>
+                                        <div class="content"><a href="#">期刊聯合目錄</a></div>
+                                    </li>
+                                    <li>
+                                        <h4>CONCERT 連結：</h4>
+                                        <div class="content"><a href="# ">CONCERT電子期刊聯合目錄</a></div>
+                                    </li>
+                                    <li>
+                                        <h4>JCR Impact Factor：</h4>
+                                        <div class="content"><a href="#">7.417</a></div>
+                                    </li>
+                                </ul>
+                                <h3>功能列</h3>
+                                <ul class="info_icon">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_bookmark_normal.svg" alt="">
+                                            </div>
+                                            <span class="function_name">加入書籤</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_mail.svg" alt="">
+                                            </div>
+                                            <span class="function_name">Email</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_print.svg" alt="">
+                                            </div>
+                                            <span class="function_name">列印</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_forum.svg" alt="">
+                                            </div>
+                                            <span class="function_name">報名資料庫說明會</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_questionnaire.svg" alt="">
+                                            </div>
+                                            <span class="function_name">填寫問卷</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </section>
-                        <hr>
-                        <section>
-                            <h3>書目資料</h3>
-                            <ul class="info_list">
-                                <li>
-                                    <h4>語文別：</h4>
-                                    <div class="content">英文</div>
-                                </li>
-                                <li>
-                                    <h4>公告資訊：</h4>
-                                    <div class="content">「108年度購置教學研究相關圖書儀器及設備改善計畫」教育部經費補助訂購
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4>資料類型：</h4>
-                                    <div class="content"><a href="#">索引/摘要</a><a href="#">電子資料庫</a></div>
-                                </li>
-                                <li>
-                                    <h4>主題：</h4>
-                                    <div class="content"><a href="#">生物醫學</a></div>
-                                </li>
-                                <li>
-                                    <h4>資源簡介：</h4>
-                                    <div class="content">GRICOLA 農業學索摘資料庫是目前全球針對農業學相關領域收錄最齊全之索摘型電子資料庫，透過美國國家農業圖書館所編輯之專業資訊，是農業領域研究者必備之專業資料庫。主題涵蓋農業學、植物學、化學、自然資源、動物學和生態學等，收錄1970年迄今，超過850種期刊、圖書、會議論文、研究報告、政府文件和視聽媒體、電腦軟體等資料，以英語資料為主，但歐、亞和非洲系語言資料亦佔1/3以上。此資料庫亦可視為美國國家農業圖書館 (U.S. National Agricultural Library, NAL) 之館藏資料庫；每月更新。<br />主題範疇：農業學、動物科學、園藝和水文學。</div>
-                                </li>
-                            </ul>
-                        </section>
-                        <hr>
-                        <section>
-                            <h3>功能列</h3>
-                            <ul class="info_icon">
-                                <li>
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <img src="images/icon/icon_bookmark_normal.svg" alt="">
+                         <section class="sourceblock">
+                            <!-- 手風琴關閉狀態:
+                                1. ".accordion_toggle" 沒有".turnicon" 
+                                2. ".accordion_content" style="display: none"-->
+                            <div class="accordion_header">
+                                <a href="#" class="accordion_toggle"></a>
+                                <div class="source">資料來源：<a href="#">EBSCOhost-ESC (Business Source Complete)</a>
+                                    <a href="#" class="web_link">https://search.proquest.com/?accountid=10046&selectids=1007418</a>
+                                </div>
+                                
+                            </div>
+                            <div class="accordion_content" style="display: none;">
+                                <h3>書目資料</h3>
+                                <ul class="info_list">
+                                    <li>
+                                        <h4>ISSN：</h4>
+                                        <div class="content">0001-4273</div>
+                                    </li>
+                                    <li>
+                                        <h4>代理商/出版商：</h4>
+                                        <div class="content">2014-10-31
                                         </div>
-                                        <span class="function_name">加入書籤</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <img src="images/icon/icon_mail.svg" alt="">
-                                        </div>
-                                        <span class="function_name">Email</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <img src="images/icon/icon_print.svg" alt="">
-                                        </div>
-                                        <span class="function_name">列印</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <img src="images/icon/icon_forum.svg" alt="">
-                                        </div>
-                                        <span class="function_name">報名資料庫說明會</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <img src="images/icon/icon_questionnaire.svg" alt="">
-                                        </div>
-                                        <span class="function_name">填寫問卷</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h3>資料庫類型</h3>
-                            <button type="button" class="btn_primary">全文查詢</button>
-                            <button type="button" class="btn_primary">購買</button>
-                            <button type="button" class="btn_primary">可校外連線</button>
-                        </section>
-                        <section>
-                            <h3>相關檔案</h3>
-                            <ul class="relative_link">
-                                <li><a href="#">105 (下) 教育訓練影音檔</a></li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h3>相關連結</h3>
-                            <ul class="relative_link">
-                                <li><a href="#">期刊聯合目錄</a></li>
-                                <li><a href="#">CONCERT 電子期刊聯合目錄</a></li>
-                                <li><a href="#">命令列檢索</a></li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h3>相關資料庫</h3>
-                            <ul class="relative_link">
-                                <li><a href="#">Webpat 全球專利資訊網</a></li>
-                                <li><a href="#">Journal Citation Reports (JCR Web)</a></li>
-                                <li><a href="#">Web of Science (WOS) - SCIE & SSCI</a></li>
-                            </ul>
+                                    </li>
+                                    <li>
+                                        <h4>更新日期：</h4>
+                                        <div class="content">2014-10-31</div>
+                                    </li>
+                                    <li>
+                                        <h4>全文收錄年代：</h4>
+                                        <div class="content">Mar 1963-</div>
+                                    </li>
+                                    <li>
+                                        <h4>期刊聯合目錄：</h4>
+                                        <div class="content"><a href="#">期刊聯合目錄：</a></div>
+                                    </li>
+                                    <li>
+                                        <h4>CONCERT 連結：</h4>
+                                        <div class="content"><a href="# ">CONCERT電子期刊聯合目錄</a></div>
+                                    </li>
+                                    <li>
+                                        <h4>JCR Impact Factor:</h4>
+                                        <div class="content"><a href="#">7.417</a></div>
+                                    </li>
+                                </ul>
+                                <h3>功能列</h3>
+                                <ul class="info_icon">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_bookmark_normal.svg" alt="">
+                                            </div>
+                                            <span class="function_name">加入書籤</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_mail.svg" alt="">
+                                            </div>
+                                            <span class="function_name">Email</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_print.svg" alt="">
+                                            </div>
+                                            <span class="function_name">列印</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_forum.svg" alt="">
+                                            </div>
+                                            <span class="function_name">報名資料庫說明會</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <img src="images/icon/icon_questionnaire.svg" alt="">
+                                            </div>
+                                            <span class="function_name">填寫問卷</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </section>
                     </div>
                 </div>

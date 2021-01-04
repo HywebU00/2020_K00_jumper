@@ -60,16 +60,18 @@
             transition: all .5s;
             display: none;
         }
-        &.fix{
-            @include screen('tablet'){
-                height: 100% ;
+
+        &.fix {
+            @include screen('tablet') {
+                height: 100%;
                 overflow: hidden !important;
                 width: 100% !important;
                 position: fixed !important;
-            }  
+            }
         }
-        &.show_up{
-            top:0;
+
+        &.show_up {
+            top: 0;
             display: block;
         }
 
@@ -83,6 +85,7 @@
                 display: block;
             }
         }
+
         h4 {
             color: $color-word-light;
             margin: .5em 0;
@@ -237,7 +240,7 @@
                 padding-bottom: 1em;
             }
 
-            button{
+            button {
                 float: right;
             }
         }
@@ -279,17 +282,8 @@
 
             }
 
-            >ul {
-                >li {
-                    padding: 1em 0;
-                    border-bottom: 1px solid $color-line;
-                }
-            }
-
             .accordion_content {
                 overflow: hidden;
-
-                &.open {}
 
                 ul {
                     padding-left: .5em;
@@ -316,9 +310,51 @@
                     float: right;
                 }
             }
+
+            >ul {
+                >li {
+                    padding: 1em 0;
+                    border-bottom: 1px solid $color-line;
+                }
+            }
+
+
         }
     }
 }
+
+// 手風琴
+.accordion_header {
+    position: relative;
+
+    >a {
+        display: block;
+        color: $color-word;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 3px;
+            border: 1px solid $color-dark;
+            width: 10px;
+            height: 10px;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            transform: rotate(225deg);
+            transition: .5s;
+        }
+
+        &.turnicon {
+            &:after {
+                transform: rotate(45deg);
+                top: 8px;
+            }
+        }
+    }
+}
+
+
 
 .search_result {
     flex-basis: calc(100% - 270px);
@@ -340,35 +376,7 @@
         }
     }
 
-    .accordion_header {
-        position: relative;
 
-        &:after {
-            content: '';
-            position: absolute;
-            right: 8px;
-            top: 3px;
-            border: 1px solid $color-dark;
-            width: 10px;
-            height: 10px;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            transform: rotate(225deg);
-            transition: .5s;
-        }
-
-        a {
-            color: $color-word;
-
-            &.turnicon {
-                &:after {
-                    transform: rotate(45deg);
-                    top: 8px;
-                }
-            }
-        }
-
-    }
 
     .content_block {
         display: flex;
@@ -605,12 +613,14 @@
             >li {
                 margin-bottom: .5em;
                 display: flex;
-                a{
-                   color:$linkColor;
-                   text-decoration: underline;
+
+                a {
+                    color: $linkColor;
+                    text-decoration: underline;
                 }
-                .btn_normal{
-                    margin:0 .5em;
+
+                .btn_normal {
+                    margin: 0 .5em;
                 }
 
                 .title {
@@ -620,13 +630,15 @@
                 }
             }
         }
-        .link{
+
+        .link {
             font-weight: bold;
         }
 
-        %btn_icon{
-            padding-left: 2em; 
-            &:before{
+        %btn_icon {
+            padding-left: 2em;
+
+            &:before {
                 content: "";
                 display: inline-block;
                 position: absolute;
@@ -638,50 +650,60 @@
                 background-repeat: no-repeat;
                 background-position: center;
             }
-            
+
         }
 
-        button{
+        button {
             padding: .2em .5em;
             font-size: .938em;
             min-width: auto;
             position: relative;
             margin-bottom: .5em;
-            &.btn_normal{
+
+            &.btn_normal {
                 background: #fff;
                 border: 1px solid $linkColor;
-                color:$linkColor;
+                color: $linkColor;
             }
-            &.btn_primary{
+
+            &.btn_primary {
                 background: #fff;
                 border: 1px solid $primaryColor;
-                color:$primaryColor;
+                color: $primaryColor;
             }
-            &.full-text{
+
+            &.full-text {
                 @extend %btn_icon;
-                &:before{
+
+                &:before {
                     background-image: url(../images/full_text_finder.png);
                 }
             }
-            &.recommend{
+
+            &.recommend {
                 @extend %btn_icon;
-                &:before{
+
+                &:before {
                     background-image: url(../images/icon_recommend.svg);
                 }
             }
-            &.new{
+
+            &.new {
                 @extend %btn_icon;
-                &:before{
+
+                &:before {
                     background-image: url(../images/icon_new.svg);
                 }
             }
-            &.test{
+
+            &.test {
                 @extend %btn_icon;
-                &:before{
+
+                &:before {
                     background-image: url(../images/icon_view.svg);
                 }
             }
-            
+
         }
 
         .keyword {
