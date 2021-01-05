@@ -514,6 +514,7 @@ abbr[title] {
     }
     @include screen('mobile'){
         margin: 0 auto;
+        min-height: 4.6em;
     }
 
     .tabSet {
@@ -530,7 +531,11 @@ abbr[title] {
         border-radius: 0 0 $rounded-angle $rounded-angle;
         background:#fff;
         @include screen('mobile') {
+            padding: 20px 25px;
             box-shadow: none;
+        }
+        @include screen('xs_mobile'){
+            padding: 20px 15px;
         }
 
         &.scrolldown_fix{
@@ -540,6 +545,9 @@ abbr[title] {
             z-index: 50;
             border-radius: 0;
             padding: 15px 20px;
+            @include screen('mobile') {
+                box-shadow: $box;
+            }
             .form_grp{
                 margin: 0 auto;
                 +a{
@@ -548,6 +556,9 @@ abbr[title] {
             }
             .check_grp{
                 display: none;
+            }
+            .recent_searches{
+                display: none !important;
             }
         }
 

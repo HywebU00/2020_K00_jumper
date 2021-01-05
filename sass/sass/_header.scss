@@ -134,8 +134,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include screen('mobile') {
+            display: none;
+        }
         >ul {
-
             display: inline-flex;
             flex-wrap: nowrap;
             justify-content: flex-end;
@@ -249,7 +251,7 @@
         margin-top: 0px;
         margin-right: 10px;
         position: relative;
-        padding-top: .3em;
+        //padding-top: .3em;
         font-size: 1em;
         @include screen('tablet') {
             display: none;
@@ -330,6 +332,7 @@
             border:none;
             font-size: .938em;
             font-weight: bold;
+            margin: 0;
             @include btn_setting($btn-bg:$primaryColor, $btn-font-color:#fff);
             @include screen('mobile') {
                 min-width: auto;

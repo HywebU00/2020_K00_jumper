@@ -578,6 +578,7 @@
             >li {
                 margin-bottom: .5em;
                 display: flex;
+                flex-wrap: wrap;
 
                 a {
                     color: $linkColor;
@@ -600,31 +601,19 @@
             font-weight: bold;
         }
 
-        %btn_icon {
-            padding-left: 2em;
-
-            &:before {
-                content: "";
-                display: inline-block;
-                position: absolute;
-                left: 8px;
-                top: 4px;
-                height: 18px;
-                width: 18px;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-        }
-
         button {
             padding: .2em .5em;
             font-size: .938em;
             min-width: auto;
             position: relative;
             margin-bottom: .5em;
-
+            display: inline-flex;
+            align-items: center;
+            >img{
+                width: auto;
+                height: 18px;
+                margin-right: .3em;
+            }
             &.btn_normal {
                 background: #fff;
                 border: 1px solid $linkColor;
@@ -635,38 +624,6 @@
                 background: #fff;
                 border: 1px solid $primaryColor;
                 color: $primaryColor;
-            }
-
-            &.full-text {
-                @extend %btn_icon;
-
-                &:before {
-                    background-image: url(../images/full_text_finder.png);
-                }
-            }
-
-            &.recommend {
-                @extend %btn_icon;
-
-                &:before {
-                    background-image: url(../images/icon_recommend.svg);
-                }
-            }
-
-            &.new {
-                @extend %btn_icon;
-
-                &:before {
-                    background-image: url(../images/icon_new.svg);
-                }
-            }
-
-            &.test {
-                @extend %btn_icon;
-
-                &:before {
-                    background-image: url(../images/icon_view.svg);
-                }
             }
 
         }
