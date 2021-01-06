@@ -244,7 +244,74 @@
     }
     .nav_right{
         flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include screen('tablet') {
+            display: none;
+        }
+        
     }
+    //會員登入後
+    .member_record{
+        display: flex;
+        align-items: center;
+        margin: 0 .5em;
+        position: relative;
+        height: 100%;
+    }
+    .member_name{
+       color:#fff; 
+       font-size: .938em;
+       margin-right: .5em;
+    }
+    .btn_member{
+        width: 32px;
+        height:32px;
+        padding:0;
+        border-radius: 30px;
+        border-color: $primaryColor;
+        min-width: auto;
+        overflow: hidden;
+        background: $primaryColor;
+        position: relative;
+        img{
+            position: absolute;
+            bottom: -1px;
+            left: 5%;
+            width: 90%;
+            vertical-align: middle;
+            filter:invert(1);
+        }
+   }
+   .member_data{
+        position: absolute;
+        right: 0;
+        top: 55px;
+        width: 150px;
+        background: #fff;
+        border-radius: $rounded-angle;
+        box-shadow: $box;
+        overflow: hidden;
+        ul{
+            @include li-reset;
+        }
+        li{
+            border-bottom: 1px solid $color-line;
+            &:last-child{
+                border: none;
+            }
+            a{
+                display: block;
+                padding:.5em 1em;
+                color: $color-word;
+                font-size: .938em;
+                &:hover{
+                    background: $color-lightgray;
+                }
+            }
+        }
+   }
     // language
     .language {
         display: inline-block;
@@ -253,9 +320,6 @@
         position: relative;
         //padding-top: .3em;
         font-size: 1em;
-        @include screen('tablet') {
-            display: none;
-        }
         select{
             background: rgba(0,0,0,0) url(../images/icon/icon_arrow_down_invert.svg) no-repeat right 5px center;
             color: #fff; 
@@ -320,7 +384,6 @@
             right: 10px;
             top: 10px;
             margin: 0;
-            display: none;
         }
         @include screen('mobile') {
             

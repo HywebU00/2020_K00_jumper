@@ -19,6 +19,7 @@
     <div class="wrapper">
         <!-- 手機版menu 已登入狀態 ".language"與".btn_logout"在menu底端 -->
         <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
+        <!-- 手機版menu開啟時，<body> add class ".fix" (防止body滾動）-->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
                 <div class="logo">
@@ -95,17 +96,24 @@
                     </div>
                 </nav>
                 <div class="nav_right">
-                    <!-- login start -->
-                    <div class="login loginbtn">
-                        <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
-                        <button type="button" class="btn">個人專區</button>
-                    </div>
                     <div class="language">
                         <a href="#">語言選擇</a>
                         <ul style="display: none;">
                             <li><a href="#">中文</a></li>
                             <li><a href="#">English</a></li>
                         </ul>
+                    </div>
+                    <!-- 會員已登入狀態 -->
+                    <div class="member_record">
+                        <div class="member_name">王小明</div>
+                        <!-- click ".btn_member" 則 ".member_data" display:block -->
+                        <button type="button" class="btn_member"><img src="images/icon/icon_user.svg" alt=""></button>
+                        <div class="member_data" style="display: none;">
+                            <ul>
+                                <li><a href="#">個人專區</a></li>
+                                <li><a href="#" class="signout">登出</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

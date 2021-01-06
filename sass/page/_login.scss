@@ -3,10 +3,11 @@
 		.loginblock{
 			padding: 0;
 			width: 1040px;
-			//min-height: 630px;
+			min-height: 630px;
 			position: relative;
 			@include screen('tablet'){
 				width: 520px;
+				min-height: auto;
 			}
 			@include screen('xs_mobile'){
 			    width: calc(100% - 30px);
@@ -68,8 +69,10 @@
 			@include make-md-column(6);
 			@include make-lg-column(6);
 			padding:30px 40px;
+			min-height: 630px;
 			@include screen('tablet'){
 				padding-bottom: 0;
+				min-height: auto;
 			}
 			@include screen('xs_mobile'){
 				padding: 20px 30px 0;
