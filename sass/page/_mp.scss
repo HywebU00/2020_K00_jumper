@@ -10,14 +10,11 @@
 }
 
 .mp {
-    margin-top: 1em;
-
-    @include screen('mobile') {
-        margin-top: 0;
-    }
+   
 
 }
 .mp_logo{
+    padding-top: 1em;
     text-align: center;
     @include screen('tablet'){
         display: none;
@@ -222,7 +219,7 @@
 
 
 .feature_block {
-    margin: 2em 0;
+    margin: 0 0 2em 0;
     @include gutter();
 
     @include screen('mobile') {

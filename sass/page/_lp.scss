@@ -469,6 +469,15 @@
         padding: 0 15px;
     }
 }
+.nodata{
+    text-align: center;
+    min-height: 150px;
+    padding: 30px 15px;
+    color: $color-word-light;
+    @include screen('tablet') {
+        min-height: calc(100vh - 600px);
+    }
+}
 
 .list_block {
     display: flex;
@@ -763,10 +772,13 @@
 
     .list_block {
         .list_data {
-            padding-left: 55px !important;
+            flex-basis: 100%;
+            max-width: 100%;
+            padding-left: 55px;
+
 
             @include screen('mobile') {
-                padding-left: 0 !important;
+                padding-left: 0;
             }
 
         }
