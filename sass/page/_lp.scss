@@ -341,8 +341,83 @@
         }
     }
 
+    .browse{
+        margin-bottom: 1em;
+        .tab-content{
+            padding: 1em;
+            background: #fff;
+            overflow:hidden;
+            ul{
+                @include li-reset;
+            }
+            li{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 2px 0;
+            }
+            .subtitle{
+                flex-basis: 100px;
+                margin-bottom: 4px; 
+            }
+            .items_inline, .items{
+                a{
+                    color: $linkColor;
+                    text-decoration: underline;
+                    &:hover{
+                        color: darken($linkColor, 15);
+                    }
+                }
+            }
 
-
+            .items_inline{
+                li{
+                    display: inline-block;
+                }   
+            }
+            .items{
+                max-height: 165px;
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    flex-basis: calc(100% / 3);
+                    padding: 5px 0;
+                }
+                &.open{
+                    max-height: 100%;
+                }
+            }
+            .btn_switch{
+                position: relative;
+                display: block;
+                margin: .5em auto;
+                background: none;
+                color:$color-word;
+                border:none;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    margin-left: -3px;
+                    border-width: 2px 0 0 2px;
+                    border-color: #333;
+                    border-style: solid;
+                    width: 6px;
+                    height: 6px;
+                    transform: rotate(225deg);
+                    transition: .5s;
+                }
+                &.close{
+                    &:after{
+                        content: '';
+                        top: 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
     .content_block {
         display: flex;
         flex-wrap: wrap;
@@ -608,7 +683,9 @@
             >li {
                 margin-bottom: .5em;
                 display: flex;
-                flex-wrap: wrap;
+                @include screen('mobile'){
+                   flex-wrap: wrap; 
+                }
 
                 a {
                     color: $linkColor;
@@ -871,9 +948,9 @@
     }
 }
 
+//縮小查詢--縮小年代
 .publication_year {
-    //display: flex;
-
+    
     input {
         outline: 0;
     }
