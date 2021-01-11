@@ -24,7 +24,7 @@ $color-error: #FF7171;
 $color-warning: #F2AC57;
 // 連結顏色
 $aColor: $primaryColor;
-$aHover: lighten($aColor, 10);
+$aHover: darken($aColor, 10);
 
 // 表單focus顏色
 $form-focus: $primaryColor; //表單

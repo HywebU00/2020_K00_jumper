@@ -14,12 +14,12 @@
     <!-- favicon -->
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
+<!-- lightbox開啟時 <body> add classname "fix" -->
 
-<body>
+<body class="fix">
     <div class="wrapper">
         <!-- 手機版menu 已登入狀態 ".language"與".btn_logout"在menu底端 -->
         <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
-        <!-- 手機版menu開啟時，<body> add class ".fix" (防止body滾動）-->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
                 <div class="logo">
@@ -119,6 +119,7 @@
             </div>
         </header>
         <!-- 登入燈箱start -->
+        <!-- 登入燈箱display:block時，<body> addclass .fix -->
         <div class="login_lightbox" style="display: none;">
             <div class="overlay"></div>
             <div class="loginblock">
@@ -160,6 +161,8 @@
                     </div>
                     <div class="divider">使用第三方登入</div>
                     <div class="social_slider">
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" title="前一則" style="display: block;">Previous</button>
+                        <button class="slick-next slick-arrow" aria-label="Next" type="button" title="後一則" style="display: block;">Next</button>
                         <a href="#"><img src="images/icon_google.svg" alt=""></a>
                         <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
                     </div>
@@ -299,7 +302,9 @@
             </section>
             <section class="main_content">
                 <div class="container">
-                    <div class="filter_search">
+                    <!-- 1. lightbox (".filter_lightbox") 開啟的狀態下 ".filter_search"(後分類區塊) add classname "fix"
+                        2. 關閉 lightbox (".filter_lightbox"),則 ".filter_search" remove classname "fix"-->
+                    <div class="filter_search fix" style="display: block; top:0;">
                         <div class="close"></div>
                         <h2>調整查詢</h2>
                         <!-- ".filter_search > .option" 手機版才會出現，和搜尋結果(".search_result")下的".option"功能相同-->
@@ -405,7 +410,6 @@
                                 </li>
                                 <li>
                                     <h3>
-                                        <!-- ".accordion_content" 展開狀態下 標題<a> add classname "turnicon"-->
                                         <a href="javascript:;" class="turnicon">主題</a>
                                     </h3>
                                     <div class="accordion_content" style="display: block">
@@ -421,6 +425,9 @@
                                             <li><a href="#">物理光電/化學/數學<span>(5)</span></li>
                                             <li><a href="#">生物醫學<span>(5)</span></a></li>
                                         </ul>
+                                        <!-- 點擊 看更多button 則 
+                                            1.".filter_lightbox" display:block 
+                                            2."filter_search" add classname "fix"-->
                                         <button type="button" class="more">看更多</button>
                                     </div>
                                 </li>
@@ -462,6 +469,86 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- 點擊看更多的彈出視窗 -->
+                    <!-- ".resource_lightbox" 預設是 display:none -->
+                    <div class="resource_lightbox" style="display:block">
+                        <div class="overlay"></div>
+                        <div class="resourceblock">
+                            <div class="close"></div>
+                            <h3>主題</h3>
+                            <form action="">
+                                <div class="check_grp scroll_content">
+                                    <label>
+                                        <input type="checkbox" name="" value="" checked="">心理學<span>(11)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">商學企管<span>(15)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">電子電機/資訊電腦科學<span>(5)</span></label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">演講／講座／研討會
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">語言學習<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
+                                    </label>
+                                </div>
+                                <div class="btn_grp">
+                                    <button class="btn btn-reset">取消</button>
+                                    <button class="btn btn-submit">確定</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 彈出視窗 END -->
                     <div class="search_result">
                         <h2>查詢結果</h2>
                         <div class="academic_vocabulary">
@@ -471,7 +558,7 @@
                             -->
                             <!-- 第一個".accordion_content" 預設展開 -->
                             <h3 class="accordion_header ">
-                                <a href="javascript:;" class="turnicon">學術詞彙解釋</a>
+                                <a href="#" class="turnicon">學術詞彙解釋</a>
                             </h3>
                             <div class="accordion_content" style="display:block">
                                 <div class="content_block">
@@ -503,7 +590,7 @@
                         </div>
                         <div class="relevant_info">
                             <h3 class="accordion_header">
-                                <a href="javascript:;" class="turnicon">相關資料庫</a>
+                                <a href="#" class="turnicon">相關資料庫</a>
                             </h3>
                             <div class="accordion_content">
                                 <ul>
@@ -515,7 +602,7 @@
                         </div>
                         <div class="relevant_info">
                             <h3 class="accordion_header">
-                                <a href="javascript:;" class="">相關期刊</a>
+                                <a href="" class="">相關期刊</a>
                             </h3>
                             <div class="accordion_content" style="display: none">
                                 <ul>
@@ -527,7 +614,7 @@
                         </div>
                         <div class="relevant_info">
                             <h3 class="accordion_header">
-                                <a href="javascript:;" class="">相關電子書</a></h3>
+                                <a href="#" class="">相關電子書</a></h3>
                             <div class="accordion_content" style="display: none">
                                 <ul>
                                     <li>
@@ -565,8 +652,8 @@
                                     </div>
                                 </div>
                                 <!-- click ".filter_search_btn" 時 
-                                    1. ".filter_search" display:block 
-                                    2. css style="top:0" 
+                                    1. <.filter_search> addclass .show_up 
+                                    2. <body> addclass ".fix" 
                                 -->
                                 <!-- ".filter_search_btn" 是手機版才會出現的btn -->
                                 <button type="button" class="filter_search_btn">
@@ -649,10 +736,7 @@
                                         </table>
                                     </div>
                                     <button type="button" class="btn_normal">詳目</button>
-                                    <button type="button" class="btn_normal">
-                                        <img src="images/full_text_finder.png" alt="">
-                                        Full Text Finder
-                                    </button>
+                                    <button type="button" class="btn_normal full-text">Full Text Finder</button>
                                 </div>
                             </div>
                             <div class="list_block">
