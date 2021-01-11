@@ -289,7 +289,7 @@
                                 </form>
                             </div>
                             <!-- 頁籤內容 2 -->
-                            <div class="tab-content" id="tab2" style="display: none">
+                            <div class="tab-content" id="tab2">
                                 <form action="">
                                     <div class="form_grp form_inline">
                                         <select name="" id="selectSample" class="select_connected">
@@ -298,11 +298,18 @@
                                             <option value="">選項三</option>
                                             <option value="">選項四</option>
                                         </select>
+                                        <input name="username" id="mustSameAsId" type="text" placeholder="查找資料庫名稱、期刊名稱、電子書書名" accesskey="S">
+                                        <select name="" id="selectSample">
+                                            <option value="">資源名稱</option>
+                                            <option value="">選項二</option>
+                                            <option value="">選項三</option>
+                                            <option value="">選項四</option>
+                                        </select>
                                         <div class="btn_grp form_inline">
-                                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
                                             <input name="" type="submit" title="查詢" value="查詢" />
+                                            <a href="#" class="simple_search">簡易查詢</a>
+
                                         </div>
-                                        <a href="#" class="simple_search">簡易查詢</a>
                                         <!-- 搜尋推薦字 -->
                                         <div class="recent_searches" style="display: none;">
                                             <ul class="promptword">
@@ -333,6 +340,41 @@
                                         </div>
                                         <!-- 搜尋推薦字 END-->
                                     </div>
+                                    <!-- 新增的查詢條件 1-->
+                                    <div class="form_grp form_inline condition">
+                                        <select name="" id="selectSample">
+                                            <option value="">AND</option>
+                                            <option value="">OR</option>
+                                            <option value="">NOT</option>
+                                        </select>
+                                        <input name="username" id="mustSameAsId" type="text" accesskey="">
+                                        <select name="" id="selectSample">
+                                            <option value="">資源名稱</option>
+                                            <option value="">選項二</option>
+                                            <option value="">選項三</option>
+                                            <option value="">選項四</option>
+                                        </select>
+                                        <button type="button" class="delete">delete</button>
+                                    </div>
+                                    <!-- 新增的查詢條件 2-->
+                                    <div class="form_grp form_inline condition">
+                                        <select name="" id="selectSample">
+                                            <option value="">AND</option>
+                                            <option value="">OR</option>
+                                            <option value="">NOT</option>
+                                        </select>
+                                        <input name="username" id="mustSameAsId" type="text" accesskey="">
+                                        <select name="" id="selectSample">
+                                            <option value="">資源名稱</option>
+                                            <option value="">選項二</option>
+                                            <option value="">選項三</option>
+                                            <option value="">選項四</option>
+                                        </select>
+                                        <button type="button" class="delete">delete</button>
+                                    </div>
+                                    <button type="button" class="add_condition">新增一行</button>
+                                    <br/>
+                                    <a href="#" class="link">資源瀏覽</a>
                                 </form>
                             </div>
                         </div><!-- search END -->

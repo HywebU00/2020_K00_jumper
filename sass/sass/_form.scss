@@ -916,7 +916,6 @@ abbr[title] {
             @include screen('mobile'){
                 padding-right: 48px;
             } 
-
         }
         input, select{
             margin-right: 4px;
@@ -926,6 +925,21 @@ abbr[title] {
                 @include screen('mobile'){
                     right: 14px;
                 }
+            }
+        }
+        .link{
+            position: relative;
+            padding-left: 16px;
+            &:before{
+                content:"";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                display: block;
+                width: 14px;
+                height: 14px;
+                background: url(../images/icon/icon_arrow_right.svg) no-repeat center;
+                background-size: contain;
             }
         }
     }
