@@ -1,6 +1,8 @@
 footer{
 	padding:2em 0;
 	background: $secondaryColor;
+	width: 100%;
+	align-self: flex-end;
 	.container{
 		@include gutter();
 		color:#fff;
@@ -8,7 +10,10 @@ footer{
 	ul{
 		@include li-reset;
 		a{
-			color:#fff;
+			color:#f0f0f0;
+			&:hover{
+				color:#fff;
+			}
 		}
 	}
 	li{
@@ -31,8 +36,11 @@ footer{
 				>a{
 					display: inline-block;
 					font-size: 1.125em;
-					color:$primaryColor;
+					color:$aColor;
 					margin: .5em 0 ;
+					&:hover{
+						color:$aHover;
+					}
 				}
 				>ul{
 					>li{

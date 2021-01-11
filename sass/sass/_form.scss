@@ -1,5 +1,4 @@
-
-$form_title_width :150px;       // 表單title寬度
+$form_title_width :150px; // 表單title寬度
 
 @mixin formStyle($f_color:$color-word, $f_border:$color-input, $f_radius:$rounded-angle) {
     color: $f_color;
@@ -14,6 +13,7 @@ $form_title_width :150px;       // 表單title寬度
     @include transition(border, .2s, ease-out);
     @include transition(box-shadow, .2s, ease-out);
 }
+
 select::-ms-expand {
     display: none;
 }
@@ -22,13 +22,16 @@ select::-ms-expand {
     font-size: .938em;
     margin: .5em;
     border-top: 1px solid #DDD;
+
     .form_grp {
         border-bottom: 1px dashed #DDD;
         overflow: hidden;
         padding: .2em 0;
+
         // 閱讀條文
         &.agree {
             border-bottom: none;
+
             label {
                 float: left;
                 width: auto;
@@ -36,36 +39,46 @@ select::-ms-expand {
             }
         }
     }
+
     .form_title {
         float: left;
         width: $form_title_width;
         @include gutter();
         padding-top: 5px;
+
         @include screen('mobile') {
             width: 100%;
         }
     }
+
     .form_content {
         float: left;
         padding-top: 3px;
         width: calc(100% - #{$form_title_width});
         @include gutter();
         overflow: hidden;
+
         @include screen('mobile') {
             width: 100%;
         }
+
         // 第二層的設定
         .form_grp {
             min-height: 2.5em;
+
             .form_content {
                 float: none;
                 display: block;
                 @include gutter();
+
                 &.form_inline {
-                    input[type="text"], select {
+
+                    input[type="text"],
+                    select {
                         width: auto;
                         min-width: 100px;
                         display: inline-block;
+
                         @include screen('xs_mobile') {
                             width: 100%;
                             display: block;
@@ -73,11 +86,13 @@ select::-ms-expand {
                     }
                 }
             }
+
             &:last-child {
                 border-bottom: none;
                 margin-bottom: 0;
             }
         }
+
         // 電話專屬
         .tel {
             input[type="text"]:first-child {
@@ -85,10 +100,14 @@ select::-ms-expand {
                 background-size: 12px;
                 padding-left: 1.5em;
             }
-            input[type="text"]:first-child, select:first-child {
+
+            input[type="text"]:first-child,
+            select:first-child {
                 width: 100px !important;
+
                 &~input {
                     width: calc(100% - 200px);
+
                     @include screen('xs_mobile') {
                         width: 100% !important;
                         display: block !important;
@@ -96,62 +115,76 @@ select::-ms-expand {
                 }
             }
         }
+
         // 生日專屬
         .birthday {
             select {
                 display: inline-block;
                 margin-right: .5em;
                 text-align-last: center;
+
                 @include screen('xs_mobile') {
                     width: 88% !important;
                     min-width: 88% !important;
                     display: inline-block !important;
                     text-align-last: left;
                 }
+
                 option {
                     text-align: center;
                 }
+
                 ~select {
                     margin-left: .2em;
+
                     @include screen('xs_mobile') {
                         margin-left: 0;
                     }
                 }
             }
         }
+
         // 地址專屬
         .address {
             select {
                 min-width: 100px;
+
                 option {
                     text-align: center;
                 }
+
                 @include screen('xs_mobile') {
                     width: 100px;
                     display: inline-block !important;
                 }
             }
+
             input[type="text"] {
                 width: calc(100% - 211px) !important;
+
                 @include screen('mobile') {
                     display: block !important;
                     width: 100% !important;
                 }
             }
         }
+
         // 日期專屬
         .datepick {
             padding-right: .5em;
             position: relative;
             display: inline-block;
+
             @include screen('xs_mobile') {
                 width: 100%;
                 display: block;
             }
+
             &+.datepick {
                 margin-left: .3em;
                 margin-right: 0;
                 padding-right: 0;
+
                 &:before {
                     content: "~";
                     font-size: 1.5em;
@@ -161,16 +194,20 @@ select::-ms-expand {
                     top: .3em;
                     color: #777;
                 }
+
                 @include screen('xs_mobile') {
                     margin-left: 0em;
+
                     &:before {
                         display: none;
                     }
                 }
+
                 i {
                     right: .5em;
                 }
             }
+
             i {
                 position: absolute;
                 padding: .37em .1em !important;
@@ -181,14 +218,18 @@ select::-ms-expand {
                 border: none;
                 width: auto;
                 pointer-events: none;
-                &:hover, &:focus {
+
+                &:hover,
+                &:focus {
                     box-shadow: none;
                     border: none !important;
                 }
             }
+
             >input[type="text"] {
-                width:10em;
+                width: 10em;
                 padding-right: 2em;
+
                 @include screen('xs_mobile') {
                     width: 100%;
                 }
@@ -196,8 +237,10 @@ select::-ms-expand {
         }
     }
 }
+
 //---------------------------------------------form setting--------//
 form {
+
     .form_grp,
     .check_grp,
     .radio_grp,
@@ -205,11 +248,13 @@ form {
     .upload_grp {
         margin-bottom: .2em;
     }
+
     .check_grp,
     .radio_grp {
         label {
             display: block;
         }
+
         // radio與check個別行內設定
         &.form_inline {
             label {
@@ -218,14 +263,17 @@ form {
             }
         }
     }
+
     .form_grp,
     .upload_grp {
+
         // 文字表單個別行內設定
         &.form_inline {
             label {
                 display: inline-block;
                 margin-right: .5em;
             }
+
             input,
             textarea,
             select {
@@ -233,12 +281,14 @@ form {
             }
         }
     }
+
     // form 全域行內設定
     &.form_inline {
         label {
             display: inline-block;
             vertical-align: middle;
             margin-right: .5em;
+
             &~input,
             &~textarea {
                 display: inline-block;
@@ -246,6 +296,7 @@ form {
                 vertical-align: middle;
             }
         }
+
         input[type="text"],
         input[type="password"],
         select,
@@ -253,6 +304,7 @@ form {
             width: auto;
             display: inline-block;
         }
+
         .form_grp,
         .check_grp,
         .radio_grp,
@@ -261,9 +313,12 @@ form {
             display: inline-block;
             margin-right: .5em;
         }
+
         .check_grp,
         .radio_grp {}
+
         .btn_grp {
+
             .btn,
             input[type="submit"],
             input[type="reset"],
@@ -273,22 +328,27 @@ form {
                 padding: .45em 1em;
             }
         }
+
         select,
         textarea {
             width: auto;
         }
     }
 }
+
 //---------------------------------------------下拉選單--------//
 label,
 legend {
     // white-space: nowrap;
     display: inline-block;
     margin: 0 0 .5em 0;
+
     @include screen('xs_mobile') {
         display: block;
     }
+
     &.inline {
+
         input,
         select,
         textarea {
@@ -296,11 +356,13 @@ legend {
         }
     }
 }
+
 fieldset {
     border: none;
     padding: 0;
     margin: 0;
 }
+
 //---------------------------------------------預設設定--------//
 input,
 textarea,
@@ -308,6 +370,7 @@ select,
 button {
     @include formStyle(); // 預設載入formStyle設定
 }
+
 input,
 select,
 textarea {
@@ -316,6 +379,7 @@ textarea {
     -moz-appearance: none;
     appearance: none;
 }
+
 //---------------------------------------------文字輸入表單--------//
 input[type="text"],
 input[type="password"],
@@ -325,37 +389,45 @@ input[type="tel"] {
         /* Chrome/Opera/Safari */
         color: darken($color-gray, 20);
     }
+
     &::-moz-placeholder {
         /* Firefox 19+ */
         color: darken($color-gray, 20);
     }
+
     &:-ms-input-placeholder {
         /* IE 10+ */
         color: darken($color-gray, 20);
     }
+
     &:-moz-placeholder {
         /* Firefox 18- */
         color: darken($color-gray, 20);
     }
 }
+
 button,
 input[type="button"],
     {
     @extend %btn;
     @include btn_setting(darken($color-gray, 20), #FFF);
 }
+
 input[type="submit"] {
     @extend %btn;
     @include btn_setting($form-focus, #FFF);
 }
+
 textarea {
     @include formStyle();
     height: 5em;
     overflow-y: scroll;
+
     @include screen('xs_mobile') {
         width: 100%;
     }
 }
+
 input[type="text"]:focus,
 input[type="reset"]:focus,
 input[type="file"]:focus,
@@ -367,6 +439,7 @@ select:focus {
     @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20));
     outline: none;
 }
+
 //
 //---------------------------------------------下拉選單--------//
 select {
@@ -375,21 +448,25 @@ select {
     border: 1px solid $color-gray;
     background: #fff url(../images/icon/icon_arrow_down.svg) no-repeat right 10px center;
     background-size: 12px;
+
     option {
         outline: none;
         border: none;
     }
+
     &:-moz-focusring {
         color: transparent;
         text-shadow: 0 0 0 #000;
     }
 }
+
 //---------------------------------------------reset--------//
 input[type="reset"] {
     @extend %btn;
     @include btn_setting(darken($color-gray, 20), #FFF);
     text-shadow: none;
 }
+
 //---------------------------------------------checkbox & radio--------//
 input[type="checkbox"],
 input[type="radio"] {
@@ -400,21 +477,26 @@ input[type="radio"] {
     background-color: #f7f6ee;
     border: 2px solid $color-gray;
 }
+
 input[type="radio"] {
     border-radius: 50%;
 }
+
 input[type="checkbox"] {
     border-radius: 4px;
 }
+
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
     border-color: $form-focus;
     background-color: $form-focus;
 }
+
 input[type="checkbox"]:focus,
-input[type="radio"]:focus{
+input[type="radio"]:focus {
     outline: none;
 }
+
 input[type="checkbox"]:checked {
     background-image: url(../images/basic/icon_checked.svg);
     background-repeat: no-repeat;
@@ -423,33 +505,40 @@ input[type="checkbox"]:checked {
     //box-shadow: $form-focus 0 0 0 1px;
     @include border-radius(2px);
 }
+
 input[type="radio"]:checked {
     box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
 }
+
 //---------------------------------------------readonly disable -------//
 input[readonly],
 input[disable] {
     background: lighten($color-gray, 15);
     color: darken($color-gray, 10);
     border-color: darken($color-gray, 10);
+
     &~label {
         color: darken($color-gray, 10);
     }
+
     &:hover,
     &:focus {
         border-color: darken($color-gray, 10);
         box-shadow: none; // cursor: not-allowed;
     }
 }
+
 // 檔案上傳
 // https://codepen.io/shubhamc_007/pen/oZyodd
 .upload_grp {
     position: relative;
+
     input[readonly],
     input[disable] {
         background: transparent;
         color: #666;
     }
+
     .upload_btn {
         position: absolute;
         overflow: hidden;
@@ -459,12 +548,14 @@ input[disable] {
         @include btn_setting($form-focus, #FFF);
         padding: .2em 1em !important;
         @include border-radius(4px);
+
         &:hover,
         &:focus {
             cursor: pointer !important;
         }
     }
 }
+
 input[type="file"] {
     position: absolute;
     top: 0;
@@ -476,6 +567,7 @@ input[type="file"] {
     opacity: 0;
     filter: alpha(opacity=0);
 }
+
 //---------------------------------------------captcha--------//
 img.captcha {
     display: inline-block;
@@ -483,14 +575,17 @@ img.captcha {
     max-height: 44px;
     max-height: 100px;
     margin-bottom: .3em;
+
     &+input {
         display: inline-block;
         width: auto;
         vertical-align: middle;
     }
+
     ~.btn {
         margin-top: -1px;
     }
+
     ~img {
         display: inline-block;
         vertical-align: middle;
@@ -498,6 +593,7 @@ img.captcha {
         margin-bottom: .5em;
     }
 }
+
 //---------------------------------------------必填欄位說明--------//
 abbr[title] {
     border-bottom: none;
@@ -513,13 +609,15 @@ abbr[title] {
     @include screen('tablet') {
         width: 100%;
     }
-    @include screen('mobile'){
+
+    @include screen('mobile') {
         margin: 0 auto;
         min-height: 4.6em;
     }
 
     .tabSet {
         margin: 0 auto;
+
         @include screen('mobile') {
             background: $color-lightgray;
         }
@@ -530,58 +628,83 @@ abbr[title] {
         box-shadow: $box;
         width: 100%;
         border-radius: 0 0 $rounded-angle $rounded-angle;
-        background:#fff;
+        background: #fff;
+
         @include screen('mobile') {
             padding: 20px 25px;
             box-shadow: none;
         }
-        @include screen('xs_mobile'){
+
+        @include screen('xs_mobile') {
             padding: 20px 15px;
         }
 
-        &.scrolldown_fix{
+        &.scrolldown_fix {
             position: fixed;
             left: 0;
             top: 55px;
             z-index: 50;
             border-radius: 0;
             padding: 15px 20px;
+
             @include screen('mobile') {
                 box-shadow: $box;
             }
-            .form_grp{
+
+            .form_grp {
                 margin: 0 auto;
-                +a{
+
+                +a {
                     display: none;
                 }
             }
-            .check_grp{
+
+            .check_grp {
                 display: none;
             }
-            .recent_searches{
+
+            .recent_searches {
                 display: none !important;
             }
         }
 
+        .btn_grp{
+            padding: 0;
+            width: 176px;
+            @include screen('mobile'){
+                position: absolute;
+                margin: 0;
+                top: 0;
+                right: 0;
+                width: auto;
+            }
+            
+        }
+
         .check_grp {
             margin: .5em 0;
-            a{
-                color:$color-word;
+
+            a {
+                color: $color-word;
                 text-decoration: underline;
                 margin-left: .5em;
-                &:hover{
-                    color:$primaryColor;
+
+                &:hover {
+                    color: $primaryColor;
                 }
             }
         }
-        a.database_link{
+
+        a.database_link {
             color: $color-word;
             text-decoration: underline;
-            padding:0 .3em; 
-            &:hover{
+            padding: 0 .3em;
+
+            &:hover {
                 color: $primaryColor;
             }
-            @include screen('mobile'){
+
+            @include screen('mobile') {
                 display: none;
             }
         }
@@ -593,102 +716,129 @@ abbr[title] {
         //     top:55px;
         //}
     }
-    .link{
+
+    .link {
         text-decoration: underline;
+        display: block;
+    }
+    .add_condition{
+        border: 1px solid $primaryColor;
+        color:$primaryColor;
+        background: #fff;  
+        margin: 0 0 1em 0; 
+        height: 44px; 
     }
 
     .form_grp {
-        margin:0 0 1em 0;
+        margin: 0 0 1em 0;
     }
 
     .form_inline {
         display: flex;
         align-items: center;
         position: relative;
-        select{
-            flex: 0 0 120px;
+    }
+
+    select{
+        height: 44px;
+        border-color: $color-input;
+        margin-bottom: 0;
+        margin-right: 4px;
+    }
+
+    input {
+        margin-bottom: 0;
+        margin-right: 4px;
+
+        &[type="text"] {
+            flex: 1 1 auto;
             height: 44px;
-            border-radius: $rounded-angle 0 0 $rounded-angle;
-            border-color: $color-input;
-            border-right: 0;
-            margin-bottom:0;
-            @include screen('mobile'){
-                
-            }
-            +input{
-                border-radius: 0 $rounded-angle $rounded-angle 0;
-            }
-        }
-        input{
-            margin-bottom: 0;
-            &[type="text"]{
-                flex: 1 1 auto;
-                height: 44px;
-                &.show_recent_searches{
-                    box-shadow: 0px -1px 2px rgba(0,0,0, .3);
-                    border-radius: $rounded-angle $rounded-angle 0 0;
-                }
-                @include screen('mobile'){
-                    width: 100%;
-                    margin:0;
-                }
-            }
-            &[type="submit"]{
-                height: 44px;
-                margin: 0 .5em;
-                transition: all .3s;
-                border-radius: 30px;
-                @include screen('mobile'){
-                    position: absolute;
-                    margin:0;
-                    top:0;
-                    right: 0;
-                    border-radius: $rounded-angle;
-                    font-size: 0em;
-                    width: 44px !important;
-                    height: 44px;
-                    background:$primaryColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
-                    background-size: 20px;
-                    outline: 1px solid transparent;
-                    border:none;
-                    display:block;
-                    min-width: 0em !important;
-                    @include box-sizing;
-                }
-            }
-        } 
-        .advanced_search {
-            background: $color-lightgray;
-            color: $color-word;
-            text-shadow: none;
-            border: none;
-            display: inline-block;
-            padding: 0 1em;
-            line-height: 1;
-            height: 44px;
-            line-height: 44px;
-            align-self:flex-end;
-            border-radius: 30px;
-            @include screen('mobile') {
-                display: none;
+
+            &.show_recent_searches {
+                box-shadow: 0px -1px 2px rgba(0, 0, 0, .3);
+                border-radius: $rounded-angle $rounded-angle 0 0;
             }
 
-            &:hover {
-                background: darken($color-lightgray, 10); 
+            @include screen('mobile') {
+                width: 100%;
+                margin: 0;
             }
-            
+        }
+
+        &[type="submit"] {
+            height: 44px;
+            margin: 0 .5em;
+            transition: all .3s;
+            border-radius: 30px;
+
+            @include screen('mobile') {
+                position: absolute;
+                margin: 0;
+                top: 0;
+                right: 0;
+                border-radius: $rounded-angle;
+                font-size: 0em;
+                width: 44px !important;
+                height: 44px;
+                background: $primaryColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
+                background-size: 20px;
+                outline: 1px solid transparent;
+                border: none;
+                display: block;
+                min-width: 0em !important;
+                @include box-sizing;
+            }
         }
     }
+
+    .select_connected {
+        flex: 0 0 120px;
+        height: 44px;
+        border-radius: $rounded-angle 0 0 $rounded-angle;
+        border-right: 0;
+        margin-right: 0 !important;
+        @include screen('mobile') {}
+
+        +input {
+            border-radius: 0 $rounded-angle $rounded-angle 0;
+        }
+    }
+
+    
+
+    .advanced_search,
+    .simple_search {
+        background: $color-lightgray;
+        color: $color-word;
+        display: inline-block;
+        padding: 0 1em;
+        height: 44px;
+        width: 96px;
+        line-height: 44px;
+        border-radius: 30px;
+
+        @include screen('mobile') {
+            display: none;
+        }
+
+        &:hover {
+            background: darken($color-lightgray, 10);
+        }
+
+    }
+
     .keywordHot {
         display: inline-block;
         vertical-align: middle;
         padding: .1em 0 .3em;
+
         ul {
             display: inline-block;
             font-size: 1em;
             line-height: 1.65em;
             margin: 0;
             padding: 0;
+
             &:before {
                 display: inline-block;
                 content: "熱門關鍵字：";
@@ -696,24 +846,29 @@ abbr[title] {
                 float: left;
                 font-weight: bold;
             }
+
             li {
                 //margin: 0 .6em 0 0;
                 padding: 0;
                 display: inline-block;
-                &:after{
+
+                &:after {
                     content: "、";
                     display: inline-block;
                     margin-right: -2px;
-                    color:$color-word-light;
+                    color: $color-word-light;
                 }
-                &:last-of-type{
-                    &:after{
-                        content:none;
+
+                &:last-of-type {
+                    &:after {
+                        content: none;
                     }
                 }
             }
+
             a {
-                color:$color-word-light;
+                color: $color-word-light;
+
                 &:hover,
                 &:focus {
                     text-decoration: underline;
@@ -722,7 +877,56 @@ abbr[title] {
             }
         }
     }
-    .explanation{
+    .condition{
+        position: relative;
+        width: 574px;
+        @include screen('mobile'){
+            width: auto;
+        }
+        .delete{
+            position: absolute;
+            right: -30px;
+            top:calc(50% - 10px);
+            font-size: 0;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $primaryColor;
+            background: #fff;
+            &:before{
+                content:"";
+                position: absolute;
+                display: block;
+                background: $primaryColor;
+                width: 12px;
+                height: 2px;
+                left: 3px;
+                top: calc(50% - 1px);
+            }
+        }
+    }
+
+    .explanation {
         margin-top: 1.5em;
+    }
+
+
+    &.advanced {
+        .form_grp{
+            @include screen('mobile'){
+                padding-right: 48px;
+            } 
+
+        }
+        input, select{
+            margin-right: 4px;
+        }
+        .condition{
+            .delete{
+                @include screen('mobile'){
+                    right: 14px;
+                }
+            }
+        }
     }
 }

@@ -9,10 +9,7 @@
     }
 }
 
-.mp {
-   
 
-}
 .mp_logo{
     padding-top: 1em;
     text-align: center;
@@ -31,14 +28,15 @@
     //         @include gutter();
     //     }
     // }
-    .form_grp{
-        position: relative;
-        width: 750px;
-        margin: 0 auto 1em auto;
-        @include screen('tablet'){
-            width: auto;
-        }
-    }
+    // .form_grp{
+    //     position: relative;
+    //     width: 750px;
+    //     @include screen('tablet'){
+    //         width: auto;
+    //     }
+    // }
+    
+    
     .recent_searches {
         width: calc(100% - 178px);
         background-color: rgba(255, 255, 255, 1);

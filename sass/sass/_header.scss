@@ -7,9 +7,6 @@
     width: 100%;
     top: 0;
     @include box-shadow(0px 2px 5px RGBA(0, 0, 0, .3)); // 虛擬底色 - navigation
-    @include screen('notebook') {
-        width: 100%;
-    }
 
     %mobileCtrlBtn {
         width: 55px !important;

@@ -343,6 +343,9 @@
 
     .browse{
         margin-bottom: 1em;
+        @include screen('mobile'){
+            display: none;
+        }
         .tab-content{
             padding: 1em;
             background: #fff;
@@ -546,7 +549,7 @@
 }
 .nodata{
     text-align: center;
-    min-height: 150px;
+    min-height: 200px;
     padding: 30px 15px;
     color: $color-word-light;
     @include screen('tablet') {
@@ -885,10 +888,10 @@
     right: 1.5em;
     display: flex;
 
-    @media (min-width: 992px) and (max-width: 1200px) {
-        position: static;
-        margin-top: 1em;
-    }
+    // @media (min-width: 992px) and (max-width: 1200px) {
+    //     position: static;
+    //     margin-top: 1em;
+    // }
 
     @include screen('xs_mobile') {
         right: 15px;
