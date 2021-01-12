@@ -304,7 +304,7 @@
                 <div class="container">
                     <!-- 1. lightbox (".filter_lightbox") 開啟的狀態下 ".filter_search"(後分類區塊) add classname "fix"
                         2. 關閉 lightbox (".filter_lightbox"),則 ".filter_search" remove classname "fix"-->
-                    <div class="filter_search fix" style="display: block; top:0;">
+                    <div class="filter_search fix">
                         <div class="close"></div>
                         <h2>調整查詢</h2>
                         <!-- ".filter_search > .option" 手機版才會出現，和搜尋結果(".search_result")下的".option"功能相同-->
@@ -470,82 +470,127 @@
                         </div>
                     </div>
                     <!-- 點擊看更多的彈出視窗 -->
-                    <!-- ".resource_lightbox" 預設是 display:none -->
                     <div class="resource_lightbox" style="display:block">
                         <div class="overlay"></div>
                         <div class="resourceblock">
                             <div class="close"></div>
-                            <h3>主題</h3>
-                            <form action="">
-                                <div class="check_grp scroll_content">
-                                    <label>
-                                        <input type="checkbox" name="" value="" checked="">心理學<span>(11)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">商學企管<span>(15)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">電子電機/資訊電腦科學<span>(5)</span></label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">演講／講座／研討會
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">運動與休閒<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">語言學習<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">藝術人文<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">歷史地理<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">台灣研究<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">物理光電/化學/數學<span>(5)</span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="" value="">生物醫學<span>(5)</span>
-                                    </label>
-                                </div>
+                            <h3>瀏覽資料庫</h3>
+                            <div class="tabSet">
+                                <ul class="tabs">
+                                    <li class="active"><a href="javascript:;">目前選取<span>(3)</span></a></li>
+                                    <li><a href="javascript:;">預設推薦</a></li>
+                                    <li><a href="javascript:;">學院</a></li>
+                                    <li><a href="javascript:;">主題</a></li>
+                                    <li><a href="javascript:;">資料類型</a></li>
+                                    <li><a href="javascript:;">學院精選</a></li>
+                                    <li><a href="javascript:;">所有資料庫</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content"  style="display: block">
                                 <div class="btn_grp">
-                                    <button class="btn btn-reset">取消</button>
-                                    <button class="btn btn-submit">確定</button>
+                                    <button type="button" class="">全部取消</button>
+                                    <button type="button" class="">回復預設</button>
                                 </div>
-                            </form>
+                                <div class="scroll_content">
+                                    <ul>
+                                        <li>
+                                            <a href="#" target="_blank">L&B 數位圖書館中西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">L&B 數位圖書館中西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書Ebrary 西文電子書Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書Ebrary 西文電子書Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
+                                            <button type="button" class="del_btn">刪除</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="note">異質資源受限於查詢速度，首次預設取回30筆，<br/>
+                                當您看到第30筆資料時，點下一頁，就可以繼續取回資料囉</p>
+                            
+                            <div class="btn_grp">
+                                <button class="btn btn-reset">取消</button>
+                                <button class="btn btn-submit">確定</button>
+                            </div>
                         </div>
                     </div>
                     <!-- 彈出視窗 END -->
