@@ -770,11 +770,11 @@ body.fix {
             .btn_grp{
                 float: none;
                 text-align: left;
-                padding: 10px 20px;
+                padding: 15px 20px;
             }
             .scroll_content {
                 overflow-y: scroll;
-                height: calc(100% - 75px);
+                height: calc(100% - 70px);
                 padding: 10px 20px;
                 @include screen('xs_mobile'){
                     padding: 0 15px;
@@ -787,9 +787,12 @@ body.fix {
             }
             li{
                 flex-basis: 50%;
-                margin-bottom: 20px;
+                margin-bottom: 1em;
                 @include screen('mobile'){
                     flex-basis: 100%;
+                }
+                label{
+                    margin-bottom: 0;
                 }
                 a{
                     color: $color-word;
@@ -803,6 +806,19 @@ body.fix {
                 .del_btn{
                     vertical-align: middle;
                 }
+            }
+            .btn_switch{
+                width: 22px;
+                height: 20px;
+                font-size: 0;
+                margin:0 5px;
+
+            }
+            .accordion_header{
+                flex-basis: 100%;
+            }
+            .accordion_content{
+                padding: 10px 25px;
             }
         }
     }

@@ -346,9 +346,8 @@
             .items_inline, .items{
                 a{
                     color: $linkColor;
-                    text-decoration: underline;
                     &:hover{
-                        color: darken($linkColor, 15);
+                        text-decoration: underline;
                     }
                 }
             }
@@ -372,31 +371,14 @@
                 }
             }
             .btn_switch{
-                position: relative;
                 display: block;
-                margin: .5em auto;
-                background: none;
-                color:$color-word;
-                border:none;
                 &:after{
-                    content: '';
-                    position: absolute;
-                    left: 50%;
-                    bottom: 0;
-                    margin-left: -3px;
-                    border-width: 2px 0 0 2px;
-                    border-color: #333;
-                    border-style: solid;
-                    width: 6px;
-                    height: 6px;
-                    transform: rotate(225deg);
-                    transition: .5s;
+                    bottom:0;
+                    top:auto;
                 }
-                &.close{
+                &.turnicon{
                     &:after{
-                        content: '';
                         top: 0;
-                        transform: rotate(45deg);
                     }
                 }
             }

@@ -100,7 +100,42 @@ $btn-radius:$rounded-angle;
     border-radius: 2px;
     border: 2px solid $color-word;
     background: url(../images/icon/icon_close.svg) no-repeat center;
-    background-size: 72%;
+    background-size: 12px;
+}
+
+.btn_switch {
+    position: relative;
+    margin: .5em auto;
+    background: none;
+    color: $color-word-light;
+    border: none;
+    border-radius: 0;
+    &:hover{
+       background: none; 
+       color:$color-word;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 4px;
+        margin-left: -3px;
+        border-width: 2px 0 0 2px;
+        border-color: #333;
+        border-style: solid;
+        width: 6px;
+        height: 6px;
+        transform: rotate(225deg);
+        transition: .5s;
+    }
+
+    &.turnicon {
+        &:after {
+            content: '';
+            top:6px;
+            transform: rotate(45deg);
+        }
+    }
 }
 
 //按鈕顏色
