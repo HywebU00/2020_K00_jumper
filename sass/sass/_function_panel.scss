@@ -1,62 +1,24 @@
-// function_panel setting
-// .function_panel {
-//     text-align: right;
-//     margin: .2em 0;
-//     padding: .5em 0 .5em;
-//     min-height: 35px;
-//     border-top: 1px solid #DDD;
-//     border-bottom: 1px solid #DDD;
-//     @include screen('mobile') {
-//         margin: .6em 0;
-//         padding: .5em 0 .5em;
-//     }
-//     .share {
-//         display: inline-block;
-//         vertical-align: top;
-//     }
-//     .function {
-//         display: inline-block;
-//         vertical-align: top;
-//     }
-//     .publish_time {
-//         float: left;
-//         min-width: 100px;
-//         display: block;
-//         margin-top: .6em;
-//         color:#666;
-//         span{
-//             font-size:.938em;
-//             @include screen('mobile') {
-//                 display:none;
-//             }
-//         }
-//         time{
-//             font-family:georgia;
-//             font-size:1.125em;
-//             @include screen('mobile') {
-//                 font-size:.938em;
-//             }
-//         }
-//         &:before {
-//             content: "";
-//             display: inline-block;
-//             width: 12px;
-//             height: 12px;
-//             top:.3em;
-//             background: url(../images/basic/icon_time.png) no-repeat center center;
-//             background-size: 12px;
-//         }
-//     }
-// }
-
 .function_panel {
     background: linear-gradient(to bottom, #ffffff, #e5e5e5);
-    padding: 1.5em;
+    padding:.5em 1.5em;
     position: relative;
     border: 1px solid $color-lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
     @include screen('xs_mobile') {
-        padding: 1.5em 15px;
+        padding: .5em 15px;
+    }
+
+    button{
+        background: transparent;
+        margin:0;
+        height: 40px;
+        &:hover{
+            color: $primaryColor;
+        }
     }
 
     .display_grp {
@@ -120,15 +82,17 @@
 
     }
     .result_amount {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
+        align-items: center;
+        margin-right: .5em;
 
         .search_word {
             color: $primaryColor;
         }
 
         .total {
-            padding: 0 .4em;
+            padding: 0 0 0 .4em;
         }
 
         em {
@@ -167,9 +131,108 @@
 
 }
 
+.function_block {
+    // position: absolute;
+    // top: 1em;
+    // right: 1.5em;
+    display: inline-flex;
+    align-items: center;
+    margin: .5em 0;
+
+    // @media (min-width: 992px) and (max-width: 1200px) {
+    //     position: static;
+    //     margin-top: 1em;
+    // }
+
+    @include screen('xs_mobile') {
+        right: 15px;
+    }
+
+    .filter_search_btn {
+        display: none;
+
+        @include screen('tablet') {
+            display: block;
+        }
+    }
+
+    .add_bookmark,
+    .filter_search_btn {
+        border: 1px solid $color-input;
+        background: none;
+        color: $color-word;
+        margin: 0 0 0 .5em;
+        position: relative;
+
+        // &:before{
+        //     position: absolute;
+        //     content:"";
+        //}
+        @include screen('tablet') {
+            padding: .4em;
+            min-width: 2.5em;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: $primaryColor;
+
+            .i_bookmark {
+                &:before {
+                    background-image: url(../images/icon/icon_bookmark_saved.svg);
+                }
+            }
+        }
+
+        i {
+            margin: 0;
+
+            &:before {
+                height: 1.2em;
+                width: 1.2em;
+            }
+        }
+
+        span {
+            @include screen('tablet') {
+                display: none;
+            }
+        }
+    }
+    .btn_grp{
+        padding: 0;
+        display: flex;
+        button{
+            display: flex;
+            align-items: center;
+            margin-left: .5em;
+            &:first-of-type{
+                margin-left: 0;
+            }
+            @include screen('mobile'){
+                min-width: 40px;
+                justify-content: center;
+            }
+            i{
+                @include screen('mobile'){
+                    margin: 0;
+                }  
+            }
+            span{
+                @include screen('mobile'){
+                    font-size: 0;
+                }
+                
+            }
+        }
+    }
+}
+
 .option {
     position: relative;
     z-index: 10;
+    margin-left: .5em;
 
     @include screen('mobile') {
         display: none;
@@ -182,7 +245,8 @@
         a {
             display: block;
             color: $color-word;
-            padding: .5em 2em .5em 1em;
+            padding: 0 2em 0 1em;
+            line-height: 38px;
             cursor: pointer;
 
             &:after {
@@ -210,7 +274,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
         padding: 10px;
         width: 150px;
-        top: 38px;
+        top: 42px;
         right: 0;
 
         ul {
