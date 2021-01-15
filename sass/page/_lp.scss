@@ -6,13 +6,20 @@
         color: $primaryColor;
         font-size: 1.5em;
     }
-
 }
 
 .personal{
    .search_block{
         @include screen('mobile'){
             display: none;
+        }
+   }
+   .search_result{
+        h2{
+            display: block;
+            font-size: 1.25em;
+            padding: 0 15px;
+            color: $color-word;
         }
    } 
 }
@@ -702,10 +709,8 @@
         h3 {
             font-size: 1.25em;
             margin-top: 0;
+            width: calc(100% - 5em);
 
-            @include screen('tablet') {
-                width: calc(100% - 5em);
-            }
             @include screen('mobile') {
                 width: 100%;
             }
