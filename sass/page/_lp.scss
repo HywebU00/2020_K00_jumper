@@ -16,10 +16,12 @@
    }
    .search_result{
         h2{
-            display: block;
-            font-size: 1.25em;
-            padding: 0 15px;
-            color: $color-word;
+            @include screen('mobile'){
+                display: block;
+                font-size: 1.25em;
+                padding: 0 15px;
+                color: $color-word;
+            }           
         }
    } 
 }
@@ -587,7 +589,7 @@
     padding: 0 1.5em;
     position: relative;
 
-    @include screen('xs_mobile') {
+    @include screen('mobile') {
         padding: 0 15px;
     }
 }

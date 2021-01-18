@@ -10,7 +10,8 @@ body.fix {
 .related_lightbox,
 .detail_lightbox,
 .filter_lightbox,
-.resource_lightbox {
+.resource_lightbox,
+.personal_lightbox {
     position: fixed;
     top: 0;
     right: 0;
@@ -820,6 +821,49 @@ body.fix {
             .accordion_content{
                 padding: 10px 25px;
             }
+        }
+    }
+}
+.personal_lightbox {
+    h4{
+        margin: .5em 0;
+        color: $primaryColor;
+    }
+    .personalblock {
+        @extend %lightbox_block;
+        width: 350px;
+        padding: 1em 20px;
+        overflow-y: scroll;
+        @include screen('mobile'){
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+        }
+    }
+    .export{
+        margin: 1em 0;
+        border-bottom: 1px solid $color-line;
+        ul{
+            @include li-reset;
+            padding-left: 1em;
+        }
+        li{
+            margin: .5em 0;
+            a{
+                color: $color-word;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .share{
+        label{
+            color:$color-word-light;
+            font-size: .938em;
+        }
+        .btn_send{
+            text-align: right;
         }
     }
 }

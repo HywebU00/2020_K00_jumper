@@ -432,6 +432,7 @@ input[type="text"]:focus,
 input[type="reset"]:focus,
 input[type="file"]:focus,
 input[type="tel"]:focus,
+input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
@@ -503,7 +504,6 @@ input[type="checkbox"]:checked {
     background-position: center center;
     background-size: 98%;
     //box-shadow: $form-focus 0 0 0 1px;
-    @include border-radius(2px);
 }
 
 input[type="radio"]:checked {

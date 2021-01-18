@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @include screen('xs_mobile') {
+    @include screen('mobile') {
         padding: .5em 15px;
         //display: block;
     }
@@ -217,20 +217,19 @@
             &:first-of-type{
                 margin-left: 0;
             }
-            @include screen('mobile'){
+            @include screen('tablet'){
                 min-width: 40px;
                 justify-content: center;
             }
             i{
-                @include screen('mobile'){
+                @include screen('tablet'){
                     margin: 0;
                 }  
             }
             span{
-                @include screen('mobile'){
+                @include screen('tablet'){
                     font-size: 0;
                 }
-                
             }
         }
     }
