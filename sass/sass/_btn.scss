@@ -94,14 +94,19 @@ input[type="submit"],
     }
 }
 
-.del_btn {
+.del_btn, .add_btn{
     font-size: 0;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 2px;
-    border: 2px solid $color-word;
+    border: none;
     background: url(../images/icon/icon_close.svg) no-repeat center;
-    background-size: 12px;
+    background-size: 14px;
+    opacity: .6;
+}
+
+.add_btn{
+    background-image: url(../images/icon/icon_add.svg);
 }
 
 .btn_switch {

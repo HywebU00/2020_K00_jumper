@@ -860,10 +860,52 @@ body.fix {
     .share{
         label{
             color:$color-word-light;
-            font-size: .938em;
+            font-size: .875em;
         }
         .btn_send{
             text-align: right;
+        }
+    }
+    .added_tag, .other_tag{
+        margin: 1em 0;
+        ul{
+            @include li-reset;
+        }
+        li{
+            position: relative;
+            margin: .5em 0;
+            span{
+               padding: 0 .4em; 
+            }
+            .del_btn, .add_btn{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }   
+        }
+    }
+    .add_newtag{
+        border: 0;
+        display: flex;
+        align-items: center;
+        padding: .5em 0;
+        &:before{
+            content:"";
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 30px;
+            background: $color-lightgray url(../images/icon/icon_add.svg) no-repeat center;
+            background-size: 16px;
+            margin-right: .5em;
+            opacity: .6;
+        }
+        &:hover,
+        &:focus{
+            background: transparent;
+            &:before{
+                opacity: 1;
+            }
         }
     }
 }
