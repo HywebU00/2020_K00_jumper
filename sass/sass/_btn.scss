@@ -69,24 +69,32 @@ $btn-radius:$rounded-angle;
     }
 }
 
-input[type="submit"],
+button[type="submit"],
 .btn-submit {
     background-color: $primaryColor;
     border-color: $primaryColor;
     color: #fff;
     border-radius: 30px;
+    padding: .5em 1em;
 
     &:hover {
         background: $aHover;
         color: #fff;
     }
+    &:disabled{
+        background: $color-gray;
+        border-color: $color-gray;
+        cursor: auto;
+    }
 }
 
+button[type="reset"],
 .btn-reset {
     background-color: $color-lightgray;
     border-color: $color-lightgray;
     color: $color-word-light;
     border-radius: 30px;
+    padding: .5em 1em;
 
     &:hover {
         background: darken($color-lightgray, 10);
