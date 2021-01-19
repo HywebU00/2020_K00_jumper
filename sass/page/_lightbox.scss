@@ -20,8 +20,7 @@ body.fix {
     background-color: rgba(51, 51, 51, .4);
     z-index: 200;
     overflow-y: auto;
-
-    //display: none;
+    display: none;
     .overlay {
         position: absolute;
         top: 0;
@@ -36,6 +35,12 @@ body.fix {
             width: 100%;
             height: 100%;
         }
+    }
+    h3{
+        color: $primaryColor;
+        // padding: .5em 0;
+        // border-bottom: 2px $primaryColor solid;
+        // margin-top: 0!important;
     }
 }
 
@@ -134,7 +139,7 @@ body.fix {
         .form_content {
             text-align: center;
             padding: 0 40px;
-            
+
             @include screen('xs_mobile') {
                 padding: 0;
             }
@@ -542,7 +547,8 @@ body.fix {
         height: calc(100% - 50px);
         padding: 10px 30px;
         margin-top: 50px;
-        @include screen('xs_mobile'){
+
+        @include screen('xs_mobile') {
             padding: 0 15px;
         }
     }
@@ -671,9 +677,11 @@ body.fix {
 
     .sourceblock {
         border-top: 1px solid $color-line;
-        &:last-child{
+
+        &:last-child {
             border-bottom: 1px solid $color-line;
         }
+
         .accordion_header {
             .accordion_toggle {
                 display: block;
@@ -704,22 +712,26 @@ body.fix {
                     }
                 }
             }
-            .source{
+
+            .source {
                 margin: 1em 0;
                 line-height: 1.8;
-                padding:0 40px 0 10px;
+                padding: 0 40px 0 10px;
                 border-left: 5px solid $primaryColor;
-                a{
+
+                a {
                     color: $linkColor;
                     text-decoration: underline;
                 }
             }
-            .web_link{
-                display: block;                
+
+            .web_link {
+                display: block;
             }
 
         }
-        .accordion_content{
+
+        .accordion_content {
             background: $color-lightgray;
             margin-bottom: 1em;
             padding: 1em;
@@ -728,9 +740,10 @@ body.fix {
 }
 
 .resource_lightbox {
-    @include screen('mobile'){
+    @include screen('mobile') {
         display: none;
     }
+
     .resourceblock {
         @extend %lightbox_block;
         width: 1100px;
@@ -742,157 +755,242 @@ body.fix {
         @include screen('mobile') {
             height: 95%;
         }
-        .tabSet{
-            li{
-                a{
+
+        .tabSet {
+            li {
+                a {
                     font-size: 1em;
                 }
             }
         }
-        .btn_grp{
+
+        .btn_grp {
             float: right;
         }
-        .note{
+
+        .note {
             float: left;
             max-width: calc(100% - 170px);
-            @include screen('xs_mobile'){
+
+            @include screen('xs_mobile') {
                 display: none;
             }
         }
-        .tab-content{
+
+        .tab-content {
             background: $color-lightgray;
-            padding:10px 0;
+            padding: 10px 0;
             height: calc(100% - 170px);
             box-shadow: $box inset;
-            @include screen('mobile'){
+
+            @include screen('mobile') {
                 height: calc(100% - 220px);
             }
-            .btn_grp{
+
+            .btn_grp {
                 float: none;
                 text-align: left;
                 padding: 15px 20px;
             }
+
             .scroll_content {
                 overflow-y: scroll;
                 height: calc(100% - 70px);
                 padding: 10px 20px;
-                @include screen('xs_mobile'){
+
+                @include screen('xs_mobile') {
                     padding: 0 15px;
                 }
             }
-            ul{
+
+            ul {
                 @include li-reset;
                 display: flex;
                 flex-wrap: wrap;
             }
-            li{
+
+            li {
                 flex-basis: 50%;
                 margin-bottom: 1em;
-                @include screen('mobile'){
+
+                @include screen('mobile') {
                     flex-basis: 100%;
                 }
-                label{
+
+                label {
                     margin-bottom: 0;
                 }
-                a{
+
+                a {
                     color: $color-word;
                     display: inline-block;
                     margin-right: 4px;
                     vertical-align: middle;
-                    &:hover{
+
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
-                .del_btn{
+
+                .del_btn {
                     vertical-align: middle;
                 }
             }
-            .btn_switch{
+
+            .btn_switch {
                 width: 22px;
                 height: 20px;
                 font-size: 0;
-                margin:0 5px;
+                margin: 0 5px;
 
             }
-            .accordion_header{
+
+            .accordion_header {
                 flex-basis: 100%;
             }
-            .accordion_content{
+
+            .accordion_content {
                 padding: 10px 25px;
             }
         }
     }
 }
+
 .personal_lightbox {
-    h4{
+    h4 {
         margin: .5em 0;
-        color: $primaryColor;
     }
+
     .personalblock {
         @extend %lightbox_block;
-        width: 380px;
+        width: 540px;
+        max-height: 95%;
         padding: 1em 20px;
         overflow-y: scroll;
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             width: 100%;
+            max-height: 100%;
             height: 100%;
             border-radius: 0;
         }
     }
-    .export{
-        margin: 1em 0;
-        border-bottom: 1px solid $color-line;
-        ul{
+
+    .export {
+        margin: 1.5em 0;
+
+        ul {
             @include li-reset;
             padding-left: 1em;
         }
-        li{
+
+        li {
             margin: .5em 0;
-            a{
+
+            a {
                 color: $color-word;
-                &:hover{
+
+                &:hover {
                     text-decoration: underline;
                 }
             }
         }
     }
-    .share, .newtag_input{
-        label{
-            color:$color-word-light;
+
+    .share,
+    .newtag_input {
+        label {
+            color: $color-word-light;
             font-size: .875em;
         }
-        .btn_grp_right{
+
+        .btn_grp_right {
             text-align: right;
             padding: .5em 0;
         }
     }
-    .added_tag, .other_tag{
-        margin: 1em 0;
-        ul{
+
+    .added_tag,
+    .other_tag,
+    .manage_tag {
+        margin: 1.5em 0;
+
+        ul {
             @include li-reset;
         }
-        li{
+
+        li {
             position: relative;
-            margin: .5em 0;
-            padding-right: 25px;
-            span{
-               padding: 0 .4em; 
+            margin: 1em 0;
+            padding-right: 2em;
+
+            span {
+                padding: 0 .4em;
             }
-            .del_btn, .add_btn{
-                position: absolute;
-                right: 0;
-                top: 0;
-                z-index: 10;
-            }   
+        }
+
+        .del_btn,
+        .add_btn,
+        .manage_btn_grp {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            z-index: 10;
         }
     }
-    .add_newtag{
+
+    .manage_tag {
+        li {
+            padding-right: 225px;
+            @include screen('xs_mobile'){
+                padding-right: 90px;
+            }
+            &:before{
+                top: .25em;
+            }
+        }
+        input[type="text"]{
+            border-radius: 0;
+            border: 0;
+            border-bottom: 2px solid $primaryColor;
+            width: calc(100% - 50px);
+            padding: 0;
+        }
+
+        .manage_btn_grp {
+            top: -2px;
+
+            button {
+                padding: .2em .5em;
+                font-size: .875em;
+                margin: 0;
+                @include screen('xs_mobile'){
+                    border: 0;
+                }
+
+                i {
+                    &:before {
+                        width: 1em;
+                        height: 1em;
+                    }
+                }
+                span{
+                    @include screen('xs_mobile'){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .add_newtag {
         border: 0;
         display: flex;
         align-items: center;
         padding: .5em 0;
-        &:before{
-            content:"";
+
+        &:before {
+            content: "";
             display: block;
             width: 28px;
             height: 28px;
@@ -901,12 +999,16 @@ body.fix {
             background-size: 16px;
             margin-right: .5em;
             opacity: .6;
+            transition: .3s;
         }
+
         &:hover,
-        &:focus{
+        &:focus {
             background: transparent;
-            &:before{
+
+            &:before {
                 opacity: 1;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
             }
         }
     }

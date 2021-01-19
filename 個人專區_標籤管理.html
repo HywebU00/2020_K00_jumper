@@ -300,6 +300,9 @@
                                             <li><a href="#">標籤一號<span>(77)</span></a></li>
                                             <li><a href="#">標籤二號<span>(55)</span></a></li>
                                         </ul>
+                                        <!-- click button 則
+                                            1.".filter_search" add class "fix"
+                                            2. ".personal_lightbox" display:block-->
                                         <button type="button" class="btn_management">管理我的分類標籤</button>
                                     </div>
 
@@ -308,38 +311,39 @@
 
                         </div>
                     </div>
-                    <!-- 點擊看更多的彈出視窗 -->
+                    <!-- 點擊“管理我的分類標籤”(button.btn_management)的彈出視窗 -->
                     <!-- ".personal_lightbox" 預設是 display:none -->
                     <div class="personal_lightbox" style="display:block">
                         <div class="overlay"></div>
                         <div class="personalblock">
                             <div class="close"></div>
-                            <h3>分享與匯出</h3>
-                            <div class="export">
-                                <h4>匯出</h4>
+                            <h3>管理分類標籤</h3>
+                            <div class="mytags manage_tag">
                                 <ul>
-                                    <li><a href="javascript:;">EXCEL</a></li>
-                                    <li><a href="javascript:;">MARC</a></li>
-                                    <li><a href="javascript:;">ISO 2709</a></li>
-                                    <li><a href="javascript:;">RefWork</a></li>
-                                    <li><a href="javascript:;">EndNote</a></li>
-                                    <li><a href="javascript:;">Reference Manager</a></li>
-                                    <li><a href="javascript:;">TXT</a></li>
-                                    <li><a href="javascript:;">列印</a></li>
+                                    <li><input type="text" value="標籤一號標籤一號"><span>(6)</span>
+                                        <div class="manage_btn_grp">
+                                            <button type="button"><i class="i_check"></i><span>儲存</span></button>
+                                            <button type="button"><i class="i_trash"></i><span>刪除標籤</span></button>
+                                        </div>
+                                    </li>
+                                    <li>標籤二號<span>(5)</span>
+                                        <div class="manage_btn_grp">
+                                            <button type="button"><i class="i_edit"></i><span>重新命名</span></button>
+                                            <button type="button"><i class="i_trash"></i><span>刪除標籤</span></button>
+                                        </div>
+                                    </li>
+                                    <li>test<span>(5)</span>
+                                        <div class="manage_btn_grp">
+                                            <button type="button"><i class="i_edit"></i><span>重新命名</span></button>
+                                            <button type="button"><i class="i_trash"></i><span>刪除標籤</span></button>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                             <hr>
-                            <div class="share">
-                                <h4>分享</h4>
-                                <form action="">
-                                    <label for="username">轉寄至此信箱（預設為註冊信箱）</label>
-                                    <input type="email" id="username" placeholder="請輸入電子信箱" value="testtest@hyweb.com.tw">
-                                    <div class="btn_grp_right">
-                                        <button type="submit">寄出</button>
-                                    </div>
-                                </form>
-                            </div>
+                            <button class="add_newtag">新增分類標籤</button>
                         </div>
+
                     </div>
                     <div class="search_result">
                         <h2>收藏列表</h2>
@@ -353,6 +357,7 @@
                             
                             <div class="function_block">
                                 <div class="btn_grp">
+                                    <!-- click 加入分類標籤buttom 則燈箱".personal_lightbox" display:block -->
                                     <button type="button" title="加入分類標籤">
                                         <i class="i_tag"></i>
                                         <span>加入分類標籤</span>

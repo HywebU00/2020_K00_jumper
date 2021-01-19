@@ -104,13 +104,18 @@ button[type="reset"],
 
 .del_btn, .add_btn{
     font-size: 0;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 2px;
     border: none;
-    background: url(../images/icon/icon_close.svg) no-repeat center;
-    background-size: 14px;
+    background: $color-btn-light url(../images/icon/icon_close.svg) no-repeat center;
+    background-size: 12px;
     opacity: .6;
+    border-radius: 30px;
+    transition: .3s;
+    &:hover{
+        box-shadow: 0 1px 3px rgba(0,0,0, .5);
+    }
 }
 
 .add_btn{
@@ -151,54 +156,3 @@ button[type="reset"],
         }
     }
 }
-
-//按鈕顏色
-//@include btn_setting(按鈕顏色,字的顏色);
-// .btn-green {
-//     @extend %btn;
-//     @include btn_setting($color-green, #FFF);
-// }
-// .btn-blue {
-//     @extend %btn;
-//     @include btn_setting($color-blue, #FFF);
-// }
-// .btn-yellow {
-//     @extend %btn;
-//     @include btn_setting(lighten($color-yellow, 5), #FFF);
-// }
-// .btn-orange {
-//     @extend %btn;
-//     @include btn_setting(lighten($color-orange, 10), #FFF);
-// }
-// .btn-red {
-//     @extend %btn;
-//     @include btn_setting($color-red, #FFF);
-// }
-// .btn-purple {
-//     @extend %btn;
-//     @include btn_setting(lighten($color-purple, 5), #FFF);
-// }
-// .btn-submit {
-//     @extend %btn;
-//     @include btn_setting(lighten($primaryColor, 5), #FFF);
-// }
-// .btn-reset {
-//     @extend %btn;
-//     color:lighten($color-word,15);
-// }
-// .btn-primary {
-//     @extend .btn-orange;
-// }
-// // 按鈕大小
-// .btn-xl {
-//     font-size: $font-size * 1.5; //24px
-// }
-// .btn-lg {
-//     font-size: $font-size * 1.25; //20px
-// }
-// .btn-sm {
-//     font-size: $font-size * .938; //15px
-// }
-// .btn-xs {
-//     font-size: $font-size * .75; //12px
-// }

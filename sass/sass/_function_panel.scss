@@ -34,6 +34,7 @@
             background: none;
             color: $color-word-light;
             position: relative;
+            height: auto;
             &:before{
                 content: "";
                 position: absolute;
