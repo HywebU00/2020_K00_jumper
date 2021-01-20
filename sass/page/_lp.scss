@@ -725,7 +725,7 @@
 
         h3 {
             font-size: 1.25em;
-            margin: 0 0 1em 0;
+            margin-top: 0;
             width: calc(100% - 5em);
 
             @include screen('mobile') {
@@ -993,7 +993,7 @@
         position: absolute;
         z-index: 10;
         right: 0;
-        top: .5em;
+        top: .25em;
         display: flex;
 
         button {
