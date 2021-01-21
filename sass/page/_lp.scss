@@ -639,11 +639,19 @@
         }
         &~.sort_icon{
             margin-top: 2em;
+            @include screen('mobile'){
+                display: none;
+            }
             .pic{
                 width: 70px;
                 height: 70px;
                 padding: .8em;
             }
+        }
+        &~.list_data{
+            @include screen('mobile'){
+                margin-top: 1em;
+            }      
         }
     }
 
@@ -681,9 +689,9 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
         @include screen('mobile') {
-            display: none;
+            display: block;
+            flex-basis: auto;
         }
 
         .pic {
@@ -696,6 +704,9 @@
             //box-shadow: $box;
             background: $color-lightgray;
             padding: .5em;
+            @include screen('mobile') {
+                display: none;
+            }
 
             img {
                 height: 100%;
@@ -711,6 +722,12 @@
             color: $color-word-light;
             font-size: .875em;
             line-height: 1.25;
+            @include screen('mobile'){
+                border: 1px solid $color-gray;
+                padding: .2em .5em;
+                border-radius: 5px;
+                margin: 0 0 .5em 0;
+            }
         }
 
         &+.list_data {
@@ -734,7 +751,7 @@
             flex-basis: 100%;
             max-width: 100%;
             padding: 0;
-            margin-top: 1em;
+
         }
 
         h3 {
