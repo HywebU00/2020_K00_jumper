@@ -396,6 +396,15 @@
         }
     }
 
+    >.filter_search_btn{
+        position: absolute;
+        right: 15px;
+        top: 1em;
+        @include screen('mobile'){
+            top: .5em;
+        }
+    }
+
     .browse {
         margin-bottom: 1em;
 
