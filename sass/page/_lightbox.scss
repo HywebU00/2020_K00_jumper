@@ -46,7 +46,7 @@ body.fix {
 
 .close {
     background: url('../images/icon/icon_close.svg') no-repeat center;
-    background-size: 20px;
+    background-size: 18px;
     width: 25px;
     height: 25px;
     display: block;
@@ -956,6 +956,7 @@ body.fix {
             border-bottom: 2px solid $primaryColor;
             width: calc(100% - 50px);
             padding: 0;
+            color: $color-word-light;
         }
 
         .manage_btn_grp {
