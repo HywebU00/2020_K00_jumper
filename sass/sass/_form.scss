@@ -7,7 +7,7 @@ $form_title_width :150px; // 表單title寬度
     padding: .5em;
     background: #fff;
     vertical-align: middle;
-    margin-bottom: .3em;
+    margin-bottom:.3em;
     @include box-sizing;
     @include border-radius($f_radius);
     @include transition(border, .2s, ease-out);
@@ -48,12 +48,16 @@ select::-ms-expand {
 
         @include screen('mobile') {
             width: 100%;
+            @include gutter(0);
         }
     }
 
 
     .form_content {
-        float: left;
+        float: right;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         padding-top: 3px;
         width: calc(100% - #{$form_title_width});
         @include gutter();
@@ -61,6 +65,7 @@ select::-ms-expand {
 
         @include screen('mobile') {
             width: 100%;
+            @include gutter(0);
         }
 
         &.form_inline {
@@ -70,14 +75,24 @@ select::-ms-expand {
             select {
                 width: auto;
                 min-width: 100px;
-                display: inline-block;
+                margin:0 .3em .3em;
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
 
                 @include screen('xs_mobile') {
                     width: 100%;
                     display: block;
                 }
             }
+            .flex-grow{
+                flex: 1 1 auto;
+            }
         }
+
 
         // 第二層的設定
         .form_grp {
@@ -243,7 +258,7 @@ select::-ms-expand {
 }
 
 //---------------------------------------------form setting--------//
-.form {
+form, .form {
 
     .form_grp,
     .check_grp,
@@ -379,6 +394,13 @@ button {
     @include formStyle(); // 預設載入formStyle設定
 }
 
+button{
+    &:hover,
+    &:focus{
+        outline: none;
+    }
+}
+
 input,
 select,
 textarea {
@@ -418,12 +440,11 @@ button,
 input[type="button"],
     {
     @extend %btn;
-    @include btn_setting(#fff, $color-word);
 }
 
 input[type="submit"] {
     @extend %btn;
-    @include btn_setting($form-focus, #FFF);
+
 }
 
 textarea {
@@ -442,6 +463,7 @@ input[type="file"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
+input[type="date"]:focus,
 textarea:focus,
 select:focus {
     border: 1px solid lighten($form-focus, 20);
@@ -472,7 +494,7 @@ select {
 //---------------------------------------------reset--------//
 input[type="reset"] {
     @extend %btn;
-    @include btn_setting(darken($color-gray, 20), #FFF);
+    //@include btn_setting(darken($color-gray, 20), #FFF);
     text-shadow: none;
 }
 
@@ -553,7 +575,7 @@ input[disable] {
         top: 1px;
         right: 3px;
         @extend %btn;
-        @include btn_setting($form-focus, #FFF);
+        //@include btn_setting($form-focus, #FFF);
         padding: .2em 1em !important;
         @include border-radius(4px);
 
@@ -766,6 +788,7 @@ abbr[title] {
         &[type="text"] {
             flex: 1 1 auto;
             height: 44px;
+            margin: 0;
 
             &.show_recent_searches {
                 box-shadow: 0px -1px 2px rgba(0, 0, 0, .3);
@@ -810,7 +833,7 @@ abbr[title] {
         height: 44px;
         border-radius: $rounded-angle 0 0 $rounded-angle;
         border-right: 0;
-        margin-right: 0 !important;
+        margin: 0 !important;
 
         @include screen('mobile') {}
 
@@ -831,7 +854,6 @@ abbr[title] {
         width: 96px;
         line-height: 44px;
         border-radius: 30px;
-        flex: 1 0 96px;
 
         @include screen('mobile') {
             display: none;

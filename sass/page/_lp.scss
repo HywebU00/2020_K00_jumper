@@ -485,6 +485,19 @@
         background: #fff;
         overflow: hidden;
         padding: 2em 3em;
+        @include screen('tablet'){
+            padding: 2em;
+        }
+        @include screen('mobile'){
+            padding: 1em 15px;
+        }
+        .tab_grp, 
+        .advanced_form{
+            @include screen('mobile'){
+                display: none;
+            }
+        }
+
     }
 
     .content_block {
