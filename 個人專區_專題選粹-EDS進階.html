@@ -263,8 +263,14 @@
                                 <li>
                                     <div class="accordion_content">
                                         <ul>
-                                            <li><a href="#">策略一號</a></li>
-                                            <li><a href="#">策略二號</a></li>
+                                            <li>
+                                                <a href="#">策略一號</a>
+                                                <!-- ".btn_del" 預設是 display:none -->
+                                                <button type="button" class="btn_del" style="display: none"><i class="i_trash" ></i></button></li>
+                                            <li>
+                                                <a href="#">策略二號</a>
+                                                <button type="button" class="btn_del" style="display: none" style="display: block"><i class="i_trash"></i></button>
+                                            </li>
                                         </ul>
                                         <button type="button" class="btn_management">管理策略</button>
                                     </div>

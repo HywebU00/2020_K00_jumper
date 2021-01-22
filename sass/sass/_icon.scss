@@ -10,8 +10,8 @@
 }
 @mixin hyui_icon($icon_img) {
     &:before {
-        background-image: url(../images/icon/#{$icon_img}.svg);
-        background-size: cover;
+        background: url(../images/icon/#{$icon_img}.svg) no-repeat center;
+        background-size: contain;
         margin-top: -0.1em;
         margin-bottom: .1em;
     }
