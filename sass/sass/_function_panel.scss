@@ -1,6 +1,6 @@
 .function_panel {
     background: linear-gradient(to bottom, #ffffff, #e5e5e5);
-    padding:.5em 1.5em;
+    padding: .5em 1.5em;
     position: relative;
     border: 1px solid $color-lightgray;
     display: flex;
@@ -13,11 +13,12 @@
         //display: block;
     }
 
-    button{
+    button {
         background: transparent;
-        margin:0;
+        margin: 0;
         height: 40px;
-        &:hover{
+
+        &:hover {
             color: $primaryColor;
         }
     }
@@ -35,7 +36,8 @@
             color: $color-word-light;
             position: relative;
             height: auto;
-            &:before{
+
+            &:before {
                 content: "";
                 position: absolute;
                 display: inline-block;
@@ -44,45 +46,51 @@
                 border-radius: 4px;
                 left: 0;
                 top: -1px;
-                margin:0 3px;
+                margin: 0 3px;
                 opacity: .6;
                 transition: .3s;
             }
+
             &:hover,
-            &.active{
-                &:before{
+            &.active {
+                &:before {
                     opacity: 1;
-                } 
+                }
             }
         }
-        .list_less{
-            &:before{
-                background:$color-gray url(../images/icon/icon_list_less.svg) center no-repeat;
+
+        .list_less {
+            &:before {
+                background: $color-gray url(../images/icon/icon_list_less.svg) center no-repeat;
                 background-size: 80%;
             }
+
             &:hover,
-            &.active{
-                &:before{
-                    background:$primaryColor url(../images/icon/icon_list_less_invert.svg) center no-repeat;
+            &.active {
+                &:before {
+                    background: $primaryColor url(../images/icon/icon_list_less_invert.svg) center no-repeat;
                     background-size: 80%;
                 }
             }
         }
-        .list_more{
-            &:before{
-                background:$color-gray url(../images/icon/icon_list_more.svg) center no-repeat;
+
+        .list_more {
+            &:before {
+                background: $color-gray url(../images/icon/icon_list_more.svg) center no-repeat;
                 background-size: 80%;
             }
+
             &:hover,
-            &.active{
-                &:before{
-                    background:$primaryColor url(../images/icon/icon_list_more_invert.svg) center no-repeat;
+            &.active {
+                &:before {
+                    background: $primaryColor url(../images/icon/icon_list_more_invert.svg) center no-repeat;
                     background-size: 80%;
                 }
             }
         }
 
     }
+
     .result_amount {
         display: inline-flex;
         flex-wrap: wrap;
@@ -129,7 +137,7 @@
                 display: none;
             }
         }
-    } 
+    }
 
 }
 
@@ -151,90 +159,99 @@
         // justify-content: flex-end;
     }
 
-    
-    .btn_grp{
+
+    .btn_grp {
         padding: 0;
         display: flex;
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             position: absolute;
             bottom: calc(100% + .75em);
             right: 15px;
         }
-        button{
+
+        button {
             display: flex;
             align-items: center;
             margin-left: .5em;
-            &:first-of-type{
+
+            &:first-of-type {
                 margin-left: 0;
             }
-            @include screen('tablet'){
+
+            @include screen('tablet') {
                 min-width: 40px;
                 justify-content: center;
             }
-            i{
-                @include screen('tablet'){
+
+            i {
+                @include screen('tablet') {
                     margin: 0;
-                }  
+                }
             }
-            span{
-                @include screen('tablet'){
+
+            span {
+                @include screen('tablet') {
                     font-size: 0;
                 }
             }
         }
     }
-}.filter_search_btn {
-        display: none;
+}
 
-        @include screen('tablet') {
-            display: block;
-        }
+.filter_search_btn {
+    display: none;
+
+    @include screen('tablet') {
+        display: block;
+    }
+}
+
+.add_bookmark,
+.filter_search_btn {
+    border: 1px solid $color-input;
+    background: none;
+    color: $color-word;
+    margin: 0 0 0 .5em;
+    position: relative;
+
+    // &:before{
+    //     position: absolute;
+    //     content:"";
+    //}
+    @include screen('tablet') {
+        padding: .4em;
+        min-width: 2.5em;
     }
 
-    .add_bookmark,
-    .filter_search_btn {
-        border: 1px solid $color-input;
-        background: none;
-        color: $color-word;
-        margin: 0 0 0 .5em;
-        position: relative;
+    &:hover,
+    &:focus,
+    &.active {
+        color: $primaryColor;
 
-        // &:before{
-        //     position: absolute;
-        //     content:"";
-        //}
-        @include screen('tablet') {
-            padding: .4em;
-            min-width: 2.5em;
-        }
-
-        &:hover,
-        &:focus,
-        &.active {
-            color: $primaryColor;
-
-            .i_bookmark {
-                &:before {
-                    background-image: url(../images/icon/icon_bookmark_saved.svg);
-                }
-            }
-        }
-
-        i {
-            margin: 0;
-
+        .i_bookmark {
             &:before {
-                height: 1.2em;
-                width: 1.2em;
-            }
-        }
-
-        span {
-            @include screen('tablet') {
-                display: none;
+                background-image: url(../images/icon/icon_bookmark_saved.svg);
             }
         }
     }
+
+    i {
+        margin: 0;
+
+        &:before {
+            height: 1.2em;
+            width: 1.2em;
+        }
+    }
+
+    span {
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+}
+
 .option {
     position: relative;
     z-index: 10;
@@ -309,12 +326,12 @@
     }
 }
 
-.tabSet{
-    &+.function_panel{
-        .function_block{
-            .btn_grp{
-                bottom:calc(100% + 3.75em)
+.tabSet {
+    &+.function_panel {
+        .function_block {
+            .btn_grp {
+                bottom: calc(100% + 3.75em)
             }
         }
     }
-}  
+}

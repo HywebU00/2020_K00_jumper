@@ -143,9 +143,10 @@
             border-radius: $rounded-angle $rounded-angle 0 0;
             background: $color-tab;
             color: $color-word;
-            padding: .65em 2em;
+            padding: .5em 2em;
             min-width: 140px;
             text-align: center;
+            font-weight: bold;
 
             &:hover {
                 background: $primaryColor;

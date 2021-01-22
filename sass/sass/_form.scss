@@ -20,7 +20,7 @@ select::-ms-expand {
 
 .form_grid {
     font-size: .938em;
-    margin: .5em;
+    margin: .5em 0;
     border-top: 1px solid #DDD;
 
     .form_grp {
@@ -51,6 +51,7 @@ select::-ms-expand {
         }
     }
 
+
     .form_content {
         float: left;
         padding-top: 3px;
@@ -62,6 +63,22 @@ select::-ms-expand {
             width: 100%;
         }
 
+        &.form_inline {
+
+            input,
+            textarea,
+            select {
+                width: auto;
+                min-width: 100px;
+                display: inline-block;
+
+                @include screen('xs_mobile') {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+
         // 第二層的設定
         .form_grp {
             min-height: 2.5em;
@@ -71,20 +88,7 @@ select::-ms-expand {
                 display: block;
                 @include gutter();
 
-                &.form_inline {
 
-                    input[type="text"],
-                    select {
-                        width: auto;
-                        min-width: 100px;
-                        display: inline-block;
-
-                        @include screen('xs_mobile') {
-                            width: 100%;
-                            display: block;
-                        }
-                    }
-                }
             }
 
             &:last-child {
@@ -239,7 +243,7 @@ select::-ms-expand {
 }
 
 //---------------------------------------------form setting--------//
-form {
+.form {
 
     .form_grp,
     .check_grp,
@@ -280,6 +284,10 @@ form {
                 width: auto;
             }
         }
+    }
+
+    button{
+        margin: 0 0 .3em 0;
     }
 
     // form 全域行內設定
@@ -446,7 +454,7 @@ select:focus {
 select {
     height: 40px;
     padding: 0 34px 0 .8em;
-    border: 1px solid $color-gray;
+    border: 1px solid $color-input;
     background: #fff url(../images/icon/icon_arrow_down.svg) no-repeat right 10px center;
     background-size: 12px;
 
@@ -669,21 +677,25 @@ abbr[title] {
             }
         }
 
-        .btn_grp{
+        .btn_grp {
             padding: 0;
             width: 176px;
-            @include screen('mobile'){
+
+            @include screen('mobile') {
                 position: absolute;
                 margin: 0;
                 top: 0;
                 right: 0;
                 width: auto;
             }
-            
+
         }
 
         .check_grp {
             margin: .5em 0;
+            label{
+                margin-right: .5em;
+            }
 
             a {
                 color: $color-word;
@@ -721,12 +733,13 @@ abbr[title] {
     .link {
         text-decoration: underline;
     }
-    .add_condition{
+
+    .add_condition {
         border: 1px solid $primaryColor;
-        color:$primaryColor;
-        background: #fff;  
-        margin: 0 0 1em 0; 
-        height: 44px; 
+        color: $primaryColor;
+        background: #fff;
+        margin: 0 0 1em 0;
+        height: 44px;
     }
 
     .form_grp {
@@ -739,7 +752,7 @@ abbr[title] {
         position: relative;
     }
 
-    select{
+    select {
         height: 44px;
         border-color: $color-input;
         margin-bottom: 0;
@@ -798,6 +811,7 @@ abbr[title] {
         border-radius: $rounded-angle 0 0 $rounded-angle;
         border-right: 0;
         margin-right: 0 !important;
+
         @include screen('mobile') {}
 
         +input {
@@ -805,7 +819,7 @@ abbr[title] {
         }
     }
 
-    
+
 
     .advanced_search,
     .simple_search {
@@ -817,6 +831,7 @@ abbr[title] {
         width: 96px;
         line-height: 44px;
         border-radius: 30px;
+        flex: 1 0 96px;
 
         @include screen('mobile') {
             display: none;
@@ -878,24 +893,28 @@ abbr[title] {
             }
         }
     }
-    .condition{
+
+    .condition {
         position: relative;
         width: 574px;
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             width: auto;
         }
-        .delete{
+
+        .delete {
             position: absolute;
             right: -30px;
-            top:calc(50% - 10px);
+            top: calc(50% - 10px);
             font-size: 0;
             border-radius: 50%;
             width: 20px;
             height: 20px;
             border: 1px solid $primaryColor;
             background: #fff;
-            &:before{
-                content:"";
+
+            &:before {
+                content: "";
                 position: absolute;
                 display: block;
                 background: $primaryColor;
@@ -913,26 +932,31 @@ abbr[title] {
 
 
     &.advanced {
-        .form_grp{
-            @include screen('mobile'){
+        .form_grp {
+            @include screen('mobile') {
                 padding-right: 48px;
-            } 
+            }
         }
-        input, select{
+
+        input,
+        select {
             margin-right: 4px;
         }
-        .condition{
-            .delete{
-                @include screen('mobile'){
+
+        .condition {
+            .delete {
+                @include screen('mobile') {
                     right: 14px;
                 }
             }
         }
-        .link{
+
+        .link {
             position: relative;
             padding-left: 16px;
-            &:before{
-                content:"";
+
+            &:before {
+                content: "";
                 position: absolute;
                 top: 4px;
                 left: 0;

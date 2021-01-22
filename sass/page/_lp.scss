@@ -481,6 +481,11 @@
             }
         }
     }
+    .content{
+        background: #fff;
+        overflow: hidden;
+        padding: 2em 3em;
+    }
 
     .content_block {
         display: flex;
@@ -857,7 +862,7 @@
             align-items: center;
             text-decoration: none;
             border-radius: $rounded-angle;
-            padding: .2em .5em;
+            padding: .1em .5em;
             font-size: .875em;
             border: 1px solid $primaryColor;
             background: $primaryColor;
