@@ -393,7 +393,8 @@
             font-size: .938em;
             font-weight: bold;
             margin: 0;
-            //@include btn_setting($btn-bg:$primaryColor, $btn-font-color:#fff);
+            background: $primaryColor;
+            border-radius: 30px;
             @include screen('mobile') {
                 min-width: auto;
                 padding: 4px 10px 3px !important;
