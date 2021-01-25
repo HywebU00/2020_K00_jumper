@@ -38,6 +38,7 @@ body.fix {
     }
     h3{
         color: $primaryColor;
+        margin: .5em 0;
         // padding: .5em 0;
         // border-bottom: 2px $primaryColor solid;
         // margin-top: 0!important;
@@ -750,13 +751,31 @@ body.fix {
         max-width: 95%;
         height: 90%;
         padding: 10px 20px;
+        position: relative;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
 
         @include screen('mobile') {
             height: 95%;
         }
 
+        h3{
+            span{
+                display: inline-block;
+                margin-left: .5em;
+                font-size: 1rem;
+                color: $color-word-light;
+                font-weight: normal;
+                em{
+                    font-style: normal;
+                }
+            }
+        }
+
         .tabSet {
+            margin: 0;
+            background: #fff;
             li {
                 a {
                     font-size: 1em;
@@ -765,12 +784,17 @@ body.fix {
         }
 
         .btn_grp {
-            float: right;
+            align-self: flex-end;
         }
 
         .note {
-            float: left;
-            max-width: calc(100% - 170px);
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+            max-width: calc(100% - 250px);
+            height: 46px;
+            overflow-y: auto;
+            font-size: .938em;
 
             @include screen('xs_mobile') {
                 display: none;
@@ -784,7 +808,7 @@ body.fix {
             box-shadow: $box inset;
 
             @include screen('mobile') {
-                height: calc(100% - 220px);
+                height: calc(100% - 200px);
             }
 
             .btn_grp {
@@ -792,6 +816,18 @@ body.fix {
                 text-align: left;
                 padding: 10px 20px;
                 width: auto;
+                position: static;
+            }
+            button[type="reset"]{
+                 background-color: #fff;
+                border-color:$color-input; 
+                color: $color-word;
+                border-radius: $rounded-angle;
+                padding: .5em 1em;
+                &:hover{
+                    color: $primaryColor;
+                    border-color: $primaryColor;
+                }
             }
 
             .scroll_content {

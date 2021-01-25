@@ -65,8 +65,8 @@ $btn-radius:$rounded-angle;
     &:focus,
     &.active {
         color: $primaryColor;
-        border-color: $primaryColor;
         outline: none;
+        border-color: $primaryColor;
     }
 }
 
@@ -101,6 +101,7 @@ button[type="reset"],
     padding: .5em 1.5em;
 
     &:hover {
+        border-color: $color-lightgray;
         background: darken($color-lightgray, 10);
         color: $color-word;
     }
