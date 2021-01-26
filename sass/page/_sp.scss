@@ -2,12 +2,20 @@
 	.main_content{
 		.container{
 			max-width: 1100px;
-			display: block;
+			@include gutter();
+		}
+		h2{
+			width: 100%;
 		}
 		.col{
 			@include gutter();
+			margin-bottom: 30px;
+			@include screen('mobile'){
+				@include gutter(0);
+			}
 		}
 		.featured_data{
+			padding-bottom: 70px;
 			h3{
 				margin: .5em 0;
 				padding: .5em 0;
@@ -15,19 +23,38 @@
 			}
 			.content{
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 				justify-content: space-between;
+				@include screen('mobile'){
+					align-items:center;
+				}
+				ul{
+					max-width: calc(100% - 130px);
+				}
 				li{
 					border: none;
 					margin-bottom: 0;
+					white-space: normal;
+					@include screen('mobile'){
+						display: none;
+					}
+					&.m_show{
+						display: block
+					}
+					span{
+						font-weight: bold;
+						@include screen('xs_mobile'){
+							display: block;
+						}
+					}
 				}
 			}
 			.apply{
-				text-align: center;
-				margin-top: 1em;
-				a{
-					@extend %btn-submit;
-				}
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				@extend %btn-submit;
 			}
 		}
 		.quota{
@@ -35,6 +62,9 @@
 			border-radius: $rounded-angle;
 			background: $color-lightgray;
 			text-align: center;
+			// @include screen('xs_mobile'){
+			// 	margin: 0 auto;
+			// }
 		}
 		.status{
 			margin-bottom: 1em;
