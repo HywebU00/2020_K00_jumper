@@ -54,6 +54,27 @@ $btn-radius:$rounded-angle;
     }
 }
 
+%btn-submit{
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    color: #fff;
+    border-radius: 30px;
+    padding: .5em 1.5em;
+
+    &:hover,
+    &:focus {
+        background: $aHover;
+        color: #fff;
+        outline: none;
+    }
+    &:disabled{
+        background: $color-gray;
+        border-color: $color-gray;
+        cursor: auto;
+    }
+
+}
+
 // 按鈕基本樣式
 .btn {
     @extend %btn;
@@ -72,24 +93,8 @@ $btn-radius:$rounded-angle;
 
 input[type="submit"],
 button[type="submit"],
-.btn-submit {
-    background-color: $primaryColor;
-    border-color: $primaryColor;
-    color: #fff;
-    border-radius: 30px;
-    padding: .5em 1.5em;
-
-    &:hover,
-    &:focus {
-        background: $aHover;
-        color: #fff;
-        outline: none;
-    }
-    &:disabled{
-        background: $color-gray;
-        border-color: $color-gray;
-        cursor: auto;
-    }
+.btn-submit{
+    @extend %btn-submit;
 }
 
 button[type="reset"],
