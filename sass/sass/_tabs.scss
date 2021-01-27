@@ -143,7 +143,7 @@
             border-radius: $rounded-angle $rounded-angle 0 0;
             background: $color-tab;
             color: $color-word;
-            padding: .5em 2em;
+            padding: .6em 2em;
             min-width: 140px;
             text-align: center;
             font-weight: bold;
@@ -172,5 +172,48 @@
             }
         }
 
+    }
+}
+.date_panel{
+    margin: .2em 0;
+    padding: .5em 0 .5em;
+    min-height: 35px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    display: flex;
+    .publish_time {
+        color: $color-word-light;
+        position: relative;
+        padding-left: 20px;
+        font-size: .875em;
+        margin-right: 1.5em;
+        &:before{
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            left: 0;
+            top: .35em;
+            background: url(../images/icon/icon_clock.svg) no-repeat center;
+            background-size: 12px;
+            opacity: .6;
+        }
+
+    }
+}
+.article_content{
+    .pic{
+        margin: 2em auto;
+        text-align: center;
+        @include screen('mobile'){
+            margin: 1em auto;
+        }
+        img{
+            max-width: 90%;
+            @include screen('mobile'){
+                max-width: 100%;
+            }
+        }
     }
 }
