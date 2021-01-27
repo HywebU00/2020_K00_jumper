@@ -128,12 +128,16 @@
     background: #fff;
     padding: 20px 30px;
     width: 100%;
+    margin-bottom: 1em;
+    &:last-child{
+    	margin-bottom: 0;
+    }
     @include screen('mobile'){
     	padding: 15px;
     }
 
     h3 {
-        margin: 1em 0;
+        margin-bottom: 1em;
         color: $primaryColor;
     }
 
@@ -206,3 +210,25 @@
     }
 }
 
+.article_content{
+    .pic{
+        margin: 2em auto;
+        text-align: center;
+        @include screen('mobile'){
+            margin: 1em auto;
+        }
+        img{
+            max-width: 90%;
+            @include screen('mobile'){
+                max-width: 100%;
+            }
+        }
+    }
+    .link{
+    	color: $linkColor;
+    	&:hover,
+    	&:focus{
+    		text-decoration: underline;
+    	}
+    }
+}

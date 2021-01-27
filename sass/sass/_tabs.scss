@@ -181,6 +181,9 @@
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
     display: flex;
+    @include screen('xs_mobile'){
+        flex-wrap: wrap;
+    }
     .publish_time {
         color: $color-word-light;
         position: relative;
@@ -200,20 +203,5 @@
             opacity: .6;
         }
 
-    }
-}
-.article_content{
-    .pic{
-        margin: 2em auto;
-        text-align: center;
-        @include screen('mobile'){
-            margin: 1em auto;
-        }
-        img{
-            max-width: 90%;
-            @include screen('mobile'){
-                max-width: 100%;
-            }
-        }
     }
 }
