@@ -25,12 +25,13 @@
        	.back{
        		position: absolute;
        		right: 15px;
-       		top: 1.6em;
+       		top: 1.7em;
        		font-size: .875em;
-       		
-       		@include screen('mobile'){
-       			position: static;
-       		}
+       		display: inline-block;
+       		// @include screen('mobile'){
+       		// 	position: static;
+       		// 	margin-bottom: .5em;
+       		// }
        	}
 
         .featured_data {
@@ -107,7 +108,7 @@
             color: $color-word-light;
         }
 
-        .num {
+        .amount {
             font-size: 2em;
             font-weight: bold;
             color: $primaryColor;
@@ -157,6 +158,49 @@
     		margin: 0 auto;
     		@include screen('mobile'){
     			width: 100%;
+    		}
+    	}
+    }
+    .list{
+    	li{
+    		padding: 1em 0;
+    		border-bottom: 1px solid $color-line;
+    		display: flex;
+    		align-items: center;
+    		justify-content: space-between;
+    		@include screen('mobile'){
+    			flex-wrap: wrap;
+    			justify-content: flex-start;
+    		}
+    		a{
+    			display: flex;
+    			color: $color-word;
+    			position: relative;
+    			//padding-left: 2em;
+    			width: calc(100% - 100px);
+    			&:hover{
+    				color: $primaryColor;
+    			}
+    			@include screen('mobile'){
+    				width: 100%;
+    			}
+    		}
+    		.num{
+    			font-weight: normal;
+    			min-width: 1.5em;
+			    white-space: nowrap;
+			    text-align: right;
+    			&:after{
+    				content: ".";
+    				display: inline-block;
+    			}
+    		}
+    		time{
+    			color: $color-word-light;
+    			font-size: .875em;
+    			@include screen('mobile'){
+    				margin-left: 2em;
+    			}
     		}
     	}
     }
