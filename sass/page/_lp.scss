@@ -30,7 +30,7 @@
 
 .main_content {
     background: $color-lightgray;
-
+    min-height: calc(100% - 200px);
     .container {
         position: static;
         display: flex;

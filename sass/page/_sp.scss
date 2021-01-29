@@ -196,7 +196,8 @@
     		}
     		.num{
     			font-weight: normal;
-    			min-width: 1.5em;
+    			min-width: 2em;
+    			margin-right: .2em;
 			    white-space: nowrap;
 			    text-align: right;
     			&:after{
@@ -213,7 +214,18 @@
     		}
     	}
     }
+    .table_list{
+    	.title{
+    		width: 40%;
+    	}
+
+    }
+
 }
+.fillin{
+	display: block;
+    @extend %btn-submit;
+    	}
 
 .article_content{
     .pic{

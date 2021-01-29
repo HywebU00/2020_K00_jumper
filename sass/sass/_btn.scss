@@ -79,15 +79,28 @@ $btn-radius:$rounded-angle;
 .btn {
     @extend %btn;
     @include box-sizing;
-    //@include btn_setting;
-    text-shadow: none;
-
     &:hover,
     &:focus,
     &.active {
         color: $primaryColor;
         outline: none;
         border-color: $primaryColor;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    @include box-sizing;
+    text-shadow: none;
+    background: $primaryColor;
+    border-radius: 30px;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &.active {
+        outline: none;
+        border-color: $primaryColor;
+        color: #fff;
     }
 }
 
