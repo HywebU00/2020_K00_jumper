@@ -147,6 +147,7 @@
 
     li {
         padding: 4px 0;
+        line-height: 1.5;
 
         span {
             font-weight: bold;
@@ -248,4 +249,13 @@
     		text-decoration: underline;
     	}
     }
+}
+.questionnaire{
+	h3{
+		font-size: 1.125送出em;
+		padding: .5em 0;
+		background: $color-lightgray;
+		color: $color-word;
+		text-align: center;
+	}
 }

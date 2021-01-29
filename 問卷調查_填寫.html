@@ -313,82 +313,142 @@
             <section class="main_content">
                 <div class="container">
                     <h2>問卷調查</h2>
+                    <a href="javascript:;" class="back">回上一頁</a>
                     <div class="detail_block">
-                        <div class="table_list">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>編號</th>
-                                        <th class="title">問卷標題</th>
-                                        <th>資源名稱</th>
-                                        <th>調查起迄時間</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-title="編號">01</td>
-                                        <td data-title="問卷標題">Groliner Online 資料庫意見回饋</td>
-                                        <td data-title="資源名稱" class="link"><a href="#">Groliner Online (試用資料庫)</a></td>
-                                        <td data-title="調查起迄時間" class="nowrap">2020/12/03~2020/12/31</td>
-                                        <td class="nowrap"><a href="#" class="btn-primary">填寫</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="編號">02</td>
-                                        <td data-title="問卷標題">Groliner Online 資料庫意見回饋 Groliner Online 資料庫意見回饋 Groliner Online 資料庫意見回饋</td>
-                                        <td data-title="資源名稱" class="link"><a href="#">Groliner Online (試用資料庫)</a></td>
-                                        <td data-title="調查起迄時間" class="nowrap">2020/12/03~2020/12/31</td>
-                                        <td class="nowrap"><a href="#" class="btn-primary">填寫</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="編號">03</td>
-                                        <td data-title="問卷標題">Groliner Online 資料庫意見回饋</td>
-                                        <td data-title="資源名稱" class="link"><a href="#">Groliner Online (試用資料庫)</a></td>
-                                        <td data-title="調查起迄時間" class="nowrap">2020/12/03~2020/12/31</td>
-                                        <td class="nowrap"><a href="#" class="btn-primary">填寫</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="編號">04</td>
-                                        <td data-title="問卷標題">Groliner Online 資料庫意見回饋</td>
-                                        <td data-title="資源名稱" class="link"><a href="#">Groliner Online (試用資料庫)</a></td>
-                                        <td data-title="調查起迄時間" class="nowrap">2020/12/03~2020/12/31</td>
-                                        <td class="nowrap"><a href="#" class="btn-primary">填寫</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="編號">05</td>
-                                        <td data-title="問卷標題">Groliner Online 資料庫意見回饋</td>
-                                        <td data-title="資源名稱" class="link"><a href="#">Groliner Online (試用資料庫)</a></td>
-                                        <td data-title="調查起迄時間" class="nowrap">2020/12/03~2020/12/31</td>
-                                        <td class="nowrap"><a href="#" class="btn-primary">填寫</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="pagination">
-                            <ul class="page">
-                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                        <div class="info">
+                            <h3>Groline Online 資料庫意見回饋</h3>
+                            <ul>
+                                <li><span>資源名稱：</span>Groline Online</li>
+                                <li><span>說明：</span> 為了瞭解您使用資料庫的狀況為了瞭解您使用資料庫的狀況為了瞭解您使用資料庫的狀況為了瞭解您使用資料庫的狀況為了瞭解您使用資料庫的狀況為了瞭解您使用資料庫的狀況</li>
+                                <li><span>調查起訖時間：</span>2020/12/03 ~ 2020/12/31</li>
                             </ul>
-                            <form action="" class="form_inline">
-                                <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-                                    <select name="" id="">
-                                        <option value="">10</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
-                                        <option value="">40</option>
-                                    </select> 筆
+                        </div>
+                        <div class="questionnaire">
+                            <h3>基本資料</h3>
+                            <form action="">
+                                <p><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填欄位，不能為空</p>
+                                <div class="form_grid">
+                                    <div class="form_grp">
+                                        <label for="username" class="form_title">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                        <div class="form_content">
+                                            <input type="text" id="username" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title">身份<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                                        <div class="form_content">
+                                            <div class="radio_grp form_inline">
+                                                <label>
+                                                    <input type="radio" name="" value="">教師</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">博士班</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">碩士班</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">大學部</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">研究助理</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">行政助理</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title">單位<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                                        <div class="form_content">
+                                            <div class="radio_grp form_inline">
+                                                <label>
+                                                    <input type="radio" name="" value="">理學院</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">應用數學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">物理學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">化學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">心理學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">生物科技學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">奈米科技碩士學位學程</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">理學院</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">應用數學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">物理學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">化學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">心理學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">生物科技學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">奈米科技碩士學位學程</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="" class="form_title">Email<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                        <div class="form_content">
+                                            <input type="email" id="" value="" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grid">
+                                    <h3>意見資料</h3>
+                                    <p><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填欄位，不能為空</p>
+                                    <div class="form_grp">
+                                        <div class="form_title">使用目的<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                                        <div class="form_content">
+                                            <div class="radio_grp form_inline">
+                                                <label>
+                                                    <input type="checkbox" name="" value="">理學院</label>
+                                                <label>
+                                                    <input type="checkbox" name="" value="">應用數學系</label>
+                                                <label>
+                                                    <input type="checkbox" name="" value="">物理學系</label>
+                                                <label>
+                                                    <input type="checkbox" name="" value="">化學系</label>
+                                                <label>
+                                                    <input type="checkbox" name="" value="">心理學系</label>
+                                                <label>
+                                                    <input type="checkbox" name="" value="">生物科技學系</label>
+                                                <label>
+                                                    <input type="checkbox" name="" value="">奈米科技碩士學位學程</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title">單位<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                                        <div class="form_content">
+                                            <div class="radio_grp form_inline">
+                                                    <input type="radio" name="" value="">理學院</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">應用數學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">物理學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">化學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">心理學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">生物科技學系</label>
+                                                <label>
+                                                    <input type="radio" name="" value="">奈米科技碩士學位學程</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="address" class="form_title">您推薦或不推薦此資料庫的原因：</label>
+                                        <div class="form_content">
+                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-reset">清除</button>
+                                        <button class="btn btn-submit"></button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
