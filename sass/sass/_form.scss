@@ -702,7 +702,6 @@ abbr[title] {
 
         .btn_grp {
             padding: 0;
-            width: 176px;
 
             @include screen('mobile') {
                 position: absolute;
@@ -919,7 +918,7 @@ abbr[title] {
 
     .condition {
         position: relative;
-        width: 574px;
+        width: calc(100% - 188px);
 
         @include screen('mobile') {
             width: auto;
