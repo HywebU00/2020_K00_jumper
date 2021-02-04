@@ -1,10 +1,13 @@
 // 定義顏色 此顏色可自由變換
-$primaryColor: #E15706; //主色
+$sites: initial, version01;
+$primaryColor: #E15706, #005d98; //主色
 $secondaryColor: #313131; //輔色
-$lightColor: #fcc211; //點綴
+$lightColor: #fcc211, #eb574b; //點綴
 $linkColor: #2288d1; //連結
 $importantColor: #c51623; //重要
+$style: index($sites, initial);
 // 但注意真實顏色與語意的關聯必須易於辨識
+
 $color-blue: #21baff;
 $color-green: #5cb85c;
 $color-orange: #f77810;
@@ -24,12 +27,11 @@ $color-btn-light: #eee;
 $color-error: #FF7171;
 $color-warning: #F2AC57;
 // 連結顏色
-$aColor: $primaryColor;
-$aHover: darken($aColor, 10);
+$aColor: $linkColor;
+$aHover: $importantColor;
 
 // 表單focus顏色
-$form-focus: $primaryColor; //表單
-$form-btn: $primaryColor; //表單
+$form-focus: $color-yellow; //表單
 //-------------------------------------------------------------字型--------//                &:hover{
 
 

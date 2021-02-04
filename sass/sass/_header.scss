@@ -233,7 +233,7 @@
                 padding: .5em 1em;
                 background-color: $color-lightgray;
                 &:hover{
-                    background-color: $primaryColor;
+                    background-color: nth($primaryColor, $style);
                     color: #fff;
                 }
             }
@@ -267,10 +267,10 @@
         height:32px;
         padding:0;
         border-radius: 30px;
-        border-color: $primaryColor;
+        border-color: nth($primaryColor, $style);
         min-width: auto;
         overflow: hidden;
-        background: $primaryColor;
+        background: nth($primaryColor, $style);
         position: relative;
         img{
             position: absolute;
@@ -364,7 +364,7 @@
                     transition: .5s;
 
                     &:hover {
-                        background-color: rgba($primaryColor, .25);
+                        background-color: darken(nth($primaryColor, $style), 10);;
                         color: $color-word;
                     }
                 }
@@ -393,7 +393,7 @@
             font-size: .938em;
             font-weight: bold;
             margin: 0;
-            background: $primaryColor;
+            background: nth($primaryColor, $style);
             border-radius: 30px;
             @include screen('mobile') {
                 min-width: auto;

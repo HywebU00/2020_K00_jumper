@@ -520,8 +520,8 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-    border-color: $form-focus;
-    background-color: $form-focus;
+    border-color: nth($primaryColor, $style);
+    background-color: nth($primaryColor, $style);
 }
 
 input[type="checkbox"]:focus,
@@ -538,7 +538,7 @@ input[type="checkbox"]:checked {
 }
 
 input[type="radio"]:checked {
-    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
+    box-shadow: #fff 0 0 0 3px inset, nth($primaryColor, $style) 0 0 0 1px;
 }
 
 //---------------------------------------------readonly disable -------//
@@ -725,7 +725,7 @@ abbr[title] {
                 margin-left: .5em;
 
                 &:hover {
-                    color: $primaryColor;
+                    color: nth($primaryColor, $style);
                 }
             }
         }
@@ -736,7 +736,7 @@ abbr[title] {
             padding: 0 .3em;
 
             &:hover {
-                color: $primaryColor;
+                color: nth($primaryColor, $style);
             }
 
             @include screen('mobile') {
@@ -757,8 +757,8 @@ abbr[title] {
     }
 
     .add_condition {
-        border: 1px solid $primaryColor;
-        color: $primaryColor;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style);
         background: #fff;
         margin: 0 0 1em 0;
         height: 44px;
@@ -817,7 +817,7 @@ abbr[title] {
                 font-size: 0em;
                 width: 44px !important;
                 height: 44px;
-                background: $primaryColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
+                background: nth($primaryColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
                 background-size: 20px;
                 outline: 1px solid transparent;
                 border: none;
@@ -910,7 +910,7 @@ abbr[title] {
                 &:hover,
                 &:focus {
                     text-decoration: underline;
-                    color: $primaryColor;
+                    color: nth($primaryColor, $style);
                 }
             }
         }
@@ -932,14 +932,14 @@ abbr[title] {
             border-radius: 50%;
             width: 20px;
             height: 20px;
-            border: 1px solid $primaryColor;
+            border: 1px solid nth($primaryColor, $style);
             background: #fff;
 
             &:before {
                 content: "";
                 position: absolute;
                 display: block;
-                background: $primaryColor;
+                background: nth($primaryColor, $style);
                 width: 12px;
                 height: 2px;
                 left: 3px;

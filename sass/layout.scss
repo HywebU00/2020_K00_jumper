@@ -1,0 +1,15 @@
+@import "_variable";
+@import "sass/_normalize"; //reset
+@import "sass/_mixin"; //客製MIXIN
+@import "sass/_typography"; //CP文字排版
+@import "sass/_font"; //文字設定
+@import "sass/_btn"; //按鈕設定
+@import "sass/_form";
+
+.version01{
+	$style: index($sites, version01);
+
+	.header{
+		
+	}
+}

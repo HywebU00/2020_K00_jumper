@@ -55,16 +55,16 @@ $btn-radius:$rounded-angle;
 }
 
 %btn-submit{
-    background-color: $primaryColor;
-    border-color: $primaryColor;
+    background-color: nth($primaryColor, $style);
+    border-color: nth($primaryColor, $style);
     color: #fff;
     border-radius: 30px;
     padding: .5em 1.5em;
 
     &:hover,
     &:focus {
-        background: $aHover;
-        color: #fff;
+        background: darken(nth($primaryColor, $style), 10);
+        color: #fff!important;
         outline: none;
     }
     &:disabled{
@@ -82,9 +82,9 @@ $btn-radius:$rounded-angle;
     &:hover,
     &:focus,
     &.active {
-        color: $primaryColor;
+        color: nth($primaryColor, $style);
         outline: none;
-        border-color: $primaryColor;
+        border-color: nth($primaryColor, $style);
     }
 }
 
@@ -92,14 +92,14 @@ $btn-radius:$rounded-angle;
     @extend %btn;
     @include box-sizing;
     text-shadow: none;
-    background: $primaryColor;
+    background: nth($primaryColor, $style);
     border-radius: 30px;
     color: #fff;
     &:hover,
     &:focus,
     &.active {
         outline: none;
-        border-color: $primaryColor;
+        border-color: nth($primaryColor, $style);
         color: #fff;
     }
 }

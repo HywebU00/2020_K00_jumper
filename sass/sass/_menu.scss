@@ -102,7 +102,7 @@
                 padding-right: 2em;
                 &:hover,
                 &:focus {
-                    background: $primaryColor;
+                    background: nth($primaryColor, $style);
                 }
                 &:after {
                     content: '';
@@ -189,7 +189,7 @@
             //@include box-shadow(0px 0px 4px RGBA(0, 0, 0, .4));
             padding:30px 15px;
             background: #fff;
-            border-top:3px solid $primaryColor;
+            border-top:3px solid nth($primaryColor, $style);
             a {
                 display: block;
                 color: #222;
@@ -302,20 +302,20 @@
             }
             .btn_login, .btn_logout{
                 width: 100%;
-                border: 2px solid $primaryColor;
+                border: 2px solid nth($primaryColor, $style);
                 text-shadow: none;
             }
             .btn_login{
-                background: $primaryColor;
+                background: nth($primaryColor, $style);
             }
             .btn_logout{
                 background: #fff;
-                color:$primaryColor;
+                color: nth($primaryColor, $style);
             }
             .language{
                 margin:1em 0;
                 select{
-                    border: 2px solid $primaryColor;
+                    border: 2px solid nth($primaryColor, $style);
                 }
             }
         }
@@ -359,7 +359,7 @@
                     }
                     &:hover,
                     &:focus {
-                        background: darken($primaryColor, 20);
+                        background: darken(nth($primaryColor, $style), 20);
                     }
                 }
             }

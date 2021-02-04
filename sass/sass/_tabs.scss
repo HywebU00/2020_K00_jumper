@@ -19,7 +19,7 @@
                 width: 100%;
                 height: 4px;
                 border-radius: $rounded-angle $rounded-angle 0 0;
-                background: $primaryColor;
+                background: nth($primaryColor, $style);
             }
 
             a {
@@ -63,7 +63,7 @@
 
     .active_m {
         display: none;
-        background-color: $primaryColor;
+        background-color: nth($primaryColor, $style);
         border: none;
         width: 100%;
         position: relative;
@@ -149,7 +149,7 @@
             font-weight: bold;
 
             &:hover {
-                background: $primaryColor;
+                background: nth($primaryColor, $style);
                 color: #fff;
             }
 
@@ -167,7 +167,7 @@
 
         &.active {
             a {
-                background: $primaryColor;
+                background: nth($primaryColor, $style);
                 color: #fff;
             }
         }

@@ -4,7 +4,7 @@
     position: static;
 
     h2 {
-        color: $primaryColor;
+        color: nth($primaryColor, $style);
         font-size: 1.5em;
     }
 }
@@ -137,7 +137,7 @@
         .conditions {
             background: #fff;
             border-radius: $rounded-angle;
-            border: 1px solid $primaryColor;
+            border: 1px solid nth($primaryColor, $style);
             padding: 1em;
             margin: 1.5em 0;
             position: relative;
@@ -160,7 +160,7 @@
                 align-items: center;
 
                 &:hover {
-                    color: $primaryColor;
+                    color: nth($primaryColor, $style);
                 }
 
                 &:before {
@@ -200,12 +200,12 @@
 
             button {
                 float: right;
-                border: 1px solid $primaryColor;
-                color: $primaryColor;
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
                 background: transparent;
 
                 &:hover {
-                    background: $primaryColor;
+                    background: nth($primaryColor, $style);
                     color: #fff;
                 }
 
@@ -276,13 +276,13 @@
 
                 button {
                     float: right;
-                    border: 1px solid $primaryColor;
-                    color: $primaryColor;
+                    border: 1px solid nth($primaryColor, $style);
+                    color: nth($primaryColor, $style);
                     background: transparent;
                     margin-top: .5em;
 
                     &:hover {
-                        background: $primaryColor;
+                        background: nth($primaryColor, $style);
                         color: #fff;
                     }
                 }
@@ -349,7 +349,7 @@
                 font-size: 0em;
                 width: 44px !important;
                 height: 44px;
-                background: $primaryColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
+                background: nth($primaryColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
                 background-size: 20px;
                 outline: 1px solid transparent;
                 border: none;
@@ -540,9 +540,9 @@
                 position: absolute;
                 top: .5em;
                 right: 0;
-                background: $primaryColor;
+                background: nth($primaryColor, $style);
                 color: #fff;
-                border-color: $primaryColor;
+                border-color: nth($primaryColor, $style);
 
                 @include screen('xs_mobile') {
                     position: static;
@@ -855,12 +855,12 @@
             }
 
             a {
-                color: darken($primaryColor, 15);
+                color: darken(nth($primaryColor, $style), 15);
                 transition: all .3s;
                 line-height: 1.5;
 
                 &:hover {
-                    color: $primaryColor;
+                    color: nth($primaryColor, $style);
                 }
             }
         }
@@ -943,8 +943,8 @@
             border-radius: $rounded-angle;
             padding: .1em .5em;
             font-size: .875em;
-            border: 1px solid $primaryColor;
-            background: $primaryColor;
+            border: 1px solid nth($primaryColor, $style);
+            background: nth($primaryColor, $style);
             color: #fff;
 
             &:hover {
@@ -1026,8 +1026,8 @@
 
             &.btn_primary {
                 background: #fff;
-                border: 1px solid $primaryColor;
-                color: $primaryColor;
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
             }
 
         }
@@ -1058,7 +1058,7 @@
                 line-height: 1.5;
 
                 &:hover {
-                    color: $primaryColor;
+                    color: nth($primaryColor, $style);
                 }
             }
         }
@@ -1265,7 +1265,7 @@
 
     input[type=number]:invalid,
     input[type=number]:out-of-range {
-        border: 2px solid #ff6347;
+        border: 2px solid nth($primaryColor, $style);
     }
 
     input[type=range] {
@@ -1278,22 +1278,22 @@
     }
 
     input[type=range]:focus::-webkit-slider-runnable-track {
-        background: $primaryColor;
+        background: nth($primaryColor, $style);
     }
 
     input[type=range]:focus::-ms-fill-lower {
-        background: $primaryColor;
+        background: nth($primaryColor, $style);
     }
 
     input[type=range]:focus::-ms-fill-upper {
-        background: $primaryColor;
+        background: nth($primaryColor, $style);
     }
 
     input[type=range]::-webkit-slider-runnable-track {
         width: 100%;
         height: 6px;
         cursor: pointer;
-        background: $primaryColor;
+        background: nth($primaryColor, $style);
         border-radius: 1px;
         box-shadow: none;
         border: 0;
@@ -1304,7 +1304,7 @@
         z-index: 2;
         position: relative;
         box-shadow: 0px 0px 0px #000;
-        border: 1px solid $primaryColor;
+        border: 1px solid nth($primaryColor, $style);
         height: 18px;
         width: 18px;
         border-radius: 25px;
@@ -1319,7 +1319,7 @@
         height: 6px;
         cursor: pointer;
         animate: 0.2s;
-        background: $primaryColor;
+        background: nth($primaryColor, $style);
         border-radius: 1px;
         box-shadow: none;
         border: 0;
@@ -1329,7 +1329,7 @@
         z-index: 2;
         position: relative;
         box-shadow: 0px 0px 0px #000;
-        border: 1px solid $primaryColor;
+        border: 1px solid nth($primaryColor, $style);
         height: 18px;
         width: 18px;
         border-radius: 25px;
@@ -1349,7 +1349,7 @@
 
     input[type=range]::-ms-fill-lower,
     input[type=range]::-ms-fill-upper {
-        background: $primaryColor;
+        background: nth($primaryColor, $style);
         border-radius: 1px;
         box-shadow: none;
         border: 0;
@@ -1359,7 +1359,7 @@
         z-index: 2;
         position: relative;
         box-shadow: 0px 0px 0px #000;
-        border: 1px solid $primaryColor;
+        border: 1px solid nth($primaryColor, $style);
         height: 18px;
         width: 18px;
         border-radius: 25px;

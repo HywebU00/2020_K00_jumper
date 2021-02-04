@@ -6,7 +6,7 @@
     font-size: .938em;
     @extend %clearfix; // outline: 1px solid red;
     span {
-        color: $primaryColor;
+        color: nth($primaryColor, $style);
         margin: 0px .5em;
     }
     .page {
@@ -31,15 +31,15 @@
                 background: $color-lightgray;
                 &:hover,
                 &:focus {
-                    background: $primaryColor;
+                    background: nth($primaryColor, $style);
                     color: #fff !important;
                 }
             }
             &.active {
                 a {
                     color: #fff !important;
-                    background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    background: nth($primaryColor, $style);
+                    border: darken(nth($primaryColor, $style), 5) solid 1px;
                 }
             }
             %arrow {
@@ -152,7 +152,7 @@
         
         a {
             padding: 0 5px;
-            color: $primaryColor;
+            color: nth($primaryColor, $style);
             text-decoration: none;
         }
     }
