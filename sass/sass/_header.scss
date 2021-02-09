@@ -72,7 +72,6 @@
         height: auto;
         margin: 0 0 0 20px;
         padding: 0;
-        //float: left;
         flex: 0 0 220px;
         @include box-sizing;
         a {
@@ -94,10 +93,6 @@
             align-items: center;
             img {
                 display: none;
-                // width: auto;
-                // height: auto;
-                // max-height: 50px;
-                // margin: 0px auto; // transform: scale(.8);
             }   
         }
         span{
@@ -110,20 +105,9 @@
                 display: block;
             }
         }
-        // @media(max-width: 345px) {
-        //     padding: 2px 60px 2px 50px;
-        //     img {
-        //         width: auto;
-        //         height: auto;
-        //         max-height: 50px;
-        //         margin: 0px auto;
-        //         transform: scale(.8);
-        //     }
-        // }
     }
     // 導覽列
     .navigation {
-        //float: right;
         flex: 1 1 auto;
         text-align: center;
         font-size: .938em;
@@ -157,7 +141,6 @@
 
         }
         li {
-            //float: left;
             height: 100%;
             a {
                 display: flex;

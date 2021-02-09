@@ -9,7 +9,41 @@
 .version01{
 	$style: index($sites, version01);
 
+	.lp,
+	.personal{
+		h2 {
+	        color: nth($primaryColor, $style);
+	    }
+	}
 	.header{
-		
+		.more_list_block{
+			.more_list{
+				a{
+					&:hover{
+                    	background-color: nth($primaryColor, $style);
+                	}
+				}
+			}
+		}
+		.btn_member{
+			border-color: nth($primaryColor, $style);
+			background: nth($primaryColor, $style);
+		}
+		.language{
+			ul{
+				li{
+					a{
+						&:hover{
+							background-color: darken(nth($primaryColor, $style), 10);
+						}
+					}
+				}
+			}
+		}
+		.login{
+			.btn{
+				background: nth($primaryColor, $style);
+			}
+		}
 	}
 }
