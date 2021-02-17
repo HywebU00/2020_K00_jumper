@@ -6,44 +6,129 @@
 @import "sass/_btn"; //按鈕設定
 @import "sass/_form";
 
-.version01{
-	$style: index($sites, version01);
+.version01 {
+    $style: index($sites, version01);
 
-	.lp,
-	.personal{
-		h2 {
-	        color: nth($primaryColor, $style);
-	    }
-	}
-	.header{
-		.more_list_block{
-			.more_list{
-				a{
-					&:hover{
-                    	background-color: nth($primaryColor, $style);
-                	}
-				}
-			}
-		}
-		.btn_member{
-			border-color: nth($primaryColor, $style);
-			background: nth($primaryColor, $style);
-		}
-		.language{
-			ul{
-				li{
-					a{
-						&:hover{
-							background-color: darken(nth($primaryColor, $style), 10);
-						}
-					}
-				}
-			}
-		}
-		.login{
-			.btn{
-				background: nth($primaryColor, $style);
-			}
-		}
-	}
+    .lp,
+    .personal {
+        h2 {
+            color: nth($primaryColor, $style);
+        }
+    }
+
+    //header
+    .header {
+        .more_list_block {
+            .more_list {
+                a {
+                    &:hover {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+
+        .btn_member {
+            border-color: nth($primaryColor, $style);
+            background: nth($primaryColor, $style);
+        }
+
+        .language {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 10);
+                        }
+                    }
+                }
+            }
+        }
+
+        .login {
+            .btn {
+                background: nth($primaryColor, $style);
+
+                &:hover {
+                    background: darken(nth($primaryColor, $style), 5);
+                }
+            }
+        }
+    }
+
+    //form
+    input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+        border-color: nth($primaryColor, $style);
+        background-color: nth($primaryColor, $style);
+    }
+
+    input[type="radio"]:checked {
+        box-shadow: #fff 0 0 0 3px inset, nth($primaryColor, $style) 0 0 0 1px;
+    }
+
+    //search
+    .search_system {
+        .tab-content {
+            .check_grp {
+                a {
+                    &:hover {
+                        color: nth($primaryColor, $style);
+                    }
+                }
+            }
+
+            a.database_link {
+                &:hover {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+
+        .add_condition {
+            border-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+        }
+
+        input {
+            &[type="submit"] {
+                @include screen('mobile') {
+                    background-color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+
+    .tabSet {
+        li {
+
+            &.active,
+            &:focus {
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+
+    .main_tabSet {
+        .active_m {
+            background-color: nth($primaryColor, $style);
+        }
+
+        li {
+            a {
+                &:hover {
+                    background: nth($primaryColor, $style);
+                }
+            }
+
+            &.active {
+                a {
+                    background: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+
 }

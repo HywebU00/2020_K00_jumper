@@ -31,10 +31,10 @@
 .main_content {
     background: $color-lightgray;
     min-height: calc(100% - 200px);
-    .container {
+    >.container {
         position: static;
         display: flex;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
         width: 100%;
     }
 
