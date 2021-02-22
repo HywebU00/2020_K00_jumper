@@ -4,7 +4,7 @@ $primaryColor: #E15706, #005d98; //主色
 $secondaryColor: #313131; //輔色
 $lightColor: #fcc211, #eb574b; //點綴
 $linkColor: #2288d1; //連結
-$importantColor: #c51623; //重要
+$importantColor: #f4573f; //重要
 $style: index($sites, initial);
 // 但注意真實顏色與語意的關聯必須易於辨識
 
@@ -28,7 +28,7 @@ $color-error: #FF7171;
 $color-warning: #F2AC57;
 // 連結顏色
 $aColor: $linkColor;
-$aHover: $importantColor;
+$aHover: darken($aColor, 10);
 
 // 表單focus顏色
 $form-focus: $color-yellow; //表單

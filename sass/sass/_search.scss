@@ -165,7 +165,7 @@
         &[type="submit"] {
             height: 44px;
             margin: 0 .5em;
-            transition: all .3s;
+            transition: .3s ease-in;
             border-radius: 30px;
             border: none;
 
@@ -178,7 +178,7 @@
                 font-size: 0em;
                 width: 44px !important;
                 height: 44px;
-                background: nth($primaryColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
+                background: $importantColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
                 background-size: 20px;
                 outline: 1px solid transparent;
                 border: none;
@@ -215,6 +215,7 @@
         width: 96px;
         line-height: 44px;
         border-radius: 30px;
+        transition: .3s ease-in;
 
         @include screen('mobile') {
             display: none;

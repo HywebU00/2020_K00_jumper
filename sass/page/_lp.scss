@@ -101,7 +101,7 @@
                 transition: background-color .3s;
 
                 &:hover {
-                    background-color: $aHover;
+                    background-color: darken(nth($primaryColor, $style), 10);
                 }
             }
         }
@@ -493,9 +493,9 @@
 
                 a {
                     color: $linkColor;
-
+                    text-decoration: underline;
                     &:hover {
-                        text-decoration: underline;
+                       color: darken($linkColor, 10); 
                     }
 
                     &.active {
@@ -1069,12 +1069,18 @@
                 background: #fff;
                 border: 1px solid $linkColor;
                 color: $linkColor;
+                &:hover{
+                    background-color: rgba($linkColor, .1);
+                }
             }
 
             &.btn_primary {
                 background: #fff;
                 border: 1px solid nth($primaryColor, $style);
                 color: nth($primaryColor, $style);
+                &:hover{
+                    background-color: rgba(nth($primaryColor, $style), .1);
+                }
             }
 
         }
@@ -1128,6 +1134,9 @@
             border-radius: 0;
             display: inline-block;
             padding: 0;
+            &:hover{
+                color: darken($linkColor, 10);
+            }
 
             &.popover {
                 padding-right: 1em;

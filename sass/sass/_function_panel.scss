@@ -213,6 +213,7 @@
     color: $color-word;
     margin: 0 0 0 .5em;
     position: relative;
+    @extend %hover_transition;
 
     // &:before{
     //     position: absolute;
@@ -222,15 +223,19 @@
         padding: .4em;
         min-width: 2.5em;
     }
+    &:before{
+        background: nth($primaryColor, $style);
+    }
 
     &:hover,
     &:focus,
     &.active {
-        color: $primaryColor;
+        color: #fff;
+        border-color: nth($primaryColor, $style);
 
         .i_bookmark {
             &:before {
-                background-image: url(../images/icon/icon_bookmark_saved.svg);
+                background-image: url(../images/icon/icon_bookmark_invert.svg);
             }
         }
     }
@@ -261,16 +266,15 @@
     }
 
     .name {
-        border: 1px solid $color-input;
-        border-radius: $rounded-angle;
-
         a {
+            border: 1px solid $color-input;
             display: block;
             color: $color-word;
             padding: 0 2em 0 1em;
             line-height: 38px;
             cursor: pointer;
-
+            border-radius: $rounded-angle;
+            @extend %hover_transition;
             &:after {
                 content: "";
                 position: absolute;
@@ -282,9 +286,15 @@
                 top: 12px;
                 right: 10px;
             }
-
-            &:hover {
-                color: $primaryColor;
+            &:before{
+                background: nth($primaryColor, $style);
+            }
+            &:hover{
+                color: #fff;
+                border-color: nth($primaryColor, $style);
+                &:after{
+                    background-image: url(../images/icon/icon_arrow_down_invert.svg);
+                }
             }
         }
     }

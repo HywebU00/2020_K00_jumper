@@ -10,9 +10,11 @@ footer{
 	ul{
 		@include li-reset;
 		a{
-			color:#f0f0f0;
+			color: #fff;
+			opacity: .7;
 			&:hover{
-				color:#fff;
+				opacity: 1;
+				color: #fff;
 			}
 		}
 	}
@@ -36,10 +38,12 @@ footer{
 				>a{
 					display: inline-block;
 					font-size: 1.125em;
-					color: nth($primaryColor, $style);
+					color: #fff;
 					margin: .5em 0 ;
+					font-weight: bold;
+					opacity: 1;
 					&:hover{
-						color:$aHover;
+						color: $color-yellow;
 					}
 				}
 				>ul{

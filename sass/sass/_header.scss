@@ -155,6 +155,11 @@
                     color: #fff;
                     background: lighten($secondaryColor, 5);
                 }
+                
+                &.active{
+                    color: #fff;
+                    background: nth($primaryColor, $style); 
+                }
             }
         }
     }
@@ -217,8 +222,8 @@
                 background-color: $color-lightgray;
                 transition: all .3s;
                 &:hover{
-                    background-color: nth($primaryColor, $style);
-                    color: #fff;
+                    background-color: darken($color-lightgray, 10);
+                    color: $color-word;
                 }
             }
         }
@@ -342,13 +347,17 @@
                 width: 100%;
                 a {
                     background-image: none;
-                    color: #333;
+                    color: $color-word;
                     text-align: left;
                     padding: 4px 15px 3px;
                     display: block;
                     transition: .5s;
 
-                    &:hover {
+                    &:hover{
+                        background: $color-lightgray;
+                    }
+
+                    &.active {
                         background-color: nth($primaryColor, $style);
                         color: #fff;
                     }

@@ -678,7 +678,9 @@ body.fix {
         a {
             color: $linkColor;
             text-decoration: underline;
-
+            &:hover{
+                color: darken($linkColor, 10);
+            }
         }
     }
 
