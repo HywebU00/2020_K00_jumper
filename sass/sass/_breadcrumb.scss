@@ -1,12 +1,11 @@
 .breadcrumb {
-    border-bottom: 1px solid #EEE;
     padding: .1em 0em .1em;
-    font-size: .813em;
-    margin: 0px auto 5px;
+    font-size: .875em;
     ul {
+        display: inline-block;
         @include li-reset;
         li {
-            display: inline-block;
+            display: inline-block!important;
             margin: 0px .1em .1em 0px;
             &:before {
                 @extend %slash;
@@ -21,6 +20,6 @@
         }
     }
     a {
-        @include aSetting_nocolor;
+        color: $linkColor;
     }
 }

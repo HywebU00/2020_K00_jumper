@@ -37,7 +37,6 @@ body.fix {
         }
     }
     h3{
-        color: nth(nth($primaryColor, $style), $style);
         margin: .5em 0;
         // padding: .5em 0;
         // border-bottom: 2px nth($primaryColor, $style) solid;
@@ -493,6 +492,10 @@ body.fix {
                 position: fixed;
                 padding: .5em 0;
             }
+
+            button{
+                float: none;
+            }
         }
     }
 
@@ -551,6 +554,14 @@ body.fix {
     .detail_top {
         h3 {
             line-height: 1.5;
+            display: inline-block;
+            color: nth($primaryColor, $style);
+            +img{
+                display: inline-block;
+                height: 1.25em;
+                margin: 0 .25em .25em;
+                vertical-align: middle;
+            }
         }
 
         a {
@@ -575,6 +586,7 @@ body.fix {
             flex: 0 0 170px;
             margin: .5em 0;
             padding-right: 10px;
+            color: lighten($color-word, 10);
 
             @include screen('mobile') {
                 flex-basis: 100%;

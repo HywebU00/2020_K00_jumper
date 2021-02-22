@@ -31,6 +31,7 @@
 .main_content {
     background: $color-lightgray;
     min-height: calc(100% - 200px);
+
     >.container {
         position: static;
         display: flex;
@@ -41,277 +42,9 @@
     h3 {
         font-size: 1.25em;
         margin: .5em 0;
-        &.accordion_header{
+
+        &.accordion_header {
             margin: .2em 0;
-        }
-    }
-
-    .filter_search {
-        width: 270px;
-        flex: 0 0 270px;
-        //background-color: $color-lightgray;
-        @include gutter();
-
-        @include screen('tablet') {
-            position: fixed;
-            z-index: 100;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            border-radius: $rounded-angle $rounded-angle 0 0;
-            box-shadow: $box;
-            width: 100%;
-            height: 100%;
-            overflow-y: scroll;
-            border-radius: 0;
-            transition: all .5s;
-            display: none;
-        }
-
-        &.fix {
-            @include screen('tablet') {
-                height: 100%;
-                overflow: hidden !important;
-                width: 100% !important;
-                position: fixed !important;
-            }
-        }
-
-        &.show_up {
-            top: 0;
-            display: block;
-        }
-
-        >.close {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            display: none;
-
-            @include screen('tablet') {
-                display: block;
-            }
-        }
-
-        h4 {
-            color: $color-word-light;
-            margin: .5em 0;
-            font-weight: normal;
-        }
-
-        ul {
-            @include li-reset;
-        }
-
-        .option {
-            display: none;
-
-            .option_list {
-                width: 100%;
-            }
-
-            @include screen('tablet') {
-                display: block;
-                margin-left: 0;
-            }
-        }
-
-
-
-        &+.search_overlay {
-            background: RGBA(0, 0, 0, 0.5);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            display: none;
-            z-index: 9;
-            overflow-x: hidden !important;
-            overflow-y: auto !important;
-
-            @include screen('mobile') {
-                display: block;
-            }
-        }
-
-        .conditions {
-            background: #fff;
-            border-radius: $rounded-angle;
-            border: 1px solid nth($primaryColor, $style);
-            padding: 1em;
-            margin: 1.5em 0;
-            position: relative;
-            overflow: hidden;
-
-            h3 {
-                margin-top: 0;
-                padding-bottom: .5em;
-                border-bottom: 1px solid $color-line;
-            }
-
-
-
-            .del_all {
-                float: right;
-                color: $color-word-light;
-                border: 1px solid $color-input;
-                background-color: #fff;
-                display: flex;
-                align-items: center;
-
-                &:hover {
-                    color: nth($primaryColor, $style);
-                }
-
-                &:before {
-                    content: "";
-                    display: inline-block;
-                    width: 18px;
-                    height: 18px;
-                    background: url(../images/icon/icon_trash.svg) no-repeat;
-                    background-size: contain;
-                    filter: invert(.3);
-                    margin-right: 2px;
-                }
-            }
-
-
-            li {
-                margin-bottom: 1em;
-
-                li {
-                    margin-bottom: .5em;
-
-                    span {
-                        padding: 0 5px;
-                        vertical-align: middle;
-                    }
-                }
-            }
-
-        }
-
-        .focus {
-            overflow: hidden;
-
-            >div {
-                padding-bottom: 1em;
-            }
-
-            button {
-                float: right;
-                border: 1px solid nth($primaryColor, $style);
-                color: nth($primaryColor, $style);
-                background: transparent;
-
-                &:hover {
-                    background: nth($primaryColor, $style);
-                    color: #fff;
-                }
-
-            }
-        }
-
-        .sort_list {
-            margin: 1.5em 0;
-
-            h3 {
-                margin: .2em 0;
-                position: relative;
-                font-size: 1.125em;
-
-
-                a {
-                    display: block;
-                    color: $color-word;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        right: 8px;
-                        top: 3px;
-                        border-width: 1px 0 0 1px;
-                        border-color: $color-dark;
-                        border-style: solid;
-                        width: 10px;
-                        height: 10px;
-                        transform: rotate(225deg);
-                        transition: .5s;
-                    }
-
-                    &.turnicon {
-                        &:after {
-                            transform: rotate(45deg);
-                            top: 8px;
-                        }
-                    }
-                }
-
-            }
-
-            .accordion_content,
-            .list_content {
-                overflow: hidden;
-
-                ul {
-                    padding-left: .5em;
-                }
-
-                li {
-                    padding: .5em 0;
-                    overflow: hidden;
-
-                    a {
-                        color: $color-word;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-
-                    span {
-                        padding: 0 .4em;
-                    }
-                }
-
-                button {
-                    float: right;
-                    border: 1px solid nth($primaryColor, $style);
-                    color: nth($primaryColor, $style);
-                    background: transparent;
-                    margin-top: .5em;
-
-                    &:hover {
-                        background: nth($primaryColor, $style);
-                        color: #fff;
-                    }
-                }
-
-                .btn_del {
-                    border: 0;
-                    margin: 0;
-                    padding: 0;
-                    opacity: .6;
-
-                    &:hover,
-                    &:focus {
-                        background: none;
-                        opacity: 1;
-                    }
-                }
-            }
-
-            >ul {
-                >li {
-                    padding: 1em 0;
-                    border-bottom: 1px solid $color-line;
-                }
-            }
-
-
         }
     }
 
@@ -319,7 +52,8 @@
         padding-top: .5em;
         max-width: 350px;
         margin-bottom: 1em;
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             max-width: 100%;
         }
 
@@ -327,12 +61,15 @@
             display: flex;
             align-items: center;
             position: relative;
-            @include screen('mobile'){
+
+            @include screen('mobile') {
                 flex-wrap: wrap;
             }
-            label{
+
+            label {
                 white-space: nowrap;
-                @include screen('mobile'){
+
+                @include screen('mobile') {
                     display: block;
                 }
             }
@@ -368,6 +105,272 @@
                 }
             }
         }
+    }
+}
+
+.filter_search {
+    width: 270px;
+    flex: 0 0 270px;
+    //background-color: $color-lightgray;
+    @include gutter();
+
+    @include screen('tablet') {
+        position: fixed;
+        z-index: 100;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        border-radius: $rounded-angle $rounded-angle 0 0;
+        box-shadow: $box;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        border-radius: 0;
+        transition: all .5s;
+        display: none;
+    }
+
+    &.fix {
+        @include screen('tablet') {
+            height: 100%;
+            overflow: hidden !important;
+            width: 100% !important;
+            position: fixed !important;
+        }
+    }
+
+    &.show_up {
+        top: 0;
+        display: block;
+    }
+
+    >.close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        display: none;
+
+        @include screen('tablet') {
+            display: block;
+        }
+    }
+
+    h4 {
+        color: $color-word-light;
+        margin: .5em 0;
+        font-weight: normal;
+    }
+
+    ul {
+        @include li-reset;
+    }
+
+    .option {
+        display: none;
+
+        .option_list {
+            width: 100%;
+        }
+
+        @include screen('tablet') {
+            display: block;
+            margin-left: 0;
+        }
+    }
+    &+.search_overlay {
+        background: RGBA(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 9;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+
+        @include screen('mobile') {
+            display: block;
+        }
+    }
+
+    .conditions {
+        background: #fff;
+        border-radius: $rounded-angle;
+        border: 1px solid nth($primaryColor, $style);
+        padding: 1em;
+        margin: 1.5em 0;
+        position: relative;
+        overflow: hidden;
+
+        h3 {
+            margin-top: 0;
+            padding-bottom: .5em;
+            border-bottom: 1px solid $color-line;
+        }
+
+
+
+        .del_all {
+            float: right;
+            color: $color-word-light;
+            border: 1px solid $color-input;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: nth($primaryColor, $style);
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background: url(../images/icon/icon_trash.svg) no-repeat;
+                background-size: contain;
+                filter: invert(.3);
+                margin-right: 2px;
+            }
+        }
+
+
+        li {
+            margin-bottom: 1em;
+
+            li {
+                margin-bottom: .5em;
+
+                span {
+                    padding: 0 5px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+    }
+
+    .focus {
+        overflow: hidden;
+
+        >div {
+            padding-bottom: 1em;
+        }
+
+        button {
+            float: right;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            background: transparent;
+
+            &:hover {
+                background: nth($primaryColor, $style);
+                color: #fff;
+            }
+
+        }
+    }
+
+    .sort_list {
+        margin: 1.5em 0;
+
+        h3 {
+            margin: .2em 0;
+            position: relative;
+            font-size: 1.125em;
+
+
+            a {
+                display: block;
+                color: $color-word;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 8px;
+                    top: 3px;
+                    border-width: 1px 0 0 1px;
+                    border-color: $color-dark;
+                    border-style: solid;
+                    width: 10px;
+                    height: 10px;
+                    transform: rotate(225deg);
+                    transition: .5s;
+                }
+
+                &.turnicon {
+                    &:after {
+                        transform: rotate(45deg);
+                        top: 8px;
+                    }
+                }
+            }
+
+        }
+
+        .accordion_content,
+        .list_content {
+            overflow: hidden;
+
+            ul {
+                padding-left: .5em;
+            }
+
+            li {
+                padding: .5em 0;
+                overflow: hidden;
+
+                a {
+                    color: $color-word;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                span {
+                    padding: 0 .4em;
+                }
+            }
+
+            >button {
+                float: right;
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                background: transparent;
+                margin-top: .5em;
+
+                &:hover {
+                    background: nth($primaryColor, $style);
+                    color: #fff;
+                }
+            }
+
+            .btn_del {
+                border: 0;
+                margin: 0;
+                padding: 0;
+                opacity: .6;
+
+                &:hover,
+                &:focus {
+                    background: none;
+                    opacity: 1;
+                }
+            }
+        }
+
+        >ul {
+            >li {
+                padding: 1em 0;
+                border-bottom: 1px solid $color-line;
+            }
+        }
+
+
     }
 }
 
@@ -442,11 +445,25 @@
         margin-bottom: 1em;
 
         @include screen('mobile') {
-            display: none;
+            @include gutter();
+        }
+
+        .tabSet {
+            overflow: hidden;
+
+            li {
+                a {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .tabs {
+            overflow-x: auto;
         }
 
         .tab-content {
-            padding: 1em;
+            padding: 1em 1.5em;
             background: #fff;
             overflow: hidden;
 
@@ -456,8 +473,11 @@
 
             li {
                 display: flex;
-                flex-wrap: wrap;
                 padding: 2px 0;
+
+                @include screen('xs_mobile') {
+                    flex-wrap: wrap;
+                }
             }
 
             .subtitle {
@@ -467,11 +487,20 @@
 
             .items_inline,
             .items {
+                @include screen('xs_mobile') {
+                    width: 100%
+                }
+
                 a {
                     color: $linkColor;
 
                     &:hover {
                         text-decoration: underline;
+                    }
+
+                    &.active {
+                        color: $color-orange;
+
                     }
                 }
             }
@@ -492,6 +521,14 @@
                 li {
                     flex-basis: calc(100% / 3);
                     padding: 5px 0;
+
+                    @include screen('tablet') {
+                        flex-basis: calc(100% / 2);
+                    }
+
+                    @include screen('xs_mobile') {
+                        flex-basis: 100%;
+                    }
                 }
 
                 &.open {
@@ -871,7 +908,8 @@
 
         ul {
             @include li-reset;
-            &.keyword{
+
+            &.keyword {
                 max-width: 100%;
             }
         }
