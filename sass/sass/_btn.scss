@@ -95,6 +95,10 @@ $btn-radius:$rounded-angle;
     background: nth($primaryColor, $style);
     border-radius: 30px;
     color: #fff;
+    @extend %hover_transition;
+    &:before{
+        background: $importantColor;;
+    }
     &:hover,
     &:focus,
     &.active {

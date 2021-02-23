@@ -1000,7 +1000,7 @@
             color: #fff;
 
             &:hover {
-                background: $aHover;
+                background: darken(nth($primaryColor, $style),5);
             }
 
             &:before {
