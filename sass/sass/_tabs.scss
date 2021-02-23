@@ -149,6 +149,7 @@
             min-width: 140px;
             text-align: center;
             font-weight: bold;
+            transition: .2s ease-in;
 
             &:hover {
                 background: nth($primaryColor, $style);

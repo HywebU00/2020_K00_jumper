@@ -158,7 +158,6 @@
         // justify-content: flex-end;
     }
 
-
     .btn_grp {
         padding: 0;
         display: flex;
@@ -173,6 +172,13 @@
             display: flex;
             align-items: center;
             margin-left: .5em;
+            @extend %hover_transition;
+
+            &:hover{
+                i{
+                    filter: invert(1);
+                }
+            }
 
             &:first-of-type {
                 margin-left: 0;
