@@ -87,9 +87,13 @@
 
             .apply {
                 @extend %btn-submit;
+                @extend %hover_transition;
                 align-self: flex-end;
                 display: inline-block;
                 margin: 0 auto;
+                &:before{
+                    background:$importantColor;
+                }
             }
         }
 
@@ -112,7 +116,7 @@
         .amount {
             font-size: 2em;
             font-weight: bold;
-            color: $primaryColor;
+            color: $importantColor;
 
             .total {
                 &:before {

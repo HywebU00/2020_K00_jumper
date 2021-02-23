@@ -101,7 +101,7 @@
                 transition: background-color .3s;
 
                 &:hover {
-                    background-color: darken(nth($primaryColor, $style), 10);
+                    background-color: $importantColor;
                 }
             }
         }
@@ -220,20 +220,32 @@
             background-color: #fff;
             display: flex;
             align-items: center;
+            position: relative;
+            padding-left: 1.6em;
+            @extend %hover_transition;
 
-            &:hover {
-                color: nth($primaryColor, $style);
+            &:before{
+                background-color:  nth($primaryColor, $style);
             }
 
-            &:before {
+            &:after {
                 content: "";
                 display: inline-block;
-                width: 18px;
-                height: 18px;
+                position: absolute;
+                left: .5em;
+                width: 1em;
+                height: 1em;
                 background: url(../images/icon/icon_trash.svg) no-repeat;
                 background-size: contain;
-                filter: invert(.3);
                 margin-right: 2px;
+            }
+
+            &:hover {
+                color: #fff;
+                &:after{
+                    background-image: url(../images/icon/icon_trash_invert.svg);
+                }
+                
             }
         }
 
@@ -265,11 +277,7 @@
             border: 1px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
             background: transparent;
-
-            &:hover {
-                background: nth($primaryColor, $style);
-                color: #fff;
-            }
+            @extend %hover_transition;
 
         }
     }
@@ -342,11 +350,8 @@
                 color: nth($primaryColor, $style);
                 background: transparent;
                 margin-top: .5em;
+                @extend %hover_transition;
 
-                &:hover {
-                    background: nth($primaryColor, $style);
-                    color: #fff;
-                }
             }
 
             .btn_del {

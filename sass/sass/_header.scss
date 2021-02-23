@@ -158,7 +158,11 @@
                 
                 &.active{
                     color: #fff;
-                    background: nth($primaryColor, $style); 
+                    background: nth($primaryColor, $style);
+                    &:hover{
+                        color: #fff;
+                        background: nth($primaryColor, $style);
+                    }
                 }
             }
         }
@@ -200,13 +204,16 @@
             }
         }
         .more_list{
+            display: none;
             position: absolute;
             right:0;
             top: 46px;
             width: 180px;
-            background: $color-lightgray;
+            background: #fff;
             box-shadow: $box;
             border-radius: $rounded-angle;
+            transform-origin: 50% 0;
+            animation: slideDown .3s ease-out;
             @include li-reset;
             padding: .8em 0; 
             li{
@@ -219,10 +226,10 @@
                 color: $color-word;
                 display: block;
                 padding: .5em 1em;
-                background-color: $color-lightgray;
+                background-color: #fff;
                 transition: all .3s;
                 &:hover{
-                    background-color: darken($color-lightgray, 10);
+                    background-color: $color-lightgray;
                     color: $color-word;
                 }
             }
@@ -271,6 +278,7 @@
         }
    }
    .member_data{
+        display: none;
         position: absolute;
         right: 0;
         top: 55px;
@@ -279,6 +287,9 @@
         border-radius: $rounded-angle;
         box-shadow: $box;
         overflow: hidden;
+        transform-origin: 50% 0;
+        animation: slideDown .3s ease-out;
+
         ul{
             @include li-reset;
         }
@@ -335,13 +346,16 @@
             margin: 0;
             padding: 5px 0;
             list-style-type: none;
-            display: block;
+            display: none;
             position: absolute;
             background: #fff;
             box-shadow: $box;
             top: auto;
             left: 0;
             border-radius: $rounded-angle;
+            overflow: hidden;
+            transform-origin: 50% 0;
+            animation: slideDown .3s ease-out;
             li {
                 margin-bottom: 0px;
                 width: 100%;
@@ -390,13 +404,13 @@
             background: nth($primaryColor, $style);
             border-radius: 30px;
             line-height: 1.5;
-            transition: all .3s;
+            @extend %hover_transition;
+            &:before{
+                background-color: $importantColor;
+            }
             @include screen('mobile') {
                 min-width: auto;
                 padding: 4px 10px 3px !important;
-            }
-            &:hover{
-                background: darken(nth($primaryColor, $style), 5);
             }
         }
     }

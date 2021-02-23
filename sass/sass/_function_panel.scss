@@ -204,6 +204,27 @@
     @include screen('tablet') {
         display: block;
     }
+    &:hover,
+    &.active {
+
+        .i_filter {
+            &:before {
+                background-image: url(../images/icon/icon_filter_invert.svg);
+            }
+        }
+    }
+}
+
+.add_bookmark{
+    &:hover,
+    &.active {
+
+        .i_bookmark {
+            &:before {
+                background-image: url(../images/icon/icon_bookmark_invert.svg);
+            }
+        }
+    }
 }
 
 .add_bookmark,
@@ -223,21 +244,11 @@
         padding: .4em;
         min-width: 2.5em;
     }
-    &:before{
-        background: nth($primaryColor, $style);
-    }
 
-    &:hover,
-    &:focus,
+    
     &.active {
         color: #fff;
-        border-color: nth($primaryColor, $style);
-
-        .i_bookmark {
-            &:before {
-                background-image: url(../images/icon/icon_bookmark_invert.svg);
-            }
-        }
+        background-color: nth($primaryColor, $style);
     }
 
     i {
@@ -286,12 +297,8 @@
                 top: 12px;
                 right: 10px;
             }
-            &:before{
-                background: nth($primaryColor, $style);
-            }
+           
             &:hover{
-                color: #fff;
-                border-color: nth($primaryColor, $style);
                 &:after{
                     background-image: url(../images/icon/icon_arrow_down_invert.svg);
                 }
@@ -305,9 +312,11 @@
         border-radius: $rounded-angle;
         box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
         padding: 10px;
-        width: 150px;
+        min-width: 150px;
         top: 42px;
         right: 0;
+        transform-origin: 50% 0;
+        animation: slideDown .3s ease-out;
 
         ul {
             @include li-reset;
@@ -326,7 +335,7 @@
                 display: block;
                 transition: all .3s;
 
-                &:hover {
+                &:hover, &.active {
                     color: nth($primaryColor, $style);
                 }
             }

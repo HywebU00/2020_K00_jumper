@@ -168,6 +168,10 @@
             transition: .3s ease-in;
             border-radius: 30px;
             border: none;
+            background-color: $importantColor;
+            &:hover{
+                background-color: darken($importantColor, 10);
+            }
 
             @include screen('mobile') {
                 position: absolute;

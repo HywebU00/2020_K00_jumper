@@ -21,6 +21,7 @@
 @import "sass/_form";         //表單
 @import "sass/_icon";         //圖示
 @import "sass/_element";        //小元素
+@import "sass/_animation.scss";  //動態
 
 // 模組
 @import "sass/_header";         //header
@@ -31,15 +32,16 @@
 @import "sass/_fixed_sidebar";      //固定側邊欄
 //@import "sass/_function";       //function功能區塊
 @import "sass/_accordion";
+
 @import "sass/_modal";          //pop視窗
-@import "sass/_marquee";        //跑馬燈
+//@import "sass/_marquee";        //跑馬燈
 @import "sass/_paginations";      //分頁
 //@import "sass/_thumbnail";        //縮圖
 @import "sass/_category";       //標籤
 @import "sass/_lightbox";       //燈箱
 //@import "sass/_share";          //社群分享
 @import "sass/_tag";          //文章標籤
-@import "sass/_fontsize";       //控制文章字體大小
+//@import "sass/_fontsize";       //控制文章字體大小
 @import "sass/_notice";         //提示
 @import "sass/_function_panel";     //內頁功能面板
 @import "sass/_search";          //搜尋模組
@@ -56,7 +58,7 @@
 // @import "page/_qp";           //QP
 
 // 外掛
-@import "sass/_slick";          //slick
+//@import "sass/_slick";          //slick
 
 // 列印
 @import "sass/_print";          //列印樣式

@@ -110,6 +110,14 @@ button[type="submit"],
     @extend %btn-submit;
 }
 
+button[type="submit"],
+.btn-submit{
+    @extend %hover_transition;
+    &:before{
+        background: $importantColor;
+    }
+}
+
 button[type="reset"],
 .btn-reset {
     background-color: $color-lightgray;
@@ -117,10 +125,12 @@ button[type="reset"],
     color: $color-word-light;
     border-radius: 30px;
     padding: .5em 1.5em;
-
+    @extend %hover_transition;
+    &:before{
+        background: darken($color-lightgray, 10);
+    }
     &:hover {
         border-color: $color-lightgray;
-        background: darken($color-lightgray, 10);
         color: $color-word;
     }
 }
