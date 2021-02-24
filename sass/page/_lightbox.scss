@@ -75,8 +75,6 @@ body.fix {
     box-shadow: $box;
 
     @include screen('xs_mobile') {
-        padding: 40px 20px 20px;
-        width: calc(100% - 30px);
         min-width: auto;
         @include box-sizing;
     }
@@ -105,10 +103,14 @@ body.fix {
 // 登入
 .login_lightbox {
     .loginblock {
-        @extend %lightbox_block;
         width: 520px;
         padding: 30px 40px;
         overflow-y: scroll;
+        @extend %lightbox_block;
+        @include screen('xs_mobile') {
+            padding: 40px 20px 20px;
+            width: calc(100% - 30px);
+        }
 
         .name {
             color: nth($primaryColor, $style);
@@ -784,9 +786,13 @@ body.fix {
         .tabSet {
             margin: 0;
             background: #fff;
+            .tabs{
+                overflow-x: auto;
+            }
             li {
                 a {
                     font-size: 1em;
+                    white-space: nowrap;
                 }
             }
         }
@@ -808,6 +814,11 @@ body.fix {
                 display: none;
             }
         }
+        .keyword +.tab-content{
+            @include screen('mobile'){
+                height: calc(100% - 220px);
+            }
+        }
 
         .tab-content {
             background: $color-lightgray;
@@ -815,23 +826,22 @@ body.fix {
             height: calc(100% - 170px);
             box-shadow: $box inset;
 
-            @include screen('mobile') {
-                height: calc(100% - 200px);
-            }
-
             .btn_grp {
                 float: none;
                 text-align: left;
-                padding: 10px 20px;
+                padding: 10px 15px;
                 width: auto;
                 position: static;
             }
             button[type="reset"]{
-                 background-color: #fff;
+                background-color: #fff;
                 border-color:$color-input; 
                 color: $color-word;
                 border-radius: $rounded-angle;
                 padding: .5em 1em;
+                &:before{
+                    background-color: #fff;
+                }
                 &:hover{
                     color: nth($primaryColor, $style);
                     border-color: nth($primaryColor, $style);
@@ -864,6 +874,7 @@ body.fix {
 
                 label {
                     margin-bottom: 0;
+                    display: inline-block;
                 }
 
                 a {
