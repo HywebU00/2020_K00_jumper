@@ -171,7 +171,7 @@
         button {
             display: flex;
             align-items: center;
-            margin-left: .5em;
+            margin:0 0 0 .5em;
             @extend %hover_transition;
 
             &:hover{

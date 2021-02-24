@@ -359,6 +359,8 @@
                 margin: 0;
                 padding: 0;
                 opacity: .6;
+                float: right;
+                background: transparent;
 
                 &:hover,
                 &:focus {
@@ -399,21 +401,12 @@
             margin-right: .5em;
         }
     }
+    &.added_tag{
+        li:before{
+            top: .25em;
+        }
+    }
 
-    // .btn_management{
-    //     border-radius: 30px;
-    //     color: $primaryColor;
-    //     border: 1px solid $primaryColor;
-    //     float:none !important;
-    //     margin: 1em auto 0 auto;
-    //     display: block;
-    //     padding: .5em 1em;
-    //     background: transparent;
-    //     &:hover{
-    //         background: $primaryColor;
-    //         color: #fff;
-    //     }
-    // }
 }
 
 .search_result {
@@ -569,6 +562,12 @@
 
         @include screen('mobile') {
             padding: 1em 15px;
+        }
+
+        .tab_grp{
+            button{
+               @extend %hover_transition; 
+            }
         }
 
         .tab_grp,
