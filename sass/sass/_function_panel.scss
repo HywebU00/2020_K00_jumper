@@ -67,7 +67,7 @@
             &:hover,
             &.active {
                 &:before {
-                    background: $primaryColor url(../images/icon/icon_list_less_invert.svg) center no-repeat;
+                    background: nth($primaryColor, $style) url(../images/icon/icon_list_less_invert.svg) center no-repeat;
                     background-size: 80%;
                 }
             }
