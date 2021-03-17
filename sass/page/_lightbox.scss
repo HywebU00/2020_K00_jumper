@@ -744,7 +744,6 @@ body.fix {
             .web_link {
                 display: block;
             }
-
         }
 
         .accordion_content {
@@ -759,8 +758,32 @@ body.fix {
     .sendEmail{
         margin: 1em 0;
         display: none;
+        position: relative;
         >input[type="email"]{
             min-width: 45%;
+            @include screen('mobile'){
+                min-width: 100%;
+                padding-right: 40px;
+            }
+        }
+        .btn-submit{
+            @include screen('mobile'){
+                position: absolute;
+                font-size: 0;
+                border-radius: $rounded-angle;
+                right: 0;
+                top: 0;
+                width: 40px;
+                height: 40px;
+            } 
+            &:after{
+                content:"";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url(../images/icon/icon_email_invert.svg) center no-repeat;
+                background-size: 60%;
+            }
         }
     }
 } 
