@@ -1438,27 +1438,62 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 頁碼-置底、收起狀態 -->
                             <div class="pagination">
                                 <ul class="page">
                                     <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                                    <li class="active"><a href="#">1</a></li>
+                                    <li class="prev"><a href="#" title="回上一頁">回上一頁</a></li>
+                                    <li class="pageClose"><a href="#" title="收合頁碼">收合</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <!-- 
+                                    1.click 目前的頁碼，則".pagination" add classname "expansion" ，變成頁碼展開狀態
+                                    2. a[title]內的文字會顯示成hover時的提示文字
+                                    -->
+                                    <li class="active"><a href="#" title="更多頁面">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                </ul>
+                            </div>
+                            <!-- 頁碼-置底、收起、浮動狀態 -->
+                            <!-- 浮動狀態時 add classname "fixed" -->
+                            <div class="pagination fixed">
+                                <ul class="page">
+                                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                    <li class="prev"><a href="#" title="回上一頁">回上一頁</a></li>
+                                    <li class="pageClose"><a href="#" title="收合頁碼">收合</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <!-- 
+                                    1.click 目前的頁碼，則".pagination" add classname "expansion" ，變成頁碼展開狀態
+                                    2. a[title]內的文字會顯示成hover時的提示文字
+                                    -->
+                                    <li class="active"><a href="#" title="更多頁面">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                </ul>
+                            </div>
+                            <!-- 頁碼-置底、展開狀態 -->
+                            <div class="pagination expansion">
+                                <ul class="page ">
+                                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                    <li class="prev"><a href="#" title="回上一頁">回上一頁</a></li>
+                                    <!-- 
+                                    1.click 關閉按鈕(.pageClose) 則remove classname "expansion", 其他頁碼會隱藏起來
+                                    2. a[title]內的文字會顯示成hover時的提示文字-->
+                                    <li class="pageClose"><a href="#" title="收合頁碼">收合</a></li>
+                                    <li class="active"><a href="#" title="">1</a></li>
                                     <li><a href="#">2</a></li>
                                     <li><a href="#">3</a></li>
                                     <li><a href="#">4</a></li>
                                     <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#">7</a></li>
-                                    <li><a href="#">8</a></li>
-                                    <li><a href="#">9</a></li>
-                                    <li><a href="#">10</a></li>
                                     <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
                                     <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
                                 </ul>
-                                <form action="" class="form_inline">
-                                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>

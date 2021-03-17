@@ -7,18 +7,18 @@ a:focus {
     }
 }
 
-// 導盲磚
-.accesskey {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 9;
-    color: $color-word;
-    font-size: $font-size;
-    @include screen("mobile") {
-        display: none;
-    }
-}
+// // 導盲磚
+// .accesskey {
+//     position: absolute;
+//     top: 5px;
+//     left: 5px;
+//     z-index: 9;
+//     color: $color-word;
+//     font-size: $font-size;
+//     @include screen("mobile") {
+//         display: none;
+//     }
+// }
 
 .renew {
     background: none;

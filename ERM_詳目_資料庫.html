@@ -14,8 +14,8 @@
     <!-- favicon -->
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
-
 <!-- lightbox開啟時 <body> add classname "fix" -->
+
 <body class="fix">
     <div class="wrapper">
         <!-- 手機版menu 已登入狀態 language與logout button在menu下方 -->
@@ -667,6 +667,7 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <!-- 點擊Email之後開啟下方 div.sendEmail-->
                                     <a href="#">
                                         <div class="img-container">
                                             <img src="images/icon/icon_mail.svg" alt="">
@@ -699,6 +700,11 @@
                                     </a>
                                 </li>
                             </ul>
+                            <!-- 點擊email icon後開啟此 email input (css預設display:none) -->
+                            <div class="sendEmail form_inline" style="display:block;">
+                                <input name="username" id="" type="email" placeholder="請輸入指定的 Email" class="">
+                                <button class="btn btn-submit">送出</button>
+                            </div>
                         </section>
                         <section>
                             <h3>資料庫類型</h3>
