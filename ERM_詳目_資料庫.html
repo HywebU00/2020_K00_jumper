@@ -409,15 +409,17 @@
                     <div class="search_result">
                         <h2>查詢結果</h2>
                         <div class="function_panel">
-                            <div class="result_amount">
-                                查詢結果：
-                                <div class="total">共<em>118,535</em>筆</div>
-                            </div>
-                            <div class="display_grp">
-                                顯示方式：
-                                <!-- click button 則 add classname .active-->
-                                <button type="button" class="list_less">簡目</button>
-                                <button type="button" class="list_more active">詳目</button>
+                            <div class="function_block">
+                                <div class="display_grp">
+                                    顯示方式：
+                                    <!-- click button 則 add classname .active-->
+                                    <button type="button" class="list_less">簡目</button>
+                                    <button type="button" class="list_more active">詳目</button>
+                                </div>
+                                <div class="result_amount">
+                                    查詢結果：
+                                    <div class="total">共<em>118,535</em>筆</div>
+                                </div>
                             </div>
                             <div class="function_block">
                                 <div class="option">
@@ -667,7 +669,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <!-- 點擊Email之後開啟下方 div.sendEmail-->
+                                    <!-- 點擊Email之後開啟下方 div.showEmail-->
                                     <a href="#">
                                         <div class="img-container">
                                             <img src="images/icon/icon_mail.svg" alt="">
@@ -701,7 +703,7 @@
                                 </li>
                             </ul>
                             <!-- 點擊email icon後開啟此 email input (css預設display:none) -->
-                            <div class="sendEmail form_inline" style="display:block;">
+                            <div class="showEmail form_inline" style="display:block;">
                                 <input name="username" id="" type="email" placeholder="請輸入指定的 Email" class="">
                                 <button class="btn btn-submit">送出</button>
                             </div>

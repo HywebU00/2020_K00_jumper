@@ -411,7 +411,8 @@
 
 .search_result {
     flex-basis: calc(100% - 270px);
-    max-width: calc(100% - 270px);
+    //max-width: calc(100% - 270px);
+    flex-grow: 1;
     @include gutter();
 
     @include screen('tablet') {
