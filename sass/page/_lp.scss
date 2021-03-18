@@ -1216,11 +1216,11 @@
 
     .function_panel {
         .result_amount {
-            display: none;
+            display: flex;
 
-            @include screen('mobile') {
-                display: flex;
-            }
+            // @include screen('mobile') {
+            //     display: flex;
+            // }
         }
 
         .display_grp {
