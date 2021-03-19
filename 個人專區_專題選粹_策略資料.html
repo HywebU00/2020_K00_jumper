@@ -15,11 +15,10 @@
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
 
-<body>
+<body class="fix">
     <div class="wrapper">
-        <!-- 手機版menu 已登入狀態 ".language"與".btn_logout"在menu底端 -->
+        <!-- 手機版menu 已登入狀態 language與logout button在menu下方 -->
         <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
-        <!-- 手機版menu開啟時，<body> add class ".fix" (防止body滾動）-->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
                 <div class="logo">
@@ -118,107 +117,34 @@
                 </div>
             </div>
         </header>
-        <!-- 登入燈箱start -->
-        <div class="login_lightbox" style="display: none;">
-            <div class="overlay"></div>
-            <div class="loginblock">
-                <div class="close"></div>
-                <div class="login_form">
-                    <h2>登入<span class="name">國立彰化師範大學</span></h2>
-                    <div class="login_instructions">
-                        <div class="pc">限在校教職員工學生使用，帳號密碼同校園入口網<br />
-                            (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)
-                        </div>
-                        <div class="mobile">
-                            請輸入您的個人的讀者證號與密碼
-                        </div>
-                    </div>
-                    <div class="error">登入失敗，請重新輸入帳號密碼</div>
-                    <form>
-                        <div class="form_content">
-                            <div class="form_grp form_inline">
-                                <label for="username">帳號</label>
-                                <input name="username" type="text">
-                            </div>
-                            <div class="form_grp form_inline">
-                                <label for="password">密碼</label>
-                                <input name="password" type="password">
-                            </div>
-                            <div class="form_grp form_inline">
-                                <img src="images/captcha.png" alt="" class="captcha">
-                                <button type="button" class="renew"><i class="i_renew"></i></button>
-                                <input name="" type="text" value="" placeholder="請輸入圖形驗證碼">
-                            </div>
-                            <div class="btn_grp">
-                                <input name="" type="submit" value="確認" />
-                            </div>
-                        </div>
-                    </form>
-                    <div class="notSignin">
-                        <a href="#" class="cannot_signin">無法登入嗎？</a>
-                        <a href="#" class="customer">以訪客身份瀏覽</a>
-                    </div>
-                    <div class="divider">使用第三方登入</div>
-                    <div class="social_slider">
-                        <a href="#"><img src="images/icon_google.svg" alt=""></a>
-                        <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
-                    </div>
-                    <div class="copyright">
-                        <img src="images/ebsco.png" alt="">
-                        <img src="images/logo_hyweb.png" alt="">
-                        <p>Embedded EBSCO Discovery Service<br />
-                            System Designed by Hyweb Technology Co., Ltd.<br />
-                            ©2020 All Rights Reserved</p>
-                    </div>
-                </div>
-                <div class="function_grp">
-                    <button type="button" class="btn">回圖書館首頁</button>
-                    <div class="language">
-                        <select name="" id="">
-                            <option value="">中文</option>
-                            <option value="">English</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 登入燈箱end-->
-        <div class="main">
+        <div class="main personal">
             <section class="col-12 search_block">
                 <div class="container">
                     <div class="col">
                         <!-- 搜尋 -->
-                        <div class="advanced search_system">
+                        <div class="search_system">
                             <!-- 頁籤 -->
                             <!-- 點擊 tabs > ul > li  > a 對應的tab-content show-->
                             <div class="tabSet">
                                 <ul class="tabs">
-                                    <li class="active">
+                                    <li>
                                         <a href="#tab1">整合查詢</a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a href="#tab2">電子資源查詢</a>
                                     </li>
                                 </ul>
                             </div>
                             <!-- 頁籤內容 1 -->
-                            <div class="tab-content" id="tab1">
+                            <div class="tab-content" id="tab1" style="display: none">
                                 <form action="">
                                     <div class="form_grp form_inline">
                                         <!-- 點擊 input[type="text"] 時 
                                             1.加上class name"show_recent_searches"
                                             2.搜尋推薦字區塊 display:block -->
-                                        <input name="username" id="mustSameAsId" type="text" placeholder="查找期刊文章、異質資源整合查詢" accesskey="S">
-                                        <select name="" id="selectSample">
-                                            <option value="">題名</option>
-                                            <option value="">選項二</option>
-                                            <option value="">選項三</option>
-                                            <option value="">選項四</option>
-                                        </select>
-                                        <div class="btn_grp form_inline">
-                                            <input name="" type="submit" title="查詢" value="查詢" />
-                                            <a href="#" class="simple_search">簡易查詢</a>
-                                        </div>
+                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
+                                        <input name="" type="submit" title="查詢" value="查詢" />
+                                        <a href="#" class="advanced_search">進階查詢</a>
                                         <!-- 搜尋推薦字 -->
                                         <div class="recent_searches" style="display: none">
                                             <ul class="promptword">
@@ -249,47 +175,14 @@
                                         </div>
                                         <!-- 搜尋推薦字 END-->
                                     </div>
-                                    <!-- 新增的查詢條件 1-->
-                                    <div class="form_grp form_inline condition">
-                                        <select name="" id="selectSample">
-                                            <option value="">AND</option>
-                                            <option value="">OR</option>
-                                            <option value="">NOT</option>
-                                        </select>
-                                        <input name="username" id="mustSameAsId" type="text" accesskey="">
-                                        <select name="" id="selectSample">
-                                            <option value="">題名</option>
-                                            <option value="">選項二</option>
-                                            <option value="">選項三</option>
-                                            <option value="">選項四</option>
-                                        </select>
-                                        <button type="button" class="delete">delete</button>
-                                    </div>
-                                    <!-- 新增的查詢條件 2-->
-                                    <div class="form_grp form_inline condition">
-                                        <select name="" id="selectSample">
-                                            <option value="">AND</option>
-                                            <option value="">OR</option>
-                                            <option value="">NOT</option>
-                                        </select>
-                                        <input name="username" id="mustSameAsId" type="text" accesskey="">
-                                        <select name="" id="selectSample">
-                                            <option value="">題名</option>
-                                            <option value="">選項二</option>
-                                            <option value="">選項三</option>
-                                            <option value="">選項四</option>
-                                        </select>
-                                        <button type="button" class="delete">delete</button>
-                                    </div>
-                                    <button type="button" class="add_condition">新增一行</button>
-                                    <div class="check_grp">
+                                    <div class="check_grp form_inline">
                                         <label><input name="" type="checkbox" value="">集中式整合查詢</label>
                                         <label><input name="" type="checkbox" value="">分散式查詢<a href="#">(瀏覽資料庫)</a></label>
                                     </div>
                                 </form>
                             </div>
                             <!-- 頁籤內容 2 -->
-                            <div class="tab-content" id="tab2" style="display:none;">
+                            <div class="tab-content" id="tab2">
                                 <form action="">
                                     <div class="form_grp form_inline">
                                         <select name="" id="selectSample" class="select_connected">
@@ -298,18 +191,9 @@
                                             <option value="">選項三</option>
                                             <option value="">選項四</option>
                                         </select>
-                                        <input name="username" id="mustSameAsId" type="text" placeholder="查找資料庫名稱、期刊名稱、電子書書名" accesskey="S">
-                                        <select name="" id="selectSample">
-                                            <option value="">資源名稱</option>
-                                            <option value="">選項二</option>
-                                            <option value="">選項三</option>
-                                            <option value="">選項四</option>
-                                        </select>
-                                        <div class="btn_grp form_inline">
-                                            <input name="" type="submit" title="查詢" value="查詢" />
-                                            <a href="#" class="simple_search">簡易查詢</a>
-
-                                        </div>
+                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
+                                        <input name="" type="submit" title="查詢" value="查詢" />
+                                        <a href="#" class="advanced_search">進階查詢</a>
                                         <!-- 搜尋推薦字 -->
                                         <div class="recent_searches" style="display: none;">
                                             <ul class="promptword">
@@ -340,44 +224,192 @@
                                         </div>
                                         <!-- 搜尋推薦字 END-->
                                     </div>
-                                    <!-- 新增的查詢條件 1-->
-                                    <div class="form_grp form_inline condition">
-                                        <select name="" id="selectSample">
-                                            <option value="">AND</option>
-                                            <option value="">OR</option>
-                                            <option value="">NOT</option>
-                                        </select>
-                                        <input name="username" id="mustSameAsId" type="text" accesskey="">
-                                        <select name="" id="selectSample">
-                                            <option value="">資源名稱</option>
-                                            <option value="">選項二</option>
-                                            <option value="">選項三</option>
-                                            <option value="">選項四</option>
-                                        </select>
-                                        <button type="button" class="delete">delete</button>
-                                    </div>
-                                    <!-- 新增的查詢條件 2-->
-                                    <div class="form_grp form_inline condition">
-                                        <select name="" id="selectSample">
-                                            <option value="">AND</option>
-                                            <option value="">OR</option>
-                                            <option value="">NOT</option>
-                                        </select>
-                                        <input name="username" id="mustSameAsId" type="text" accesskey="">
-                                        <select name="" id="selectSample">
-                                            <option value="">資源名稱</option>
-                                            <option value="">選項二</option>
-                                            <option value="">選項三</option>
-                                            <option value="">選項四</option>
-                                        </select>
-                                        <button type="button" class="delete">delete</button>
-                                    </div>
-                                    <button type="button" class="add_condition">新增一行</button>
-                                    <br/>
-                                    <a href="#" class="link">資源瀏覽</a>
+                                    <a href="#" class="link">以瀏覽方式查詢本館資料庫、期刊及電子書</a>
                                 </form>
                             </div>
                         </div><!-- search END -->
+                    </div>
+                </div>
+            </section>
+            <div class="main_tabSet">
+                <div class="container">
+                    <!-- 手機版頁籤變成下拉選單 button文字內容顯示選取中的選項 
+                        click "button.active_m" 則 ".tabs" display:block
+                    -->
+                    <button type="button" class="active_m">專題選粹</button>
+                    <ul class="tabs">
+                        <li>
+                            <a href="#tab1">知識收藏</a>
+                        </li>
+                        <li>
+                            <a href="#tab2">常用資源</a>
+                        </li>
+                        <li>
+                            <a href="#tab3">檢索紀錄</a>
+                        </li>
+                        <li class="active">
+                            <a href="#tab4">專題選粹</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section class="main_content">
+                <div class="container">
+                    <div class="filter_search">
+                        <div class="close"></div>
+                        <h2>已設定策略</h2>
+                        <div class="sort_list">
+                            <ul>
+                                <li>
+                                    <div class="accordion_content">
+                                        <ul>
+                                            <li>
+                                                <a href="#">策略一號</a>
+                                                <!-- <button type="button" class="btn_del" style="display: block"><i class="i_trash" ></i></button></li> -->
+                                            <li>
+                                                <a href="#">策略二號</a>
+                                                <!-- <button type="button" class="btn_del" style="display: block" style="display: block"><i class="i_trash"></i></button> -->
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn_manage">管理策略</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="resource_lightbox" style="display:block">
+                        <div class="overlay"></div>
+                        <div class="resourceblock">
+                            <div class="close"></div>
+                            <h3>詳細資料</h3>
+                            <div class="scroll_content">
+                                <ul class="li_block">
+                                    <li><b>查詢詞：</b>策略一號</li>
+                                    <li><b>查詢週期：</b>7 日</li>
+                                    <li><b>有效日期：</b>2020/03/03</li>
+                                    <li><b>通知 Email：</b>test@hyweb.com.tw</li>
+                                </ul>
+                                
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn btn-submit">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_result">
+                        <h2>檢索紀錄</h2>
+                        <!-- click ".filter_search_btn" 時 
+                                    1. <.filter_search> addclass .show_up 
+                                    2. <body> addclass .fix 
+                                -->
+                        <!-- 開啟後分類區塊按鈕".filter_search_btn" 是手機版才會出現的btn -->
+                        <button type="button" class="filter_search_btn">
+                            <i class="i_filter"></i>
+                        </button>
+                        <div class="tabSet">
+                            <ul class="tabs">
+                                <li class="active"><a href="javascript:;">EDS 集中式</a></li>
+                                <li><a href="javascript:;">異質資源</a></li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <h3>設定選粹策略</h3>
+                            <form action="">
+                                <div class="tab_grp">
+                                    <button type="button" class="btn active">一般查詢</button>
+                                    <!-- 點擊進階查詢button 則
+                                        1. add class "active";
+                                        2. 一般查詢button remove class "active";
+                                        3. 一般查詢表單 display:none;
+                                        4. 進階查詢表單 display:block;-->
+                                    <button type="button" class="btn">進階查詢</button>
+                                </div>
+                                <div class="form_grid form">
+                                    <!-- 一般查詢 -->
+                                    <div class="form_grp">
+                                        <label for="" class="form_title">查詢詞</label>
+                                        <div class="form_content">
+                                            <input name="stitle" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- 進階查詢 -->
+                                    <div class="form_grp" style="display: none;">
+                                        <label for="" class="form_title">查詢詞</label>
+                                        <div class="form_content form_inline">
+                                            <input name="stitle" type="text" class="flex-grow"> <span>在</span>
+                                            <select name="" id="">
+                                                <option value="1" selected="">題名</option>
+                                                <option value="2">作者</option>
+                                                <option value="3">主題</option>
+                                                <option value="4">出版者</option>
+                                                <option value="5">ISSN</option>
+                                                <option value="6">ISBN</option>
+                                            </select>
+                                        </div>
+                                        <div class="form_content form_inline">
+                                            <select name="" id="">
+                                                <option value="" selected="">AND</option>
+                                                <option value="">OR</option>
+                                                <option value="">NOT</option>
+                                            </select>
+                                            <input name="stitle" type="text" class="flex-grow"> <span>在</span>
+                                            <select name="" id="">
+                                                <option value="1" selected="">題名</option>
+                                                <option value="2">作者</option>
+                                                <option value="3">主題</option>
+                                                <option value="4">出版者</option>
+                                                <option value="5">ISSN</option>
+                                                <option value="6">ISBN</option>
+                                            </select>
+                                        </div>
+                                        <div class="form_content form_inline">
+                                            <select name="" id="">
+                                                <option value="" selected="">AND</option>
+                                                <option value="">OR</option>
+                                                <option value="">NOT</option>
+                                            </select>
+                                            <input name="stitle" type="text" class="flex-grow"> <span>在</span>
+                                            <select name="" id="">
+                                                <option value="1" selected="">題名</option>
+                                                <option value="2">作者</option>
+                                                <option value="3">主題</option>
+                                                <option value="4">出版者</option>
+                                                <option value="5">ISSN</option>
+                                                <option value="6">ISBN</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="" class="form_title">查詢週期</label>
+                                        <div class="form_content form_inline">
+                                            <select id="selectSample" name="">
+                                                <option value="">3</option>
+                                                <option value="" selected="selected">7</option>
+                                                <option value="">14</option>
+                                                <option value="">28</option>
+                                            </select>
+                                            <span>日</span>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="" class="form_title">有效日期</label>
+                                        <div class="form_content form_inline">
+                                            <input name="" type="date" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="" class="form_title">通知 Email</label>
+                                        <div class="form_content">
+                                            <input name="" type="email" value="">
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-reset">清除</button>
+                                        <button class="btn btn-submit">送出</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -124,11 +124,14 @@
         .relative_subject {
             color: $linkColor;
             text-decoration: underline;
-            margin: 0 .4em;
+            margin: .5em;
 
             &:hover {
                 color: darken($linkColor, 10);
             }
+        }
+        .filter_num{
+            margin-left: .5em;
         }
 
         .total:after,

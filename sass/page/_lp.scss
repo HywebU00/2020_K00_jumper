@@ -177,6 +177,7 @@
             margin-left: 0;
         }
     }
+
     &+.search_overlay {
         background: RGBA(0, 0, 0, 0.5);
         position: fixed;
@@ -224,8 +225,8 @@
             padding-left: 1.6em;
             @extend %hover_transition;
 
-            &:before{
-                background-color:  nth($primaryColor, $style);
+            &:before {
+                background-color: nth($primaryColor, $style);
             }
 
             &:after {
@@ -242,10 +243,11 @@
 
             &:hover {
                 color: #fff;
-                &:after{
+
+                &:after {
                     background-image: url(../images/icon/icon_trash_invert.svg);
                 }
-                
+
             }
         }
 
@@ -319,57 +321,6 @@
 
         }
 
-        .accordion_content,
-        .list_content {
-            overflow: hidden;
-
-            ul {
-                padding-left: .5em;
-            }
-
-            li {
-                padding: .5em 0;
-                overflow: hidden;
-
-                a {
-                    color: $color-word;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-
-                span {
-                    padding: 0 .4em;
-                }
-            }
-
-            >button {
-                float: right;
-                border: 1px solid nth($primaryColor, $style);
-                color: nth($primaryColor, $style);
-                background: transparent;
-                margin-top: .5em;
-                @extend %hover_transition;
-
-            }
-
-            .btn_del {
-                border: 0;
-                margin: 0;
-                padding: 0;
-                opacity: .6;
-                float: right;
-                background: transparent;
-
-                &:hover,
-                &:focus {
-                    background: none;
-                    opacity: 1;
-                }
-            }
-        }
-
         >ul {
             >li {
                 padding: 1em 0;
@@ -377,7 +328,57 @@
             }
         }
 
+    }
 
+    .accordion_content,
+    .list_content {
+        overflow: hidden;
+
+        ul {
+            padding-left: .5em;
+        }
+
+        li {
+            padding: .5em 0;
+            overflow: hidden;
+
+            a {
+                color: $color-word;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            span {
+                padding: 0 .4em;
+            }
+        }
+
+        >button {
+            float: right;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            background: transparent;
+            margin-top: .5em;
+            @extend %hover_transition;
+
+        }
+
+        .btn_del {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            opacity: .6;
+            float: right;
+            background: transparent;
+
+            &:hover,
+            &:focus {
+                background: none;
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -401,8 +402,9 @@
             margin-right: .5em;
         }
     }
-    &.added_tag{
-        li:before{
+
+    &.added_tag {
+        li:before {
             top: .25em;
         }
     }
@@ -493,8 +495,9 @@
                 a {
                     color: $linkColor;
                     text-decoration: underline;
+
                     &:hover {
-                       color: darken($linkColor, 10); 
+                        color: darken($linkColor, 10);
                     }
 
                     &.active {
@@ -565,9 +568,9 @@
             padding: 1em 15px;
         }
 
-        .tab_grp{
-            button{
-               @extend %hover_transition; 
+        .tab_grp {
+            button {
+                @extend %hover_transition;
             }
         }
 
@@ -1000,7 +1003,7 @@
             color: #fff;
 
             &:hover {
-                background: darken(nth($primaryColor, $style),5);
+                background: darken(nth($primaryColor, $style), 5);
             }
 
             &:before {
@@ -1074,7 +1077,8 @@
                 background: #fff;
                 border: 1px solid $linkColor;
                 color: $linkColor;
-                &:hover{
+
+                &:hover {
                     background-color: rgba($linkColor, .1);
                 }
             }
@@ -1083,7 +1087,8 @@
                 background: #fff;
                 border: 1px solid nth($primaryColor, $style);
                 color: nth($primaryColor, $style);
-                &:hover{
+
+                &:hover {
                     background-color: rgba(nth($primaryColor, $style), .1);
                 }
             }
@@ -1139,7 +1144,8 @@
             border-radius: 0;
             display: inline-block;
             padding: 0;
-            &:hover{
+
+            &:hover {
                 color: darken($linkColor, 10);
             }
 
@@ -1200,9 +1206,11 @@
             align-items: center;
             justify-content: center;
             transition: .2s ease-in;
-            &:hover{
-               background-color: $color-lightgray; 
+
+            &:hover {
+                background-color: $color-lightgray;
             }
+
             span {
                 font-size: 0;
             }
