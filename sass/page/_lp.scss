@@ -364,6 +364,11 @@
             @extend %hover_transition;
 
         }
+        .btn_manage{
+            @include screen('mobile'){
+                display: none;
+            }
+        }
 
         .btn_del {
             border: 0;
