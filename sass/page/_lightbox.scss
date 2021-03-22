@@ -878,6 +878,7 @@ body.fix {
             padding: 10px 0;
             height: calc(100% - 170px);
             box-shadow: $box inset;
+            border-radius: 0 0 5px 5px;
 
             .btn_grp {
                 float: none;
@@ -891,7 +892,6 @@ body.fix {
                 }
             }
             .scroll_content{
-                box-shadow: none;
                 background: transparent;
                 margin-top: 0;
                 padding: 0 20px;
@@ -924,7 +924,8 @@ body.fix {
             padding: 20px;
             margin-top: 1em;
             background: $color-lightgray;
-            box-shadow: $box inset;
+            //box-shadow: $box inset;
+            border-radius: 5px;
 
             @include screen('xs_mobile') {
                 padding: 0 15px;
@@ -965,6 +966,14 @@ body.fix {
                 li{
                     flex-basis: 100%;
                 }
+            }
+            .table_list{
+                td{
+                    border-width: 0 0 1px 0;
+                }
+                th{
+                    border-width: 1px 0;
+                }              
             }
 
             .del_btn {

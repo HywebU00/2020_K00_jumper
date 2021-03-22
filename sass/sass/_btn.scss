@@ -123,7 +123,8 @@ button[type="submit"],
 }
 
 button[type="reset"],
-.btn-reset {
+.btn-reset,
+.btn-del {
     background-color: $color-lightgray;
     border-color: $color-lightgray;
     color: $color-word-light;

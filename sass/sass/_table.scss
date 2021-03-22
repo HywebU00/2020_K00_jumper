@@ -21,7 +21,7 @@ table {
         }
     }
     th {
-        background-color: #F3F3F3;
+        background-color: #EEE;
         color: #333;
         border: #DDD 1px solid;
         //text-align: center;
@@ -35,6 +35,9 @@ table {
     &.table_sprite {
         tr:nth-child(even) {
             background: #F5F5F5;
+        }
+        tr:nth-child(even) {
+            background: #FFF;
         }
     }
 }
