@@ -88,38 +88,23 @@ $btn-radius:$rounded-angle;
     }
 }
 
-.btn-primary {
-    @extend %btn;
-    @include box-sizing;
-    text-shadow: none;
-    background: nth($primaryColor, $style);
-    border-radius: 30px;
-    color: #fff;
-    @extend %hover_transition;
-    &:before{
-        background: $importantColor;;
-    }
-    &:hover,
-    &:focus,
-    &.active {
-        outline: none;
-        border-color: nth($primaryColor, $style);
-        color: #fff;
-    }
-}
 
 input[type="submit"],
 button[type="submit"],
-.btn-submit{
+.btn-submit,
+.btn-primary
+{
     @extend %btn-submit;
-}
-
-button[type="submit"],
-.btn-submit{
-    @extend %hover_transition;
     &:before{
         background: $importantColor;
     }
+}
+
+button[type="submit"],
+.btn-submit,
+.btn-primary{
+    @extend %hover_transition;
+    
 }
 
 button[type="reset"],
@@ -137,6 +122,21 @@ button[type="reset"],
     &:hover {
         border-color: $color-lightgray;
         color: $color-word;
+    }
+}
+
+.btn-nostyle{
+    background: transparent;
+    border-color: rgba(255,255,255,0);
+    color: nth($primaryColor, $style);
+    border-radius: 30px;
+    padding: .5em 1.5em;
+    @extend %hover_transition;
+    &:before{
+        background: $color-lightgray;
+    }
+    &:hover{
+        border-color: $color-lightgray;
     }
 }
 

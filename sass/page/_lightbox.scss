@@ -11,7 +11,8 @@ body.fix {
 .detail_lightbox,
 .filter_lightbox,
 .resource_lightbox,
-.personal_lightbox {
+.personal_lightbox,
+.reminder_lightbox {
     position: fixed;
     top: 0;
     right: 0;
@@ -467,6 +468,7 @@ body.fix {
     }
 }
 
+//調整查詢＿看更多
 .filter_lightbox {
     overflow: hidden;
     display: none;
@@ -521,6 +523,7 @@ body.fix {
     }
 }
 
+//詳目頁
 .detail_lightbox {
     .detailblock {
         @extend %lightbox_block;
@@ -891,7 +894,8 @@ body.fix {
                     height: calc(100% - 70px);
                 }
             }
-            .scroll_content{
+
+            .scroll_content {
                 background: transparent;
                 margin-top: 0;
                 padding: 0 20px;
@@ -962,18 +966,20 @@ body.fix {
                 }
             }
 
-            .li_block{
-                li{
+            .li_block {
+                li {
                     flex-basis: 100%;
                 }
             }
-            .table_list{
-                td{
+
+            .table_list {
+                td {
                     border-width: 0 0 1px 0;
                 }
-                th{
+
+                th {
                     border-width: 1px 0;
-                }              
+                }
             }
 
             .del_btn {
@@ -1160,4 +1166,22 @@ body.fix {
             }
         }
     }
+}
+
+.reminder_lightbox {
+    .reminderblock {
+        @extend %lightbox_block;
+        width: 560px;
+        min-height: 180px;
+        padding: 15px 20px;
+        overflow: hidden;
+
+        @include screen('mobile') {}
+
+        .btn_grp {
+            padding-bottom: 0;
+            text-align: right;
+        }
+    }
+
 }
