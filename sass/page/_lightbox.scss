@@ -944,6 +944,7 @@ body.fix {
             li {
                 flex-basis: 50%;
                 margin-bottom: 1em;
+                padding-right: 1em;
 
                 @include screen('mobile') {
                     flex-basis: 100%;
@@ -995,12 +996,8 @@ body.fix {
 
         }
 
-        .accordion_header {
+        .accordion_header, li.accordion_header {
             flex-basis: 100%;
-        }
-
-        .accordion_content {
-            padding: 10px 25px;
         }
     }
 }
