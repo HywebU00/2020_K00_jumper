@@ -788,11 +788,11 @@
             }
         }
 
-        &~.list_data {
-            @include screen('mobile') {
-                margin-top: 1em;
-            }
-        }
+        // &~.list_data {
+        //     @include screen('mobile') {
+        //         margin-top: 1em;
+        //     }
+        // }
     }
 
     a.more {
@@ -813,7 +813,9 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-
+        @include screen('mobile'){
+            top: .2em;
+        }
         &:hover {
             background: $color-lightgray;
         }
@@ -934,6 +936,7 @@
             >li {
                 margin-bottom: .5em;
                 display: flex;
+                align-items: center;
                 // @include screen('mobile'){
                 //    flex-wrap: wrap; 
                 // }
@@ -951,6 +954,10 @@
                     flex: 0 0 auto;
                     font-weight: bold;
                     line-height: 1.5;
+                    &+div{
+                        display: flex;
+                        align-items: center;
+                    }
                 }
             }
         }
@@ -1134,6 +1141,7 @@
 
     .status {
         display: flex;
+        flex-wrap: wrap;
 
         >* {
             margin: 0 .5em 0 0;
@@ -1192,6 +1200,11 @@
     .popover_content {
         font-size: .875em;
         margin: .5em 0;
+    }
+
+    .summary{
+        background: $color-lightgray;
+        padding: 5px 10px;
     }
 
     //個人專區 功能按鈕

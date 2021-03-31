@@ -5,6 +5,9 @@
     text-align: center;
     font-size: .938em;
     @extend %clearfix; // outline: 1px solid red;
+    @include screen('mobile'){
+        display: none;
+    }
 
     span {
         color: nth($primaryColor, $style);
@@ -40,7 +43,7 @@
         margin: 10px 0;
         padding: .4em .5em;
         display: inline-flex;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
         justify-content: center;
         background: #fff;
         border-radius: 50px;

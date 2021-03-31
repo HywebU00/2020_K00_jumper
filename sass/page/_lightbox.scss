@@ -591,7 +591,6 @@ body.fix {
 
         li {
             display: flex;
-            align-items: flex-end;
 
             @include screen('mobile') {
                 flex-wrap: wrap;
@@ -617,9 +616,11 @@ body.fix {
                 display: inline-block;
                 color: $linkColor;
                 text-decoration: underline;
-                margin-right: .8em;
-
-                &:hover {}
+                margin:0 .8em 0 0;
+                padding: 0;
+                &:hover {
+                    color: darken($linkColor, 10);
+                }
             }
         }
     }
@@ -647,16 +648,15 @@ body.fix {
 
                 &:hover {
                     transform: scale(1.06);
-                    background: nth($primaryColor, $style);
+                    box-shadow: 0 2px 15px rgba(0,0,0,.2);
 
                     img {
                         opacity: 1;
-                        filter: invert(1);
                     }
 
-                    .function_name {
-                        color: #fff;
-                    }
+                    // .function_name {
+                    //     color: nth($primaryColor, $style);
+                    // }
                 }
             }
 
@@ -668,8 +668,8 @@ body.fix {
 
             img {
                 object-fit: contain;
-                opacity: .7;
                 transition: .3s;
+                opacity: .8;
             }
 
             .function_name {
