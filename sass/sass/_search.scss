@@ -44,7 +44,7 @@
             top: 55px;
             z-index: 50;
             border-radius: 0;
-            padding: 15px 20px;
+            padding: 10px 20px;
 
             @include screen('mobile') {
                 box-shadow: $box;

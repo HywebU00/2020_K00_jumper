@@ -352,6 +352,7 @@
 
             span {
                 padding: 0 .4em;
+                color: $color-word-light;
             }
         }
 
@@ -520,14 +521,15 @@
             }
 
             .items {
-                max-height: 165px;
+                max-height: 162px;
                 overflow: hidden;
                 display: flex;
                 flex-wrap: wrap;
 
                 li {
-                    flex-basis: calc(100% / 3);
+                    flex-basis: calc(100% / 3 - 15px);
                     padding: 5px 0;
+                    margin-right: 15px;
 
                     @include screen('tablet') {
                         flex-basis: calc(100% / 2);
