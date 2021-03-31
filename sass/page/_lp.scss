@@ -781,11 +781,11 @@
                 display: none;
             }
 
-            .pic {
-                width: 70px;
-                height: 70px;
-                padding: .8em;
-            }
+            // .pic {
+            //     width: 70px;
+            //     height: 70px;
+            //     padding: .8em;
+            // }
         }
 
         // &~.list_data {
@@ -841,11 +841,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50px;
-            height: 50px;
-            border-radius: $rounded-angle;
-            //box-shadow: $box;
-            background: $color-lightgray;
+            width: 100px;
             padding: .5em;
 
             @include screen('mobile') {
@@ -853,7 +849,6 @@
             }
 
             img {
-                height: 100%;
                 width: 100%;
                 object-fit: contain;
             }
