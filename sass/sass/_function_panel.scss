@@ -161,50 +161,54 @@
         // justify-content: flex-end;
     }
 
-    // .btn_grp {
-    //     padding: 0;
-    //     display: flex;
+    .btn_grp {
+        padding: 0;
+        margin: 0;
+        display: flex;
 
-    //     @include screen('mobile') {
-    //         position: absolute;
-    //         bottom: calc(100% + .75em);
-    //         right: 15px;
-    //     }
+        @include screen('mobile') {
+            position: absolute;
+            bottom: calc(100% + .75em);
+            right: 15px;
+        }
 
-    //     button {
-    //         display: flex;
-    //         align-items: center;
-    //         margin:0 0 0 .5em;
-    //         @extend %hover_transition;
+        button {
+            display: flex;
+            align-items: center;
+            margin:0 0 0 .5em;
+            @extend %hover_transition;
 
-    //         &:hover{
-    //             i{
-    //                 filter: invert(1);
-    //             }
-    //         }
+            &:hover{
+                i{
+                    filter: invert(1);
+                }
+            }
 
-    //         &:first-of-type {
-    //             margin-left: 0;
-    //         }
+            &:first-of-type {
+                margin-left: 0;
+            }
 
-    //         @include screen('tablet') {
-    //             min-width: 40px;
-    //             justify-content: center;
-    //         }
+            @include screen('tablet') {
+                min-width: 40px;
+                justify-content: center;
+            }
 
-    //         i {
-    //             @include screen('tablet') {
-    //                 margin: 0;
-    //             }
-    //         }
+            i {
+                @include screen('tablet') {
+                    margin: 0;
+                }
+            }
 
-    //         span {
-    //             @include screen('tablet') {
-    //                 font-size: 0;
-    //             }
-    //         }
-    //     }
-    // }
+            span {
+                @include screen('tablet') {
+                    font-size: 0;
+                }
+            }
+        }
+        &+.option{
+            margin-left: .5em;
+        }
+    }
 }
 
 .filter_search_btn {

@@ -937,7 +937,6 @@ body.fix {
             margin-top: 1em;
             background: $color-lightgray;
             //box-shadow: $box inset;
-            border-radius: 5px;
 
             @include screen('xs_mobile') {
                 padding: 0 15px;

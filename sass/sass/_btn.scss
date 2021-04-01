@@ -66,6 +66,7 @@ $btn-radius:$rounded-angle;
         background: darken(nth($primaryColor, $style), 10);
         color: #fff!important;
         outline: none;
+        //border-color: $importantColor;
     }
     &:disabled{
         background: $color-gray;
