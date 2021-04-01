@@ -42,7 +42,7 @@
             position: fixed;
             left: 0;
             top: 55px;
-            z-index: 50;
+            z-index: 40;
             border-radius: 0;
             padding: 10px 20px;
 
@@ -71,7 +71,7 @@
         .btn_grp {
             padding: 0;
             margin: 0;
-            flex: 0 0 180px;
+            flex: 0 0 auto;
             @include screen('mobile') {
                 position: absolute;
                 margin: 0;

@@ -11,15 +11,14 @@
                 @extend %slash;
             }
             &:first-child:before {
-                content: "";
-                display: inline-block;
-                color: #666;
-                margin-left: 0;
-                padding: 0;
+                content: none;
             }
         }
     }
     a {
         color: $linkColor;
+        &:hover{
+            text-decoration: underline;
+        }
     }
 }

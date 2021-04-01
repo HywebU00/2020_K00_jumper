@@ -20,6 +20,7 @@
     &:focus {
         color: $aHover;
         cursor: pointer;
+        text-decoration: underline;
     }
 }
 body {

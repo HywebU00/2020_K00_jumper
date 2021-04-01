@@ -258,6 +258,7 @@
     &.active {
         color: #fff;
         background-color: nth($primaryColor, $style);
+        border-color: nth($primaryColor, $style);
     }
 
     i {

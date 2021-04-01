@@ -26,6 +26,16 @@
             }
         }
     }
+    .list_block{
+        .sort_icon{
+            .pic{
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                background: $color-lightgray;
+            }
+        }
+    }
 }
 
 .main_content {
@@ -500,10 +510,10 @@
 
                 a {
                     color: $linkColor;
-                    text-decoration: underline;
-
+                    
                     &:hover {
                         color: darken($linkColor, 10);
+                        text-decoration: underline;
                     }
 
                     &.active {
@@ -697,9 +707,9 @@
                 a {
                     font-weight: normal;
                     color: $linkColor;
-                    text-decoration: underline;
 
                     &:hover {
+                        text-decoration: underline;
                         color: darken($linkColor, 10);
                     }
                 }
@@ -720,9 +730,9 @@
 
             a {
                 color: $linkColor;
-                text-decoration: underline;
 
                 &:hover {
+                    text-decoration: underline;
                     color: darken($linkColor, 10);
                 }
             }
@@ -933,14 +943,16 @@
             >li {
                 margin-bottom: .5em;
                 display: flex;
-                align-items: center;
                 // @include screen('mobile'){
                 //    flex-wrap: wrap; 
                 // }
 
                 a {
                     color: $linkColor;
-                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: underline;
+                        color: darken($linkColor, 10);
+                    }
                 }
 
                 .btn_normal {
@@ -951,10 +963,10 @@
                     flex: 0 0 auto;
                     font-weight: bold;
                     line-height: 1.5;
-                    &+div{
-                        display: flex;
-                        align-items: center;
-                    }
+                    // &+div{
+                    //     display: flex;
+                    //     align-items: center;
+                    // }
                 }
             }
         }
@@ -1124,14 +1136,8 @@
                 }
             }
 
-            a {
-                color: $color-word;
-                text-decoration: underline;
+            a {                
                 line-height: 1.5;
-
-                &:hover {
-                    color: nth($primaryColor, $style);
-                }
             }
         }
     }
@@ -1148,7 +1154,6 @@
         a {
             background: none;
             color: $linkColor;
-            text-decoration: underline;
             border: none;
             position: relative;
             border-radius: 0;
@@ -1156,6 +1161,7 @@
             padding: 0;
 
             &:hover {
+                text-decoration: underline;
                 color: darken($linkColor, 10);
             }
 
