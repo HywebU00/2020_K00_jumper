@@ -1,4 +1,9 @@
-
+%set-flex{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 // 可用class個別命名
 // 單欄滿版
 .full {
@@ -7,9 +12,12 @@
     }
 }
 // 單欄
-.col-12 {}
+.col-12 {
+
+}
 // 兩欄 6-6
 .col-6-6 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(12);
         @include make-sm-column(6);
@@ -19,6 +27,7 @@
 }
 // 三欄 4-4-4
 .col-4-4-4 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(12);
         @include make-sm-column(4);
@@ -28,6 +37,7 @@
 }
 // 四欄 3-3-3
 .col-3-3-3-3 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(12);
         @include make-sm-column(6);
@@ -37,6 +47,7 @@
 }
 // 雙欄 8-4
 .col-8-4 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(12);
         @include make-sm-column(8);
@@ -52,6 +63,7 @@
 }
 // 雙欄 4-8
 .col-4-8 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(12);
         @include make-sm-column(4);
@@ -67,6 +79,7 @@
 }
 // 雙欄 9-3
 .col-9-3 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(12);
         @include make-sm-column(9);
@@ -82,6 +95,7 @@
 }
 // 雙欄 9-3
 .col-3-9 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(12);
         @include make-sm-column(3);
@@ -97,6 +111,7 @@
 }
 // 六欄 2-2-2-2-2-2
 .col-2-2-2-2-2-2 {
+    @extend %set-flex;
     .col {
         @include make-xs-column(6);
         @include make-sm-column(2);

@@ -11,6 +11,7 @@
     &:focus {
         color: $aHover;
         cursor: pointer;
+        text-decoration: underline;
     }
 }
 @mixin aSetting_nocolor($COLOR:$color-word, $NOLINE:none) {
