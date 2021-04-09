@@ -26,16 +26,16 @@
             }
         }
     }
-    .list_block{
-        .sort_icon{
-            .pic{
-                width: 50px;
-                height: 50px;
-                border-radius: 10px;
-                background: $color-lightgray;
-            }
-        }
-    }
+    // .list_block{
+    //     .sort_icon{
+    //         .pic{
+    //             width: 50px;
+    //             height: 50px;
+    //             border-radius: 10px;
+    //             background: $color-lightgray;
+    //         }
+    //     }
+    // }
 }
 
 .main_content {
@@ -854,7 +854,6 @@
             justify-content: center;
             align-items: center;
             width: 100px;
-            padding: .5em;
 
             @include screen('mobile') {
                 display: none;
@@ -1025,6 +1024,7 @@
 
             &:hover {
                 background: darken(nth($primaryColor, $style), 5);
+                text-decoration: none;
             }
 
             &:before {
@@ -1046,6 +1046,7 @@
 
             &:hover {
                 background: $color-lightgray;
+                color: $color-word;
             }
 
             &:before {
@@ -1071,6 +1072,9 @@
                     height: 1em;
                     width: 1em;
                 }
+            }
+            &:hover {
+                background: $color-lightgray;
             }
 
         }

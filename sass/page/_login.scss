@@ -72,6 +72,7 @@
 			@include make-lg-column(6);
 			padding:30px 40px;
 			min-height: 630px;
+
 			@include screen('tablet'){
 				padding-bottom: 0;
 				min-height: auto;

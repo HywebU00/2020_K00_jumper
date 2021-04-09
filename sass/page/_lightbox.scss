@@ -224,6 +224,13 @@ body.fix {
                 border-radius: $rounded-angle 0 0$rounded-angle;
                 border: 1px solid $color-input;
                 border-right: 0;
+                @include screen('xs_mobile'){
+                    border: none;
+                    width: 100%;
+                    height: auto;
+                    padding: 0;
+                    font-size: .938em;
+                }
 
                 &:before {
                     content: "";
@@ -233,12 +240,19 @@ body.fix {
                     width: 1px;
                     height: calc(100% - 16px);
                     background: $color-line;
+                    @include screen('xs_mobile'){
+                        content: none;
+                    }
                 }
 
                 &+input[type="text"],
                 &+input[type="password"] {
                     border-radius: 0 $rounded-angle $rounded-angle 0;
-                    border-left: 0;
+                    border-left-width: 0;
+                    @include screen('xs_mobile'){
+                        border-radius: $rounded-angle;
+                        border-width: 1px;
+                    }
                 }
             }
 
@@ -253,6 +267,9 @@ body.fix {
                 display: flex;
                 position: relative;
                 align-items: center;
+                @include screen('xs_mobile'){
+                    flex-wrap: wrap;
+                }
             }
         }
 
@@ -456,6 +473,7 @@ body.fix {
         display: flex;
         font-size: .75em;
         align-items: center;
+        margin-top: 1em;
 
         @include screen('tablet') {
             display: none;

@@ -74,6 +74,7 @@
     &:hover{
         color: #fff;
         border-color: nth($primaryColor, $style);
+        text-decoration: none;
         &:before{
             transform: scale(2);
         }
