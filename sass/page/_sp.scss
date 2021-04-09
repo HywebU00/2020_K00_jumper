@@ -161,7 +161,6 @@
     }
 
     li {
-        padding: 4px 0;
         line-height: 1.5;
 
         span {
@@ -205,15 +204,11 @@
 
             a {
                 display: flex;
-                color: $color-word;
                 position: relative;
                 //padding-left: 2em;
                 width: calc(100% - 100px);
-
-                &:hover {
-                    color: nth($primaryColor, $style);
-                }
-
+                @include aSetting_nocolor();
+        
                 @include screen('mobile') {
                     width: 100%;
                 }
@@ -298,5 +293,8 @@
     margin-bottom: 2em;
     a{
         @include aSetting_nocolor();
+    }
+    li{
+        padding: 5px 15px;
     }
 }
