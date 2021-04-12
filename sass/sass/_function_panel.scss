@@ -176,9 +176,16 @@
             display: flex;
             align-items: center;
             margin:0 0 0 .5em;
-            @extend %hover_transition;
+            transition: .3s ease-in;
+            i{
+                transition: .2s ease-in;
+            }
+            //@extend %hover_transition;
 
             &:hover{
+                border-color: nth($primaryColor, $style);
+                background: nth($primaryColor, $style);
+                color: #fff;
                 i{
                     filter: invert(1);
                 }
@@ -247,18 +254,14 @@
     color: $color-word;
     margin: 0 0 0 .5em;
     position: relative;
-    @extend %hover_transition;
+    transition: .2s ease-in;
 
-    // &:before{
-    //     position: absolute;
-    //     content:"";
-    //}
     @include screen('tablet') {
         padding: .4em;
         min-width: 2.5em;
     }
-
     
+    &:hover,
     &.active {
         color: #fff;
         background-color: nth($primaryColor, $style);
@@ -266,6 +269,7 @@
     }
 
     i {
+        transition: .2s ease-in;
         margin: 0;
 
         &:before {
@@ -299,7 +303,8 @@
             line-height: 38px;
             cursor: pointer;
             border-radius: $rounded-angle;
-            @extend %hover_transition;
+            transition: .2s ease-in;
+            //@extend %hover_transition;
             &:after {
                 content: "";
                 position: absolute;
@@ -310,9 +315,14 @@
                 background-size: contain;
                 top: 12px;
                 right: 10px;
+                transition: .2s ease-in;
             }
            
             &:hover{
+                background: nth($primaryColor, $style);
+                border-color: nth($primaryColor, $style);
+                text-decoration: none;
+                color: #fff;
                 &:after{
                     background-image: url(../images/icon/icon_arrow_down_invert.svg);
                 }
