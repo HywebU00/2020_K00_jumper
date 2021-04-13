@@ -1,6 +1,6 @@
 .function_panel {
     background: linear-gradient(to bottom, #ffffff, #e5e5e5);
-    padding: .5em 1.5em;
+    padding: .5em 1em;
     position: relative;
     border: 1px solid $color-lightgray;
     display: flex;
@@ -105,6 +105,9 @@
         display: inline-flex;
         flex-wrap: wrap;
         align-items: center;
+        input[type="checkbox"]{
+            margin-top: 0;
+        }
 
         .search_word {
             color: nth($primaryColor, $style);

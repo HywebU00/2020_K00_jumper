@@ -1031,6 +1031,7 @@
             &:hover {
                 background: darken(nth($primaryColor, $style), 5);
                 text-decoration: none;
+                color: #fff;
             }
 
             &:before {
