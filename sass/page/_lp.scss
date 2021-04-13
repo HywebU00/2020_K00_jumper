@@ -414,7 +414,7 @@
             content: "";
             position: absolute;
             left: 0;
-            top: .75em;
+            top: .25em;
             display: block;
             width: 1em;
             height: 1em;
@@ -425,11 +425,11 @@
         }
     }
 
-    &.added_tag {
-        li:before {
-            top: .25em;
-        }
-    }
+    // &.added_tag {
+    //     li:before {
+    //         top: .25em;
+    //     }
+    // }
 
 }
 
