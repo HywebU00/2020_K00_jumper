@@ -47,7 +47,7 @@
             padding: 10px 20px;
 
             @include screen('mobile') {
-                box-shadow: $box;
+                position: static;
             }
 
             .form_grp {

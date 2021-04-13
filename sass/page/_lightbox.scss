@@ -605,11 +605,6 @@ body.fix {
                 vertical-align: middle;
             }
         }
-
-        a {
-            color: $linkColor;
-            text-decoration: underline;
-        }
     }
 
     .info_list {
@@ -640,13 +635,8 @@ body.fix {
 
             a {
                 display: inline-block;
-                color: $linkColor;
-                text-decoration: underline;
                 margin:0 .8em 0 0;
                 padding: 0;
-                &:hover {
-                    color: darken($linkColor, 10);
-                }
             }
         }
     }
@@ -675,6 +665,7 @@ body.fix {
                 &:hover {
                     transform: scale(1.06);
                     box-shadow: 0 2px 15px rgba(0,0,0,.2);
+                    text-decoration: none;
 
                     img {
                         opacity: 1;
