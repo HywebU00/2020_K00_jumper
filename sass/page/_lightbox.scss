@@ -789,6 +789,7 @@ body.fix {
 
         >input[type="email"] {
             min-width: 45%;
+            height: 40px;
 
             @include screen('mobile') {
                 min-width: 100%;

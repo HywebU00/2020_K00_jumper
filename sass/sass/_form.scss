@@ -302,12 +302,17 @@ select::-ms-expand {
         textarea,
         select {
             width: auto;
+            margin: 0 .25em .3em;
         }
     }
-}
-
-button {
-    margin: 0 .25em .3em .25em;
+    &.form_flex{
+        display: flex;
+        input,
+        textarea,
+        select {
+            margin: 0 .25em .3em;
+        }
+    }
 }
 
 // form 全域行內設定
@@ -363,6 +368,7 @@ button {
         width: auto;
     }
 }
+
 
 
 //---------------------------------------------下拉選單--------//
