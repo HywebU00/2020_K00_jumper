@@ -287,7 +287,7 @@
 
 .option {
     position: relative;
-    z-index: 10;
+    z-index: 50;
     //margin-left: .5em;
 
     @include screen('mobile') {

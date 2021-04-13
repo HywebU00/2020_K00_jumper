@@ -46,7 +46,7 @@ $btn-radius:$rounded-angle;
     width: auto;
     padding: $btn-padding;
     //min-width: 4em;
-    margin: .25em .1em;
+    margin: .25em;
 
     i {
         margin-right: .3em;
@@ -54,22 +54,24 @@ $btn-radius:$rounded-angle;
     }
 }
 
-%btn-submit{
+%btn-submit {
     background-color: nth($primaryColor, $style);
     border-color: nth($primaryColor, $style);
     color: #fff;
     border-radius: 30px;
     padding: .5em 1.5em;
     display: inline-block;
+    transition: .3s ease-in;
 
     &:hover,
     &:focus {
-        background: darken(nth($primaryColor, $style), 10);
-        color: #fff!important;
+        background: $importantColor;
+        color: #fff !important;
         outline: none;
-        //border-color: $importantColor;
+        border-color: $importantColor;
     }
-    &:disabled{
+
+    &:disabled {
         background: $color-gray;
         border-color: $color-gray;
         cursor: auto;
@@ -81,6 +83,7 @@ $btn-radius:$rounded-angle;
 .btn {
     @extend %btn;
     @include box-sizing;
+
     &:hover,
     &:focus,
     &.active {
@@ -94,54 +97,56 @@ $btn-radius:$rounded-angle;
 input[type="submit"],
 button[type="submit"],
 .btn-submit,
-.btn-primary
-{
+.btn-primary {
     @extend %btn-submit;
-    &:before{
+
+    &:before {
         background: $importantColor;
     }
 }
 
 button[type="submit"],
 .btn-submit,
-.btn-primary{
+.btn-primary {
     @extend %hover_transition;
-    
+
 }
 
 .btn-reset,
 .btn-del {
-    background-color: $color-lightgray;
-    border-color: $color-lightgray;
+    background-color: $color-btn-light;
+    border-color: $color-btn-light;
     color: $color-word-light;
     border-radius: 30px;
     padding: .5em 1.5em;
-    @extend %hover_transition;
-    &:before{
-        background: darken($color-lightgray, 10);
-    }
+    transition: .3s ease-in;
+
     &:hover {
-        border-color: $color-lightgray;
+        background: darken($color-btn-light, 10);
+        border-color: darken($color-btn-light, 10);
         color: $color-word;
     }
 }
 
-.btn-nostyle{
+.btn-nostyle {
     background: transparent;
-    border-color: rgba(255,255,255,0);
+    border-color: rgba(255, 255, 255, 0);
     color: nth($primaryColor, $style);
     border-radius: 30px;
     padding: .5em 1.5em;
     @extend %hover_transition;
-    &:before{
+
+    &:before {
         background: $color-lightgray;
     }
-    &:hover{
+
+    &:hover {
         border-color: $color-lightgray;
     }
 }
 
-.del_btn, .add_btn{
+.del_btn,
+.add_btn {
     font-size: 0;
     width: 22px;
     height: 22px;
@@ -152,12 +157,13 @@ button[type="submit"],
     opacity: .6;
     border-radius: 30px;
     transition: .3s;
-    &:hover{
-        box-shadow: 0 1px 3px rgba(0,0,0, .5);
+
+    &:hover {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
     }
 }
 
-.add_btn{
+.add_btn {
     background-image: url(../images/icon/icon_add.svg);
 }
 
@@ -168,12 +174,14 @@ button[type="submit"],
     color: $color-word-light;
     border: none;
     border-radius: 0;
+
     &:hover,
-    &:focus{
-       background: none; 
-       color:$color-word;
-       outline: none;
+    &:focus {
+        background: none;
+        color: $color-word;
+        outline: none;
     }
+
     &:after {
         content: '';
         position: absolute;
@@ -192,8 +200,21 @@ button[type="submit"],
     &.turnicon {
         &:after {
             content: '';
-            top:6px;
+            top: 6px;
             transform: rotate(45deg);
         }
+    }
+}
+
+.btn_sendmail {
+    &:after {
+        background: url(../images/icon/icon_email_invert.svg) center no-repeat;
+        background-size: 60%;
+    }
+}
+.btn_addbookmark {
+    &:after {
+        background: url(../images/icon/icon_bookmark_normal_invert.svg) center no-repeat;
+        background-size: 60%;
     }
 }

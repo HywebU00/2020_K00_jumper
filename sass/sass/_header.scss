@@ -269,10 +269,11 @@
         overflow: hidden;
         background: nth($primaryColor, $style);
         position: relative;
-        @extend %hover_transition; 
-        &:before{
+        transition: .3s ease-in;
+        &:hover{
             background-color: $importantColor;
         }
+
         img{
             position: absolute;
             bottom: -1px;
@@ -410,10 +411,11 @@
             background: nth($primaryColor, $style);
             border-radius: 30px;
             line-height: 1.5;
-            @extend %hover_transition;
-            &:before{
-                background-color: $importantColor;
+            transition: .3s ease-in;
+            &:hover{
+                background: $importantColor;
             }
+
             @include screen('mobile') {
                 min-width: auto;
                 padding: 4px 10px 3px !important;

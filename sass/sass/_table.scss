@@ -34,9 +34,9 @@ table {
     }
     &.table_sprite {
         tr:nth-child(even) {
-            background: #F5F5F5;
+            background: #F9F9F9;
         }
-        tr:nth-child(even) {
+        tr:nth-child(odd) {
             background: #FFF;
         }
     }

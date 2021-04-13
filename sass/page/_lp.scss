@@ -233,13 +233,9 @@
             align-items: center;
             position: relative;
             padding-left: 1.6em;
-            @extend %hover_transition;
+            transition: .3s ease-in;
 
             &:before {
-                background-color: nth($primaryColor, $style);
-            }
-
-            &:after {
                 content: "";
                 display: inline-block;
                 position: absolute;
@@ -249,13 +245,18 @@
                 background: url(../images/icon/icon_trash.svg) no-repeat;
                 background-size: contain;
                 margin-right: 2px;
+                opacity: .6;
+                transition: .3s ease-in;
             }
 
             &:hover {
                 color: #fff;
+                background-color: nth($primaryColor, $style);
+                border-color: nth($primaryColor, $style);
 
-                &:after {
+                &:before {
                     background-image: url(../images/icon/icon_trash_invert.svg);
+                    opacity: 1;
                 }
 
             }
@@ -289,7 +290,12 @@
             border: 1px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
             background: transparent;
-            @extend %hover_transition;
+            transition: .3s ease-in;
+            &:hover {
+                color: #fff;
+                background-color: nth($primaryColor, $style);
+                border-color: nth($primaryColor, $style);
+            }
 
         }
     }
