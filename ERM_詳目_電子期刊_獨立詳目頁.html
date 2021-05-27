@@ -14,16 +14,25 @@
     <!-- favicon -->
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
+<!-- lightbox開啟時 <body> add classname "fix" -->
 
 <body>
     <div class="wrapper">
         <!-- 手機版menu 已登入狀態 language與logout button在menu下方 -->
+        <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
                 <div class="logo">
                     <img src="images/logo.png" alt="" />
                 </div>
                 <div class="menu">
+                    <button type="button" class="btn_login">登入</button>
+                    <div class="language">
+                        <select name="" id="">
+                            <option value="">中文</option>
+                            <option value="">English</option>
+                        </select>
+                    </div>
                     <ul>
                         <li>圖書館服務
                             <ul>
@@ -53,42 +62,6 @@
                         </select>
                     </div>
                     <button type="button" class="btn_logout">登出</button>
-                </div>
-            </div>
-            <div class="menu_overlay"></div>
-        </aside>
-
-        <!-- 手機版menu 未登入狀態 language與logout button在menu上方 -->
-        <aside class="sidebar" style="display: none;">
-            <div class="m_area">
-                <div class="logo">
-                    <img src="images/logo.png" alt="" />
-                </div>
-                <div class="menu">
-                    <button type="button" class="btn_login">登入</button>
-                    <!-- 語言設定 start-->
-                    <div class="language">
-
-                        <select name="" id="">
-                            <option value="">中文</option>
-                            <option value="">English</option>
-                        </select>
-                    </div>
-                    
-                    <ul>
-                        <li>圖書館服務
-                            <ul>
-                                <li><a href="#">首頁</a></li>
-                                <li><a href="#">查看所有電子資源</a></li>
-                                <li><a href="#">資料庫講習</a></li>
-                                <li><a href="#">校外連線</a></li>
-                                <li><a href="#">VPN 安裝使用說明</a></li>
-                                <li><a href="#">教育訓練簡報</a></li>
-                                <li><a href="#">常見問答</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    
                 </div>
             </div>
             <div class="menu_overlay"></div>
@@ -123,20 +96,26 @@
                     </div>
                 </nav>
                 <div class="nav_right">
-                        
-                        <div class="language">
-                            <a href="#">語言選擇</a>
-                            <ul style="display: none;">
-                                <li><a href="#">中文</a></li>
-                                <li><a href="#">English</a></li>
+                    <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul style="display: none;">
+                            <li><a href="#">中文</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <!-- 會員已登入狀態 -->
+                    <div class="member_record">
+                        <div class="member_name">王小明</div>
+                        <!-- click ".btn_member" 則 ".member_data" display:block -->
+                        <button type="button" class="btn_member"><img src="images/icon/icon_user.svg" alt=""></button>
+                        <div class="member_data" style="display: none;">
+                            <ul>
+                                <li><a href="#">個人專區</a></li>
+                                <li><a href="#" class="signout">登出</a></li>
                             </ul>
                         </div>
-                        <!-- login start -->
-                        <div class="login loginbtn">
-                            <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
-                            <button type="button" class="btn">登入</button>
-                        </div>
                     </div>
+                </div>
             </div>
         </header>
         <!-- 登入燈箱start -->
@@ -181,6 +160,8 @@
                     </div>
                     <div class="divider">使用第三方登入</div>
                     <div class="social_slider">
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" title="前一則" style="display: block;">Previous</button>
+                        <button class="slick-next slick-arrow" aria-label="Next" type="button" title="後一則" style="display: block;">Next</button>
                         <a href="#"><img src="images/icon_google.svg" alt=""></a>
                         <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
                     </div>
@@ -204,10 +185,7 @@
             </div>
         </div>
         <!-- 登入燈箱end-->
-        <div class="main mp">
-            <section class="mp_logo">
-                    <img src="images/logo.png" alt="logo">
-            </section>
+        <div class="main lp">
             <section class="col-12 search_block">
                 <div class="container">
                     <div class="col">
@@ -217,27 +195,24 @@
                             <!-- 點擊 tabs > ul > li  > a 對應的tab-content show-->
                             <div class="tabSet">
                                 <ul class="tabs">
-                                    <li class="active">
+                                    <li>
                                         <a href="#tab1">整合查詢</a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a href="#tab2">電子資源查詢</a>
                                     </li>
                                 </ul>
                             </div>
                             <!-- 頁籤內容 1 -->
-                            <div class="tab-content" id="tab1">
+                            <div class="tab-content" id="tab1" style="display: none">
                                 <form action="">
                                     <div class="form_grp form_inline">
                                         <!-- 點擊 input[type="text"] 時 
                                             1.加上class name"show_recent_searches"
                                             2.搜尋推薦字區塊 display:block -->
                                         <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
-                                        
-                                        <div class="btn_grp form_inline">
-                                            <input name="" type="submit" title="查詢" value="查詢">
-                                            <a href="#" class="simple_search">簡易查詢</a>
-                                        </div>
+                                        <input name="" type="submit" title="查詢" value="查詢" />
+                                        <a href="#" class="advanced_search">進階查詢</a>
                                         <!-- 搜尋推薦字 -->
                                         <div class="recent_searches" style="display: none">
                                             <ul class="promptword">
@@ -270,39 +245,25 @@
                                     </div>
                                     <div class="check_grp form_inline">
                                         <label><input name="" type="checkbox" value="">集中式整合查詢</label>
-                                        <label><input name="" type="checkbox" value="">分散式查詢<a href="#" class="database_link">(瀏覽資料庫)</a></label>
-
+                                        <label><input name="" type="checkbox" value="">分散式查詢<a href="#">(瀏覽資料庫)</a></label>
                                     </div>
                                 </form>
-                                <div class="keywordHot">
-                                    <ul><b>熱門關鍵字：</b>
-                                        <li><a href="#">東野圭吾</a></li>
-                                        <li><a href="#">屁屁偵探</a></li>
-                                        <li><a href="#">名偵探柯南</a></li>
-                                        <li><a href="#">科學實驗王</a></li>
-                                        <li><a href="#">哈利波特</a></li>
-                                        <li><a href="#">鬼滅之刃</a></li>
-                                        <li><a href="#">python</a></li>
-                                        <li><a href="#">怪傑佐羅力</a></li>
-                                        <li><a href="#">漫畫</a></li>
-                                        <li><a href="#">神奇樹屋</a></li>
-                                        <li><a href="#">尋寶記</a></li>
-                                        <li><a href="#">大英百科</a></li>
-                                        <li><a href="#">多益</a></li>
-                                        <li><a href="#">原子習慣</a></li>
-                                        <li><a href="#">高木直子</a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- 頁籤內容 2 -->
-                            <div class="tab-content" id="tab2" style="display: none">
+                            <div class="tab-content" id="tab2">
                                 <form action="">
                                     <div class="form_grp form_inline">
+                                        <select name="" id="selectSample" class="select_connected">
+                                            <option value="">電子期刊</option>
+                                            <option value="">選項二</option>
+                                            <option value="">選項三</option>
+                                            <option value="">選項四</option>
+                                        </select>
                                         <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
                                         <input name="" type="submit" title="查詢" value="查詢" />
                                         <a href="#" class="advanced_search">進階查詢</a>
                                         <!-- 搜尋推薦字 -->
-                                        <div class="recent_searches" style="">
+                                        <div class="recent_searches" style="display: none;">
                                             <ul class="promptword">
                                                 <li><a href="#">文學推薦字</a></li>
                                                 <li><a href="#">文學推薦字</a></li>
@@ -331,72 +292,237 @@
                                         </div>
                                         <!-- 搜尋推薦字 END-->
                                     </div>
-                                    <div class="check_grp form_inline">
-                                        <label><input name="" type="checkbox" value="">集中式整合查詢</label>
-                                        <label><input name="" type="checkbox" value="">分散式查詢（瀏覽資料庫）</label>
-                                    </div>
+                                    <a href="#" class="link">以瀏覽方式查詢本館資料庫、期刊及電子書</a>
                                 </form>
-                                <div class="keywordHot">
-                                    熱門關鍵字：
-                                    東野圭吾、屁屁偵探、名偵探柯南、科學實驗王、哈利波特、鬼滅之刃、python、怪傑佐羅力、漫畫、神奇樹屋、尋寶記、大英百科、多益、原子習慣、高木直子
-                                </div>
                             </div>
                         </div><!-- search END -->
                     </div>
                 </div>
             </section>
-            <section class="col-4-4-4 feature_block">
+            <div class="main_tabSet">
                 <div class="container">
-                    <div class="col">
-                        <div class="featured_data">
-                            <h2>最新消息</h2>
-                            <ul>
-                                <li><a href="#">圖書館九月主題選書展開始囉！</a></li>
-                                <li><a href="#">[公告] 自動化書庫中心閉館進行設備維護</a></li>
-                                <li><a href="#">圖書館閱覽室誠徵工讀人員</a></li>
-                                <li><a href="#">新增資料庫：農業植物學資料庫</a></li>
-                                <li><a href="#">借閱政策更新</a></li>
-                            </ul>
-                            <a href="#" class="more">看更多</a>
+                    <!-- 手機版頁籤變成下拉選單 button文字內容顯示選取中的選項 
+                        click "button.active_m" 則 ".tabs" display:block
+                    -->
+                    <button type="button" class="active_m">資料庫<span>(3)</span></button>
+                    <ul class="tabs">
+                        <li>
+                            <a href="#tab1">資料庫<span>(3)</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="#tab2">電子期刊<span>(174)</span></a>
+                        </li>
+                        <li>
+                            <a href="#tab3">紙本期刊<span>(174)</span></a>
+                        </li>
+                        <li>
+                            <a href="#tab4">電子書<span>(174)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section class="main_content erm">
+                <div class="container">
+                    <div class="filter_search">
+                        <div class="close"></div>
+                        <h2>調整查詢</h2>
+                        <!-- ".filter_search > .option" 手機版才會出現，和搜尋結果(".search_result")下的".option"功能相同-->
+                        <div class="option">
+                            <div class="name"><a href="javascript:;">排序方式</a></div>
+                            <!--click ".name" 則開啟 ".option_list"-->
+                            <div class="option_list" style="display: none;">
+                                <ul>
+                                    <li><a href="#">核心資料庫</a></li>
+                                    <li><a href="#">日期近到晚</a></li>
+                                    <li><a href="#" class="here">熱門預約</a></li>
+                                    <li><a href="#">熱門點閱</a></li>
+                                    <li><a href="#">熱門評分/評論</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="focus">
+                            <h3>狀態</h3>
+                            <div>
+                                <ul>
+                                    <li><label for=""><input type="checkbox">JCR</label></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="featured_data">
-                            <h2>熱門資料庫</h2>
-                            <ul>
-                                <li><a href="#">CEPS（思博網）華藝圖書館中文電子書電子書</a></li>
-                                <li><a href="#">JCR Web 期刊引用評鑑報告</a></li>
-                                <li><a href="#">HyRead ebook 中文電子書</a></li>
-                                <li><a href="#">JCR Web 期刊引用評鑑報告</a></li>
-                                <li><a href="#">HyRead ebook 中文電子書</a></li>
-                            </ul>
-                            <a href="#" class="more">看更多</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="featured_data">
-                            <h2>熱門電子期刊</h2>
-                            <ul>
-                                <li><a href="#">Journal of Finance</a></li>
-                                <li><a href="#">Journal of Business Ethics</a></li>
-                                <li><a href="#">Academy of Management Journal</a></li>
-                                <li><a href="#">特殊教育學報</a></li>
-                                <li><a href="#">The Journal of Finance</a></li>
-                            </ul>
-                            <a href="#" class="more">看更多</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="featured_data">
-                            <h2>熱門電子期刊</h2>
-                            <ul>
-                                <li><a href="#">Journal of Finance</a></li>
-                                <li><a href="#">Journal of Business Ethics</a></li>
-                                <li><a href="#">Academy of Management Journal</a></li>
-                                <li><a href="#">特殊教育學報</a></li>
-                                <li><a href="#">The Journal of Finance</a></li>
-                            </ul>
-                            <a href="#" class="more">看更多</a>
+                    <div class="search_result">
+                        <h2>詳細書目</h2>
+                        <div class="detail_lightbox normalPage">
+                            <div class="detailblock">
+                                <section class="detail_top">
+                                    <h3>Academy of Management Journal</h3>
+                                </section>
+                                <section class="sourceblock">
+                                    <!-- 手風琴開啟狀態:
+                                1. ".accordion_toggle" add classname "turnicon" 
+                            -->
+                                    <div class="accordion_header">
+                                        <a href="#" class="accordion_toggle turnicon"></a>
+                                        <div class="source">資料來源：<a href="#">EBSCOhost-ESC (Business Source Complete)</a>
+                                            <a href="#" class="web_link">https://search.proquest.com/?accountid=10046&selectids=1007418</a>
+                                        </div>
+                                    </div>
+                                    <div class="accordion_content">
+                                        <h3>書目資料</h3>
+                                        <ul class="info_list">
+                                            <li>
+                                                <h4>ISSN：</h4>
+                                                <div class="content">0001-4273</div>
+                                            </li>
+                                            <li>
+                                                <h4>代理商/出版商：</h4>
+                                                <div class="content">2014-10-31
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>更新日期：</h4>
+                                                <div class="content">2014-10-31</div>
+                                            </li>
+                                            <li>
+                                                <h4>全文收錄年代：</h4>
+                                                <div class="content">Mar 1963-</div>
+                                            </li>
+                                            <li>
+                                                <h4>期刊聯合目錄：</h4>
+                                                <div class="content"><a href="#">期刊聯合目錄</a></div>
+                                            </li>
+                                            <li>
+                                                <h4>CONCERT 連結：</h4>
+                                                <div class="content"><a href="# ">CONCERT電子期刊聯合目錄</a></div>
+                                            </li>
+                                            <li>
+                                                <h4>JCR Impact Factor：</h4>
+                                                <div class="content"><a href="#">7.417</a></div>
+                                            </li>
+                                        </ul>
+                                        <h3>功能列</h3>
+                                        <ul class="info_icon">
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_bookmark_normal.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">加入書籤</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_mail.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">Email</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_print.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">列印</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!-- 點擊email icon後開啟此 email input (css預設display:none) -->
+                                        <div class="showEmail form_inline" style="display:block;">
+                                            <input name="username" id="" type="email" placeholder="請輸入指定的 Email" class="error">
+                                            <button class="btn btn-submit">送出</button>
+                                            <div class="notice_error">無效的電子郵件地址</div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="sourceblock">
+                                    <!-- 手風琴關閉狀態:
+                                1. ".accordion_toggle" 沒有".turnicon" 
+                                2. ".accordion_content" style="display: none"-->
+                                    <div class="accordion_header">
+                                        <a href="#" class="accordion_toggle"></a>
+                                        <div class="source">資料來源：<a href="#">EBSCOhost-ESC (Business Source Complete)</a>
+                                            <a href="#" class="web_link">https://search.proquest.com/?accountid=10046&selectids=1007418</a>
+                                        </div>
+                                    </div>
+                                    <div class="accordion_content" style="display: none;">
+                                        <h3>書目資料</h3>
+                                        <ul class="info_list">
+                                            <li>
+                                                <h4>ISSN：</h4>
+                                                <div class="content">0001-4273</div>
+                                            </li>
+                                            <li>
+                                                <h4>代理商/出版商：</h4>
+                                                <div class="content">2014-10-31
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>更新日期：</h4>
+                                                <div class="content">2014-10-31</div>
+                                            </li>
+                                            <li>
+                                                <h4>全文收錄年代：</h4>
+                                                <div class="content">Mar 1963-</div>
+                                            </li>
+                                            <li>
+                                                <h4>期刊聯合目錄：</h4>
+                                                <div class="content"><a href="#">期刊聯合目錄：</a></div>
+                                            </li>
+                                            <li>
+                                                <h4>CONCERT 連結：</h4>
+                                                <div class="content"><a href="# ">CONCERT電子期刊聯合目錄</a></div>
+                                            </li>
+                                            <li>
+                                                <h4>JCR Impact Factor:</h4>
+                                                <div class="content"><a href="#">7.417</a></div>
+                                            </li>
+                                        </ul>
+                                        <h3>功能列</h3>
+                                        <ul class="info_icon">
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_bookmark_normal.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">加入書籤</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_mail.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">Email</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_print.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">列印</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_forum.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">報名資料庫說明會</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/icon/icon_questionnaire.svg" alt="">
+                                                    </div>
+                                                    <span class="function_name">填寫問卷</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
                     </div>
                 </div>
