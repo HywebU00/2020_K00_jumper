@@ -2,6 +2,7 @@
 a:focus {
     outline: none;
     box-shadow: 0 0px 0px 1px $primaryColor inset;
+
     @include screen('mobile') {
         box-shadow: none;
     }
@@ -27,7 +28,7 @@ a:focus {
     margin: 0;
 }
 
-.nowrap{
+.nowrap {
     white-space: nowrap;
 }
 
@@ -103,9 +104,11 @@ a:focus {
     display: none;
     z-index: 99999999;
     text-indent: -999999px;
-    &:hover,&:focus{
+
+    &:hover,
+    &:focus {
         background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
-        box-shadow:none;
+        box-shadow: none;
     }
 }
 
@@ -113,6 +116,7 @@ a:focus {
 img.img-responsive {
     @include img-responsive();
 }
+
 // 表單必填
 .necessary {
     color: red;
@@ -122,6 +126,7 @@ img.img-responsive {
 .tooltip {
     text-align: center;
     padding: 40px 0;
+
     span {
         display: inline-block;
         background: #DEDEDE;
@@ -132,17 +137,48 @@ img.img-responsive {
         line-height: 20px;
         vertical-align: baseline;
     }
+
     p>em {
         color: red;
     }
 }
 
+.option_list {
+    position: absolute;
+    background: #fff;
+    border-radius: $rounded-angle;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    padding: 10px;
+    transform-origin: 50% 0;
+    animation: slideDown .3s ease-out;
 
+    ul {
+        @include li-reset;
+    }
 
+    li {
+        border-bottom: 1px solid lighten($color-line, 5);
 
+        &:last-child {
+            border: none;
+        }
 
+        &.active {
+            a {
+                color: nth($primaryColor, $style);
+            }
+        }
 
+        a {
+            padding: 8px 5px;
+            color: $color-word;
+            display: block;
+            transition: all .3s;
 
-
-
-
+            &:hover,
+            &.active {
+                color: nth($primaryColor, $style);
+            }
+        }
+    }
+}

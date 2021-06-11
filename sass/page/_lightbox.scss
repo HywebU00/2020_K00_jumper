@@ -632,6 +632,10 @@ body.fix {
         .content {
             margin: .5em 0;
             line-height: 1.5;
+            word-break: break-word;
+            @include screen('mobile') {
+                flex-basis: 100%;
+            }
 
             a {
                 display: inline-block;
@@ -787,12 +791,15 @@ body.fix {
         display: none;
         position: relative;
 
-        >input[type="email"] {
+        >input[type="email"],
+        >input[type="text"]{
             min-width: 45%;
             height: 40px;
+            margin: 0;
 
             @include screen('mobile') {
                 min-width: 100%;
+                width: 100%;
                 padding-right: 40px;
             }
         }
@@ -813,6 +820,20 @@ body.fix {
                 display: block;
                 width: 100%;
                 height: 100%;
+            }
+        }
+        .option_list{
+            position: absolute;
+            min-width: 45%; 
+            top: 45px;
+            left: 0;
+            background: #fff;
+            @include screen('mobile'){
+                min-width: 100%;
+                width: 100%;
+            }
+            ul{
+                @include li-reset;
             }
         }
     }
@@ -975,7 +996,7 @@ body.fix {
 
                 a {
                     color: $color-word;
-                    display: inline-block;
+                    //display: inline-block;
                     margin-right: 4px;
                     vertical-align: middle;
 
@@ -1191,11 +1212,17 @@ body.fix {
         padding: 15px 20px;
         overflow: hidden;
 
-        @include screen('mobile') {}
+        @include screen('mobile') {
+            width: 310px;
+            max-width: 90%;
+        }
 
         .btn_grp {
             padding-bottom: 0;
             text-align: right;
+            @include screen('mobile') {
+            text-align: center;
+            }
         }
     }
 

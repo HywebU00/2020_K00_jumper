@@ -1229,6 +1229,9 @@
         right: 0;
         top: .25em;
         display: flex;
+        @include screen('mobile'){
+            top: 0;
+        }
 
         button {
             border: none;
@@ -1300,7 +1303,7 @@
             padding-left: 70px;
 
             @include screen('mobile') {
-                padding-left: 0;
+                margin-top:.25em; 
             }
         }
     }
