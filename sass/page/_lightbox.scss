@@ -837,6 +837,14 @@ body.fix {
             }
         }
     }
+    .showScrollBlock{
+        display: none;
+        margin: 1em 0;
+        padding: 1em;
+        max-height: 250px;
+        overflow-y: auto;
+        background: $color-lightgray;
+    }
 }
 
 .resource_lightbox {
