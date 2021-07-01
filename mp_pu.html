@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <div class="wrapper version01">
+    <div class="wrapper pu">
         <!-- 手機版menu 已登入狀態 language與logout button在menu下方 -->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
                 <div class="logo">
-                    <img src="images/logo.png" alt="" />
+                    <img src="images/pu/logo.png" alt="" />
                 </div>
                 <div class="menu">
                     <ul>
@@ -63,7 +63,7 @@
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
                 <div class="logo">
-                    <img src="images/logo.png" alt="" />
+                    <img src="images/pu/logo.png" alt="" />
                 </div>
                 <div class="menu">
                     <button type="button" class="btn_login">登入</button>
@@ -102,7 +102,7 @@
                 <button type="button" class="sidebarCtrl">側欄選單</button>
                 <h1>
                     <a href="index.html">
-                        <img src="images/logo_version.png" alt="" />
+                        <img src="images/pu/logo_version.png" alt="" />
                         <span>國立彰化師範大學整合查詢</span>
                     </a>
                 </h1>
@@ -207,9 +207,10 @@
         <!-- 登入燈箱end-->
         <div class="main mp">
             <section class="mp_logo">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="images/pu/logo.png" alt="logo">
             </section>
             <section class="col-12 search_block">
+                <img class="header_bg" src="images/header_bg.png" alt="">
                 <div class="container">
                     <div class="col">
                         <!-- 搜尋 -->
@@ -234,8 +235,11 @@
                                             1.加上class name"show_recent_searches"
                                             2.搜尋推薦字區塊 display:block -->
                                         <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
-                                        <input name="" type="submit" title="查詢" value="查詢" />
-                                        <a href="#" class="advanced_search">進階查詢</a>
+                                        
+                                        <div class="btn_grp form_inline">
+                                            <input name="" type="submit" title="查詢" value="查詢">
+                                            <a href="#" class="simple_search">簡易查詢</a>
+                                        </div>
                                         <!-- 搜尋推薦字 -->
                                         <div class="recent_searches" style="display: none">
                                             <ul class="promptword">
@@ -273,7 +277,7 @@
                                     </div>
                                 </form>
                                 <div class="keywordHot">
-                                    <ul>
+                                    <ul><b>熱門關鍵字：</b>
                                         <li><a href="#">東野圭吾</a></li>
                                         <li><a href="#">屁屁偵探</a></li>
                                         <li><a href="#">名偵探柯南</a></li>
@@ -367,6 +371,19 @@
                                 <li><a href="#">HyRead ebook 中文電子書</a></li>
                                 <li><a href="#">JCR Web 期刊引用評鑑報告</a></li>
                                 <li><a href="#">HyRead ebook 中文電子書</a></li>
+                            </ul>
+                            <a href="#" class="more">看更多</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="featured_data">
+                            <h2>熱門電子期刊</h2>
+                            <ul>
+                                <li><a href="#">Journal of Finance</a></li>
+                                <li><a href="#">Journal of Business Ethics</a></li>
+                                <li><a href="#">Academy of Management Journal</a></li>
+                                <li><a href="#">特殊教育學報</a></li>
+                                <li><a href="#">The Journal of Finance</a></li>
                             </ul>
                             <a href="#" class="more">看更多</a>
                         </div>

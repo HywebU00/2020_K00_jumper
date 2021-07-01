@@ -65,10 +65,10 @@ $btn-radius:$rounded-angle;
 
     &:hover,
     &:focus {
-        background: $importantColor;
+        background: nth($importantColor, $style);
         color: #fff !important;
         outline: none;
-        border-color: $importantColor;
+        border-color: nth($importantColor, $style);
     }
 
     &:disabled {
@@ -101,15 +101,20 @@ button[type="submit"],
     @extend %btn-submit;
 
     &:before {
-        background: $importantColor;
+        background: nth($importantColor, $style);
     }
 }
 
 button[type="submit"],
 .btn-submit,
 .btn-primary {
-    @extend %hover_transition;
-
+    transition: .3s ease-in;
+    &:hover{
+        color: #fff;
+        border-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
+        text-decoration: none;
+    }
 }
 
 .btn-reset,
@@ -134,7 +139,13 @@ button[type="submit"],
     color: nth($primaryColor, $style);
     border-radius: 30px;
     padding: .5em 1.5em;
-    @extend %hover_transition;
+    transition: .3s ease-in;
+    &:hover{
+        color: #fff;
+        border-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
+        text-decoration: none;
+    }
 
     &:before {
         background: $color-lightgray;

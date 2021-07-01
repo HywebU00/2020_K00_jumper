@@ -111,7 +111,7 @@
                 transition: background-color .3s;
 
                 &:hover {
-                    background-color: $importantColor;
+                    background-color: nth($importantColor, $style);
                 }
             }
         }
@@ -378,7 +378,13 @@
             color: nth($primaryColor, $style);
             background: transparent;
             margin-top: .5em;
-            @extend %hover_transition;
+            transition: .3s ease-in;
+            &:hover{
+                color: #fff;
+                border-color: nth($primaryColor, $style);
+                background: nth($primaryColor, $style);
+                text-decoration: none;
+            }
 
         }
         .btn_manage{
@@ -593,7 +599,13 @@
 
         .tab_grp {
             button {
-                @extend %hover_transition;
+                transition: .3s ease-in;
+                &:hover{
+                    color: #fff;
+                    border-color: nth($primaryColor, $style);
+                    background: nth($primaryColor, $style);
+                    text-decoration: none;
+                }
             }
         }
 
@@ -1471,7 +1483,7 @@
         height: 18px;
         width: 18px;
         border-radius: 25px;
-        background: #a1d0ff;
+        background: nth($primaryColor, $style);
         cursor: pointer;
     }
 }

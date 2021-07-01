@@ -180,21 +180,22 @@
             transition: .3s ease-in;
             border-radius: 30px;
             border: none;
-            background-color: $importantColor;
+            background-color: nth($importantColor, $style);
             &:hover{
-                background-color: darken($importantColor, 10);
+                background-color: darken(nth($importantColor, $style), 10);
             }
 
             @include screen('mobile') {
                 position: absolute;
                 margin: 0;
                 bottom: 0;
+                top: 0;
                 right: 0;
                 border-radius: $rounded-angle;
                 font-size: 0em;
                 width: 44px !important;
                 height: 44px;
-                background: $importantColor url(../images/icon/icon_search_invert.svg) no-repeat center center;
+                background: nth($importantColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
                 background-size: 20px;
                 outline: 1px solid transparent;
                 border: none;

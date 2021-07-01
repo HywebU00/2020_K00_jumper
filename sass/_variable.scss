@@ -1,10 +1,10 @@
 // 定義顏色 此顏色可自由變換
-$sites: initial, version01;
-$primaryColor: #E15706, #005d98; //主色
-$secondaryColor: #313131; //輔色
+$sites: initial, pu;
+$primaryColor: #E15706, #C1328E; //主色
+$secondaryColor: #313131, #7d7d7d; //輔色
 $lightColor: #fcc211, #eb574b; //點綴
 $linkColor: #2288d1; //連結
-$importantColor: #f4573f; //重要
+$importantColor: #f4573f, #D92E47; //重要
 $style: index($sites, initial);
 // 但注意真實顏色與語意的關聯必須易於辨識
 

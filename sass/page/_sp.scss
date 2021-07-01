@@ -14,6 +14,7 @@
 
         .col {
             @include gutter();
+
             @include screen('mobile') {
                 @include gutter(0);
             }
@@ -94,13 +95,20 @@
 
             .apply {
                 @extend %btn-submit;
-                @extend %hover_transition;
                 align-self: flex-end;
                 display: inline-block;
                 margin: 0 auto;
+                transition: .3s ease-in;
+
+                &:hover {
+                    color: #fff;
+                    border-color: nth($primaryColor, $style);
+                    background: nth($primaryColor, $style);
+                    text-decoration: none;
+                }
 
                 &:before {
-                    background: $importantColor;
+                    background: nth($importantColor, $style);
                 }
             }
         }
@@ -208,7 +216,7 @@
                 //padding-left: 2em;
                 width: calc(100% - 100px);
                 @include aSetting_nocolor();
-        
+
                 @include screen('mobile') {
                     width: 100%;
                 }
@@ -289,12 +297,15 @@
         text-align: center;
     }
 }
-.question_block{
+
+.question_block {
     margin-bottom: 2em;
-    a{
+
+    a {
         @include aSetting_nocolor();
     }
-    li{
+
+    li {
         padding: 5px 15px;
     }
 }

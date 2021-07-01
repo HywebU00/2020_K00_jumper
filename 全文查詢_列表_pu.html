@@ -15,12 +15,12 @@
     <!-- favicon -->
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
-<!-- lightbox開啟時 <body> add classname "fix" -->
 
-<body class="fix">
-    <div class="wrapper">
+<body>
+    <div class="wrapper pu">
         <!-- 手機版menu 已登入狀態 ".language"與".btn_logout"在menu底端 -->
         <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
+        <!-- 手機版menu開啟時，<body> add class ".fix" (防止body滾動）-->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
                 <div class="logo">
@@ -75,7 +75,7 @@
                 <button type="button" class="sidebarCtrl">側欄選單</button>
                 <h1>
                     <a href="index.html">
-                        <img src="images/logo_version.png" alt="" />
+                        <img src="images/pu/logo_version.png" alt="" />
                         <span>國立彰化師範大學整合查詢</span>
                     </a>
                 </h1>
@@ -89,8 +89,8 @@
                     <div class="more_list_block">
                         <!-- click button, 則下方 ul display:block -->
                         <button type="button" class="more">查看更多</button>
-                        <ul class="more_list" style="display:none">
-                            <li><a href="#">資料庫講習</a></li>
+                        <ul class="more_list" style="">
+                            <li><a href="#" class="active">資料庫講習</a></li>
                             <li><a href="#">VPN 安裝使用說明</a></li>
                             <li><a href="#">教育訓練簡報</a></li>
                         </ul>
@@ -99,8 +99,8 @@
                 <div class="nav_right">
                     <div class="language">
                         <a href="#">語言選擇</a>
-                        <ul style="display: none;">
-                            <li><a href="#">中文</a></li>
+                        <ul style="">
+                            <li><a href="#" class="active">中文</a></li>
                             <li><a href="#">English</a></li>
                         </ul>
                     </div>
@@ -120,7 +120,6 @@
             </div>
         </header>
         <!-- 登入燈箱start -->
-        <!-- 登入燈箱display:block時，<body> addclass .fix -->
         <div class="login_lightbox" style="display: none;">
             <div class="overlay"></div>
             <div class="loginblock">
@@ -162,8 +161,6 @@
                     </div>
                     <div class="divider">使用第三方登入</div>
                     <div class="social_slider">
-                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" title="前一則" style="display: block;">Previous</button>
-                        <button class="slick-next slick-arrow" aria-label="Next" type="button" title="後一則" style="display: block;">Next</button>
                         <a href="#"><img src="images/icon_google.svg" alt=""></a>
                         <a href="#"><img src="images/icon_facebook.svg" alt=""></a>
                     </div>
@@ -189,6 +186,7 @@
         <!-- 登入燈箱end-->
         <div class="main lp">
             <section class="col-12 search_block">
+                <img class="header_bg" src="images/header_bg.png" alt="">
                 <div class="container">
                     <div class="col">
                         <!-- 搜尋 -->
@@ -210,11 +208,12 @@
                                 <form action="">
                                     <div class="form_grp form_inline">
                                         <!-- 點擊 input[type="text"] 時 
-                                            1.加上class name"show_recent_searches"
+                                            1.加上classname"show_recent_searches"
                                             2.搜尋推薦字區塊 display:block -->
                                         <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
-                                        <input name="" type="submit" title="查詢" value="查詢" />
-                                        <a href="#" class="advanced_search">進階查詢</a>
+                                        <div class="btn_grp">
+                                            <input name="" type="submit" title="查詢" value="查詢" /><a href="#" class="advanced_search">進階查詢</a>
+                                        </div>
                                         <!-- 搜尋推薦字 -->
                                         <div class="recent_searches" style="display: none">
                                             <ul class="promptword">
@@ -303,16 +302,14 @@
             </section>
             <section class="main_content">
                 <div class="container">
-                    <!-- 1. lightbox (".filter_lightbox") 開啟的狀態下 ".filter_search"(後分類區塊) add classname "fix"
-                        2. 關閉 lightbox (".filter_lightbox"),則 ".filter_search" remove classname "fix"-->
-                    <div class="filter_search fix">
+                    <div class="filter_search">
                         <div class="close"></div>
                         <h2>調整查詢</h2>
                         <!-- ".filter_search > .option" 手機版才會出現，和搜尋結果(".search_result")下的".option"功能相同-->
                         <div class="option">
                             <div class="name"><a href="javascript:;">排序方式</a></div>
                             <!--click ".name" 則開啟 ".option_list"-->
-                            <div class="option_list" style="display: none;">
+                            <div class="option_list" style="">
                                 <ul>
                                     <li><a href="#">日期晚到近</a></li>
                                     <li><a href="#">日期近到晚</a></li>
@@ -411,6 +408,7 @@
                                 </li>
                                 <li>
                                     <h3>
+                                        <!-- ".accordion_content" 展開狀態下 標題<a> add classname "turnicon"-->
                                         <a href="javascript:;" class="turnicon">主題</a>
                                     </h3>
                                     <div class="accordion_content" style="display: block">
@@ -426,9 +424,6 @@
                                             <li><a href="#">物理光電/化學/數學<span>(5)</span></li>
                                             <li><a href="#">生物醫學<span>(5)</span></a></li>
                                         </ul>
-                                        <!-- 點擊 看更多button 則 
-                                            1.".filter_lightbox" display:block 
-                                            2."filter_search" add classname "fix"-->
                                         <button type="button" class="more">看更多</button>
                                     </div>
                                 </li>
@@ -470,131 +465,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- 點擊看更多的彈出視窗 -->
-                    <div class="resource_lightbox" style="display:block">
-                        <div class="overlay"></div>
-                        <div class="resourceblock">
-                            <div class="close"></div>
-                            <h3>瀏覽資料庫</h3>
-                            <div class="tabSet">
-                                <ul class="tabs">
-                                    <li class="active"><a href="javascript:;">目前選取<span>(3)</span></a></li>
-                                    <li><a href="javascript:;">預設推薦</a></li>
-                                    <li><a href="javascript:;">學院</a></li>
-                                    <li><a href="javascript:;">主題</a></li>
-                                    <li><a href="javascript:;">資料類型</a></li>
-                                    <li><a href="javascript:;">學院精選</a></li>
-                                    <li><a href="javascript:;">所有資料庫</a></li>
-                                </ul>
-                            </div>
-                            <div class="tab-content"  style="display: block">
-                                <div class="btn_grp">
-                                    <button type="button" class="btn">全部取消</button>
-                                    <button type="button" class="btn">回復預設</button>
-                                </div>
-                                <div class="scroll_content">
-                                    <ul>
-                                        <li>
-                                            <a href="#" target="_blank">L&B 數位圖書館中西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">L&B 數位圖書館中西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書Ebrary 西文電子書Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書Ebrary 西文電子書Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">Ebrary 西文電子書</a>
-                                            <button type="button" class="del_btn">刪除</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="note">異質資源受限於查詢速度，首次預設取回30筆
-                                當您看到第30筆資料時，點下一頁，就可以繼續取回資料囉</p>
-                            
-                            <div class="btn_grp">
-                                <button class="btn btn-reset">取消</button>
-                                <button class="btn btn-submit">確定</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 彈出視窗 END -->
                     <div class="search_result">
                         <h2>查詢結果</h2>
                         <div class="academic_vocabulary">
@@ -604,7 +474,7 @@
                             -->
                             <!-- 第一個".accordion_content" 預設展開 -->
                             <h3 class="accordion_header ">
-                                <a href="#" class="turnicon">學術詞彙解釋</a>
+                                <a href="javascript:;" class="turnicon">學術詞彙解釋</a>
                             </h3>
                             <div class="accordion_content" style="display:block">
                                 <div class="content_block">
@@ -636,7 +506,7 @@
                         </div>
                         <div class="relevant_info">
                             <h3 class="accordion_header">
-                                <a href="#" class="turnicon">相關資料庫</a>
+                                <a href="javascript:;" class="turnicon">相關資料庫</a>
                             </h3>
                             <div class="accordion_content">
                                 <ul>
@@ -648,19 +518,21 @@
                         </div>
                         <div class="relevant_info">
                             <h3 class="accordion_header">
-                                <a href="" class="">相關期刊</a>
+                                <a href="javascript:;" class="turnicon">相關期刊</a>
                             </h3>
-                            <div class="accordion_content" style="display: none">
+                            <div class="accordion_content" style="display: block">
                                 <ul>
                                     <li><a href="#">會計研究月刊</a></li>
-                                    <li><a href="#">會計研究月刊</a></li>
-                                    <li><a href="#">會計研究月刊</a></li>
                                 </ul>
+                                <div class="form_grp form_flex">
+                                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
+                                    <input name="" type="submit" title="查詢" value="查詢">
+                                </div>
                             </div>
                         </div>
                         <div class="relevant_info">
                             <h3 class="accordion_header">
-                                <a href="#" class="">相關電子書</a></h3>
+                                <a href="javascript:;" class="">相關電子書</a></h3>
                             <div class="accordion_content" style="display: none">
                                 <ul>
                                     <li>
@@ -698,8 +570,8 @@
                                     </div>
                                 </div>
                                 <!-- click ".filter_search_btn" 時 
-                                    1. <.filter_search> addclass .show_up 
-                                    2. <body> addclass ".fix" 
+                                    1. ".filter_search" display:block 
+                                    2. css style="top:0" 
                                 -->
                                 <!-- ".filter_search_btn" 是手機版才會出現的btn -->
                                 <button type="button" class="filter_search_btn">
@@ -782,7 +654,10 @@
                                         </table>
                                     </div>
                                     <button type="button" class="btn_normal">詳目</button>
-                                    <button type="button" class="btn_normal full-text">Full Text Finder</button>
+                                    <button type="button" class="btn_normal">
+                                        <img src="images/full_text_finder.png" alt="">
+                                        Full Text Finder
+                                    </button>
                                 </div>
                             </div>
                             <div class="list_block">
@@ -791,10 +666,10 @@
                                 <a class="bookmark"><img src="images/icon/icon_bookmark_saved.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
-                                        <img src="images/icon_book.svg" alt="">
+                                        <img src="images/icon_journal.svg" alt="">
                                     </div>
                                     <div class="sort_name">
-                                        書籍
+                                        學術期刊
                                     </div>
                                 </div>
                                 <div class="list_data">
@@ -828,6 +703,7 @@
                                         <div class="popover_content" style="display: none">
                                         </div>
                                         <span class="tip">有可用館藏</span>
+                                        <button type="button" class="popover turnicon">摘要</button>
                                     </div>
                                     <div class="popover_content table_list" style="display: none;">
                                         <table>
@@ -856,6 +732,14 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    <div class="popover_content summary">
+                                        我是摘要我是摘要，我是摘要我是摘要，我是摘要我是摘要，我是摘要我是摘要，我是摘要我是摘要，我是摘要我是摘要，我是摘要我是摘要
+                                    </div>
+                                    <button type="button" class="btn_normal">詳目</button>
+                                    <button type="button" class="btn_normal">
+                                        <img src="images/full_text_finder.png" alt="">
+                                        Full Text Finder
+                                    </button>
                                 </div>
                             </div>
                             <div class="list_block">
@@ -863,10 +747,87 @@
                                 <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
-                                        <img src="images/icon_book.svg" alt="">
+                                        <img src="images/icon_doctoral.svg" alt="">
                                     </div>
                                     <div class="sort_name">
-                                        書籍
+                                        碩博士論文、專題論文
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                        <button type="button" class="popover">摘要</button>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button type="button" class="btn_normal">詳目</button>
+                                    <button type="button" class="btn_normal">
+                                        <img src="images/full_text_finder.png" alt="">
+                                        Full Text Finder
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="list_block">
+                                <div class="list_num">4</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_ebook.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        電子書
                                     </div>
                                 </div>
                                 <div class="list_data">
@@ -930,14 +891,14 @@
                                 </div>
                             </div>
                             <div class="list_block">
-                                <div class="list_num">4</div>
+                                <div class="list_num">5</div>
                                 <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
-                                        <img src="images/icon_book.svg" alt="">
+                                        <img src="images/icon_magazine.svg" alt="">
                                     </div>
                                     <div class="sort_name">
-                                        書籍
+                                        期刊
                                     </div>
                                 </div>
                                 <div class="list_data">
@@ -1000,27 +961,559 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="list_block">
+                                <div class="list_num">6</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_article.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        評論、電子資源、非印刷資源
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_block">
+                                <div class="list_num">7</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_government_doc.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        初級資料
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_block">
+                                <div class="list_num">8</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_conference_paper.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        會議論文
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_block">
+                                <div class="list_num">9</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_report.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        報告
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_block">
+                                <div class="list_num">10</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_editorial_opinion.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        編輯評論
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_block">
+                                <div class="list_num">11</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_news.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        新聞
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_block">
+                                <div class="list_num">12</div>
+                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <div class="sort_icon">
+                                    <div class="pic">
+                                        <img src="images/icon_bio.svg" alt="">
+                                    </div>
+                                    <div class="sort_name">
+                                        簡歷（傳記）
+                                    </div>
+                                </div>
+                                <div class="list_data">
+                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                                    <ul>
+                                        <li>
+                                            <div class="title">作者：</div>
+                                            <div>Wong, Sau-ling C.</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">出版日期：</div>
+                                            <div>2001</div>
+                                        </li>
+                                        <li>
+                                            <div class="title">主題關鍵詞：</div>
+                                            <ul class="keyword">
+                                                <li><a href="#">Chinese literature</a></li>
+                                                <li><a href="#">2000-2099</a></li>
+                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                                                <li><a href="#">Short story</a></li>
+                                                <li><a href="#">migrant identity</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="title">資料庫：</div>MLA International Bibilography
+                                        </li>
+                                    </ul>
+                                    <div class="status">
+                                        <button type="button">館藏查詢</button>
+                                        <button type="button" class="popover">館藏狀態</button>
+                                        <div class="popover_content" style="display: none">
+                                        </div>
+                                        <span class="tip">有可用館藏</span>
+                                    </div>
+                                    <div class="popover_content table_list" style="display: none;">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>索書號</th>
+                                                    <th>索書號</th>
+                                                    <th>館藏狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號">01</td>
+                                                    <td data-title="索書號">810.618499 2019</td>
+                                                    <td data-title="索書號">總圖B1典藏書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">可外借</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號">02</td>
+                                                    <td data-title="索書號">810.618486 2014</td>
+                                                    <td data-title="索書號">總圖5F中文書區如果文字太長</td>
+                                                    <td data-title="館藏狀態">外借中也可能很長</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 頁碼-置底、收起狀態 -->
                             <div class="pagination">
                                 <ul class="page">
                                     <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                                    <li class="active"><a href="#">1</a></li>
+                                    <li class="prev"><a href="#" title="回上一頁">回上一頁</a></li>
+                                    <li class="pageClose"><a href="#" title="收合頁碼">收合</a></li>
+                                    <li><a href="#">1</a></li>
                                     <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
+                                    <!-- 
+                                    1.click 目前的頁碼，則".pagination" add classname "expansion" ，變成頁碼展開狀態
+                                    2. a[title]內的文字會顯示成hover時的提示文字
+                                    -->
+                                    <li class="active"><a href="#" title="更多頁面">3</a></li>
                                     <li><a href="#">4</a></li>
                                     <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#">7</a></li>
-                                    <li><a href="#">8</a></li>
-                                    <li><a href="#">9</a></li>
-                                    <li><a href="#">10</a></li>
                                     <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
                                     <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
                                 </ul>
-                                <form action="" class="form_inline">
-                                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>
-                                    </div>
-                                </form>
+                            </div>
+                            <!-- 頁碼-置底、收起、浮動狀態 -->
+                            <!-- 浮動狀態時 add classname "fixed" -->
+                            <div class="pagination fixed">
+                                <ul class="page">
+                                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                    <li class="prev"><a href="#" title="回上一頁">回上一頁</a></li>
+                                    <li class="pageClose"><a href="#" title="收合頁碼">收合</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <!-- 
+                                    1.click 目前的頁碼，則".pagination" add classname "expansion" ，變成頁碼展開狀態
+                                    2. a[title]內的文字會顯示成hover時的提示文字
+                                    -->
+                                    <li class="active"><a href="#" title="更多頁面">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                </ul>
+                            </div>
+                            <!-- 頁碼-置底、展開狀態 -->
+                            <div class="pagination expansion">
+                                <ul class="page ">
+                                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                    <li class="prev"><a href="#" title="回上一頁">回上一頁</a></li>
+                                    <!-- 
+                                    1.click 關閉按鈕(.pageClose) 則remove classname "expansion", 其他頁碼會隱藏起來
+                                    2. a[title]內的文字會顯示成hover時的提示文字-->
+                                    <li class="pageClose"><a href="#" title="收合頁碼">收合</a></li>
+                                    <li class="active"><a href="#" title="">1001</a></li>
+                                    <li><a href="#">1002</a></li>
+                                    <li><a href="#">1003</a></li>
+                                    <li><a href="#">1004</a></li>
+                                    <li><a href="#">1005</a></li>
+                                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>

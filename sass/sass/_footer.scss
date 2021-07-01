@@ -1,6 +1,6 @@
 footer{
 	padding:2em 0;
-	background: $secondaryColor;
+	background: nth($secondaryColor, $style);
 	width: 100%;
 	align-self: flex-end;
 	.container{

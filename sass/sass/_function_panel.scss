@@ -18,7 +18,7 @@
         height: 40px;
 
         &:hover {
-            color: $primaryColor;
+            color: nth($primaryColor, $style);
         }
     }
 
@@ -190,7 +190,6 @@
             i{
                 transition: .2s ease-in;
             }
-            //@extend %hover_transition;
 
             &:hover{
                 border-color: nth($primaryColor, $style);
@@ -224,6 +223,13 @@
         }
         &+.option{
             margin-left: .5em;
+        }
+    }
+    .add_bookmark,
+    .filter_search_btn {
+        &:hover,
+        &.active {
+            color: #fff;
         }
     }
 }
@@ -314,7 +320,7 @@
             cursor: pointer;
             border-radius: $rounded-angle;
             transition: .2s ease-in;
-            //@extend %hover_transition;
+
             &:after {
                 content: "";
                 position: absolute;

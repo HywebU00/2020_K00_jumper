@@ -1,24 +1,24 @@
-img {
-    &.img_rounded {
-        //導角，可自訂
-        @include border-radius($rounded-angle);
-    }
-    &.img_circle {
-        //圓形
-        @include border-radius(50%);
-    }
-    &:not([src]) {
-        visibility: hidden;
-        opacity: 0;
-    }
-    &.lazy{
-        visibility: hidden;
-    }
-    &.loaded {
-        visibility: visible;
-        animation: lazy_animation .5s ease-out;
-    }
-}
+// img {
+//     &.img_rounded {
+//         //導角，可自訂
+//         @include border-radius($rounded-angle);
+//     }
+//     &.img_circle {
+//         //圓形
+//         @include border-radius(50%);
+//     }
+//     &:not([src]) {
+//         visibility: hidden;
+//         opacity: 0;
+//     }
+//     &.lazy{
+//         visibility: hidden;
+//     }
+//     &.loaded {
+//         visibility: visible;
+//         animation: lazy_animation .5s ease-out;
+//     }
+// }
 @keyframes lazy_animation {
     from {
         opacity: 0;
