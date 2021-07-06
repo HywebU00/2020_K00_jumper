@@ -137,6 +137,9 @@
         @include screen('xs_mobile'){
             flex-wrap: wrap;
         }
+        input[type="text"]{
+            margin: 0;
+        }
     }
 
     select {

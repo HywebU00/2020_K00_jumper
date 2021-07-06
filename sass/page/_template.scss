@@ -93,29 +93,36 @@ body {
     }
 }
 
-//
+//換色
 .changeColor{
     position: fixed;
     z-index: 9999;
     right: 100%;
+    left: auto;
     top: 10%;
-    height: 80%;
+    max-height: 80%;
     transition: .3s all;
+    box-shadow: 2px 2px 5px rgba(0,0,0, .1);
     &:before{
         content:"";
         position: absolute;
         display: block;
         width: 30px;
         height: 48px;
-        background: url(../images/icon/icon_arrow_right.svg) center no-repeat; 
+        background: #eee url(../images/icon/icon_arrow_right.svg) center no-repeat; 
         background-size: 20px;
         left: 100%;
         top:0;
         cursor: pointer;
+        box-shadow: 2px 2px 3px rgba(0,0,0, .2);
+        opacity: .7;
     }
     &:hover{
         right: auto;
         left: 0;
+        &:before{
+            background-image: url(../images/icon/icon_arrow_left.svg);
+        }
     }
     ul{
         @include li-reset;
@@ -125,6 +132,9 @@ body {
     }
     li{
        border-bottom: 1px solid #fff; 
+       &:last-of-type{
+        border-bottom: none;
+       }
         a{
             display: block;
             padding: .8em .5em;
@@ -132,7 +142,7 @@ body {
             color: #333;
             text-align: center; 
             transition: .2s all;
-            &:hover{
+            &:hover, &:focus{
                 text-decoration: none;
                 background: #333;
                 color: #fff;
