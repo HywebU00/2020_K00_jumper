@@ -11,13 +11,13 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/NCL.css">
     <!-- favicon -->
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
 </head>
 
 <body>
-    <div class="wrapper pu">
+    <div class="wrapper NCL">
         <!-- 手機版menu 已登入狀態 language與logout button在menu下方 -->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
@@ -58,7 +58,6 @@
             </div>
             <div class="menu_overlay"></div>
         </aside>
-
         <!-- 手機版menu 未登入狀態 language與logout button在menu上方 -->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
@@ -69,13 +68,11 @@
                     <button type="button" class="btn_login">登入</button>
                     <!-- 語言設定 start-->
                     <div class="language">
-
                         <select name="" id="">
                             <option value="">中文</option>
                             <option value="">English</option>
                         </select>
                     </div>
-                    
                     <ul>
                         <li>圖書館服務
                             <ul>
@@ -89,7 +86,6 @@
                             </ul>
                         </li>
                     </ul>
-                    
                 </div>
             </div>
             <div class="menu_overlay"></div>
@@ -124,20 +120,19 @@
                     </div>
                 </nav>
                 <div class="nav_right">
-                        
-                        <div class="language">
-                            <a href="#">語言選擇</a>
-                            <ul style="display: none;">
-                                <li><a href="#">中文</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
-                        </div>
-                        <!-- login start -->
-                        <div class="login loginbtn">
-                            <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
-                            <button type="button" class="btn">登入</button>
-                        </div>
+                    <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul style="display: none;">
+                            <li><a href="#">中文</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
                     </div>
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
+                        <button type="button" class="btn">登入</button>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- 登入燈箱start -->
@@ -207,7 +202,7 @@
         <!-- 登入燈箱end-->
         <div class="main mp">
             <section class="mp_logo">
-                    <img src="images/pu/logo.png" alt="logo">
+                <img src="images/pu/logo.png" alt="logo">
             </section>
             <section class="col-12 search_block">
                 <img class="header_bg" src="images/header_bg.png" alt="">
@@ -235,7 +230,6 @@
                                             1.加上class name"show_recent_searches"
                                             2.搜尋推薦字區塊 display:block -->
                                         <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
-                                        
                                         <div class="btn_grp form_inline">
                                             <input name="" type="submit" title="查詢" value="查詢">
                                             <a href="#" class="simple_search">簡易查詢</a>
@@ -273,7 +267,6 @@
                                     <div class="check_grp form_inline">
                                         <label><input name="" type="checkbox" value="">集中式整合查詢</label>
                                         <label><input name="" type="checkbox" value="">分散式查詢<a href="#" class="database_link">(瀏覽資料庫)</a></label>
-
                                     </div>
                                 </form>
                                 <div class="keywordHot">

@@ -92,3 +92,51 @@ body {
         }
     }
 }
+
+//
+.changeColor{
+    position: fixed;
+    z-index: 9999;
+    right: 100%;
+    top: 10%;
+    height: 80%;
+    transition: .3s all;
+    &:before{
+        content:"";
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 48px;
+        background: url(../images/icon/icon_arrow_right.svg) center no-repeat; 
+        background-size: 20px;
+        left: 100%;
+        top:0;
+        cursor: pointer;
+    }
+    &:hover{
+        right: auto;
+        left: 0;
+    }
+    ul{
+        @include li-reset;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    li{
+       border-bottom: 1px solid #fff; 
+        a{
+            display: block;
+            padding: .8em .5em;
+            background: #eee;
+            color: #333;
+            text-align: center; 
+            transition: .2s all;
+            &:hover{
+                text-decoration: none;
+                background: #333;
+                color: #fff;
+            }
+        }
+    }
+}
