@@ -18,13 +18,15 @@ $(function() {
         $('.wrapper').removeClass('NCL').addClass('pu');
         $('head').find('#cssStyle').attr('href',"css/pu.css");
         $('h1 img').attr('src','images/pu/logo_version.png');
-        $('.mp_logo img').attr('src','images/pu/logo.png');
+        $('.login_page h1 img').attr('src','images/pu/logo.png');
+        $('.mp_logo img').attr('src','images/pu/logo.png');   
     });
 
     $('.NCL_btn').click(function(e) {
         $('.wrapper').removeClass('pu').addClass('NCL');
         $('head').find('#cssStyle').attr('href',"css/NCL.css");
         $('h1 img').attr('src','images/NCL/logo_version.png');
+        $('.login_page h1 img').attr('src','images/NCL/logo.png');
         $('.mp_logo img').attr('src','images/NCL/logo.png');
     });
 });
