@@ -12,11 +12,14 @@ $(function() {
 
     $('.initial_btn').click(function(e) {
     	$('.wrapper').removeClass('NCL pu');
+    	$('h1 img').attr('src','images/logo_version.png');
+        $('.login_page h1 img').attr('src','images/logo.png');
+        $('.mp_logo img').attr('src','images/logo.png');
     });
 
     $('.pu_btn').click(function(e) {
         $('.wrapper').removeClass('NCL').addClass('pu');
-        $('head').find('#cssStyle').attr('href',"css/pu.css");
+        $('#cssStyle').attr('href',"css/pu.css");
         $('h1 img').attr('src','images/pu/logo_version.png');
         $('.login_page h1 img').attr('src','images/pu/logo.png');
         $('.mp_logo img').attr('src','images/pu/logo.png');   
@@ -24,7 +27,7 @@ $(function() {
 
     $('.NCL_btn').click(function(e) {
         $('.wrapper').removeClass('pu').addClass('NCL');
-        $('head').find('#cssStyle').attr('href',"css/NCL.css");
+        $('#cssStyle').attr('href',"css/NCL.css");
         $('h1 img').attr('src','images/NCL/logo_version.png');
         $('.login_page h1 img').attr('src','images/NCL/logo.png');
         $('.mp_logo img').attr('src','images/NCL/logo.png');

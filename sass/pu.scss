@@ -207,6 +207,15 @@
                     background: darken(nth($secondaryColor, $style), 5);
                 }
             }
+            .more_list{
+                a{
+                    background-color: #fff;
+                    &:hover{
+                        background-color: $color-lightgray;
+                    }
+
+                }
+            }
         }
 
         .btn_member {
@@ -564,6 +573,7 @@
                 &:hover {
                     background-color: nth($primaryColor, $style);
                     border-color: nth($primaryColor, $style);
+                    color: #fff;
                 }
             }
         }
@@ -578,6 +588,7 @@
             &:hover {
                 border-color: nth($primaryColor, $style);
                 background: nth($primaryColor, $style);
+                color: #fff;
             }
         }
     }

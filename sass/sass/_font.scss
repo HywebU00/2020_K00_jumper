@@ -34,26 +34,26 @@ a {
     @include aSetting();
 }
 // kbd
-kbd{
-    background: #FFF;
-    border-radius:.2em;
-    color:#555;
-    font-weight: bold;
-    display:inline-block;
-    padding:.1em .6em;
-    font-size: .938em;
-    font-family: sans-serif;
-    margin-right: .4em;
-    margin-bottom: .1em;
-    vertical-align:middle;
-    border-top: 1px solid #BBB;
-    border-bottom: 3px solid #BBB;
-    border-left: 2px solid #BBB;
-    border-right: 2px solid #BBB;
-    ~kbd{
-        margin-left: .4em;
-    }
-    kbd{
-        border:none;
-    }
-}
+// kbd{
+//     background: #FFF;
+//     border-radius:.2em;
+//     color:#555;
+//     font-weight: bold;
+//     display:inline-block;
+//     padding:.1em .6em;
+//     font-size: .938em;
+//     font-family: sans-serif;
+//     margin-right: .4em;
+//     margin-bottom: .1em;
+//     vertical-align:middle;
+//     border-top: 1px solid #BBB;
+//     border-bottom: 3px solid #BBB;
+//     border-left: 2px solid #BBB;
+//     border-right: 2px solid #BBB;
+//     ~kbd{
+//         margin-left: .4em;
+//     }
+//     kbd{
+//         border:none;
+//     }
+// }

@@ -4,7 +4,7 @@
 @import "sass/_typography"; //CP文字排版
 @import "sass/_font"; //文字設定
 @import "sass/_btn"; //按鈕設定
-//@import "sass/_form";
+@import "sass/_form";
 
 .NCL {
     $style: index($sites, NCL);
@@ -167,6 +167,7 @@
                         color: $color-word;
                         &.active {
                             background-color: nth($primaryColor, $style);
+                            color: #fff;
                         }
                     }
                 }
@@ -195,10 +196,11 @@
                     }
 
                     &.active {
-                        background: nth($primaryColor, $style);
+                        background: nth($secondaryColor, $style);
 
                         &:hover {
-                            background: nth($primaryColor, $style);
+                            background: nth($secondaryColor, $style);
+                            color: $color-word;
                         }
                     }
                 }
@@ -212,6 +214,15 @@
 
                 &:hover {
                     background: darken(nth($secondaryColor, $style), 5);
+                }
+            }
+            .more_list{
+                a{
+                    background-color: #fff;
+                    &:hover{
+                        background-color: $color-lightgray;
+                    }
+
                 }
             }
         }
@@ -580,6 +591,7 @@
                 &:hover {
                     background-color: nth($primaryColor, $style);
                     border-color: nth($primaryColor, $style);
+                    color: #fff;
                 }
             }
         }
