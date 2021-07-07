@@ -207,10 +207,12 @@
                     background: darken(nth($secondaryColor, $style), 5);
                 }
             }
-            .more_list{
-                a{
+
+            .more_list {
+                a {
                     background-color: #fff;
-                    &:hover{
+
+                    &:hover {
                         background-color: $color-lightgray;
                     }
 
@@ -295,7 +297,8 @@
     //====== sass/_footer.scss =======
     footer {
         background: nth($secondaryColor, $style);
-        .container{
+
+        .container {
             @include gutter();
         }
     }
@@ -382,6 +385,7 @@
                 &:hover {
                     border-color: nth($primaryColor, $style);
                     background: nth($primaryColor, $style);
+                    color: #fff;
                 }
             }
         }
@@ -428,8 +432,8 @@
             border-color: nth($primaryColor, $style);
             color: nth($primaryColor, $style);
         }
-        
-        input[type="text"]{
+
+        input[type="text"] {
             margin: 0;
         }
 
@@ -473,8 +477,18 @@
 
 
     //======= page/_lightbox.scss =======
+
     .login_lightbox {
         .loginblock {
+            .btn_primary {
+                border-color: nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+
+                &:hover {
+                    background: nth($primaryColor, $style);
+                }
+            }
+
             .name {
                 color: nth($primaryColor, $style);
             }
@@ -508,6 +522,19 @@
         .detailblock {
             .title {
                 background: nth($primaryColor, $style);
+            }
+
+            .btn_primary {
+                background: #fff;
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                padding: .2em .5em;
+                transition: .2s;
+
+                &:hover {
+                    background: nth($primaryColor, $style);
+                    color: #fff;
+                }
             }
         }
 
@@ -633,9 +660,11 @@
                     background: darken(nth($primaryColor, $style), 5);
                 }
             }
+
             .tag_edit {
                 background: #fff;
                 border-color: #929292;
+
                 &:hover {
                     background: $color-lightgray;
                 }

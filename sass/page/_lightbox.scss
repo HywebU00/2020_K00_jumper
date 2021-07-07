@@ -93,18 +93,6 @@ body.fix {
         z-index: 10;
     }
 
-    .btn_primary {
-        background: #fff;
-        border: 1px solid nth($primaryColor, $style);
-        color: nth($primaryColor, $style);
-        padding: .2em .5em;
-        transition: .2s;
-
-        &:hover {
-            background: nth($primaryColor, $style);
-            color: #fff;
-        }
-    }
 }
 
 // 登入
@@ -118,6 +106,19 @@ body.fix {
         @include screen('xs_mobile') {
             padding: 40px 20px 20px;
             width: calc(100% - 30px);
+        }
+
+        .btn_primary {
+            background: #fff;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            padding: .2em .5em;
+            transition: .2s;
+
+            &:hover {
+                background: nth($primaryColor, $style);
+                color: #fff;
+            }
         }
 
         .name {
@@ -215,13 +216,14 @@ body.fix {
                 padding: 0 .65em;
                 color: $color-word-light;
                 height: 44px;
-                margin: 0; 
+                margin: 0;
                 display: flex;
                 align-items: center;
                 border-radius: $rounded-angle 0 0$rounded-angle;
                 border: 1px solid $color-input;
                 border-right: 0;
-                @include screen('xs_mobile'){
+
+                @include screen('xs_mobile') {
                     border: none;
                     width: 100%;
                     height: auto;
@@ -237,7 +239,8 @@ body.fix {
                     width: 1px;
                     height: calc(100% - 16px);
                     background: $color-line;
-                    @include screen('xs_mobile'){
+
+                    @include screen('xs_mobile') {
                         content: none;
                     }
                 }
@@ -246,7 +249,8 @@ body.fix {
                 &+input[type="password"] {
                     border-radius: 0 $rounded-angle $rounded-angle 0;
                     border-left-width: 0;
-                    @include screen('xs_mobile'){
+
+                    @include screen('xs_mobile') {
                         border-radius: $rounded-angle;
                         border-width: 1px;
                     }
@@ -264,7 +268,8 @@ body.fix {
                 display: flex;
                 position: relative;
                 align-items: center;
-                @include screen('xs_mobile'){
+
+                @include screen('xs_mobile') {
                     flex-wrap: wrap;
                 }
             }
@@ -508,6 +513,19 @@ body.fix {
             border-radius: 0;
         }
 
+        .btn_primary {
+            background: #fff;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            padding: .2em .5em;
+            transition: .2s;
+
+            &:hover {
+                background: nth($primaryColor, $style);
+                color: #fff;
+            }
+        }
+
         h3 {
             padding: 0 20px;
         }
@@ -558,6 +576,19 @@ body.fix {
 
         @include screen('mobile') {
             height: 95%;
+        }
+
+        .btn_primary {
+            background: #fff;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            padding: .2em .5em;
+            transition: .2s;
+
+            &:hover {
+                background: nth($primaryColor, $style);
+                color: #fff;
+            }
         }
 
         .title {
@@ -630,13 +661,14 @@ body.fix {
             margin: .5em 0;
             line-height: 1.5;
             word-break: break-word;
+
             @include screen('mobile') {
                 flex-basis: 100%;
             }
 
             a {
                 display: inline-block;
-                margin:0 .8em 0 0;
+                margin: 0 .8em 0 0;
                 padding: 0;
             }
         }
@@ -665,7 +697,7 @@ body.fix {
 
                 &:hover {
                     transform: scale(1.06);
-                    box-shadow: 0 2px 15px rgba(0,0,0,.2);
+                    box-shadow: 0 2px 15px rgba(0, 0, 0, .2);
                     text-decoration: none;
 
                     img {
@@ -789,7 +821,7 @@ body.fix {
         position: relative;
 
         >input[type="email"],
-        >input[type="text"]{
+        >input[type="text"] {
             min-width: 45%;
             height: 40px;
             margin: 0;
@@ -819,22 +851,26 @@ body.fix {
                 height: 100%;
             }
         }
-        .option_list{
+
+        .option_list {
             position: absolute;
-            min-width: 45%; 
+            min-width: 45%;
             top: 45px;
             left: 0;
             background: #fff;
-            @include screen('mobile'){
+
+            @include screen('mobile') {
                 min-width: 100%;
                 width: 100%;
             }
-            ul{
+
+            ul {
                 @include li-reset;
             }
         }
     }
-    .showScrollBlock{
+
+    .showScrollBlock {
         display: none;
         margin: 1em 0;
         padding: 1em;
@@ -862,6 +898,19 @@ body.fix {
 
         @include screen('mobile') {
             height: 95%;
+        }
+
+        .btn_primary {
+            background: #fff;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            padding: .2em .5em;
+            transition: .2s;
+
+            &:hover {
+                background: nth($primaryColor, $style);
+                color: #fff;
+            }
         }
 
         h3 {
@@ -944,7 +993,8 @@ body.fix {
             }
 
         }
-        .accordion_content{
+
+        .accordion_content {
             padding-top: 1em;
         }
 
@@ -1040,7 +1090,8 @@ body.fix {
 
         }
 
-        .accordion_header, li.accordion_header {
+        .accordion_header,
+        li.accordion_header {
             flex-basis: 100%;
         }
     }
@@ -1063,6 +1114,19 @@ body.fix {
             max-height: 100%;
             height: 100%;
             border-radius: 0;
+        }
+
+        .btn_primary {
+            background: #fff;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            padding: .2em .5em;
+            transition: .2s;
+
+            &:hover {
+                background: nth($primaryColor, $style);
+                color: #fff;
+            }
         }
     }
 
@@ -1222,11 +1286,25 @@ body.fix {
             max-width: 90%;
         }
 
+        .btn_primary {
+            background: #fff;
+            border: 1px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+            padding: .2em .5em;
+            transition: .2s;
+
+            &:hover {
+                background: nth($primaryColor, $style);
+                color: #fff;
+            }
+        }
+
         .btn_grp {
             padding-bottom: 0;
             text-align: right;
+
             @include screen('mobile') {
-            text-align: center;
+                text-align: center;
             }
         }
     }

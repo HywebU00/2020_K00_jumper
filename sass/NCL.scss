@@ -158,13 +158,15 @@
         }
 
         .language {
-            a{
+            a {
                 color: $color-word;
             }
+
             ul {
                 li {
                     a {
                         color: $color-word;
+
                         &.active {
                             background-color: nth($primaryColor, $style);
                             color: #fff;
@@ -216,10 +218,12 @@
                     background: darken(nth($secondaryColor, $style), 5);
                 }
             }
-            .more_list{
-                a{
+
+            .more_list {
+                a {
                     background-color: #fff;
-                    &:hover{
+
+                    &:hover {
                         background-color: $color-lightgray;
                     }
 
@@ -304,14 +308,16 @@
     //====== sass/_footer.scss =======
     footer {
         background: nth($secondaryColor, $style);
-        .container{
+
+        .container {
             @include gutter();
             color: $color-word;
         }
-        nav{
-            >ul{
-                >li{
-                    a{
+
+        nav {
+            >ul {
+                >li {
+                    a {
                         color: $color-word;
                     }
                 }
@@ -401,6 +407,7 @@
                 &:hover {
                     border-color: nth($primaryColor, $style);
                     background: nth($primaryColor, $style);
+                    color: #fff;
                 }
             }
         }
@@ -442,7 +449,8 @@
                 }
             }
         }
-        input[type="text"]{
+
+        input[type="text"] {
             margin: 0;
         }
 
@@ -493,6 +501,19 @@
     //======= page/_lightbox.scss =======
     .login_lightbox {
         .loginblock {
+            .btn_primary {
+                background: #fff;
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                padding: .2em .5em;
+                transition: .2s;
+
+                &:hover {
+                    background: nth($primaryColor, $style);
+                    color: #fff;
+                }
+            }
+
             .name {
                 color: nth($primaryColor, $style);
             }
@@ -524,6 +545,19 @@
 
     .detail_lightbox {
         .detailblock {
+            .btn_primary {
+                background: #fff;
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                padding: .2em .5em;
+                transition: .2s;
+
+                &:hover {
+                    background: nth($primaryColor, $style);
+                    color: #fff;
+                }
+            }
+
             .title {
                 background: nth($primaryColor, $style);
             }
@@ -650,9 +684,11 @@
                     background: darken(nth($primaryColor, $style), 5);
                 }
             }
+
             .tag_edit {
                 background: #fff;
                 border-color: #929292;
+
                 &:hover {
                     background: $color-lightgray;
                 }
