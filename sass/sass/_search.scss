@@ -75,7 +75,7 @@
             @include screen('mobile') {
                 position: absolute;
                 margin: 0;
-                top: 0;
+                bottom: 0;
                 right: 0;
                 width: auto;
             }
@@ -173,6 +173,7 @@
             }
             @include screen('xs_mobile') {
                flex-basis: 100%; 
+               max-width: 100%;
 
            }
         }
@@ -189,10 +190,9 @@
             }
 
             @include screen('mobile') {
-                position: absolute;
                 margin: 0;
+                position: absolute;
                 bottom: 0;
-                top: 0;
                 right: 0;
                 border-radius: $rounded-angle;
                 font-size: 0em;

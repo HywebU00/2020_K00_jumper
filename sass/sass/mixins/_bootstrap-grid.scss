@@ -82,7 +82,7 @@ $container-lg: $container-large-desktop !default;
 }
 /* Generate the extra small columns*/
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
-    float: left;
+    //float: left;
     width: percentage(($columns / $grid-columns));
 }
 @mixin make-xs-column-offset($columns) {
@@ -97,7 +97,7 @@ $container-lg: $container-large-desktop !default;
 /* Generate the small columns*/
 @mixin make-sm-column($columns) {
     @media (min-width: $screen-sm-min) {
-        float: left;
+        //float: left;
         width: percentage(($columns / $grid-columns));
     }
 }
@@ -119,7 +119,7 @@ $container-lg: $container-large-desktop !default;
 /* Generate the medium columns*/
 @mixin make-md-column($columns) {
     @media (min-width: $screen-md-min) {
-        float: left;
+        //float: left;
         width: percentage(($columns / $grid-columns));
     }
 }
@@ -141,7 +141,7 @@ $container-lg: $container-large-desktop !default;
 /* Generate the large columns*/
 @mixin make-lg-column($columns) {
     @media (min-width: $screen-lg-min) {
-        float: left;
+        //float: left;
         width: percentage(($columns / $grid-columns));
     }
 }

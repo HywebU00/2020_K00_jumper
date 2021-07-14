@@ -209,25 +209,36 @@
     .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-content: stretch;
         padding: 0;
 
         .col {
-            flex: 0 0 calc(100% / 3);
-            max-width: calc(100% / 3);
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
             margin-bottom: 1em;
             @include gutter();
 
             @include screen('tablet') {
-                flex: 0 0 calc(100% / 2);
-                max-width: calc(100% / 2);
+                flex: 0 0 50%;
+                max-width: 40%;
             }
 
             @include screen('mobile') {
                 flex-basis: 100%;
                 max-width: 100%;
                 padding: 20px 0;
+            }
+            &:last-child{
+                &:nth-child(3n-1){
+                    margin-right: 33.33333%;
+                }
+                &:nth-child(3n-2){
+                    margin-right: 66.66666%;
+                }
+                &:first-child, &:nth-child(2){
+                    margin-right: 0;
+                }
             }
         }
     }
