@@ -166,7 +166,7 @@ $container-lg: $container-large-desktop !default;
         @include box-sizing;
     }
 }
-.container {
-    position: relative;
-    @include container-fixed;
-}
+// .container {
+//     position: relative;
+//     @include container-fixed;
+// }

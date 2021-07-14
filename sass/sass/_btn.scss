@@ -65,7 +65,7 @@ $btn-radius:$rounded-angle;
 
     &:hover,
     &:focus {
-        background: nth($importantColor, $style);
+        background-color: nth($importantColor, $style);
         color: #fff !important;
         outline: none;
         border-color: nth($importantColor, $style);

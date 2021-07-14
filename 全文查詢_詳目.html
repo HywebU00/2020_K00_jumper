@@ -1541,7 +1541,7 @@
                                         </li>
                                         <li>
                                             <h4>主題術語：</h4>
-                                            <div class="content">生物醫學<br/>肺炎<br/>中醫藥</div>
+                                            <div class="content">生物醫學<br />肺炎<br />中醫藥</div>
                                         </li>
                                         <li>
                                             <h4>說明：</h4>
@@ -1623,7 +1623,7 @@
                                                 <div class="img-container">
                                                     <img src="images/icon/icon_export.svg" alt="">
                                                 </div>
-                                                <span class="function_name">匯出<br/>書目格式</span>
+                                                <span class="function_name">匯出<br />書目格式</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -1632,19 +1632,68 @@
                                         <input name="username" id="" type="email" placeholder="請輸入指定的 Email" class="">
                                         <button class="btn btn-submit">送出</button>
                                     </div>
-                                    <!-- 點擊”引用“、”匯出書目格式“ 開啟此區塊 (css預設display:none)-->
-                                    <div class="showScrollBlock" style="display: block;">
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料<br/>
-                                        引入資料
+                                    <!-- 點擊”引用“ 開啟此區塊 (css預設display:none)-->
+                                    <div class="showToolPanel" style="display: block;">
+                                        <div class="close"></div>
+                                        <h4>引文格式</h4>
+                                        <div class="informational_note">
+                                            <i class="i_info"></i>
+                                            註記：檢視說明 <a href="#">EBSCO Connect</a> 並在使用前進行必要的修正。特別注意人名、大小寫及日期。請參閱圖書館資料來源，以瞭解正確的格式與使用標點符號的方法。
+                                        </div>
+                                        <div class="scrollBlock">
+                                            <ul class="cite-list">
+                                                <li class="cite-list_item">
+                                                    <div class="cite-list__item_term">
+                                                        <a href="#">ABNT</a>
+                                                        <div>(Brazilian National Standards)</div>
+                                                    </div>
+                                                    <div class="cite-list__item_desc">
+                                                        <div class="cite-header">參考資料</div>
+                                                        <div class="body-paragraph">
+                                                            KROTZSCH, M.; STEPANOVA, D. <b>Reasoning web. [electronic resource] : explainable artificial intelligence : 15th International Summer School 2019, Bolzano, Italy, September 20-24, 2019 : tutorial lectures</b>. <i>[s. l.]</i>: Springer International Publishing, 2019. ISBN 9783030314231. Disponível em: https://search.ebscohost.com/login.aspx?direct=true&amp;db=cat05027a&amp;AN=ntu.535232&amp;lang=zh-tw&amp;site=eds-live. Acesso em: 14 jul. 2021.
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cite-list_item">
+                                                    <div class="cite-list__item_term">
+                                                        <a href="#">ABNT</a>
+                                                        <div>(Brazilian National Standards)</div>
+                                                    </div>
+                                                    <div class="cite-list__item_desc">
+                                                        <div class="cite-header">參考資料</div>
+                                                        <div class="body-paragraph">
+                                                            KROTZSCH, M.; STEPANOVA, D. <b>Reasoning web. [electronic resource] : explainable artificial intelligence : 15th International Summer School 2019, Bolzano, Italy, September 20-24, 2019 : tutorial lectures</b>. <i>[s. l.]</i>: Springer International Publishing, 2019. ISBN 9783030314231. Disponível em: https://search.ebscohost.com/login.aspx?direct=true&amp;db=cat05027a&amp;AN=ntu.535232&amp;lang=zh-tw&amp;site=eds-live. Acesso em: 14 jul. 2021.
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <a title="" class="export-link" href="#">匯出至「參考書目管理軟體」</a>
+                                            <span>(EndNote、ProCite、Reference Manager、RefWorks、BibTeX 等)</span>
+                                        </div>
+                                    </div>
+                                    <!-- 點擊”匯出書目格式“ 開啟此區塊 (css預設display:none)-->
+                                    <div class="showToolPanel" style="display: block;">
+                                        <div class="close"></div>
+                                        <h4>匯出書目格式</h4>
+                                        <p>要儲存的文章數： 1</p>
+                                        <p><strong>將引文儲存至下列項目的格式化檔案：</strong></p>
+                                        <div class="radio_grp">
+                                            <label><input name="" type="radio" value="">直接匯出為 RIS 格式 (例如 CITAVI、EasyBib、EndNote、ProCite、Reference Manager、Zotero)</label>
+                                            <label><input name="" type="radio" value="">一般書目管理軟體</label>
+                                            <label><input name="" type="radio" value=""> XML 格式的引文</label>
+                                            <label><input name="" type="radio" value=""> BibTeX 格式引文</label>
+                                            <label><input name="" type="radio" value=""> XML 格式的引文</label>
+                                            <label><input name="" type="radio" value=""> 直接匯出至 RefWorks</label>
+                                            <label><input name="" type="radio" value=""> 直接匯出至 EndNote Web</label>
+                                            <label><input name="" type="radio" value=""> 下載 CSV</label>
+                                            <label><input name="" type="radio" value=""> 直接匯出至 NoodleTools</label>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button class="btn btn-reset">取消</button>
+                                            <button class="btn btn-submit">儲存</button>
+                                        </div>
                                     </div>
                                 </section>
                             </div>
