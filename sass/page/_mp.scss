@@ -227,7 +227,7 @@
             @include screen('mobile') {
                 flex-basis: 100%;
                 max-width: 100%;
-                padding: 20px 0;
+                padding: 0;
             }
             &:last-child{
                 &:nth-child(3n-1){
