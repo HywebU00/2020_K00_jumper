@@ -1,8 +1,9 @@
 .search_system {
     width: 90%;
     max-width: 900px;
-    margin: 1em auto;
+    margin: 0 auto;
     position: relative;
+    padding: 1em 0;
 
     @include screen('tablet') {
         width: 100%;
@@ -137,9 +138,9 @@
         @include screen('xs_mobile'){
             flex-wrap: wrap;
         }
-        input[type="text"]{
-            margin: 0;
-        }
+        // input[type="text"]{
+        //     margin: 0;
+        // }
     }
 
     select {
@@ -180,7 +181,7 @@
 
         &[type="submit"] {
             height: 44px;
-            margin: 0 .5em;
+            margin: 0 5px;
             transition: .3s ease-in;
             border-radius: 30px;
             border: none;

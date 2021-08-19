@@ -986,7 +986,7 @@ body.fix {
         }
 
         .accordion_content {
-            padding-top: 1em;
+            margin: 15px 0 0 22px;
         }
 
 
@@ -1040,6 +1040,7 @@ body.fix {
                     display: inline-block;
                 }
 
+
                 a {
                     color: $color-word;
                     //display: inline-block;
@@ -1084,6 +1085,9 @@ body.fix {
         .accordion_header,
         li.accordion_header {
             flex-basis: 100%;
+            >label{
+                font-weight: bold;
+            }
         }
     }
 }

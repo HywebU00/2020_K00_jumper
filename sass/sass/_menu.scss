@@ -234,28 +234,37 @@
                 >li {
                     position: relative;
                     cursor: pointer;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        right: 16px;
-                        top: 1em;
-                        width: 5px;
-                        line-height: 1.25em;
-                        height: 5px;
-                        border: 2px solid #222;
-                        transform: rotate(45deg);
-                        border-top: none;
-                        border-left: none;
-                        transition: .3s;
+
+                    >.turnicon{
+                        padding: 0;
+                        position: relative;
+                        font-weight: bold;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: calc(50% - 5px);
+                            width: 5px;
+                            line-height: 1.25em;
+                            height: 5px;
+                            border: 2px solid #222;
+                            transform: rotate(45deg);
+                            border-top: none;
+                            border-left: none;
+                            transition: .3s;
+                        }
                     }
                     
                     &:first-of-type, &.openSubmenu{
+                        >.turnicon{
+                            &:after{
+                                transform: rotate(225deg);
+                            }
+                        }
                         >ul{
                             display: block;
                         }
-                        &:after{
-                            transform: rotate(225deg);
-                        }
+                        
                     }
 
                     >ul{

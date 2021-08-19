@@ -6,6 +6,8 @@ footer{
 	.container{
 		@include gutter();
 		color:#fff;
+		display: flex;
+		justify-content: center;
 	}
 	ul{
 		@include li-reset;
@@ -24,6 +26,7 @@ footer{
 	}
 	nav{
 		font-size: .938em;
+		max-width: 60%;
 		@include screen('mobile'){
 			display: none;
 		}
@@ -31,9 +34,11 @@ footer{
 			display: flex;
 			flex-wrap: wrap;
 			>li{
-				flex:0 1 calc(100% / 3);
+				flex:0 1 33.33333%;
+				padding-right: 2em;
 				@include screen('xs_mobile'){
 					flex:0 0 100%;
+					padding-right: 0;
 				}
 				>a{
 					display: inline-block;
@@ -59,5 +64,9 @@ footer{
 	}
 	.footer_info{
 		font-size: .813em;
+		margin-left: 2em;
+		@include screen('mobile'){
+			margin-left: 0;
+		}
 	}
 }
