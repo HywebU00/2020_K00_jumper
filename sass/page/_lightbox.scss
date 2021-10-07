@@ -101,8 +101,7 @@ body.fix {
 
 // 登入
 .login_lightbox {
-    .loginblock,
-    .bindingblock {
+    .loginblock{
         width: 520px;
         //padding: 30px 50px;
         overflow-y: scroll;
@@ -361,7 +360,7 @@ body.fix {
         }
     }
 
-    .bindingblock{
+    .binding{
         h3,p {
             text-align: left;
         }
