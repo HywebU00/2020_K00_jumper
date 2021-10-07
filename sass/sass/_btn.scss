@@ -111,8 +111,8 @@ button[type="submit"],
     transition: .3s ease-in;
     &:hover{
         color: #fff;
-        border-color: nth($primaryColor, $style);
-        background: nth($primaryColor, $style);
+        border-color: darken(nth($primaryColor, $style), 10);
+        background: darken(nth($primaryColor, $style), 10);
         text-decoration: none;
     }
 }
@@ -140,12 +140,11 @@ button[type="submit"],
     border-radius: 30px;
     padding: .5em 1.5em;
     transition: .3s ease-in;
-    &:hover{
-        color: #fff;
-        border-color: nth($primaryColor, $style);
-        background: nth($primaryColor, $style);
-        text-decoration: none;
-    }
+    // &:hover{
+    //     border-color: nth($primaryColor, $style);
+    //     background: nth($primaryColor, $style);
+    //     text-decoration: none;
+    // }
 
     &:before {
         background: $color-lightgray;
@@ -154,6 +153,7 @@ button[type="submit"],
     &:hover {
         border-color: $color-lightgray;
         background: $color-lightgray;
+        text-decoration: none;
     }
 }
 

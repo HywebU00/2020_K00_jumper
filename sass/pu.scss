@@ -48,9 +48,8 @@
     .btn-submit,
     .btn-primary {
         &:hover {
-
-            border-color: nth($primaryColor, $style);
-            background: nth($primaryColor, $style);
+            border-color: darken(nth($primaryColor, $style), 10);
+            background: darken(nth($primaryColor, $style), 10);
         }
     }
 
@@ -494,6 +493,10 @@
                         background: nth($primaryColor, $style);
                     }
                 }
+            }
+
+            h3{
+                color: darken(nth($primaryColor, $style), 10);
             }
         }
 

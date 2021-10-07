@@ -72,8 +72,9 @@
 			@include make-sm-column(12);
 			@include make-md-column(6);
 			@include make-lg-column(6);
-			padding:30px 40px;
+			padding:30px 50px;
 			min-height: 630px;
+			margin: 0 auto;
 			display: flex;
     		flex-direction: column;
 

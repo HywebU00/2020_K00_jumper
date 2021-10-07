@@ -75,11 +75,16 @@ body.fix {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 30px;
+    padding: 30px 40px;
     background-color: #fff;
     border-radius: $rounded-angle;
     //overflow: auto;
     box-shadow: $box;
+
+    @media screen and (max-height: 800px){
+        top: 1em;
+        transform: translate(-50%, 0);
+    }
 
     @include screen('xs_mobile') {
         min-width: auto;
@@ -92,19 +97,19 @@ body.fix {
         top: 15px;
         z-index: 10;
     }
-
 }
 
 // 登入
 .login_lightbox {
-    .loginblock {
+    .loginblock,
+    .bindingblock {
         width: 520px;
-        padding: 30px 40px;
+        //padding: 30px 50px;
         overflow-y: scroll;
         @extend %lightbox_block;
 
         @include screen('xs_mobile') {
-            padding: 40px 20px 20px;
+            //padding: 40px 20px 20px;
             width: calc(100% - 30px);
         }
 
@@ -138,8 +143,13 @@ body.fix {
         }
 
         h2 {
-            font-size: 1.125em;
+            font-size: 1.25em;
             text-align: center;
+        }
+
+        h3{
+            font-size: 1.125em;
+            color: darken(nth($primaryColor, $style), 15);
         }
 
         p {
@@ -149,7 +159,6 @@ body.fix {
 
         .form_content {
             text-align: center;
-            padding: 0 40px;
 
             @include screen('xs_mobile') {
                 padding: 0;
@@ -182,14 +191,14 @@ body.fix {
             a {
                 display: inline-block;
 
-                &:after {
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 1px;
-                    background: nth($primaryColor, $style);
-                    line-height: 1;
-                }
+                // &:after {
+                //     content: "";
+                //     display: block;
+                //     width: 100%;
+                //     height: 1px;
+                //     background: nth($primaryColor, $style);
+                //     line-height: 1;
+                // }
             }
 
             .pc {
@@ -246,7 +255,8 @@ body.fix {
                 }
 
                 &+input[type="text"],
-                &+input[type="password"] {
+                &+input[type="password"],
+                &+select{
                     border-radius: 0 $rounded-angle $rounded-angle 0;
                     border-left-width: 0;
 
@@ -258,7 +268,8 @@ body.fix {
             }
 
             input[type="text"],
-            input[type="password"] {
+            input[type="password"],
+            select {
                 flex: 1 1 auto;
                 height: 44px;
                 margin: 0;
@@ -347,6 +358,12 @@ body.fix {
                 padding: 0 .5em;
                 text-decoration: underline;
             }
+        }
+    }
+
+    .bindingblock{
+        h3,p {
+            text-align: left;
         }
     }
 
@@ -849,6 +866,7 @@ body.fix {
                 display: block;
                 width: 100%;
                 height: 100%;
+                background: url(../images/icon/icon_search_invert.svg) no-repeat center center;
             }
         }
 
