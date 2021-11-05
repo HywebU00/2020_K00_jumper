@@ -57,7 +57,6 @@
             </div>
             <div class="menu_overlay"></div>
         </aside>
-
         <!-- 手機版menu 未登入狀態 language與logout button在menu上方 -->
         <aside class="sidebar" style="display: none;">
             <div class="m_area">
@@ -68,13 +67,11 @@
                     <button type="button" class="btn_login">登入</button>
                     <!-- 語言設定 start-->
                     <div class="language">
-
                         <select name="" id="">
                             <option value="">中文</option>
                             <option value="">English</option>
                         </select>
                     </div>
-                    
                     <ul>
                         <li>圖書館服務
                             <ul>
@@ -88,7 +85,6 @@
                             </ul>
                         </li>
                     </ul>
-                    
                 </div>
             </div>
             <div class="menu_overlay"></div>
@@ -123,20 +119,19 @@
                     </div>
                 </nav>
                 <div class="nav_right">
-                        
-                        <div class="language">
-                            <a href="#">語言選擇</a>
-                            <ul style="display: none;">
-                                <li><a href="#">中文</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
-                        </div>
-                        <!-- login start -->
-                        <div class="login loginbtn">
-                            <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
-                            <button type="button" class="btn">登入</button>
-                        </div>
+                    <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul style="display: none;">
+                            <li><a href="#">中文</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
                     </div>
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <!-- 點擊登入button，則登入燈箱"login_lightbox" display:block -->
+                        <button type="button" class="btn">登入</button>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- 登入燈箱start -->
@@ -206,144 +201,140 @@
         <!-- 登入燈箱end-->
         <div class="main mp">
             <section class="mp_logo">
-                    <img src="images/logo.png" alt="logo">
+                <img src="images/logo.png" alt="logo">
             </section>
             <section class="search_block">
                 <img class="header_bg" src="images/header_bg.png" alt="">
                 <div class="container">
-                    
-                        <!-- 搜尋 -->
-                        <div class="search_system">
-                            <!-- 頁籤 -->
-                            <!-- 點擊 tabs > ul > li  > a 對應的tab-content show-->
-                            <div class="tabSet">
-                                <ul class="tabs">
-                                    <li class="active">
-                                        <a href="#tab1">整合查詢</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab2">電子資源查詢</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- 頁籤內容 1 -->
-                            <div class="tab-content" id="tab1">
-                                <form action="">
-                                    <div class="form_grp form_inline">
-                                        <!-- 點擊 input[type="text"] 時 
+                    <!-- 搜尋 -->
+                    <div class="search_system">
+                        <!-- 頁籤 -->
+                        <!-- 點擊 tabs > ul > li  > a 對應的tab-content show-->
+                        <div class="tabSet">
+                            <ul class="tabs">
+                                <li class="active">
+                                    <a href="#tab1">整合查詢</a>
+                                </li>
+                                <li>
+                                    <a href="#tab2">電子資源查詢</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 頁籤內容 1 -->
+                        <div class="tab-content" id="tab1">
+                            <form action="">
+                                <div class="form_grp form_inline">
+                                    <!-- 點擊 input[type="text"] 時 
                                             1.加上class name"show_recent_searches"
                                             2.搜尋推薦字區塊 display:block -->
-                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
-                                        
-                                        <div class="btn_grp form_inline">
-                                            <input name="" type="submit" title="查詢" value="查詢">
-                                            <a href="#" class="simple_search">簡易查詢</a>
-                                        </div>
-                                        <!-- 搜尋推薦字 -->
-                                        <div class="recent_searches" style="display: none">
-                                            <ul class="promptword">
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                            </ul>
-                                            <div class="title">查詢記錄</div>
-                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
-                                            <ul class="record_list">
-                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- 搜尋推薦字 END-->
+                                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
+                                    <div class="btn_grp form_inline">
+                                        <input name="" type="submit" title="查詢" value="查詢">
+                                        <a href="#" class="simple_search">簡易查詢</a>
                                     </div>
-                                    <div class="check_grp form_inline">
-                                        <label><input name="" type="checkbox" value="">集中式整合查詢</label>
-                                        <label><input name="" type="checkbox" value="">分散式查詢<a href="#" class="database_link">(瀏覽資料庫)</a></label>
-
+                                    <!-- 搜尋推薦字 -->
+                                    <div class="recent_searches" style="display: none">
+                                        <ul class="promptword">
+                                            <li><a href="#">文學推薦字</a></li>
+                                            <li><a href="#">文學推薦字</a></li>
+                                            <li><a href="#">文學推薦字</a></li>
+                                            <li><a href="#">文學推薦字</a></li>
+                                        </ul>
+                                        <div class="title">查詢記錄</div>
+                                        <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                                        <ul class="record_list">
+                                            <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </form>
-                                <div class="keywordHot">
-                                    <ul><b>熱門關鍵字：</b>
-                                        <li><a href="#">東野圭吾</a></li>
-                                        <li><a href="#">屁屁偵探</a></li>
-                                        <li><a href="#">名偵探柯南</a></li>
-                                        <li><a href="#">科學實驗王</a></li>
-                                        <li><a href="#">哈利波特</a></li>
-                                        <li><a href="#">鬼滅之刃</a></li>
-                                        <li><a href="#">python</a></li>
-                                        <li><a href="#">怪傑佐羅力</a></li>
-                                        <li><a href="#">漫畫</a></li>
-                                        <li><a href="#">神奇樹屋</a></li>
-                                        <li><a href="#">尋寶記</a></li>
-                                        <li><a href="#">大英百科</a></li>
-                                        <li><a href="#">多益</a></li>
-                                        <li><a href="#">原子習慣</a></li>
-                                        <li><a href="#">高木直子</a></li>
-                                    </ul>
+                                    <!-- 搜尋推薦字 END-->
                                 </div>
-                            </div>
-                            <!-- 頁籤內容 2 -->
-                            <div class="tab-content" id="tab2" style="display: none">
-                                <form action="">
-                                    <div class="form_grp form_inline">
-                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
-                                        <input name="" type="submit" title="查詢" value="查詢" />
-                                        <a href="#" class="advanced_search">進階查詢</a>
-                                        <!-- 搜尋推薦字 -->
-                                        <div class="recent_searches" style="">
-                                            <ul class="promptword">
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                            </ul>
-                                            <div class="title">查詢記錄</div>
-                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
-                                            <ul class="record_list">
-                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- 搜尋推薦字 END-->
-                                    </div>
-                                    <div class="check_grp form_inline">
-                                        <label><input name="" type="checkbox" value="">集中式整合查詢</label>
-                                        <label><input name="" type="checkbox" value="">分散式查詢（瀏覽資料庫）</label>
-                                    </div>
-                                </form>
-                                <div class="keywordHot">
-                                    熱門關鍵字：
-                                    東野圭吾、屁屁偵探、名偵探柯南、科學實驗王、哈利波特、鬼滅之刃、python、怪傑佐羅力、漫畫、神奇樹屋、尋寶記、大英百科、多益、原子習慣、高木直子
+                                <div class="check_grp form_inline">
+                                    <label><input name="" type="checkbox" value="">集中式整合查詢</label>
+                                    <label><input name="" type="checkbox" value="">分散式查詢<a href="#" class="database_link">(瀏覽資料庫)</a></label>
                                 </div>
+                            </form>
+                            <div class="keywordHot">
+                                <ul><b>熱門關鍵字：</b>
+                                    <li><a href="#">東野圭吾</a></li>
+                                    <li><a href="#">屁屁偵探</a></li>
+                                    <li><a href="#">名偵探柯南</a></li>
+                                    <li><a href="#">科學實驗王</a></li>
+                                    <li><a href="#">哈利波特</a></li>
+                                    <li><a href="#">鬼滅之刃</a></li>
+                                    <li><a href="#">python</a></li>
+                                    <li><a href="#">怪傑佐羅力</a></li>
+                                    <li><a href="#">漫畫</a></li>
+                                    <li><a href="#">神奇樹屋</a></li>
+                                    <li><a href="#">尋寶記</a></li>
+                                    <li><a href="#">大英百科</a></li>
+                                    <li><a href="#">多益</a></li>
+                                    <li><a href="#">原子習慣</a></li>
+                                    <li><a href="#">高木直子</a></li>
+                                </ul>
                             </div>
-                        </div><!-- search END -->
-                    
+                        </div>
+                        <!-- 頁籤內容 2 -->
+                        <div class="tab-content" id="tab2" style="display: none">
+                            <form action="">
+                                <div class="form_grp form_inline">
+                                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
+                                    <input name="" type="submit" title="查詢" value="查詢" />
+                                    <a href="#" class="advanced_search">進階查詢</a>
+                                    <!-- 搜尋推薦字 -->
+                                    <div class="recent_searches" style="">
+                                        <ul class="promptword">
+                                            <li><a href="#">文學推薦字</a></li>
+                                            <li><a href="#">文學推薦字</a></li>
+                                            <li><a href="#">文學推薦字</a></li>
+                                            <li><a href="#">文學推薦字</a></li>
+                                        </ul>
+                                        <div class="title">查詢記錄</div>
+                                        <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                                        <ul class="record_list">
+                                            <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                            <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
+                                                <div class="del"><a href="#">移除</a></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 搜尋推薦字 END-->
+                                </div>
+                                <div class="check_grp form_inline">
+                                    <label><input name="" type="checkbox" value="">集中式整合查詢</label>
+                                    <label><input name="" type="checkbox" value="">分散式查詢（瀏覽資料庫）</label>
+                                </div>
+                            </form>
+                            <div class="keywordHot">
+                                熱門關鍵字：
+                                東野圭吾、屁屁偵探、名偵探柯南、科學實驗王、哈利波特、鬼滅之刃、python、怪傑佐羅力、漫畫、神奇樹屋、尋寶記、大英百科、多益、原子習慣、高木直子
+                            </div>
+                        </div>
+                    </div><!-- search END -->
                 </div>
             </section>
             <section class="col-4-4-4 feature_block">
@@ -446,12 +437,11 @@
                                 <li><a href="#">智慧財產權聲明</a></li>
                             </ul>
                         </li>
-                        
                     </ul>
                 </nav>
                 <div class="footer_info">
                     <p class="copyright">
-                        Copyright © 2014 National Taipei University of Technology 
+                        Copyright © 2014 National Taipei University of Technology
                     </p>
                     <p>電話：02-2771-2171 # 3100 傳真：02-2776-2383 <br />
                         地址：10608 臺北市大安區忠孝東路三段一號<br />
@@ -466,4 +456,5 @@
     <script src="js/changecolor.js"></script>
     <!-- 以上測試換色使用，實際套版請移除 -->
 </body>
+
 </html>

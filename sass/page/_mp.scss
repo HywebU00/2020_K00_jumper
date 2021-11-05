@@ -9,6 +9,9 @@
     }
 }
 
+.mp{
+    
+}
 
 .mp_logo {
     padding-top: 1em;
@@ -200,6 +203,7 @@
 .feature_block {
     padding: 1em 15px;
     background: $color-lightgray;
+    flex-grow: 1;
 
     @include screen('mobile') {
         margin-top: 0;
