@@ -40,6 +40,8 @@
 .search_block {
     position: relative;
     //overflow: hidden;
+    flex-grow: 1;
+
     .header_bg{
         position: absolute;
         width: 100%;
@@ -201,15 +203,15 @@
 
 
 .feature_block {
-    padding: 1em 15px;
+    
     background: $color-lightgray;
-    flex-grow: 1;
 
     @include screen('mobile') {
         margin-top: 0;
     }
 
     .container {
+        //padding: 1em 15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -219,7 +221,7 @@
         .col {
             flex: 0 0 33.33333%;
             max-width: 33.33333%;
-            margin-bottom: 1em;
+            margin-bottom: 1.5em;
             @include gutter();
 
             @include screen('tablet') {
@@ -231,6 +233,9 @@
                 flex-basis: 100%;
                 max-width: 100%;
                 padding: 0;
+            }
+            &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                margin-top: 1.5em;
             }
             &:last-child{
                 &:nth-child(3n-1){
