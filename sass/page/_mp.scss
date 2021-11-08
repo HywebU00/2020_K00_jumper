@@ -211,32 +211,38 @@
     }
 
     .container {
-        //padding: 1em 15px;
+        padding: 0 15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-content: stretch;
-        padding: 0;
 
         .col {
             flex: 0 0 33.33333%;
             max-width: 33.33333%;
             margin-bottom: 1.5em;
             @include gutter();
+            &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                margin-top: 1.5em;
+            }
 
             @include screen('tablet') {
                 flex: 0 0 50%;
                 max-width: 50%;
+                &:nth-child(3){
+                    margin-top: 0;
+                }
             }
 
             @include screen('mobile') {
                 flex-basis: 100%;
                 max-width: 100%;
                 padding: 0;
+                &:nth-child(2){
+                    margin-top: 0; 
+                }
             }
-            &:nth-child(1), &:nth-child(2), &:nth-child(3){
-                margin-top: 1.5em;
-            }
+            
             &:last-child{
                 &:nth-child(3n-1){
                     margin-right: 33.33333%;
