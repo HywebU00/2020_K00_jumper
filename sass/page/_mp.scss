@@ -341,9 +341,12 @@
 }
 
 .mp{
-    .search_block{
-        .header_bg{
-            height: 390px;
+    .mp_logo{     
+        &+.search_block{
+
+            .header_bg{
+                height: calc(100% + 90px);
+            }
         }
     }
 }

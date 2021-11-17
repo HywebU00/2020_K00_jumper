@@ -11,15 +11,16 @@
 
     @include screen('mobile') {
         margin: 0 auto;
+        padding: 0;
         min-height: 4.6em;
     }
 
     .tabSet {
         margin: 0 auto;
 
-        @include screen('mobile') {
-            background: $color-lightgray;
-        }
+        // @include screen('mobile') {
+        //     background: $color-lightgray;
+        // }
     }
 
     .tab-content {
