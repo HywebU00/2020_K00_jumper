@@ -1,101 +1,128 @@
-.login_page{
-	.login_lightbox{
-		display: block;
-		.loginblock{
-			display: flex;
-			padding: 0;
-			width: 1040px;
-			min-height: 630px;
-			position: relative;
-			flex-wrap: wrap;
-			@include screen('tablet'){
-				width: 520px;
-				min-height: auto;
-			}
-			@include screen('xs_mobile'){
-			    width: calc(100% - 30px);
-			}
-			@media (max-width: 768px) and (max-height: 600px){
-				height: 100%;
-				border-radius: 0;
-				overflow-y: scroll;
-			}
-		}
-		
-		.main_img{
-			position: relative;
-			padding: 1.5em 2em;
-			@include make-sm-column(12);
-			@include make-md-column(6);
-			@include make-lg-column(6);
-			@include screen('tablet'){
-				display: none;
-			}
-			.logo{
-				img{
-					max-width: 100%;
-					max-height: 80px;
-				}
-			}
-			.textblock{
-				background: rgba(255,255,255, .85);
-				border-radius: $rounded-angle;
-				padding: 1em .5em; 
-				max-height: 22.5em;
-				.text_content{
-					padding:0 .5em; 
-					overflow-y: auto;
-					max-height: 20.5em;
-					line-height: 1.6em;
-					font-size: .938em;
-				}
-			}
-			.img-container{
-				position: absolute;
-				left: 0;
-				top: 0;
-				z-index: -1;
-				width: 100%;
-				height: calc(100% - 100px);
-				//@include aspect-ratio(1, 1);
-				img{
-					object-fit: cover;
-				}
-			}
-		}
-		.function_grp{
-			display: flex;
-		}
-
-		.login_form{
-			//@include make-xs-column(12); 
-			@include make-sm-column(12);
-			@include make-md-column(6);
-			@include make-lg-column(6);
-			padding:30px 50px;
-			min-height: 630px;
-			margin: 0 auto;
-			display: flex;
-    		flex-direction: column;
-
-			@include screen('tablet'){
-				padding-bottom: 0;
-				min-height: auto;
-			}
-			@include screen('xs_mobile'){
-				padding: 20px 30px 0;
-				width: 100%;
-			}
-
-			form{
-				flex-grow: 1;
-			}
-		}
-
-		.login_instructions{
-			margin-bottom: 10px;
-			
-		}
-	}
-	
+.login_page {
+    .login_lightbox {
+        display: block;
+        .loginblock {
+            display: flex;
+            padding: 0;
+            width: 1040px;
+            min-height: 630px;
+            position: relative;
+            flex-wrap: wrap;
+            @include screen('tablet') {
+                width: 520px;
+                min-height: auto;
+            }
+            @include screen('xs_mobile') {
+                width: calc(100% - 30px);
+            }
+            @media (max-width: 768px) and (max-height: 600px) {
+                height: 100%;
+                border-radius: 0;
+                overflow-y: scroll;
+            }
+            &.noform {
+                max-width: 520px;
+                .main_img {
+                    @include screen('tablet') {
+                        display: block;
+                    }
+                    .img-container {
+                        height: 100%;
+                    }
+                    .textblock {
+                        max-height: 18em;
+                        .text_content {
+                            max-height: 16em;
+                        }
+                    }
+                }
+                .login_form {
+                    min-height: auto;
+                    padding: 1em;
+                    width: 100%;
+                    margin-top: 1em;
+                    background: rgba(255, 255, 255, 0.85);
+                    border-radius: $rounded-angle;
+                }
+                .function_grp {
+                    position: static;
+                    padding: 10px 20px 30px;
+                    width: 100%;
+                    @include screen('mobile') {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .main_img {
+            position: relative;
+            padding: 1.5em 2em;
+            flex: 1 1 50%;
+            @include screen('tablet') {
+                display: none;
+            }
+            @include screen('mobile') {
+                padding: 1em;
+            }
+            .logo {
+                img {
+                    max-width: 100%;
+                    max-height: 80px;
+                }
+            }
+            .textblock {
+                background: rgba(255, 255, 255, .85);
+                border-radius: $rounded-angle;
+                padding: 1em .5em;
+                max-height: 22.5em;
+                .text_content {
+                    padding: 0 .5em;
+                    overflow-y: auto;
+                    max-height: 20.5em;
+                    line-height: 1.6em;
+                    font-size: .938em;
+                }
+            }
+            .img-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                width: 100%;
+                height: calc(100% - 100px);
+                //@include aspect-ratio(1, 1);
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
+        .function_grp {
+            display: flex;
+        }
+        .login_form {
+            //@include make-xs-column(12); 
+            @include make-sm-column(12);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+            padding: 30px 50px;
+            min-height: 630px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            @include screen('tablet') {
+                padding-bottom: 0;
+                min-height: auto;
+            }
+            @include screen('xs_mobile') {
+                padding: 20px 30px 0;
+                width: 100%;
+            }
+            form {
+                flex-grow: 1;
+            }
+        }
+        .login_instructions {
+            margin-bottom: 10px;
+        }
+    }
 }
