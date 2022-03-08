@@ -30,13 +30,17 @@
 
 body {
     @include fontSetting(1em);
-    line-height: 1.45em;
+    line-height: 1.5em;
     font-family: $font-family;
     -webkit-text-size-adjust: none;
 }
 
 a {
     @include aSetting();
+}
+
+p {
+    line-height: 1.65em;
 }
 
 // kbd
