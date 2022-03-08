@@ -3,7 +3,7 @@
     font-weight: bold;
     font-size: .75em;
     position: relative;
-    @include screen('mobile'){
+    @include screen('mobile') {
         font-size: 1em;
     }
     >a {
@@ -24,8 +24,8 @@
             height: 6px;
             border-width: 1px 1px 0 0;
             border-style: solid;
-            border-color:#fff;
-            transform:rotate(135deg);
+            border-color: #fff;
+            transform: rotate(135deg);
         }
         // &:before {
         //     position: absolute;
@@ -36,10 +36,6 @@
         //     content: "";
         //     border-left: 1px solid #DDD;
         // }
-        &:focus {
-            box-shadow: none;
-            background: #444;
-        }
     }
     ul {
         //background: #555;

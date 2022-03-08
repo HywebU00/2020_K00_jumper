@@ -1,5 +1,4 @@
 $form_title_width :150px; // 表單title寬度
-
 @mixin formStyle($f_color:$color-word, $f_border:$color-input, $f_radius:$rounded-angle) {
     color: $f_color;
     font-size: 1em;
@@ -21,20 +20,16 @@ select::-ms-expand {
 .form_grid {
     font-size: .938em;
     margin: .5em 0;
-
     .form_grp {
         border-bottom: 1px dashed #DDD;
         overflow: hidden;
         padding: .2em 0;
-
         &:first-of-type {
             border-top: 1px solid #DDD;
         }
-
         // 閱讀條文
         &.agree {
             border-bottom: none;
-
             label {
                 float: left;
                 width: auto;
@@ -42,20 +37,16 @@ select::-ms-expand {
             }
         }
     }
-
     .form_title {
         float: left;
         width: $form_title_width;
         @include gutter();
         padding-top: 5px;
-
         @include screen('mobile') {
             width: 100%;
             @include gutter(0);
         }
     }
-
-
     .form_content {
         float: right;
         display: flex;
@@ -64,59 +55,45 @@ select::-ms-expand {
         width: calc(100% - #{$form_title_width});
         @include gutter();
         overflow: hidden;
-
         @include screen('mobile') {
             width: 100%;
             @include gutter(5px);
         }
-
         &.form_inline {
-
             input,
             textarea,
             select {
                 width: auto;
                 min-width: 100px;
                 margin: 0 .3em .3em;
-
                 &:first-child {
                     margin-left: 0;
                 }
-
                 &:last-child {
                     margin-right: 0;
                 }
-
                 @include screen('xs_mobile') {
                     width: 100%;
                     display: block;
                 }
             }
-
             .flex-grow {
                 flex: 1 1 auto;
             }
         }
-
-
         // 第二層的設定
         .form_grp {
             min-height: 2.5em;
-
             .form_content {
                 float: none;
                 display: block;
                 @include gutter();
-
-
             }
-
             &:last-child {
                 border-bottom: none;
                 margin-bottom: 0;
             }
         }
-
         // 電話專屬
         .tel {
             input[type="text"]:first-child {
@@ -124,14 +101,11 @@ select::-ms-expand {
                 background-size: 12px;
                 padding-left: 1.5em;
             }
-
             input[type="text"]:first-child,
             select:first-child {
                 width: 100px !important;
-
                 &~input {
                     width: calc(100% - 200px);
-
                     @include screen('xs_mobile') {
                         width: 100% !important;
                         display: block !important;
@@ -139,76 +113,62 @@ select::-ms-expand {
                 }
             }
         }
-
         // 生日專屬
         .birthday {
             select {
                 display: inline-block;
                 margin-right: .5em;
                 text-align-last: center;
-
                 @include screen('xs_mobile') {
                     width: 88% !important;
                     min-width: 88% !important;
                     display: inline-block !important;
                     text-align-last: left;
                 }
-
                 option {
                     text-align: center;
                 }
-
                 ~select {
                     margin-left: .2em;
-
                     @include screen('xs_mobile') {
                         margin-left: 0;
                     }
                 }
             }
         }
-
         // 地址專屬
         .address {
             select {
                 min-width: 100px;
-
                 option {
                     text-align: center;
                 }
-
                 @include screen('xs_mobile') {
                     width: 100px;
                     display: inline-block !important;
                 }
             }
-
             input[type="text"] {
                 width: calc(100% - 211px) !important;
-
                 @include screen('mobile') {
                     display: block !important;
                     width: 100% !important;
                 }
             }
         }
-
         // 日期專屬
         .datepick {
             padding-right: .5em;
             position: relative;
             display: inline-block;
-
             @include screen('xs_mobile') {
                 width: 100%;
                 display: block;
             }
-
             &+.datepick {
                 margin-left: .3em;
                 margin-right: 0;
                 padding-right: 0;
-
                 &:before {
                     content: "~";
                     font-size: 1.5em;
@@ -218,20 +178,16 @@ select::-ms-expand {
                     top: .3em;
                     color: #777;
                 }
-
                 @include screen('xs_mobile') {
                     margin-left: 0em;
-
                     &:before {
                         display: none;
                     }
                 }
-
                 i {
                     right: .5em;
                 }
             }
-
             i {
                 position: absolute;
                 padding: .37em .1em !important;
@@ -242,18 +198,15 @@ select::-ms-expand {
                 border: none;
                 width: auto;
                 pointer-events: none;
-
                 &:hover,
                 &:focus {
                     box-shadow: none;
                     border: none !important;
                 }
             }
-
             >input[type="text"] {
                 width: 10em;
                 padding-right: 2em;
-
                 @include screen('xs_mobile') {
                     width: 100%;
                 }
@@ -263,8 +216,6 @@ select::-ms-expand {
 }
 
 //---------------------------------------------form setting--------//
-
-
 .form_grp,
 .check_grp,
 .radio_grp,
@@ -278,7 +229,6 @@ select::-ms-expand {
     label {
         display: block;
     }
-
     // radio與check個別行內設定
     &.form_inline {
         label {
@@ -290,14 +240,12 @@ select::-ms-expand {
 
 .form_grp,
 .upload_grp {
-
     // 文字表單個別行內設定
     &.form_inline {
         label {
             display: inline-block;
             margin-right: .5em;
         }
-
         input,
         textarea,
         select {
@@ -305,7 +253,7 @@ select::-ms-expand {
             margin: 0 .25em .3em;
         }
     }
-    &.form_flex{
+    &.form_flex {
         display: flex;
         input,
         textarea,
@@ -321,7 +269,6 @@ select::-ms-expand {
         display: inline-block;
         vertical-align: middle;
         margin-right: .5em;
-
         &~input,
         &~textarea {
             display: inline-block;
@@ -329,7 +276,6 @@ select::-ms-expand {
             vertical-align: middle;
         }
     }
-
     input[type="text"],
     input[type="email"],
     input[type="password"],
@@ -338,7 +284,6 @@ select::-ms-expand {
         width: auto;
         display: inline-block;
     }
-
     .form_grp,
     .check_grp,
     .radio_grp,
@@ -347,12 +292,9 @@ select::-ms-expand {
         display: inline-block;
         margin-right: .5em;
     }
-
     .check_grp,
     .radio_grp {}
-
     .btn_grp {
-
         .btn,
         input[type="submit"],
         input[type="reset"],
@@ -362,14 +304,11 @@ select::-ms-expand {
             padding: .45em 1em;
         }
     }
-
     select,
     textarea {
         width: auto;
     }
 }
-
-
 
 //---------------------------------------------下拉選單--------//
 label,
@@ -377,13 +316,10 @@ legend {
     // white-space: nowrap;
     display: inline-block;
     margin: 0 0 .5em 0;
-
     @include screen('xs_mobile') {
         display: block;
     }
-
     &.inline {
-
         input,
         select,
         textarea {
@@ -407,7 +343,6 @@ button {
 }
 
 button {
-
     &:hover,
     &:focus {
         outline: none;
@@ -421,7 +356,6 @@ textarea {
     -webkit-appearance: none; //清除 safari 的預設樣式
     -moz-appearance: none;
     appearance: none;
-
     &.error {
         box-shadow: 0px 0px 0px 2px $color-red;
     }
@@ -436,17 +370,14 @@ input[type="tel"] {
         /* Chrome/Opera/Safari */
         color: darken($color-gray, 20);
     }
-
     &::-moz-placeholder {
         /* Firefox 19+ */
         color: darken($color-gray, 20);
     }
-
     &:-ms-input-placeholder {
         /* IE 10+ */
         color: darken($color-gray, 20);
     }
-
     &:-moz-placeholder {
         /* Firefox 18- */
         color: darken($color-gray, 20);
@@ -455,20 +386,18 @@ input[type="tel"] {
 
 button,
 input[type="button"],
-    {
+{
     @extend %btn;
 }
 
 input[type="submit"] {
     @extend %btn;
-
 }
 
 textarea {
     @include formStyle();
     height: 5em;
     overflow-y: scroll;
-
     @include screen('xs_mobile') {
         width: 100%;
     }
@@ -481,6 +410,7 @@ input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
+input[type="number"]:focus,
 textarea:focus,
 select:focus {
     border: 1px solid lighten($form-focus, 20);
@@ -496,12 +426,10 @@ select {
     border: 1px solid $color-input;
     background: #fff url(../images/icon/icon_arrow_down.svg) no-repeat right 10px center;
     background-size: 12px;
-
     option {
         outline: none;
         border: none;
     }
-
     &:-moz-focusring {
         color: transparent;
         text-shadow: 0 0 0 #000;
@@ -543,6 +471,7 @@ input[type="radio"]:checked {
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
     outline: none;
+    box-shadow: 0 0px 0px 2px nth($focusColor, $style) inset;
 }
 
 input[type="checkbox"]:checked {
@@ -563,11 +492,9 @@ input[disable] {
     background: lighten($color-gray, 15);
     color: darken($color-gray, 10);
     border-color: darken($color-gray, 10);
-
     &~label {
         color: darken($color-gray, 10);
     }
-
     &:hover,
     &:focus {
         border-color: darken($color-gray, 10);
@@ -579,13 +506,11 @@ input[disable] {
 // https://codepen.io/shubhamc_007/pen/oZyodd
 .upload_grp {
     position: relative;
-
     input[readonly],
     input[disable] {
         background: transparent;
         color: #666;
     }
-
     .upload_btn {
         position: absolute;
         overflow: hidden;
@@ -595,7 +520,6 @@ input[disable] {
         //@include btn_setting($form-focus, #FFF);
         padding: .2em 1em !important;
         @include border-radius(4px);
-
         &:hover,
         &:focus {
             cursor: pointer !important;
@@ -622,17 +546,14 @@ img.captcha {
     max-height: 44px;
     max-height: 100px;
     margin-bottom: .3em;
-
     &+input {
         display: inline-block;
         width: auto;
         vertical-align: middle;
     }
-
     ~.btn {
         margin-top: -1px;
     }
-
     ~img {
         display: inline-block;
         vertical-align: middle;

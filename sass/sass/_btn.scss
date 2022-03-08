@@ -3,7 +3,6 @@ $btn-font-color:$color-word;
 $btn-border:darken($color-word, 5);
 $btn-padding:.5em 1em;
 $btn-radius:$rounded-angle;
-
 // 按鈕外框
 .btn_grp {
     text-align: center;
@@ -15,7 +14,6 @@ $btn-radius:$rounded-angle;
 //     background-color: $btn-bg;
 //     //border: 1px solid $color-input;
 //     color: $btn-font-color;
-
 //     //@include border-radius($btn-radius);
 //     //@include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
 //     &:hover,
@@ -26,12 +24,10 @@ $btn-radius:$rounded-angle;
 //         outline: none;
 //         //@include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
 //     }
-
 //     &.active {
 //         cursor: pointer;
 //     }
 // }
-
 // 按鈕預設陰影
 %btn {
     font-size: $font-size;
@@ -47,7 +43,6 @@ $btn-radius:$rounded-angle;
     padding: $btn-padding;
     //min-width: 4em;
     margin: .25em;
-
     i {
         margin-right: .3em;
         margin-left: .3em;
@@ -62,44 +57,41 @@ $btn-radius:$rounded-angle;
     padding: .5em 1.5em;
     display: inline-block;
     transition: .3s ease-in;
-
     &:hover,
     &:focus {
         background-color: nth($importantColor, $style);
         color: #fff !important;
         outline: none;
-        border-color: nth($importantColor, $style);
+        //border-color: nth($importantColor, $style);
+        box-shadow: 0 0px 0px 2px nth($focusColor, $style) inset;
     }
-
     &:disabled {
         background: $color-gray;
         border-color: $color-gray;
         cursor: auto;
     }
-
 }
 
 // 按鈕基本樣式
 .btn {
     @extend %btn;
     @include box-sizing;
-
     &:hover,
-    &:focus,
     &.active {
         color: nth($primaryColor, $style);
         outline: none;
         border-color: nth($primaryColor, $style);
     }
+    &:focus {
+        box-shadow: 0 0px 0px 2px nth($focusColor, $style) inset;
+    }
 }
-
 
 input[type="submit"],
 button[type="submit"],
 .btn-submit,
 .btn-primary {
     @extend %btn-submit;
-
     &:before {
         background: nth($importantColor, $style);
     }
@@ -109,7 +101,7 @@ button[type="submit"],
 .btn-submit,
 .btn-primary {
     transition: .3s ease-in;
-    &:hover{
+    &:hover {
         color: #fff;
         border-color: darken(nth($primaryColor, $style), 10);
         background: darken(nth($primaryColor, $style), 10);
@@ -125,7 +117,6 @@ button[type="submit"],
     border-radius: 30px;
     padding: .5em 1.5em;
     transition: .3s ease-in;
-
     &:hover {
         background: darken($color-btn-light, 10);
         border-color: darken($color-btn-light, 10);
@@ -145,11 +136,9 @@ button[type="submit"],
     //     background: nth($primaryColor, $style);
     //     text-decoration: none;
     // }
-
     &:before {
         background: $color-lightgray;
     }
-
     &:hover {
         border-color: $color-lightgray;
         background: $color-lightgray;
@@ -169,7 +158,6 @@ button[type="submit"],
     opacity: .6;
     border-radius: 30px;
     transition: .3s;
-
     &:hover {
         box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
     }
@@ -186,14 +174,12 @@ button[type="submit"],
     color: $color-word-light;
     border: none;
     border-radius: 0;
-
     &:hover,
     &:focus {
         background: none;
         color: $color-word;
         outline: none;
     }
-
     &:after {
         content: '';
         position: absolute;
@@ -208,7 +194,6 @@ button[type="submit"],
         transform: rotate(225deg);
         transition: .5s;
     }
-
     &.turnicon {
         &:after {
             content: '';
@@ -224,6 +209,7 @@ button[type="submit"],
         background-size: 60%;
     }
 }
+
 .btn_addbookmark {
     &:after {
         background: url(../images/icon/icon_bookmark_normal_invert.svg) center no-repeat;

@@ -53,6 +53,7 @@ body.fix {
     opacity: .8;
     border-radius: 50%;
     transition: .2s ease-in;
+    border: none;
     &:hover {
         transform: rotate(90deg);
     }

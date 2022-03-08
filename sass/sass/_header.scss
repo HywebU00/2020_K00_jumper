@@ -6,8 +6,7 @@
     background: nth($secondaryColor, $style);
     width: 100%;
     top: 0;
-    @include box-shadow(0px 2px 5px RGBA(0, 0, 0, .2)); 
-
+    @include box-shadow(0px 2px 5px RGBA(0, 0, 0, .2));
     %mobileCtrlBtn {
         width: 55px !important;
         height: 55px !important;
@@ -36,7 +35,7 @@
         justify-content: space-between;
         align-items: center;
         @include gutter();
-        @include screen('mobile'){
+        @include screen('mobile') {
             padding: 0;
             display: block;
         }
@@ -48,7 +47,7 @@
             @extend %mobileCtrlBtn;
             span {
                 position: absolute;
-                background:nth($secondaryColor, $style);
+                background: nth($secondaryColor, $style);
                 width: 50%;
                 height: 4px;
                 top: 35%;
@@ -94,15 +93,15 @@
             align-items: center;
             img {
                 display: none;
-            }   
+            }
         }
-        span{
+        span {
             display: none;
             font-size: 1em;
-            color:#fff;
+            color: #fff;
             font-size: 0.5em;
             font-weight: normal;
-            @include screen('mobile'){
+            @include screen('mobile') {
                 display: block;
             }
         }
@@ -129,17 +128,16 @@
             list-style: none;
             max-width: 520px;
             height: 100%;
-            overflow: hidden; 
-            @media screen and (max-width: 1200px){
+            overflow: hidden;
+            @media screen and (max-width: 1200px) {
                 max-width: 430px;
             }
-             @media screen and (max-width: 1200px){
+            @media screen and (max-width: 1200px) {
                 max-width: 430px;
             }
             @include screen('tablet') {
                 display: none;
             }
-
         }
         li {
             height: 100%;
@@ -156,11 +154,10 @@
                     color: #fff;
                     background: lighten(nth($secondaryColor, $style), 5);
                 }
-                
-                &.active{
+                &.active {
                     color: #fff;
                     background: nth($primaryColor, $style);
-                    &:hover{
+                    &:hover {
                         color: #fff;
                         background: nth($primaryColor, $style);
                     }
@@ -168,29 +165,29 @@
             }
         }
     }
-    .more_list_block{
+    .more_list_block {
         height: 100%;
         display: inline-block;
         position: relative;
-        @include screen('tablet'){
+        @include screen('tablet') {
             display: none;
         }
-        .more{
+        .more {
             height: 100%;
             padding: .5em 1.5em .5em 1em;
             border-radius: 0;
             background: none;
             position: relative;
-            margin:0;
-            border:none;
-            color:#ccc;
+            margin: 0;
+            border: none;
+            color: #ccc;
             background: nth($secondaryColor, $style);
-            &:hover{
+            &:hover {
                 color: #fff;
                 background: lighten(nth($secondaryColor, $style), 5);
             }
-            &:before{
-                content:"";
+            &:before {
+                content: "";
                 position: absolute;
                 right: .5em;
                 top: calc(50% - 6px);
@@ -201,13 +198,13 @@
                 border-width: 1px 1px 0 0;
                 border-style: solid;
                 border-color: #ccc;
-                transform: rotate(135deg);  
+                transform: rotate(135deg);
             }
         }
-        .more_list{
+        .more_list {
             display: none;
             position: absolute;
-            right:0;
+            right: 0;
             top: 46px;
             width: 180px;
             background: #fff;
@@ -216,27 +213,27 @@
             transform-origin: 50% 0;
             animation: slideDown .3s ease-out;
             @include li-reset;
-            padding: .8em 0; 
-            li{
+            padding: .8em 0;
+            li {
                 display: block;
                 width: 100%;
-                margin:0;
+                margin: 0;
                 text-align: left;
             }
-            a{
+            a {
                 color: $color-word;
                 display: block;
                 padding: .5em 1em;
                 background-color: #fff;
                 transition: all .3s;
-                &:hover{
+                &:hover {
                     background-color: $color-lightgray;
                     color: $color-word;
                 }
             }
         }
     }
-    .nav_right{
+    .nav_right {
         flex: 0 0 auto;
         display: flex;
         align-items: center;
@@ -244,25 +241,24 @@
         @include screen('tablet') {
             display: none;
         }
-        
     }
     //會員登入後
-    .member_record{
+    .member_record {
         display: flex;
         align-items: center;
         margin: 0 .5em;
         position: relative;
         height: 100%;
     }
-    .member_name{
-       color:#fff; 
-       font-size: .938em;
-       margin-right: .5em;
+    .member_name {
+        color: #fff;
+        font-size: .938em;
+        margin-right: .5em;
     }
-    .btn_member{
+    .btn_member {
         width: 32px;
-        height:32px;
-        padding:0;
+        height: 32px;
+        padding: 0;
         border-radius: 30px;
         border-color: nth($primaryColor, $style);
         min-width: auto;
@@ -270,20 +266,19 @@
         background: nth($primaryColor, $style);
         position: relative;
         transition: .3s ease-in;
-        &:hover{
+        &:hover {
             background-color: nth($importantColor, $style);
         }
-
-        img{
+        img {
             position: absolute;
             bottom: -1px;
             left: 5%;
             width: 90%;
             vertical-align: middle;
-            filter:invert(1);
+            filter: invert(1);
         }
-   }
-   .member_data{
+    }
+    .member_data {
         display: none;
         position: absolute;
         right: 0;
@@ -295,26 +290,25 @@
         overflow: hidden;
         transform-origin: 50% 0;
         animation: slideDown .3s ease-out;
-
-        ul{
+        ul {
             @include li-reset;
         }
-        li{
+        li {
             border-bottom: 1px solid $color-line;
-            &:last-child{
+            &:last-child {
                 border: none;
             }
-            a{
+            a {
                 display: block;
-                padding:.5em 1em;
+                padding: .5em 1em;
                 color: $color-word;
                 font-size: .938em;
-                &:hover{
+                &:hover {
                     background: $color-lightgray;
                 }
             }
         }
-   }
+    }
     // language
     .language {
         display: inline-block;
@@ -323,10 +317,10 @@
         position: relative;
         //padding-top: .3em;
         font-size: 1em;
-        select{
-            background: rgba(0,0,0,0) url(../images/icon/icon_arrow_down_invert.svg) no-repeat right 5px center;
-            color: #fff; 
-            border:none;
+        select {
+            background: rgba(0, 0, 0, 0) url(../images/icon/icon_arrow_down_invert.svg) no-repeat right 5px center;
+            color: #fff;
+            border: none;
             background-size: 12px;
             padding-right: 20px;
             height: 2.4em;
@@ -341,11 +335,11 @@
             padding: 4px 30px 4px 15px;
             text-align: left;
             line-height: 1.5;
-            background-color: rgba(255,255,255, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             @include box-sizing(border-box);
             &:hover,
-            &:focus{
-                background-color: rgba(255,255,255, 0.2);
+            &:focus {
+                background-color: rgba(255, 255, 255, 0.2);
                 text-decoration: none;
             }
         }
@@ -373,11 +367,9 @@
                     padding: 4px 15px 3px;
                     display: block;
                     transition: .5s;
-
-                    &:hover{
+                    &:hover {
                         background: $color-lightgray;
                     }
-
                     &.active {
                         background-color: nth($primaryColor, $style);
                         color: #fff;
@@ -397,14 +389,12 @@
             top: 10px;
             margin: 0;
         }
-        @include screen('mobile') {
-            
-        }
+        @include screen('mobile') {}
         .btn {
             @include box-sizing(border-box);
             padding: 4px 20px!important;
             color: #fff;
-            border:none;
+            border: none;
             font-size: .938em;
             font-weight: bold;
             margin: 0;
@@ -412,10 +402,11 @@
             border-radius: 30px;
             line-height: 1.5;
             transition: .3s ease-in;
-            &:hover{
+            &:hover,
+            &:focus {
+                color: #fff;
                 background: nth($importantColor, $style);
             }
-
             @include screen('mobile') {
                 min-width: auto;
                 padding: 4px 10px 3px !important;
@@ -433,6 +424,7 @@
         display: none;
     }
 }
+
 //search
 .search {
     min-width: 25%;
@@ -591,6 +583,7 @@
         }
     }
 }
+
 // header fix
 // .header.fixed {
 //     position: fixed;

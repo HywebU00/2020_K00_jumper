@@ -5,28 +5,26 @@
 @import "sass/_font"; //文字設定
 @import "sass/_btn"; //按鈕設定
 @import "sass/_form";
-
 .pu {
     $style: index($sites, pu);
-
     .container {
         margin: 0 auto;
     }
-
+    //====== sass/_accessibility.scss ======
+    a.goCenter {
+        background: nth($primaryColor, $style);
+    }
     //====== sass/_btn.scss =======
     %btn-submit {
         background-color: nth($primaryColor, $style);
         border-color: nth($primaryColor, $style);
-
         &:hover,
         &:focus {
             background-color: nth($importantColor, $style);
             border-color: nth($importantColor, $style);
         }
     }
-
     .btn {
-
         &:hover,
         &:focus,
         &.active {
@@ -34,7 +32,6 @@
             border-color: nth($primaryColor, $style);
         }
     }
-
     input[type="submit"],
     button[type="submit"],
     .btn-submit,
@@ -43,7 +40,6 @@
             background: nth($importantColor, $style);
         }
     }
-
     button[type="submit"],
     .btn-submit,
     .btn-primary {
@@ -52,15 +48,12 @@
             background: darken(nth($primaryColor, $style), 10);
         }
     }
-
     .btn-nostyle {
         color: nth($primaryColor, $style);
     }
-
     //====== sass/_tabs.scss =======
     .tabSet {
         li {
-
             &.active,
             &:focus {
                 &:before {
@@ -69,19 +62,16 @@
             }
         }
     }
-
     .main_tabSet {
         .active_m {
             background-color: nth($primaryColor, $style);
         }
-
         li {
             a {
                 &:hover {
                     background: nth($primaryColor, $style);
                 }
             }
-
             &.active {
                 a {
                     background: nth($primaryColor, $style);
@@ -89,23 +79,20 @@
             }
         }
     }
-
     //======= sass/_form.scss ======
     input[type="checkbox"]:checked,
     input[type="radio"]:checked {
         border-color: nth($primaryColor, $style);
         background-color: nth($primaryColor, $style);
     }
-
     input[type="radio"]:checked {
-        box-shadow: #fff 0 0 0 3px inset, nth($primaryColor, $style) 0 0 0 1px;
+        box-shadow: #fff 0 0 0 3px inset, nth($focusColor, $style) 0 0 0 1px;
     }
-
     //======= sass/_element.scss ======
-    a:focus {
-        box-shadow: 0 0px 0px 1px nth($primaryColor, $style) inset;
+    a:focus,
+    button:focus {
+        box-shadow: 0 0px 0px 2px nth($focusColor, $style) inset;
     }
-
     .option_list {
         li {
             &.active {
@@ -113,9 +100,7 @@
                     color: nth($primaryColor, $style);
                 }
             }
-
             a {
-
                 &:hover,
                 &.active {
                     color: nth($primaryColor, $style);
@@ -123,11 +108,9 @@
             }
         }
     }
-
     //====== sass/_header.scss =======
     .header {
         background: nth($secondaryColor, $style);
-
         >.container {
             .sidebarCtrl {
                 span {
@@ -135,7 +118,6 @@
                 }
             }
         }
-
         .more_list_block {
             .more_list {
                 a {
@@ -145,16 +127,13 @@
                 }
             }
         }
-
         .btn_member {
             border-color: nth($primaryColor, $style);
             background: nth($primaryColor, $style);
-
             &:hover {
                 background-color: nth($importantColor, $style);
             }
         }
-
         .language {
             ul {
                 li {
@@ -166,30 +145,24 @@
                 }
             }
         }
-
         .login {
             .btn {
                 background: nth($primaryColor, $style);
-
                 &:hover {
                     background: nth($importantColor, $style);
                     color: #fff;
                 }
             }
         }
-
         .navigation {
             li {
                 a {
                     background: nth($secondaryColor, $style);
-
                     &:hover {
                         background: darken(nth($secondaryColor, $style), 5);
                     }
-
                     &.active {
                         background: nth($primaryColor, $style);
-
                         &:hover {
                             background: nth($primaryColor, $style);
                         }
@@ -197,42 +170,33 @@
                 }
             }
         }
-
         .more_list_block {
             .more {
                 background: nth($secondaryColor, $style);
-
                 &:hover {
                     background: darken(nth($secondaryColor, $style), 5);
                 }
             }
-
             .more_list {
                 a {
                     background-color: #fff;
-
                     &:hover {
                         background-color: $color-lightgray;
                     }
-
                 }
             }
         }
-
         .btn_member {
             border-color: nth($primaryColor, $style);
             background: nth($primaryColor, $style);
-
             &:hover {
                 background-color: nth($importantColor, $style);
             }
         }
     }
-
     .search {
         &.m_search {
             .keywordHot {
-
                 &:hover,
                 &:focus {
                     color: nth($secondaryColor, $style);
@@ -240,12 +204,10 @@
             }
         }
     }
-
     //======= sass/_menu.scss =======
     .menu {
         li {
             li.hasChild {
-
                 &:hover,
                 &:focus {
                     background: nth($primaryColor, $style);
@@ -253,25 +215,20 @@
             }
         }
     }
-
     .sidebar {
         .m_area {
             .menu {
                 border-top-color: nth($primaryColor, $style);
-
                 .btn_login,
                 .btn_logout {
                     border-color: nth($primaryColor, $style);
                 }
-
                 .btn_login {
                     background: nth($primaryColor, $style);
                 }
-
                 .btn_logout {
                     color: nth($primaryColor, $style);
                 }
-
                 .language {
                     select {
                         border-color: nth($primaryColor, $style);
@@ -279,11 +236,9 @@
                 }
             }
         }
-
         .navigation {
             li {
                 a {
-
                     &:hover,
                     &:focus {
                         background: darken(nth($primaryColor, $style), 20);
@@ -292,51 +247,42 @@
             }
         }
     }
-
     //====== sass/_footer.scss =======
     footer {
         background: nth($secondaryColor, $style);
-
         .container {
             @include gutter();
         }
     }
-
     //====== sass/_modal.scss =======
     .modal {
         h2 {
             border-bottom-color: nth($primaryColor, $style);
         }
     }
-
     //====== sass/_paginations.scss =======
     .pagination {
         span {
             color: nth($primaryColor, $style);
         }
-
         .items {
             a {
                 color: nth($primaryColor, $style);
             }
         }
     }
-
     //====== sass/_category.scss =======
     .category {
         a {
-
             &:hover,
             &:focus {
                 border-color: darken(nth($primaryColor, $style), 15);
             }
-
             &.active {
                 @include gradient(darken(nth($primaryColor, $style), 0), darken(nth($primaryColor, $style), 15), vertical);
             }
         }
     }
-
     //====== sass/_function_panel.scss =======
     .function_panel {
         button {
@@ -344,10 +290,8 @@
                 color: nth($primaryColor, $style);
             }
         }
-
         .display_grp {
             .list_less {
-
                 &:hover,
                 &.active {
                     &:before {
@@ -355,9 +299,7 @@
                     }
                 }
             }
-
             .list_more {
-
                 &:hover,
                 &.active {
                     &:before {
@@ -366,18 +308,15 @@
                 }
             }
         }
-
         .result_amount {
             .search_word {
                 color: nth($primaryColor, $style);
             }
-
             em {
                 color: nth($primaryColor, $style);
             }
         }
     }
-
     .function_block {
         .btn_grp {
             button {
@@ -389,17 +328,14 @@
             }
         }
     }
-
     .add_bookmark,
     .filter_search_btn {
-
         &:hover,
         &.active {
             background-color: nth($primaryColor, $style);
             border-color: nth($primaryColor, $style);
         }
     }
-
     .option {
         .name {
             a {
@@ -410,83 +346,65 @@
             }
         }
     }
-
     //======= sass/__search.scss =======
     .search_system {
         .tab-content {
-
             a.database_link {
                 &:hover {
                     color: nth($primaryColor, $style);
                 }
             }
         }
-
         .add_condition {
             border-color: nth($primaryColor, $style);
             color: nth($primaryColor, $style);
         }
-
         input[type="text"] {
             margin: 0;
         }
-
         .keywordHot {
             ul {
                 a {
-
-                    &:hover,
-                    &:focus {
+                    &:hover {
                         text-decoration: underline;
                         color: nth($primaryColor, $style);
                     }
                 }
             }
         }
-
         .condition {
             .delete {
                 border-color: nth($primaryColor, $style);
-
                 &:before {
                     background: nth($primaryColor, $style);
                 }
             }
         }
-
         input {
             &[type="submit"] {
                 background-color: nth($primaryColor, $style);
-
                 &:hover {
                     background-color: nth($importantColor, $style);
                 }
-
                 @include screen('mobile') {
                     background: nth($primaryColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
                 }
             }
         }
     }
-
-
     //======= page/_lightbox.scss =======
-
     .login_lightbox {
         .loginblock {
             .btn_primary {
                 border-color: nth($primaryColor, $style);
                 color: nth($primaryColor, $style);
-
                 &:hover {
                     background: nth($primaryColor, $style);
                 }
             }
-
             .name {
                 color: nth($primaryColor, $style);
             }
-
             .login_instructions {
                 a {
                     &:after {
@@ -494,61 +412,51 @@
                     }
                 }
             }
-
-            h3{
+            h3 {
                 color: darken(nth($primaryColor, $style), 10);
             }
         }
-
         .function_grp {
-
             button,
             input,
             select {
                 border-color: nth($primaryColor, $style);
             }
         }
-
         .btn {
             &:hover {
                 background-color: nth($primaryColor, $style);
             }
         }
     }
-
     .detail_lightbox {
         .detailblock {
             .title {
                 background: nth($primaryColor, $style);
             }
-
             .btn_primary {
                 background: #fff;
                 border: 1px solid nth($primaryColor, $style);
                 color: nth($primaryColor, $style);
                 padding: .2em .5em;
                 transition: .2s;
-
                 &:hover {
                     background: nth($primaryColor, $style);
                     color: #fff;
                 }
             }
         }
-
         .detail_top {
             h3 {
                 color: nth($primaryColor, $style);
             }
         }
-
         .sourceblock {
             .source {
                 border-left-color: nth($primaryColor, $style);
             }
         }
     }
-
     .personal_lightbox {
         .manage_tag {
             input[type="text"] {
@@ -556,8 +464,6 @@
             }
         }
     }
-
-
     //======= page/_lp.scss =======
     .lp,
     .personal {
@@ -565,23 +471,19 @@
             color: nth($primaryColor, $style);
         }
     }
-
     .main_content {
         .keyword {
             input[type="submit"] {
                 background: nth($primaryColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
-
                 &:hover {
                     background-color: nth($importantColor, $style);
                 }
             }
         }
     }
-
     .filter_search {
         .conditions {
             border-color: nth($primaryColor, $style);
-
             .del_all {
                 &:hover {
                     background-color: nth($primaryColor, $style);
@@ -589,12 +491,10 @@
                 }
             }
         }
-
         .focus {
             button {
                 border-color: nth($primaryColor, $style);
                 color: nth($primaryColor, $style);
-
                 &:hover {
                     background-color: nth($primaryColor, $style);
                     border-color: nth($primaryColor, $style);
@@ -603,13 +503,11 @@
             }
         }
     }
-
     .accordion_content,
     .list_content {
         >button {
             border-color: nth($primaryColor, $style);
             color: nth($primaryColor, $style);
-
             &:hover {
                 border-color: nth($primaryColor, $style);
                 background: nth($primaryColor, $style);
@@ -617,7 +515,6 @@
             }
         }
     }
-
     .search_result {
         .content {
             .tab_grp {
@@ -628,7 +525,6 @@
                     }
                 }
             }
-
             .added_list {
                 .select_source {
                     background: nth($primaryColor, $style);
@@ -637,42 +533,34 @@
             }
         }
     }
-
     .list_block {
         .list_data {
             h3 {
                 a {
                     color: darken(nth($primaryColor, $style), 15);
-
                     &:hover {
                         color: nth($primaryColor, $style);
                     }
                 }
             }
-
             .tag {
                 border-color: nth($primaryColor, $style);
                 background: nth($primaryColor, $style);
-
                 &:hover {
                     background: darken(nth($primaryColor, $style), 5);
                 }
             }
-
             .tag_edit {
                 background: #fff;
                 border-color: #929292;
-
                 &:hover {
                     background: $color-lightgray;
                 }
             }
-
             button {
                 &.btn_primary {
                     border-color: nth($primaryColor, $style);
                     color: nth($primaryColor, $style);
-
                     &:hover {
                         background-color: rgba(nth($primaryColor, $style), .1);
                     }
@@ -680,53 +568,41 @@
             }
         }
     }
-
-    .publication_year {
-
-        input[type=number]:invalid,
-        input[type=number]:out-of-range {
-            border-color: nth($primaryColor, $style);
-        }
-
-        input[type=range]:focus::-webkit-slider-runnable-track {
-            background: nth($primaryColor, $style);
-        }
-
-        input[type=range]:focus::-ms-fill-lower {
-            background: nth($primaryColor, $style);
-        }
-
-        input[type=range]:focus::-ms-fill-upper {
-            background: nth($primaryColor, $style);
-        }
-
-        input[type=range]::-webkit-slider-runnable-track {
-            background: nth($primaryColor, $style);
-        }
-
-        input[type=range]::-webkit-slider-thumb {
-            border-color: nth($primaryColor, $style);
-        }
-
-        input[type=range]::-moz-range-track {
-            background: nth($primaryColor, $style);
-        }
-
-        input[type=range]::-moz-range-thumb {
-            border-color: nth($primaryColor, $style);
-        }
-
-        input[type=range]::-ms-fill-lower,
-        input[type=range]::-ms-fill-upper {
-            background: nth($primaryColor, $style);
-        }
-
-        input[type=range]::-ms-thumb {
-            border-color: nth($primaryColor, $style);
-            background: nth($primaryColor, $style);
-        }
-    }
-
+    // .publication_year {
+    //     input[type=number]:invalid,
+    //     input[type=number]:out-of-range {
+    //         border-color: nth($primaryColor, $style);
+    //     }
+    //     input[type=range]:focus::-webkit-slider-runnable-track {
+    //         background: nth($focusColor, $style);
+    //     }
+    //     input[type=range]:focus::-ms-fill-lower {
+    //         background: nth($focusColor, $style);
+    //     }
+    //     input[type=range]:focus::-ms-fill-upper {
+    //         background: nth($focusColor, $style);
+    //     }
+    //     input[type=range]::-webkit-slider-runnable-track {
+    //         background: nth($focusColor, $style);
+    //     }
+    //     input[type=range]::-webkit-slider-thumb {
+    //         border-color: nth($primaryColor, $style);
+    //     }
+    //     input[type=range]::-moz-range-track {
+    //         background: nth($primaryColor, $style);
+    //     }
+    //     input[type=range]::-moz-range-thumb {
+    //         border-color: nth($primaryColor, $style);
+    //     }
+    //     input[type=range]::-ms-fill-lower,
+    //     input[type=range]::-ms-fill-upper {
+    //         background: nth($primaryColor, $style);
+    //     }
+    //     input[type=range]::-ms-thumb {
+    //         border-color: nth($primaryColor, $style);
+    //         background: nth($primaryColor, $style);
+    //     }
+    // }
     //======= page/_mp.scss =======
     .search_block {
         .recent_searches {
@@ -735,12 +611,10 @@
             }
         }
     }
-
     .featured_data {
         &:before {
             background: nth($primaryColor, $style);
         }
-
         li {
             a {
                 &:hover {
@@ -748,14 +622,12 @@
                 }
             }
         }
-
         a.more {
             &:after {
                 border-color: nth($primaryColor, $style);
             }
         }
     }
-
     //======= page/_sp.scss =======
     .sp {
         .main_content {
@@ -765,7 +637,6 @@
                         border-color: nth($primaryColor, $style);
                         background: nth($primaryColor, $style);
                     }
-
                     &:before {
                         background: nth($importantColor, $style);
                     }
@@ -773,11 +644,9 @@
             }
         }
     }
-
     .detail_block {
         h3 {
             color: darken(nth($primaryColor, $style), 15);
         }
     }
-
 }

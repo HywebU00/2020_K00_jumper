@@ -16,6 +16,8 @@
 </head>
 
 <body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <div class="wrapper">
         <!-- 手機版menu 已登入狀態 ".language"與".btn_logout"在menu底端 -->
         <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
@@ -70,6 +72,7 @@
         <!-- header start -->
         <header class="header">
             <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
                 <!-- click側欄選單button".sidebarCtrl", ".aside.sidebar" show-->
                 <button type="button" class="sidebarCtrl">側欄選單</button>
                 <h1>
@@ -126,8 +129,7 @@
                 <div class="login_form">
                     <h2>登入<span class="name">國立彰化師範大學</span></h2>
                     <div class="login_instructions">
-                        <div class="pc">限在校教職員工學生使用，帳號密碼同校園入口網<br />
-                            (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)
+                        <div class="pc">限在校教職員工學生使用，帳號密碼同校園入口網<br /> (其他身分讀者須到館使用電子資源、校友查找圖書請至館藏查詢系統)
                         </div>
                         <div class="mobile">
                             請輸入您的個人的讀者證號與密碼
@@ -166,9 +168,7 @@
                     <div class="copyright">
                         <img src="images/ebsco.png" alt="">
                         <img src="images/logo_hyweb.png" alt="">
-                        <p>Embedded EBSCO Discovery Service<br />
-                            System Designed by Hyweb Technology Co., Ltd.<br />
-                            ©2020 All Rights Reserved</p>
+                        <p>Embedded EBSCO Discovery Service<br /> System Designed by Hyweb Technology Co., Ltd.<br /> ©2020 All Rights Reserved</p>
                     </div>
                 </div>
                 <div class="function_grp">
@@ -184,6 +184,7 @@
         </div>
         <!-- 登入燈箱end-->
         <div class="main lp">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
             <section class="col-12 search_block">
                 <img class="header_bg" src="images/header_bg.png" alt="">
                 <div class="container">
@@ -295,7 +296,8 @@
                                     <a href="#">以瀏覽方式查詢本館資料庫、期刊及電子書</a>
                                 </form>
                             </div>
-                        </div><!-- search END -->
+                        </div>
+                        <!-- search END -->
                     </div>
                 </div>
             </section>
@@ -485,15 +487,14 @@
                                         <ul>
                                             <li>
                                                 <p>
-                                                    The leading information retrieval service of the Internet (the worldwide computer network). The Web gives
-                                                    users access to a vast array of documents that are connected to each other by means of hypertext or hypermedia links—i.e., hyperlinks, electronic connections that link related pieces of information The leading information retrieval service of the Internet (the worldwide computer network). The Web gives...
+                                                    The leading information retrieval service of the Internet (the worldwide computer network). The Web gives users access to a vast array of documents that are connected to each other by means of hypertext or hypermedia links—i.e., hyperlinks, electronic
+                                                    connections that link related pieces of information The leading information retrieval service of the Internet (the worldwide computer network). The Web gives...
                                                 </p>
                                                 <a href="#" class="more">更多</a>
                                             </li>
                                             <li>
                                                 <p>
-                                                    The leading information retrieval service of the Internet (the worldwide computer network). The Web gives
-                                                    users access to a vast array of documents that are connected to each other by means of hypertext...
+                                                    The leading information retrieval service of the Internet (the worldwide computer network). The Web gives users access to a vast array of documents that are connected to each other by means of hypertext...
                                                 </p>
                                                 <a href="#" class="more">更多</a>
                                             </li>
@@ -586,7 +587,7 @@
                         <div class="list_all">
                             <div class="list_block">
                                 <div class="list_num">1</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <button class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></button>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_book.svg" alt="">
@@ -662,7 +663,7 @@
                             <div class="list_block">
                                 <div class="list_num">2</div>
                                 <!-- 收藏狀態 -->
-                                <a class="bookmark"><img src="images/icon/icon_bookmark_saved.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark_saved.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_journal.svg" alt="">
@@ -743,7 +744,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">3</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_doctoral.svg" alt="">
@@ -820,7 +821,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">4</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_ebook.svg" alt="">
@@ -891,7 +892,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">5</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_magazine.svg" alt="">
@@ -962,7 +963,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">6</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_article.svg" alt="">
@@ -1033,7 +1034,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">7</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_government_doc.svg" alt="">
@@ -1104,7 +1105,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">8</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_conference_paper.svg" alt="">
@@ -1175,7 +1176,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">9</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_report.svg" alt="">
@@ -1246,7 +1247,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">10</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_editorial_opinion.svg" alt="">
@@ -1317,7 +1318,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">11</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_news.svg" alt="">
@@ -1388,7 +1389,7 @@
                             </div>
                             <div class="list_block">
                                 <div class="list_num">12</div>
-                                <a class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
+                                <a href="javascript:;" class="bookmark"><img src="images/icon/icon_bookmark.svg" alt=""></a>
                                 <div class="sort_icon">
                                     <div class="pic">
                                         <img src="images/icon_bio.svg" alt="">
@@ -1521,6 +1522,7 @@
         </div>
         <footer>
             <div class="container">
+                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
                 <nav class="col">
                     <ul>
                         <li>
@@ -1555,9 +1557,7 @@
                     <p class="copyright">
                         Copyright © 2014 National Taipei University of Technology Library, All rights reserved.
                     </p>
-                    <p>電話：02-2771-2171 # 3100 傳真：02-2776-2383 e-mail：library@ntut.edu.tw<br />
-                        地址：10608 臺北市大安區忠孝東路三段一號<br />
-                        開放時間：週一～六 8：30-22：00；週日 09:00-17:00
+                    <p>電話：02-2771-2171 # 3100 傳真：02-2776-2383 e-mail：library@ntut.edu.tw<br /> 地址：10608 臺北市大安區忠孝東路三段一號<br /> 開放時間：週一～六 8：30-22：00；週日 09:00-17:00
                     </p>
                 </div>
             </div>

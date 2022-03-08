@@ -11,9 +11,12 @@
     &:focus {
         color: $aHover;
         cursor: pointer;
+    }
+    &:hover {
         text-decoration: underline;
     }
 }
+
 @mixin aSetting_nocolor($COLOR:$color-word, $NOLINE:none) {
     color: $COLOR;
     text-decoration: $NOLINE;
@@ -24,15 +27,18 @@
         text-decoration: underline;
     }
 }
+
 body {
     @include fontSetting(1em);
     line-height: 1.45em;
-    font-family:$font-family;
+    font-family: $font-family;
     -webkit-text-size-adjust: none;
 }
+
 a {
     @include aSetting();
 }
+
 // kbd
 // kbd{
 //     background: #FFF;

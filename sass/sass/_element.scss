@@ -1,25 +1,25 @@
 // tab的外框線
-a:focus {
+a:focus,
+button:focus {
     outline: none;
-    box-shadow: 0 0px 0px 1px nth($primaryColor, $style) inset;
-
+    box-shadow: 0 0px 0px 2px nth($focusColor, $style) inset;
     @include screen('mobile') {
         box-shadow: none;
     }
 }
 
 // // 導盲磚
-// .accesskey {
-//     position: absolute;
-//     top: 5px;
-//     left: 5px;
-//     z-index: 9;
-//     color: $color-word;
-//     font-size: $font-size;
-//     @include screen("mobile") {
-//         display: none;
-//     }
-// }
+.accesskey {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 9;
+    color: $color-word;
+    font-size: $font-size;
+    @include screen("mobile") {
+        display: none;
+    }
+}
 
 .renew {
     background: none;
@@ -31,8 +31,6 @@ a:focus {
 .nowrap {
     white-space: nowrap;
 }
-
-
 
 // more按鈕
 // a.more {
@@ -86,7 +84,6 @@ a:focus {
 //         }
 //     }
 // }
-
 // scrollTop
 .scrollToTop {
     width: 50px;
@@ -104,7 +101,6 @@ a:focus {
     display: none;
     z-index: 99999999;
     text-indent: -999999px;
-
     &:hover,
     &:focus {
         background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
@@ -126,7 +122,6 @@ img.img-responsive {
 .tooltip {
     text-align: center;
     padding: 40px 0;
-
     span {
         display: inline-block;
         background: #DEDEDE;
@@ -137,7 +132,6 @@ img.img-responsive {
         line-height: 20px;
         vertical-align: baseline;
     }
-
     p>em {
         color: red;
     }
@@ -151,30 +145,24 @@ img.img-responsive {
     padding: 10px;
     transform-origin: 50% 0;
     animation: slideDown .3s ease-out;
-
     ul {
         @include li-reset;
     }
-
     li {
         border-bottom: 1px solid lighten($color-line, 5);
-
         &:last-child {
             border: none;
         }
-
         &.active {
             a {
                 color: nth($primaryColor, $style);
             }
         }
-
         a {
             padding: 8px 5px;
             color: $color-word;
             display: block;
             transition: all .3s;
-
             &:hover,
             &.active {
                 color: nth($primaryColor, $style);

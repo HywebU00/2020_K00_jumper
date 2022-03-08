@@ -1,0 +1,39 @@
+// 導盲磚
+.accesskey {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 9;
+    color: $color-word;
+    font-size: $font-size;
+    @include screen("mobile") {
+        display: none;
+    }
+}
+
+a.goCenter {
+    position: absolute;
+    top: -2.2em;
+    left: 50%;
+    margin-left: -480px;
+    padding: 0 .5em;
+    height: 2em;
+    line-height: 2em;
+    background: nth($primaryColor, $style);
+    text-decoration: none;
+    z-index: 999999999999;
+    opacity: 0;
+    transition: .5s;
+    border-radius: 0px 0px 4px 4px;
+    color: #FFF;
+    @include screen("mobile") {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        outline: none;
+        top: 0;
+        opacity: 1;
+        color: #fff;
+    }
+}
