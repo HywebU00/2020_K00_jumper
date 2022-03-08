@@ -164,6 +164,7 @@ img.img-responsive {
             display: block;
             transition: all .3s;
             &:hover,
+            &:focus,
             &.active {
                 color: nth($primaryColor, $style);
             }

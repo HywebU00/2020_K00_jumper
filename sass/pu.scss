@@ -102,6 +102,7 @@
             }
             a {
                 &:hover,
+                &:focus,
                 &.active {
                     color: nth($primaryColor, $style);
                 }
@@ -365,7 +366,8 @@
         .keywordHot {
             ul {
                 a {
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         text-decoration: underline;
                         color: nth($primaryColor, $style);
                     }
@@ -633,7 +635,8 @@
         .main_content {
             .featured_data {
                 .apply {
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         border-color: nth($primaryColor, $style);
                         background: nth($primaryColor, $style);
                     }

@@ -95,7 +95,7 @@
     //======= sass/_element.scss ======
     a:focus,
     button:focus {
-        box-shadow: 0 0px 0px 1px nth($focusColor, $style) inset;
+        box-shadow: 0 0px 0px 2px nth($focusColor, $style) inset;
     }
     .option_list {
         li {
@@ -106,6 +106,7 @@
             }
             a {
                 &:hover,
+                &:focus,
                 &.active {
                     color: nth($primaryColor, $style);
                 }
@@ -643,7 +644,8 @@
         }
         li {
             a {
-                &:hover {
+                &:hover,
+                &:focus {
                     color: nth($primaryColor, $style);
                 }
             }

@@ -237,7 +237,8 @@
             }
             a {
                 color: $color-word-light;
-                &:hover {
+                &:hover,
+                &:focus {
                     text-decoration: underline;
                     color: nth($primaryColor, $style);
                 }
