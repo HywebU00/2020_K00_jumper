@@ -991,6 +991,10 @@ body.fix {
             text-align: right;
             padding: .5em 0;
         }
+        button[type="reset"] {
+            border-radius: 30px;
+            padding: 0.5em 1.5em;
+        }
     }
     .added_tag,
     .other_tag,
