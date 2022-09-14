@@ -43,6 +43,11 @@
                     margin-top: 1em;
                     background: rgba(255, 255, 255, 0.85);
                     border-radius: $rounded-angle;
+                    position: relative;
+                    .copyright {
+                        position: absolute;
+                        bottom: 30px;
+                    }
                 }
                 .function_grp {
                     position: static;
@@ -109,6 +114,7 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
+            position: relative;
             @include screen('tablet') {
                 padding-bottom: 0;
                 min-height: auto;
@@ -117,9 +123,15 @@
                 padding: 20px 30px 0;
                 width: 100%;
             }
-            form {
-                flex-grow: 1;
+            .notSignin {
+                &+.copyright {
+                    position: absolute;
+                    bottom: 30px;
+                }
             }
+            // form {
+            //     flex-grow: 1;
+            // }
         }
         .login_instructions {
             margin-bottom: 10px;
