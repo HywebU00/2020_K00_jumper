@@ -298,16 +298,38 @@ body.fix {
         .notSignin {
             text-align: center;
             //font-size: .875em;
-            margin: 1em 0;
-            .cannot_signin {
+            margin: .5em 0;
+            display: flex;
+            >a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-btn-light;
+                border-color: $color-btn-light;
                 color: $color-word-light;
-                padding: 0 .5em;
-                text-decoration: underline;
+                border-radius: 30px;
+                padding: 0.5em 1.5em;
+                transition: .3s ease-in;
+                margin: .25em;
+                flex-grow: 1;
+                flex-basis: calc(50% - 0.25em);
+                height: 42px;
+                transition: .2s all;
+                font-size: .938em;
+                &:hover {
+                    text-decoration: none;
+                    background: darken($color-btn-light, 10);
+                    color: $color-word;
+                }
             }
-            .customer {
-                padding: 0 .5em;
-                text-decoration: underline;
-            }
+            // .cannot_signin {
+            //     flex-grow: 1;
+            //     flex-basis: calc(50% - 0.25em);
+            // }
+            // .customer {
+            //     flex-grow: 1;
+            //     flex-basis: calc(50% - 0.25em);
+            // }
         }
     }
     .binding {
