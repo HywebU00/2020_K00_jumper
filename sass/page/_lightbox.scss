@@ -244,6 +244,12 @@ body.fix {
                     flex-wrap: wrap;
                 }
             }
+            &.password_toggle {
+                input[type="text"],
+                input[type="password"] {
+                    padding-right: 45px;
+                }
+            }
         }
         .btn_grp {
             padding: 0;

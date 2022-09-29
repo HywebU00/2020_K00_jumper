@@ -66,14 +66,16 @@
                                 </div>
                                 <div class="error">登入失敗，請重新輸入帳號密碼</div>
                                 <div class="form_content">
-                                    <div class="form_grp form_inline">
+                                    <!-- 需切換隱藏/顯示密碼，此處套上class="password_toggle" -->
+                                    <div class="form_grp form_inline password_toggle">
                                         <label for="username">帳號</label>
                                         <input name="username" type="text">
                                         <!-- 點擊此button切換 <i class="i_view"> 和 <i class="i_hide"> -->
                                         <!-- 此狀態為顯示 -->
                                         <button type="button" class="passwordSwitch" aria-label="隱藏帳號"><i class="i_view"></i></button>
                                     </div>
-                                    <div class="form_grp form_inline">
+                                    <!-- 需切換隱藏/顯示密碼，此處套上class="password_toggle" -->
+                                    <div class="form_grp form_inline password_toggle">
                                         <label for="password">密碼</label>
                                         <input name="password" type="password">
                                         <!-- 此狀態為隱藏 -->
