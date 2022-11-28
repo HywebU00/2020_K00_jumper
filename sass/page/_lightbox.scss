@@ -337,12 +337,15 @@ body.fix {
             //     flex-basis: calc(50% - 0.25em);
             // }
         }
+        //客製按鈕
         .customBtn {
+            @extend %btn-submit;
             margin: 2em 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 42px;
+            background: mix(nth($primaryColor, $style), #fff, 80%);
         }
     }
     .binding {

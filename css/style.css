@@ -907,7 +907,7 @@ input[type=button] i, .btn i {
   margin-left: 0.3em;
 }
 
-.fillin, .sp .main_content .featured_data .apply, input[type=submit],
+.fillin, .sp .main_content .featured_data .apply, .login_lightbox .loginblock .customBtn, input[type=submit],
 button[type=submit],
 .btn-submit,
 .btn-primary {
@@ -920,10 +920,10 @@ button[type=submit],
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
-.fillin:hover, .sp .main_content .featured_data .apply:hover, input[type=submit]:hover,
+.fillin:hover, .sp .main_content .featured_data .apply:hover, .login_lightbox .loginblock .customBtn:hover, input[type=submit]:hover,
 button[type=submit]:hover,
 .btn-submit:hover,
-.btn-primary:hover, .fillin:focus, .sp .main_content .featured_data .apply:focus, input[type=submit]:focus,
+.btn-primary:hover, .fillin:focus, .sp .main_content .featured_data .apply:focus, .login_lightbox .loginblock .customBtn:focus, input[type=submit]:focus,
 button[type=submit]:focus,
 .btn-submit:focus,
 .btn-primary:focus {
@@ -933,7 +933,7 @@ button[type=submit]:focus,
   -webkit-box-shadow: 0 0px 0px 2px #e8aa0f inset;
           box-shadow: 0 0px 0px 2px #e8aa0f inset;
 }
-.fillin:disabled, .sp .main_content .featured_data .apply:disabled, input[type=submit]:disabled,
+.fillin:disabled, .sp .main_content .featured_data .apply:disabled, .login_lightbox .loginblock .customBtn:disabled, input[type=submit]:disabled,
 button[type=submit]:disabled,
 .btn-submit:disabled,
 .btn-primary:disabled {
@@ -6304,6 +6304,7 @@ body.fix {
       -ms-flex-pack: center;
           justify-content: center;
   height: 42px;
+  background: #e77938;
 }
 .login_lightbox .binding h3,
 .login_lightbox .binding p {
