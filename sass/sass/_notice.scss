@@ -16,7 +16,6 @@
         top: .7em;
         left: .8em;
         display: block;
-        vertical-align: middle;
         width: 15px;
         height: 15px;
         content: "";
@@ -31,9 +30,10 @@
         top: .8em;
         right: 1em;
         display: block;
-        @include opacity(.5);
-        &:hover, &:focus {
-            @include opacity(1);
+        opacity: 0.5;
+        &:hover,
+        &:focus {
+            opacity: 1;
         }
         img {
             display: block;
@@ -43,6 +43,7 @@
         }
     }
 }
+
 *[class*="notice_info"] {
     color: #00529B;
     background-color: #BDE5F8;
@@ -51,6 +52,7 @@
         background-size: 15px;
     }
 }
+
 *[class*="notice_success"] {
     color: #4F8A10;
     background-color: #DFF2BF;
@@ -59,6 +61,7 @@
         background-size: 15px;
     }
 }
+
 *[class*="notice_warning"] {
     color: #CE5605;
     background-color: #FEEFB3;
@@ -67,6 +70,7 @@
         background-size: 15px;
     }
 }
+
 *[class*="notice_error"] {
     color: #D8000C;
     background-color: #FFD2D2;
