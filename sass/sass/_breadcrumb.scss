@@ -1,6 +1,7 @@
 .breadcrumb {
     padding: .1em 0em .1em;
     font-size: .875em;
+    position: relative;
     ul {
         display: inline-block;
         @include li-reset;
@@ -17,8 +18,23 @@
     }
     a {
         color: $color-word;
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.search_block {
+    .breadcrumb {
+        max-width: 1400px;
+        padding: 5px 15px;
+        margin: 10px auto 0;
+    }
+}
+
+.scrolldown_fix {
+    .breadcrumb {
+        padding: 0 15px;
+        margin: 0 auto;
     }
 }
