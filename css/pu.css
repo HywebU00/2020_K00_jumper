@@ -1377,7 +1377,7 @@ abbr[title] {
   background: linear-gradient(to bottom, #c1328e, #842261);
 }
 .pu .function_panel button:hover {
-  color: #C1328E;
+  background: #C1328E;
 }
 .pu .function_panel .display_grp .list_less:hover:before, .pu .function_panel .display_grp .list_less.active:before {
   background-color: #C1328E;

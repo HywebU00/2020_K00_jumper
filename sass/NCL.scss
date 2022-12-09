@@ -310,7 +310,7 @@
     .function_panel {
         button {
             &:hover {
-                color: nth($primaryColor, $style);
+                background: nth($primaryColor, $style);
             }
         }
         .display_grp {

@@ -201,6 +201,14 @@
             color: #fff;
         }
     }
+    button {
+        margin: 0 0 0 .5em;
+        &:hover {
+            color: #fff;
+            background-color: nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style);
+        }
+    }
 }
 
 .filter_search_btn {

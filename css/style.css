@@ -4964,6 +4964,14 @@ body.fix {
 .function_block .filter_search_btn.active {
   color: #fff;
 }
+.function_block button {
+  margin: 0 0 0 0.5em;
+}
+.function_block button:hover {
+  color: #fff;
+  background-color: #E15706;
+  border-color: #E15706;
+}
 
 .filter_search_btn {
   display: none;

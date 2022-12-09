@@ -1397,7 +1397,7 @@ abbr[title] {
   background: linear-gradient(to bottom, #ff7900, #b35500);
 }
 .NCL .function_panel button:hover {
-  color: #FF7900;
+  background: #FF7900;
 }
 .NCL .function_panel .display_grp .list_less:hover:before, .NCL .function_panel .display_grp .list_less.active:before {
   background-color: #FF7900;
