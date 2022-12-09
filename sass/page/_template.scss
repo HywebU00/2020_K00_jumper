@@ -28,7 +28,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-
     @include screen('mobile') {
         background: #FFF;
         overflow: hidden;
@@ -51,7 +50,6 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     h2 {
         line-height: 1.25em;
@@ -62,23 +60,20 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     padding-top: 2em;
-
     @include screen('mobile') {
         padding-top: 5em;
     }
-
     >.container {
         @include gutter(); //gutter 代表左右要留白
     }
 }
 
 //詳目頁獨立頁面
-
 .detail_lightbox {
-    &.normalPage{
+    &.normalPage {
         display: block;
         position: static;
-        .detailblock{
+        .detailblock {
             position: static;
             box-shadow: none;
             border-radius: 0;
@@ -88,8 +83,8 @@ body {
             height: auto;
             padding: 30px;
         }
-        .info_list{
-            .content{
+        .info_list {
+            .content {
                 padding: 0;
                 background: none;
             }
@@ -98,7 +93,7 @@ body {
 }
 
 //換色
-.changeColor{
+.changeColor {
     position: fixed;
     z-index: 9999;
     right: 100%;
@@ -106,47 +101,48 @@ body {
     top: 10%;
     max-height: 80%;
     transition: .3s all;
-    box-shadow: 2px 2px 5px rgba(0,0,0, .1);
-    &:before{
-        content:"";
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+    &:before {
+        content: "";
         position: absolute;
         display: block;
         width: 30px;
         height: 48px;
-        background: #eee url(../images/icon/icon_arrow_right.svg) center no-repeat; 
+        background: #eee url(../images/icon/icon_arrow_right.svg) center no-repeat;
         background-size: 20px;
         left: 100%;
-        top:0;
+        top: 0;
         cursor: pointer;
-        box-shadow: 2px 2px 3px rgba(0,0,0, .2);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
         opacity: .7;
     }
-    &:hover{
+    &:hover {
         right: auto;
         left: 0;
-        &:before{
+        &:before {
             background-image: url(../images/icon/icon_arrow_left.svg);
         }
     }
-    ul{
+    ul {
         @include li-reset;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
-    li{
-       border-bottom: 1px solid #fff; 
-       &:last-of-type{
-        border-bottom: none;
-       }
-        a{
+    li {
+        border-bottom: 1px solid #fff;
+        &:last-of-type {
+            border-bottom: none;
+        }
+        a {
             display: block;
             padding: .8em .5em;
             background: #eee;
             color: #333;
-            text-align: center; 
+            text-align: center;
             transition: .2s all;
-            &:hover, &:focus{
+            &:hover,
+            &:focus {
                 text-decoration: none;
                 background: #333;
                 color: #fff;

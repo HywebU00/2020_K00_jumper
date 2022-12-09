@@ -1308,6 +1308,11 @@ hr {
     padding: 0.8em 0.65em;
   }
 }
+.tabSet li a span {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0 3px;
+}
 
 .main_tabSet {
   background: #e0e0e0;
@@ -2512,6 +2517,13 @@ abbr[title] {
 
 .i_mail:before {
   background: url(../images/icon/icon_mail.svg) no-repeat center;
+  background-size: contain;
+  margin-top: -0.1em;
+  margin-bottom: 0.1em;
+}
+
+.i_menu:before {
+  background: url(../images/icon/icon_menu.svg) no-repeat center;
   background-size: contain;
   margin-top: -0.1em;
   margin-bottom: 0.1em;
@@ -4848,7 +4860,7 @@ body.fix {
   color: #E15706;
 }
 .function_panel .result_amount .total {
-  padding: 0 0 0 0.4em;
+  margin-right: 0.5em;
 }
 .function_panel .result_amount em {
   display: inline-block;
@@ -4865,7 +4877,7 @@ body.fix {
   color: #1b6ba5;
 }
 .function_panel .result_amount .filter_num {
-  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 @media screen and (max-width: 991px) {
   .function_panel .result_amount .total:after,
@@ -7802,6 +7814,14 @@ body.fix {
   padding: 0.5em 0;
   overflow: hidden;
 }
+.filter_search .accordion_content li::before,
+.filter_search .list_content li::before {
+  top: 0.75em;
+}
+.filter_search .accordion_content li.active a,
+.filter_search .list_content li.active a {
+  font-weight: bold;
+}
 .filter_search .accordion_content li a,
 .filter_search .list_content li a {
   color: #333;
@@ -8394,6 +8414,10 @@ body.fix {
 .list_block .list_data h3 a:hover {
   color: #E15706;
 }
+.list_block .list_data .reminder {
+  color: #42a142;
+  margin: 0.5em 0;
+}
 .list_block .list_data ul {
   margin: 0;
   padding: 0;
@@ -8441,7 +8465,7 @@ body.fix {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 2.8em;
+  max-height: 3em;
   margin: 0;
 }
 .list_block .list_data .intro .more {
@@ -8703,6 +8727,7 @@ body.fix {
 @media screen and (max-width: 767px) {
   .personal .list_block .list_data {
     margin-top: 0.25em;
+    padding-left: 0;
   }
 }
 

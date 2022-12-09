@@ -302,6 +302,14 @@
         li {
             padding: .5em 0;
             overflow: hidden;
+            &::before {
+                top: 0.75em;
+            }
+            &.active {
+                a {
+                    font-weight: bold;
+                }
+            }
             a {
                 color: $color-word;
                 &:hover {
@@ -792,6 +800,10 @@
                 }
             }
         }
+        .reminder {
+            color: $color-green;
+            margin: .5em 0;
+        }
         ul {
             @include li-reset;
             &.keyword {
@@ -843,7 +855,7 @@
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                max-height: 2.8em;
+                max-height: 3em;
                 margin: 0;
             }
             .more {
@@ -1098,6 +1110,7 @@
             padding-left: 70px;
             @include screen('mobile') {
                 margin-top: .25em;
+                padding-left: 0;
             }
         }
     }

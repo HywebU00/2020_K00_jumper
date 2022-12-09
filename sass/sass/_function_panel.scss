@@ -7,25 +7,20 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-
     @include screen('mobile') {
         padding: .5em 15px;
         //display: block;
     }
-
     button {
         background: transparent;
         height: 40px;
-
         &:hover {
             color: nth($primaryColor, $style);
         }
     }
-
     .display_grp {
         display: flex;
         align-items: center;
-
         button {
             padding: 0 0 0 2em;
             margin: 0 5px 0 0;
@@ -35,7 +30,6 @@
             color: $color-word-light;
             position: relative;
             height: auto;
-
             &:before {
                 content: "";
                 position: absolute;
@@ -49,7 +43,6 @@
                 opacity: .6;
                 transition: .3s;
             }
-
             &:hover,
             &.active {
                 &:before {
@@ -57,13 +50,11 @@
                 }
             }
         }
-
         .list_less {
             &:before {
                 background: $color-gray url(../images/icon/icon_list_less.svg) center no-repeat;
                 background-size: 80%;
             }
-
             &:hover,
             &.active {
                 &:before {
@@ -72,13 +63,11 @@
                 }
             }
         }
-
         .list_more {
             &:before {
                 background: $color-gray url(../images/icon/icon_list_more.svg) center no-repeat;
                 background-size: 80%;
             }
-
             &:hover,
             &.active {
                 &:before {
@@ -87,63 +76,54 @@
                 }
             }
         }
-        &+.result_amount{
+        &+.result_amount {
             margin: 0 .5em;
             padding-left: .5em;
             border-left: 1px solid #fff;
-            box-shadow: -1px 0 0  $color-gray;
-            @include screen('mobile'){
+            box-shadow: -1px 0 0 $color-gray;
+            @include screen('mobile') {
                 border: 0;
                 box-shadow: none;
                 padding-left: 0;
             }
         }
     }
-
-
     .result_amount {
         display: inline-flex;
         flex-wrap: wrap;
         align-items: center;
-        input[type="checkbox"]{
+        input[type="checkbox"] {
             margin-top: 0;
         }
-
-        >b{
+        >b {
             font-weight: normal;
-            @include screen('mobile'){
+            @include screen('mobile') {
                 display: none;
             }
         }
-
         .search_word {
             color: nth($primaryColor, $style);
         }
-
         .total {
-            padding: 0 0 0 .4em;
+            margin-right: 0.5em;
         }
-
         em {
             display: inline-block;
             font-style: normal;
             padding: 0 .4em;
             color: nth($primaryColor, $style);
         }
-
         .relative_subject {
             color: $linkColor;
             text-decoration: underline;
             margin: .5em;
-
             &:hover {
                 color: darken($linkColor, 10);
             }
         }
-        .filter_num{
-            margin-left: .5em;
+        .filter_num {
+            margin-right: .5em;
         }
-
         .total:after,
         .search_word,
         .filter_num,
@@ -153,75 +133,64 @@
             }
         }
     }
-
 }
 
 .function_block {
     display: inline-flex;
     align-items: center;
     margin: .5em 0;
-
     // @media (min-width: 992px) and (max-width: 1200px) {
     //     position: static;
     //     margin-top: 1em;
     // }
-
     @include screen('xs_mobile') {
         // display: flex;
         // justify-content: flex-end;
     }
-
     .btn_grp {
         padding: 0;
         margin: 0;
         display: flex;
-
         @include screen('mobile') {
             position: absolute;
             bottom: calc(100% + .75em);
             right: 15px;
         }
-
         button {
             display: flex;
             align-items: center;
-            margin:0 0 0 .5em;
+            margin: 0 0 0 .5em;
             transition: .3s ease-in;
-            i{
+            i {
                 transition: .2s ease-in;
             }
-
-            &:hover{
+            &:hover {
                 border-color: nth($primaryColor, $style);
                 background: nth($primaryColor, $style);
                 color: #fff;
-                i{
+                i {
                     filter: invert(1);
                 }
             }
-
             &:first-of-type {
                 margin-left: 0;
             }
-
             @include screen('tablet') {
                 min-width: 40px;
                 justify-content: center;
             }
-
             i {
                 @include screen('tablet') {
                     margin: 0;
                 }
             }
-
             span {
                 @include screen('tablet') {
                     font-size: 0;
                 }
             }
         }
-        &+.option{
+        &+.option {
             margin-left: .5em;
         }
     }
@@ -236,13 +205,11 @@
 
 .filter_search_btn {
     display: none;
-
     @include screen('tablet') {
         display: block;
     }
     &:hover,
     &.active {
-
         .i_filter {
             &:before {
                 background-image: url(../images/icon/icon_filter_invert.svg);
@@ -251,10 +218,9 @@
     }
 }
 
-.add_bookmark{
+.add_bookmark {
     &:hover,
     &.active {
-
         .i_bookmark {
             &:before {
                 background-image: url(../images/icon/icon_bookmark_invert.svg);
@@ -271,29 +237,24 @@
     margin: 0 0 0 .5em;
     position: relative;
     transition: .2s ease-in;
-
     @include screen('tablet') {
         padding: .4em;
         min-width: 2.5em;
     }
-    
     &:hover,
     &.active {
         color: #fff;
         background-color: nth($primaryColor, $style);
         border-color: nth($primaryColor, $style);
     }
-
     i {
         transition: .2s ease-in;
         margin: 0;
-
         &:before {
             height: 1.2em;
             width: 1.2em;
         }
     }
-
     span {
         @include screen('tablet') {
             display: none;
@@ -305,11 +266,9 @@
     position: relative;
     z-index: 40;
     //margin-left: .5em;
-
     @include screen('mobile') {
         display: none;
     }
-
     .name {
         a {
             border: 1px solid $color-input;
@@ -320,7 +279,6 @@
             cursor: pointer;
             border-radius: $rounded-angle;
             transition: .2s ease-in;
-
             &:after {
                 content: "";
                 position: absolute;
@@ -333,21 +291,18 @@
                 right: 10px;
                 transition: .2s ease-in;
             }
-           
-            &:hover{
+            &:hover {
                 background: nth($primaryColor, $style);
                 border-color: nth($primaryColor, $style);
                 text-decoration: none;
                 color: #fff;
-                &:after{
+                &:after {
                     background-image: url(../images/icon/icon_arrow_down_invert.svg);
                 }
             }
         }
     }
-
     .option_list {
-        
         min-width: 150px;
         width: 100%;
         top: 42px;
