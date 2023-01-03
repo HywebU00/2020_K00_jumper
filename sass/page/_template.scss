@@ -29,7 +29,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     @include screen('mobile') {
-        background: #FFF;
+        background: #fff;
         overflow: hidden;
         overflow-y: auto;
     }
@@ -87,6 +87,10 @@ body {
             .content {
                 padding: 0;
                 background: none;
+                img {
+                    max-width: 480px;
+                    max-height: 270px;
+                }
             }
         }
     }
@@ -100,10 +104,10 @@ body {
     left: auto;
     top: 10%;
     max-height: 80%;
-    transition: .3s all;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+    transition: 0.3s all;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         display: block;
         width: 30px;
@@ -113,8 +117,8 @@ body {
         left: 100%;
         top: 0;
         cursor: pointer;
-        box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
-        opacity: .7;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+        opacity: 0.7;
     }
     &:hover {
         right: auto;
@@ -136,11 +140,11 @@ body {
         }
         a {
             display: block;
-            padding: .8em .5em;
+            padding: 0.8em 0.5em;
             background: #eee;
             color: #333;
             text-align: center;
-            transition: .2s all;
+            transition: 0.2s all;
             &:hover,
             &:focus {
                 text-decoration: none;
