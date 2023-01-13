@@ -1,312 +1,315 @@
 .search_system {
-    width: 90%;
-    max-width: 900px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding: 1em 0;
+  @include screen('tablet') {
+    width: 100%;
+  }
+  @include screen('mobile') {
     margin: 0 auto;
-    position: relative;
-    padding: 1em 0;
-    @include screen('tablet') {
-        width: 100%;
-    }
+    padding: 0;
+    min-height: 4.6em;
+  }
+  .tabSet {
+    margin: 0 auto;
+    // @include screen('mobile') {
+    //     background: $color-lightgray;
+    // }
+  }
+  .tab-content {
+    padding: 30px 25px;
+    box-shadow: $box;
+    width: 100%;
+    border-radius: 0 0 $rounded-angle $rounded-angle;
+    background: rgba(255, 255, 255, 0.9);
     @include screen('mobile') {
+      padding: 20px 25px;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    @include screen('xs_mobile') {
+      padding: 20px 15px;
+    }
+    &.scrolldown_fix {
+      position: fixed;
+      left: 0;
+      top: 55px;
+      z-index: 50;
+      border-radius: 0;
+      padding: 10px 20px;
+      @include screen('mobile') {
+        position: static;
+      }
+      .form_grp {
         margin: 0 auto;
-        padding: 0;
-        min-height: 4.6em;
+        max-width: 750px;
+        + a {
+          display: none;
+        }
+      }
+      .check_grp {
+        display: none;
+      }
+      .recent_searches {
+        display: none !important;
+      }
     }
-    .tabSet {
-        margin: 0 auto;
-        // @include screen('mobile') {
-        //     background: $color-lightgray;
-        // }
+    .btn_grp {
+      padding: 0;
+      margin: 0;
+      flex: 0 0 auto;
+      @include screen('mobile') {
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        right: 0;
+        width: auto;
+      }
     }
-    .tab-content {
-        padding: 30px 25px;
-        box-shadow: $box;
-        width: 100%;
-        border-radius: 0 0 $rounded-angle $rounded-angle;
-        background: rgba(255, 255, 255, .9);
-        @include screen('mobile') {
-            padding: 20px 25px;
-            box-shadow: none;
-            border-radius: 0;
-        }
-        @include screen('xs_mobile') {
-            padding: 20px 15px;
-        }
-        &.scrolldown_fix {
-            position: fixed;
-            left: 0;
-            top: 55px;
-            z-index: 50;
-            border-radius: 0;
-            padding: 10px 20px;
-            @include screen('mobile') {
-                position: static;
-            }
-            .form_grp {
-                margin: 0 auto;
-                max-width: 750px;
-                +a {
-                    display: none;
-                }
-            }
-            .check_grp {
-                display: none;
-            }
-            .recent_searches {
-                display: none !important;
-            }
-        }
-        .btn_grp {
-            padding: 0;
-            margin: 0;
-            flex: 0 0 auto;
-            @include screen('mobile') {
-                position: absolute;
-                margin: 0;
-                bottom: 0;
-                right: 0;
-                width: auto;
-            }
-        }
-        .check_grp {
-            margin: .5em 0;
-            label {
-                margin-right: .5em;
-            }
-            a {
-                color: $color-word;
-                text-decoration: underline;
-                margin-left: .5em;
-                &:hover {
-                    color: nth($primaryColor, $style);
-                }
-            }
-        }
-        a.database_link {
-            color: $color-word;
-            text-decoration: underline;
-            padding: 0 .3em;
-            &:hover {
-                color: nth($primaryColor, $style);
-            }
-            @include screen('mobile') {
-                display: none;
-            }
-        }
-    }
-    .link {
-        text-decoration: underline;
-    }
-    .add_condition {
-        border: 1px solid nth($primaryColor, $style);
-        color: nth($primaryColor, $style);
-        background: #fff;
-        margin: 0 0 1em 0;
-        height: 44px;
-    }
-    .form_grp {
-        margin: 0 0 1em 0;
-    }
-    .form_inline {
-        display: flex;
-        align-items: center;
-        position: relative;
-        @include screen('xs_mobile') {
-            flex-wrap: wrap;
-        }
-        // input[type="text"]{
-        //     margin: 0;
-        // }
-    }
-    select {
-        height: 44px;
-        border-color: $color-input;
-        margin: 0 4px 0 0!important;
-        @include screen('xs_mobile') {
-            flex-basis: 100%;
-            margin-bottom: .5em!important;
-        }
-    }
-    input {
-        margin-bottom: 0;
-        margin-right: 4px;
-        &[type="text"] {
-            flex: 1 1 auto;
-            height: 44px;
-            margin: 0;
-            &.show_recent_searches {
-                box-shadow: 0px -1px 2px rgba(0, 0, 0, .3);
-                border-radius: $rounded-angle $rounded-angle 0 0;
-            }
-            @include screen('mobile') {
-                margin: 0;
-                padding-right: 46px;
-            }
-            @include screen('xs_mobile') {
-                flex-basis: 100%;
-                max-width: 100%;
-            }
-        }
-        &[type="submit"] {
-            height: 44px;
-            margin: 0 5px;
-            transition: .3s ease-in;
-            border-radius: 30px;
-            //border: none;
-            background-color: nth($importantColor, $style);
-            &:hover {
-                background-color: darken(nth($importantColor, $style), 10);
-            }
-            @include screen('mobile') {
-                margin: 0;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                border-radius: $rounded-angle;
-                font-size: 0em;
-                width: 44px !important;
-                height: 44px;
-                background: nth($importantColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
-                outline: 1px solid transparent;
-                border: none;
-                display: block;
-                min-width: 0em !important;
-                @include box-sizing;
-            }
-        }
-    }
-    .select_connected {
-        flex: 0 0 120px;
-        height: 44px;
-        border-radius: $rounded-angle 0 0 $rounded-angle;
-        border-right-width: 0;
-        margin-right: 0 !important;
-        @include screen('xs_mobile') {
-            flex-basis: 100%;
-            border-radius: $rounded-angle;
-            border-right-width: 1px;
-        }
-        +input {
-            border-radius: 0 $rounded-angle $rounded-angle 0;
-            @include screen('xs_mobile') {
-                border-radius: $rounded-angle;
-            }
-        }
-    }
-    .advanced_search,
-    .simple_search {
-        background: $color-lightgray;
+    .check_grp {
+      margin: 0.5em 0;
+      label {
+        margin-right: 0.5em;
+      }
+      a {
         color: $color-word;
-        display: inline-block;
-        padding: 0 1em;
-        height: 44px;
-        line-height: 44px;
-        border-radius: 30px;
-        transition: .3s ease-in;
-        @include screen('mobile') {
-            display: none;
-        }
+        text-decoration: underline;
+        margin-left: 0.5em;
         &:hover {
-            background: darken($color-lightgray, 10);
-            text-decoration: none;
+          color: nth($primaryColor, $style);
         }
+      }
     }
-    .keywordHot {
-        padding: .1em 0 .3em;
-        ul {
-            display: inline-block;
-            font-size: 1em;
-            line-height: 1.65em;
-            margin: 0;
-            padding: 0;
-            li {
-                //margin: 0 .6em 0 0;
-                padding: 0;
-                display: inline-block;
-                &:after {
-                    content: "、";
-                    display: inline-block;
-                    margin-right: -2px;
-                    color: $color-word-light;
-                }
-                &:last-of-type {
-                    &:after {
-                        content: none;
-                    }
-                }
-            }
-            a {
-                color: $color-word-light;
-                &:hover,
-                &:focus {
-                    text-decoration: underline;
-                    color: nth($primaryColor, $style);
-                }
-            }
+    a.database_link {
+      color: $color-word;
+      text-decoration: underline;
+      padding: 0 0.3em;
+      &:hover {
+        color: nth($primaryColor, $style);
+      }
+      @include screen('mobile') {
+        display: none;
+      }
+    }
+  }
+  .link {
+    text-decoration: underline;
+  }
+  .add_condition {
+    border: 1px solid nth($primaryColor, $style);
+    color: nth($primaryColor, $style);
+    background: #fff;
+    margin: 0 0 1em 0;
+    height: 44px;
+  }
+  .form_grp {
+    margin: 0 0 1em 0;
+  }
+  .form_inline {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include screen('xs_mobile') {
+      flex-wrap: wrap;
+    }
+    // input[type="text"]{
+    //     margin: 0;
+    // }
+  }
+  select {
+    height: 44px;
+    border-color: $color-input;
+    margin: 0 4px 0 0 !important;
+    @include screen('xs_mobile') {
+      flex-basis: 100%;
+      margin-bottom: 0.5em !important;
+    }
+  }
+  input {
+    margin-bottom: 0;
+    margin-right: 4px;
+    &[type='text'] {
+      flex: 1 1 auto;
+      height: 44px;
+      margin: 0;
+      &.show_recent_searches {
+        box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3);
+        border-radius: $rounded-angle $rounded-angle 0 0;
+      }
+      @include screen('mobile') {
+        margin: 0;
+        padding-right: 46px;
+      }
+      @include screen('xs_mobile') {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    &[type='submit'] {
+      height: 44px;
+      margin: 0 5px;
+      transition: 0.3s ease-in;
+      border-radius: 30px;
+      //border: none;
+      background-color: nth($importantColor, $style);
+      &:hover {
+        background-color: darken(nth($importantColor, $style), 10);
+      }
+      @include screen('mobile') {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: $rounded-angle;
+        font-size: 0em;
+        width: 44px !important;
+        height: 44px;
+        background: nth($importantColor, $style) url(../images/icon/icon_search_invert.svg) no-repeat center center;
+        outline: 1px solid transparent;
+        border: none;
+        display: block;
+        min-width: 0em !important;
+        @include box-sizing;
+      }
+    }
+  }
+  .select_connected {
+    flex: 0 0 120px;
+    height: 44px;
+    border-radius: $rounded-angle 0 0 $rounded-angle;
+    border-right-width: 0;
+    margin-right: 0 !important;
+    @include screen('xs_mobile') {
+      flex-basis: 100%;
+      border-radius: $rounded-angle;
+      border-right-width: 1px;
+    }
+    + input {
+      border-radius: 0 $rounded-angle $rounded-angle 0;
+      @include screen('xs_mobile') {
+        border-radius: $rounded-angle;
+      }
+    }
+  }
+  .advanced_search,
+  .simple_search {
+    background: $color-lightgray;
+    color: $color-word;
+    display: inline-block;
+    padding: 0 1em;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 30px;
+    transition: 0.3s ease-in;
+    @include screen('mobile') {
+      display: none;
+    }
+    &:hover {
+      background: darken($color-lightgray, 10);
+      text-decoration: none;
+    }
+  }
+  .keywordHot {
+    padding: 0.1em 0 0.3em;
+    ul {
+      display: inline-block;
+      font-size: 1em;
+      line-height: 1.65em;
+      margin: 0;
+      padding: 0;
+      li {
+        //margin: 0 .6em 0 0;
+        padding: 0;
+        display: inline-block;
+        &:after {
+          content: '、';
+          display: inline-block;
+          margin-right: -2px;
+          color: $color-word-light;
         }
+        &:last-of-type {
+          &:after {
+            content: none;
+          }
+        }
+      }
+      a {
+        color: $color-word-light;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .condition {
+    position: relative;
+    width: calc(100% - 180px);
+    @include screen('mobile') {
+      width: auto;
+    }
+    .delete {
+      position: absolute;
+      right: -30px;
+      top: calc(50% - 10px);
+      font-size: 0;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      border: 1px solid nth($primaryColor, $style);
+      background: #fff;
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background: nth($primaryColor, $style);
+        width: 12px;
+        height: 2px;
+        left: 3px;
+        top: calc(50% - 1px);
+      }
+    }
+  }
+  .explanation {
+    margin-top: 1.5em;
+  }
+  &.advanced {
+    .form_grp {
+      @include screen('mobile') {
+        padding-right: 48px;
+      }
+    }
+    input,
+    select {
+      margin-right: 4px;
+      @include screen('mobile') {
+        margin-bottom: 8px;
+      }
     }
     .condition {
-        position: relative;
-        width: calc(100% - 180px);
+      .delete {
         @include screen('mobile') {
-            width: auto;
+          right: 14px;
         }
-        .delete {
-            position: absolute;
-            right: -30px;
-            top: calc(50% - 10px);
-            font-size: 0;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            border: 1px solid nth($primaryColor, $style);
-            background: #fff;
-            &:before {
-                content: "";
-                position: absolute;
-                display: block;
-                background: nth($primaryColor, $style);
-                width: 12px;
-                height: 2px;
-                left: 3px;
-                top: calc(50% - 1px);
-            }
-        }
+      }
     }
-    .explanation {
-        margin-top: 1.5em;
+    .link {
+      position: relative;
+      padding-left: 16px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 0;
+        display: block;
+        width: 14px;
+        height: 14px;
+        background: url(../images/icon/icon_arrow_right.svg) no-repeat center;
+        background-size: contain;
+      }
     }
-    &.advanced {
-        .form_grp {
-            @include screen('mobile') {
-                padding-right: 48px;
-            }
-        }
-        input,
-        select {
-            margin-right: 4px;
-        }
-        .condition {
-            .delete {
-                @include screen('mobile') {
-                    right: 14px;
-                }
-            }
-        }
-        .link {
-            position: relative;
-            padding-left: 16px;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 4px;
-                left: 0;
-                display: block;
-                width: 14px;
-                height: 14px;
-                background: url(../images/icon/icon_arrow_right.svg) no-repeat center;
-                background-size: contain;
-            }
-        }
-    }
+  }
 }
