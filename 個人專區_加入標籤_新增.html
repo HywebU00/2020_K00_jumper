@@ -1,701 +1,757 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jumper</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- favicon -->
     <!-- <link href="images/favicon.png" rel="icon" type="image/x-icon"> -->
-</head>
+  </head>
 
-<body class="fix">
+  <body class="fix">
     <div class="wrapper">
-        <!-- 手機版menu 已登入狀態 language與logout button在menu下方 -->
-        <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
-        <aside class="sidebar" style="display: none;">
-            <div class="m_area">
-                <div class="logo">
-                    <img src="images/logo.png" alt="" />
-                </div>
-                <div class="menu">
-                    <button type="button" class="btn_login">登入</button>
-                    <div class="language">
-                        <select name="" id="">
-                            <option value="">中文</option>
-                            <option value="">English</option>
-                        </select>
-                    </div>
-                    <ul>
-                        <li>圖書館服務
-                            <ul>
-                                <li><a href="#">首頁</a></li>
-                                <li><a href="#">查看所有電子資源</a></li>
-                                <li><a href="#">資料庫講習</a></li>
-                                <li><a href="#">校外連線</a></li>
-                                <li><a href="#">VPN 安裝使用說明</a></li>
-                                <li><a href="#">教育訓練簡報</a></li>
-                                <li><a href="#">常見問答</a></li>
-                            </ul>
-                        </li>
-                        <li>個人專區
-                            <ul>
-                                <li><a href="#">我的收藏</a></li>
-                                <li><a href="#">常用資源</a></li>
-                                <li><a href="#">查詢記錄</a></li>
-                                <li><a href="#">專題選擇策略</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!-- 語言設定 start-->
-                    <div class="language">
-                        <select name="" id="">
-                            <option value="">中文</option>
-                            <option value="">English</option>
-                        </select>
-                    </div>
-                    <button type="button" class="btn_logout">登出</button>
-                </div>
+      <!-- 手機版menu 已登入狀態 language與logout button在menu下方 -->
+      <!-- 手機版menu 未登入狀態 ".language"與".btn_logout"在menu上端 -->
+      <aside class="sidebar" style="display: none">
+        <div class="m_area">
+          <div class="logo">
+            <img src="images/logo.png" alt="" />
+          </div>
+          <div class="menu">
+            <button type="button" class="btn_login">登入</button>
+            <div class="language">
+              <select name="" id="">
+                <option value="">中文</option>
+                <option value="">English</option>
+              </select>
             </div>
-            <div class="menu_overlay"></div>
-        </aside>
-        <!-- sidebar  end-->
-        <!-- header start -->
-        <header class="header">
-            <div class="container">
-                <!-- click側欄選單button".sidebarCtrl", ".aside.sidebar" show-->
-                <button type="button" class="sidebarCtrl">側欄選單</button>
-                <h1>
-                    <a href="index.html">
-                        <img src="images/logo_version.png" alt="" />
-                        <span>國立彰化師範大學整合查詢</span>
-                    </a>
-                </h1>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="#">首頁</a></li>
-                        <li><a href="#">查看所有電子資源</a></li>
-                        <li><a href="#">校外連線</a></li>
-                        <li><a href="#">常見問答</a></li>
-                    </ul>
-                    <div class="more_list_block">
-                        <!-- click button, 則下方 ul display:block -->
-                        <button type="button" class="more">查看更多</button>
-                        <ul class="more_list" style="display:none">
-                            <li><a href="#">資料庫講習</a></li>
-                            <li><a href="#">VPN 安裝使用說明</a></li>
-                            <li><a href="#">教育訓練簡報</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="nav_right">
-                    <div class="language">
-                        <a href="#">語言選擇</a>
-                        <ul style="display: none;">
-                            <li><a href="#">中文</a></li>
-                            <li><a href="#">English</a></li>
-                        </ul>
-                    </div>
-                    <!-- 會員已登入狀態 -->
-                    <div class="member_record">
-                        <div class="member_name">王小明</div>
-                        <!-- click ".btn_member" 則 ".member_data" display:block -->
-                        <button type="button" class="btn_member"><img src="images/icon/icon_user.svg" alt=""></button>
-                        <div class="member_data" style="display: none;">
-                            <ul>
-                                <li><a href="#">個人專區</a></li>
-                                <li><a href="#" class="signout">登出</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <ul>
+              <li>
+                圖書館服務
+                <ul>
+                  <li><a href="#">首頁</a></li>
+                  <li><a href="#">查看所有電子資源</a></li>
+                  <li><a href="#">資料庫講習</a></li>
+                  <li><a href="#">校外連線</a></li>
+                  <li><a href="#">VPN 安裝使用說明</a></li>
+                  <li><a href="#">教育訓練簡報</a></li>
+                  <li><a href="#">常見問答</a></li>
+                </ul>
+              </li>
+              <li>
+                個人專區
+                <ul>
+                  <li><a href="#">我的收藏</a></li>
+                  <li><a href="#">常用資源</a></li>
+                  <li><a href="#">查詢記錄</a></li>
+                  <li><a href="#">專題選擇策略</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- 語言設定 start-->
+            <div class="language">
+              <select name="" id="">
+                <option value="">中文</option>
+                <option value="">English</option>
+              </select>
             </div>
-        </header>
-        <div class="main personal">
-            <section class="col-12 search_block">
-                <div class="container">
-                    <div class="col">
-                        <!-- 搜尋 -->
-                        <div class="search_system">
-                            <!-- 頁籤 -->
-                            <!-- 點擊 tabs > ul > li  > a 對應的tab-content show-->
-                            <div class="tabSet">
-                                <ul class="tabs">
-                                    <li>
-                                        <a href="#tab1">整合查詢</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#tab2">電子資源查詢</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- 頁籤內容 1 -->
-                            <div class="tab-content" id="tab1" style="display: none">
-                                <form action="">
-                                    <div class="form_grp form_inline">
-                                        <!-- 點擊 input[type="text"] 時 
+            <button type="button" class="btn_logout">登出</button>
+          </div>
+        </div>
+        <div class="menu_overlay"></div>
+      </aside>
+      <!-- sidebar  end-->
+      <!-- header start -->
+      <header class="header">
+        <div class="container">
+          <!-- click側欄選單button".sidebarCtrl", ".aside.sidebar" show-->
+          <button type="button" class="sidebarCtrl">側欄選單</button>
+          <h1>
+            <a href="index.html">
+              <img src="images/logo_version.png" alt="" />
+              <span>國立彰化師範大學整合查詢</span>
+            </a>
+          </h1>
+          <nav class="navigation">
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li><a href="#">查看所有電子資源</a></li>
+              <li><a href="#">校外連線</a></li>
+              <li><a href="#">常見問答</a></li>
+            </ul>
+            <div class="more_list_block">
+              <!-- click button, 則下方 ul display:block -->
+              <button type="button" class="more">查看更多</button>
+              <ul class="more_list" style="display: none">
+                <li><a href="#">資料庫講習</a></li>
+                <li><a href="#">VPN 安裝使用說明</a></li>
+                <li><a href="#">教育訓練簡報</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="nav_right">
+            <div class="language">
+              <a href="#">語言選擇</a>
+              <ul style="display: none">
+                <li><a href="#">中文</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </div>
+            <!-- 會員已登入狀態 -->
+            <div class="member_record">
+              <div class="member_name">王小明</div>
+              <!-- click ".btn_member" 則 ".member_data" display:block -->
+              <button type="button" class="btn_member"><img src="images/icon/icon_user.svg" alt="" /></button>
+              <div class="member_data" style="display: none">
+                <ul>
+                  <li><a href="#">個人專區</a></li>
+                  <li><a href="#" class="signout">登出</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main personal">
+        <section class="col-12 search_block">
+          <div class="container">
+            <div class="col">
+              <!-- 搜尋 -->
+              <div class="search_system">
+                <!-- 頁籤 -->
+                <!-- 點擊 tabs > ul > li  > a 對應的tab-content show-->
+                <div class="tabSet">
+                  <ul class="tabs">
+                    <li>
+                      <a href="#tab1">整合查詢</a>
+                    </li>
+                    <li class="active">
+                      <a href="#tab2">電子資源查詢</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 頁籤內容 1 -->
+                <div class="tab-content" id="tab1" style="display: none">
+                  <form action="">
+                    <div class="form_grp form_inline">
+                      <!-- 點擊 input[type="text"] 時 
                                             1.加上class name"show_recent_searches"
                                             2.搜尋推薦字區塊 display:block -->
-                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
-                                        <input name="" type="submit" title="查詢" value="查詢" />
-                                        <a href="#" class="advanced_search">進階查詢</a>
-                                        <!-- 搜尋推薦字 -->
-                                        <div class="recent_searches" style="display: none">
-                                            <ul class="promptword">
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                            </ul>
-                                            <div class="title">查詢記錄</div>
-                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
-                                            <ul class="record_list">
-                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- 搜尋推薦字 END-->
-                                    </div>
-                                    <div class="check_grp form_inline">
-                                        <label><input name="" type="checkbox" value="">集中式整合查詢</label>
-                                        <label><input name="" type="checkbox" value="">分散式查詢<a href="#">(瀏覽資料庫)</a></label>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- 頁籤內容 2 -->
-                            <div class="tab-content" id="tab2">
-                                <form action="">
-                                    <div class="form_grp form_inline">
-                                        <select name="" id="selectSample" class="select_connected">
-                                            <option value="">電子期刊</option>
-                                            <option value="">選項二</option>
-                                            <option value="">選項三</option>
-                                            <option value="">選項四</option>
-                                        </select>
-                                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
-                                        <input name="" type="submit" title="查詢" value="查詢" />
-                                        <a href="#" class="advanced_search">進階查詢</a>
-                                        <!-- 搜尋推薦字 -->
-                                        <div class="recent_searches" style="display: none;">
-                                            <ul class="promptword">
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                                <li><a href="#">文學推薦字</a></li>
-                                            </ul>
-                                            <div class="title">查詢記錄</div>
-                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
-                                            <ul class="record_list">
-                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
-                                                    <div class="del"><a href="#">移除</a></div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- 搜尋推薦字 END-->
-                                    </div>
-                                    <a href="#" class="link">以瀏覽方式查詢本館資料庫、期刊及電子書</a>
-                                </form>
-                            </div>
-                        </div><!-- search END -->
+                      <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="" />
+                      <input name="" type="submit" title="查詢" value="查詢" />
+                      <a href="#" class="advanced_search">進階查詢</a>
+                      <!-- 搜尋推薦字 -->
+                      <div class="recent_searches" style="display: none">
+                        <ul class="promptword">
+                          <li><a href="#">文學推薦字</a></li>
+                          <li><a href="#">文學推薦字</a></li>
+                          <li><a href="#">文學推薦字</a></li>
+                          <li><a href="#">文學推薦字</a></li>
+                        </ul>
+                        <div class="title">查詢記錄</div>
+                        <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                        <ul class="record_list">
+                          <li>
+                            <a href="#"
+                              >提名，東京<span>2019-08-15<em>10:50</em></span
+                              >結果，60筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >作者，村上村樹<span>2019-08-15<em>10:50</em></span
+                              >結果，3筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >出版者，遠流出版社<span>2019-08-15<em>10:50</em></span
+                              >結果，360筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span
+                              >結果，2筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span
+                              >結果，97筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 搜尋推薦字 END-->
                     </div>
+                    <div class="check_grp form_inline">
+                      <label><input name="" type="checkbox" value="" />集中式整合查詢</label>
+                      <label><input name="" type="checkbox" value="" />分散式查詢<a href="#">(瀏覽資料庫)</a></label>
+                    </div>
+                  </form>
                 </div>
-            </section>
-            <div class="main_tabSet">
-                <div class="container">
-                    <!-- 手機版頁籤變成下拉選單 button文字內容顯示選取中的選項 
+                <!-- 頁籤內容 2 -->
+                <div class="tab-content" id="tab2">
+                  <form action="">
+                    <div class="form_grp form_inline">
+                      <select name="" id="selectSample" class="select_connected">
+                        <option value="">電子期刊</option>
+                        <option value="">選項二</option>
+                        <option value="">選項三</option>
+                        <option value="">選項四</option>
+                      </select>
+                      <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" />
+                      <input name="" type="submit" title="查詢" value="查詢" />
+                      <a href="#" class="advanced_search">進階查詢</a>
+                      <!-- 搜尋推薦字 -->
+                      <div class="recent_searches" style="display: none">
+                        <ul class="promptword">
+                          <li><a href="#">文學推薦字</a></li>
+                          <li><a href="#">文學推薦字</a></li>
+                          <li><a href="#">文學推薦字</a></li>
+                          <li><a href="#">文學推薦字</a></li>
+                        </ul>
+                        <div class="title">查詢記錄</div>
+                        <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                        <ul class="record_list">
+                          <li>
+                            <a href="#"
+                              >提名，東京<span>2019-08-15<em>10:50</em></span
+                              >結果，60筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >作者，村上村樹<span>2019-08-15<em>10:50</em></span
+                              >結果，3筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >出版者，遠流出版社<span>2019-08-15<em>10:50</em></span
+                              >結果，360筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span
+                              >結果，2筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                          <li>
+                            <a href="#"
+                              >提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span
+                              >結果，97筆</a
+                            >
+                            <div class="del"><a href="#">移除</a></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 搜尋推薦字 END-->
+                    </div>
+                    <a href="#" class="link">以瀏覽方式查詢本館資料庫、期刊及電子書</a>
+                  </form>
+                </div>
+              </div>
+              <!-- search END -->
+            </div>
+          </div>
+        </section>
+        <div class="main_tabSet">
+          <div class="container">
+            <!-- 手機版頁籤變成下拉選單 button文字內容顯示選取中的選項 
                         click "button.active_m" 則 ".tabs" display:block
                     -->
-                    <button type="button" class="active_m">知識收藏</button>
-                    <ul class="tabs">
-                        <li class="active">
-                            <a href="#tab1">知識收藏</a>
-                        </li>
-                        <li>
-                            <a href="#tab2">常用資源</a>
-                        </li>
-                        <li>
-                            <a href="#tab3">檢索紀錄</a>
-                        </li>
-                        <li>
-                            <a href="#tab4">專題選粹</a>
-                        </li>
-                    </ul>
+            <button type="button" class="active_m">知識收藏</button>
+            <ul class="tabs">
+              <li class="active">
+                <a href="#tab1">知識收藏</a>
+              </li>
+              <li>
+                <a href="#tab2">常用資源</a>
+              </li>
+              <li>
+                <a href="#tab3">檢索紀錄</a>
+              </li>
+              <li>
+                <a href="#tab4">專題選粹</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="main_content">
+          <div class="container">
+            <div class="filter_search">
+              <div class="close"></div>
+              <h2>篩選條件</h2>
+              <!-- ".filter_search > .option" 手機版才會出現，和搜尋結果(".search_result")下的".option"功能相同-->
+              <div class="option">
+                <div class="name"><a href="javascript:;">排序方式</a></div>
+                <!--click ".name" 則開啟 ".option_list"-->
+                <div class="option_list" style="display: none">
+                  <ul>
+                    <li><a href="#">日期晚到近</a></li>
+                    <li><a href="#">日期近到晚</a></li>
+                    <li><a href="#" class="here">熱門預約</a></li>
+                    <li><a href="#">熱門點閱</a></li>
+                    <li><a href="#">熱門評分/評論</a></li>
+                  </ul>
                 </div>
+              </div>
+              <div class="keyword">
+                <h3>以關鍵字縮小查詢</h3>
+                <form action="">
+                  <div class="form_grp form_inline">
+                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="" />
+                    <input name="" type="submit" title="查詢" value="查詢" />
+                  </div>
+                </form>
+              </div>
+              <div class="sort_list">
+                <ul>
+                  <li>
+                    <h3>我的收藏</h3>
+                    <div class="accordion_content">
+                      <ul>
+                        <li>
+                          <a href="#">所有我的收藏<span>(77)</span></a>
+                        </li>
+                        <li>
+                          <a href="#">未加入標籤<span>(55)</span></a>
+                        </li>
+                        <li>
+                          <a href="#">電子電機/資訊電腦科學<span>(5)</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <h3>我的分類標籤</h3>
+                    <div class="accordion_content mytags">
+                      <ul>
+                        <li>
+                          <a href="#">標籤一號<span>(77)</span></a>
+                        </li>
+                        <li>
+                          <a href="#">標籤二號<span>(55)</span></a>
+                        </li>
+                      </ul>
+                      <button type="button" class="btn_management">管理標籤</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <section class="main_content">
-                <div class="container">
-                    <div class="filter_search">
-                        <div class="close"></div>
-                        <h2>篩選條件</h2>
-                        <!-- ".filter_search > .option" 手機版才會出現，和搜尋結果(".search_result")下的".option"功能相同-->
-                        <div class="option">
-                            <div class="name"><a href="javascript:;">排序方式</a></div>
-                            <!--click ".name" 則開啟 ".option_list"-->
-                            <div class="option_list" style="display: none;">
-                                <ul>
-                                    <li><a href="#">日期晚到近</a></li>
-                                    <li><a href="#">日期近到晚</a></li>
-                                    <li><a href="#" class="here">熱門預約</a></li>
-                                    <li><a href="#">熱門點閱</a></li>
-                                    <li><a href="#">熱門評分/評論</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="keyword ">
-                            <h3>以關鍵字縮小查詢</h3>
-                            <form action="">
-                                <div class="form_grp form_inline">
-                                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" class="">
-                                    <input name="" type="submit" title="查詢" value="查詢" />
-                                </div>
-                            </form>
-                        </div>
-                        <div class="sort_list">
-                            <ul>
-                                <li>
-                                    <h3>我的收藏</h3>
-                                    <div class="accordion_content">
-                                        <ul>
-                                            <li><a href="#">所有我的收藏<span>(77)</span></a></li>
-                                            <li><a href="#">未加入標籤<span>(55)</span></a></li>
-                                            <li><a href="#">電子電機/資訊電腦科學<span>(5)</span></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h3>我的分類標籤</h3>
-                                    <div class="accordion_content mytags">
-                                        <ul>
-                                            <li><a href="#">標籤一號<span>(77)</span></a></li>
-                                            <li><a href="#">標籤二號<span>(55)</span></a></li>
-                                        </ul>
-                                        <button type="button" class="btn_management">管理標籤</button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+            <!-- 點擊“加入分類標籤”的彈出視窗 -->
+            <!-- ".personal_lightbox" 預設是 display:none -->
+            <div class="personal_lightbox" style="display: block">
+              <div class="overlay"></div>
+              <div class="personalblock">
+                <div class="close"></div>
+                <h3>加入分類標籤</h3>
+                <div class="mytags added_tag">
+                  <h4>已加標籤</h4>
+                  <ul>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤二號標籤二號標籤二號標籤二號標籤二號<span>(5)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                    <li>
+                      標籤一號<span>(6)</span>
+                      <button type="button" class="del_btn">刪除</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mytags other_tag">
+                  <h4>其他標籤</h4>
+                  <ul>
+                    <li>標籤三號<span>(6)</span><button type="button" class="add_btn">加入</button></li>
+                  </ul>
+                </div>
+                <hr />
+                <button class="add_newtag">新增分類標籤</button>
+                <!-- 個人專區＿加入標籤＿新增2、3畫面 -->
+                <div class="newtag_input">
+                  <form action="">
+                    <label for="">新增標籤名稱</label>
+                    <input type="text" id="" placeholder="請輸入您的命名" />
+                    <div class="btn_grp_right">
+                      <button type="reset">取消</button>
+                      <!-- 尚未輸入標籤名稱時 按鈕狀態為disable -->
+                      <button type="submit" disabled>新增</button>
+                      <button type="submit">新增</button>
                     </div>
-                    <!-- 點擊“加入分類標籤”的彈出視窗 -->
-                    <!-- ".personal_lightbox" 預設是 display:none -->
-                    <div class="personal_lightbox" style="display:block">
-                        <div class="overlay"></div>
-                        <div class="personalblock">
-                            <div class="close"></div>
-                            <h3>加入分類標籤</h3>
-                            <div class="mytags added_tag">
-                                <h4>已加標籤</h4>
-                                <ul>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤二號標籤二號標籤二號標籤二號標籤二號<span>(5)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                    <li>標籤一號<span>(6)</span>
-                                        <button type="button" class="del_btn">刪除</button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mytags other_tag">
-                                <h4>其他標籤</h4>
-                                <ul>
-                                    <li>標籤三號<span>(6)</span><button type="button" class="add_btn">加入</button></li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <button class="add_newtag">新增分類標籤</button>
-                            <!-- 個人專區＿加入標籤＿新增2、3畫面 -->
-                            <div class="newtag_input">
-                                <form action="">
-                                    <label for="">新增標籤名稱</label>
-                                    <input type="text" id="" placeholder="請輸入您的命名">
-                                    <div class="btn_grp_right">
-                                        <button type="reset">取消</button>
-                                        <!-- 尚未輸入標籤名稱時 按鈕狀態為disable -->
-                                        <button type="submit" disabled>新增</button>
-                                        <button type="submit">新增</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="search_result">
+              <h2>收藏列表</h2>
+              <div class="function_panel">
+                <div class="result_amount">
+                  <input type="checkbox" />
+                  <div class="total">全選 共<em>75</em>筆</div>
+                  <div class="filter_num">已勾選<em>0</em>筆</div>
+                </div>
+                <div class="function_block">
+                  <div class="btn_grp">
+                    <!-- click 加入分類標籤buttom 則燈箱".personal_lightbox" display:block -->
+                    <button type="button" title="加入分類標籤">
+                      <i class="i_tag"></i>
+                      <span>加入分類標籤</span>
+                    </button>
+                    <button type="button" title="分享與匯出">
+                      <i class="i_share"></i>
+                      <span>分享與匯出</span>
+                    </button>
+                    <button type="button" title="取消收藏">
+                      <i class="i_bookmark_no"></i>
+                      <span>取消收藏</span>
+                    </button>
+                    <button type="button">無icon</button>
+                  </div>
+                  <div class="option">
+                    <div class="name"><a href="javascript:;">排序方式</a></div>
+                    <!--click ".name" 則開啟 ".option_list"-->
+                    <div class="option_list" style="display: none">
+                      <ul>
+                        <li><a href="#">日期晚到近</a></li>
+                        <li><a href="#">日期近到晚</a></li>
+                        <li><a href="#" class="here">熱門預約</a></li>
+                        <li><a href="#">熱門點閱</a></li>
+                        <li><a href="#">熱門評分/評論</a></li>
+                      </ul>
                     </div>
-                    <div class="search_result">
-                        <h2>收藏列表</h2>
-                        <div class="function_panel">
-                            <div class="result_amount">
-                                <input type="checkbox">
-                                <div class="total">全選 共<em>75</em>筆</div>
-                                <div class="filter_num">已勾選<em>0</em>筆</div>
-                            </div>
-                            <div class="function_block">
-                                <div class="btn_grp">
-                                    <!-- click 加入分類標籤buttom 則燈箱".personal_lightbox" display:block -->
-                                    <button type="button" title="加入分類標籤">
-                                        <i class="i_tag"></i>
-                                        <span>加入分類標籤</span>
-                                    </button>
-                                    <button type="button" title="分享與匯出">
-                                        <i class="i_share"></i>
-                                        <span>分享與匯出</span>
-                                    </button>
-                                    <button type="button" title="取消收藏">
-                                        <i class="i_bookmark_no"></i>
-                                        <span>取消收藏</span>
-                                    </button>
-                                    <button type="button">無icon</button>
-                                </div>
-                                <div class="option">
-                                    <div class="name"><a href="javascript:;">排序方式</a></div>
-                                    <!--click ".name" 則開啟 ".option_list"-->
-                                    <div class="option_list" style="display: none;">
-                                        <ul>
-                                            <li><a href="#">日期晚到近</a></li>
-                                            <li><a href="#">日期近到晚</a></li>
-                                            <li><a href="#" class="here">熱門預約</a></li>
-                                            <li><a href="#">熱門點閱</a></li>
-                                            <li><a href="#">熱門評分/評論</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- click ".filter_search_btn" 時 
+                  </div>
+                  <!-- click ".filter_search_btn" 時 
                                     1. <.filter_search> addclass .show_up 
                                     2. <body> addclass .fix 
                                 -->
-                                <!-- 開啟後分類區塊按鈕".filter_search_btn" 是手機版才會出現的btn -->
-                                <button type="button" class="filter_search_btn">
-                                    <i class="i_filter"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="list_all">
-                            <div class="list_block">
-                                <div class="list_num">
-                                    <input type="checkbox">1
-                                </div>
-                                <div class="function_btn">
-                                    <button type="button" title="加入分類標籤">
-                                        <i class="i_tag"></i>
-                                        <span>加入分類標籤</span>
-                                    </button>
-                                    <button type="button" title="分享與匯出">
-                                        <i class="i_share"></i>
-                                        <span>分享與匯出</span>
-                                    </button>
-                                    <button type="button" title="取消收藏">
-                                        <i class="i_bookmark_no"></i>
-                                        <span>取消收藏</span>
-                                    </button>
-                                </div>
-                                <div class="sort_icon">
-                                    <div class="pic">
-                                        <img src="images/icon_book.svg" alt="">
-                                    </div>
-                                    <div class="sort_name">
-                                        書籍
-                                    </div>
-                                </div>
-                                <div class="list_data">
-                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
-                                    <ul>
-                                        <li>
-                                            <div class="title">作者：</div>
-                                            <div>Wong, Sau-ling C.</div>
-                                        </li>
-                                        <li>
-                                            <div class="title">出版日期：</div>
-                                            <div>2001</div>
-                                        </li>
-                                        <li>
-                                            <div class="title">主題關鍵詞：</div>
-                                            <ul class="keyword">
-                                                <li><a href="#">Chinese literature</a></li>
-                                                <li><a href="#">2000-2099</a></li>
-                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
-                                                <li><a href="#">Short story</a></li>
-                                                <li><a href="#">migrant identity</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="title">資料庫：</div>MLA International Bibilography
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="btn_normal">詳目</button>
-                                    <button type="button" class="btn_normal">
-                                        <img src="images/full_text_finder.png" alt="">
-                                        Full Text Finder
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="list_block">
-                                <div class="list_num">
-                                    <input type="checkbox">2
-                                </div>
-                                <div class="function_btn">
-                                    <button type="button" title="加入分類標籤">
-                                        <i class="i_tag"></i>
-                                        <span>加入分類標籤</span>
-                                    </button>
-                                    <button type="button" title="分享與匯出">
-                                        <i class="i_share"></i>
-                                        <span>分享與匯出</span>
-                                    </button>
-                                    <button type="button" title="取消收藏">
-                                        <i class="i_bookmark_no"></i>
-                                        <span>取消收藏</span>
-                                    </button>
-                                </div>
-                                <div class="sort_icon">
-                                    <div class="pic">
-                                        <img src="images/icon_book.svg" alt="">
-                                    </div>
-                                    <div class="sort_name">
-                                        書籍
-                                    </div>
-                                </div>
-                                <div class="list_data">
-                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
-                                    <ul>
-                                        <li>
-                                            <div class="title">作者：</div>
-                                            <div>Wong, Sau-ling C.</div>
-                                        </li>
-                                        <li>
-                                            <div class="title">出版日期：</div>
-                                            <div>2001</div>
-                                        </li>
-                                        <li>
-                                            <div class="title">主題關鍵詞：</div>
-                                            <ul class="keyword">
-                                                <li><a href="#">Chinese literature</a></li>
-                                                <li><a href="#">2000-2099</a></li>
-                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
-                                                <li><a href="#">Short story</a></li>
-                                                <li><a href="#">migrant identity</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="title">資料庫：</div>MLA International Bibilography
-                                        </li>
-                                        <li>
-                                            <div class="title">分類標籤：</div>
-                                            <div class="tag_grp">
-                                                <a href="#" class="tag">標籤一號</a>
-                                                <a href="#" class="tag">標籤二號</a>
-                                                <!-- click 編輯按鈕 則標籤(.tag) add classname "tag_edit" -->
-                                                <button type="button" class="edit_tag"><i class="i_edit"></i>編輯</button>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="btn_normal">詳目</button>
-                                    <button type="button" class="btn_normal">
-                                        <img src="images/full_text_finder.png" alt="">
-                                        Full Text Finder
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="list_block">
-                                <div class="list_num">
-                                    <input type="checkbox">3
-                                </div>
-                                <div class="function_btn">
-                                    <button type="button" title="加入分類標籤">
-                                        <i class="i_tag"></i>
-                                        <span>加入分類標籤</span>
-                                    </button>
-                                    <button type="button" title="分享與匯出">
-                                        <i class="i_share"></i>
-                                        <span>分享與匯出</span>
-                                    </button>
-                                    <button type="button" title="取消收藏">
-                                        <i class="i_bookmark_no"></i>
-                                        <span>取消收藏</span>
-                                    </button>
-                                </div>
-                                <div class="sort_icon">
-                                    <div class="pic">
-                                        <img src="images/icon_book.svg" alt="">
-                                    </div>
-                                    <div class="sort_name">
-                                        書籍
-                                    </div>
-                                </div>
-                                <div class="list_data">
-                                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
-                                    <ul>
-                                        <li>
-                                            <div class="title">作者：</div>
-                                            <div>Wong, Sau-ling C.</div>
-                                        </li>
-                                        <li>
-                                            <div class="title">出版日期：</div>
-                                            <div>2001</div>
-                                        </li>
-                                        <li>
-                                            <div class="title">主題關鍵詞：</div>
-                                            <ul class="keyword">
-                                                <li><a href="#">Chinese literature</a></li>
-                                                <li><a href="#">2000-2099</a></li>
-                                                <li><a href="#">Wang Ruiyun (1958-)</a></li>
-                                                <li><a href="#">Short story</a></li>
-                                                <li><a href="#">migrant identity</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="title">資料庫：</div>MLA International Bibilography
-                                        </li>
-                                        <!-- 分類標籤 點擊“編輯”後的狀態 -->
-                                        <li>
-                                            <div class="title">分類標籤：</div>
-                                            <div class="tag_grp">
-                                                <a href="#" class="tag tag_edit">標籤一號</a>
-                                                <a href="#" class="tag tag_edit">標籤二號</a>
-                                                <button type="button" class="edit_tag"><i class="i_check"></i>確認</button>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="btn_normal">詳目</button>
-                                    <button type="button" class="btn_normal">
-                                        <img src="images/full_text_finder.png" alt="">
-                                        Full Text Finder
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="pagination">
-                                <ul class="page">
-                                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#">7</a></li>
-                                    <li><a href="#">8</a></li>
-                                    <li><a href="#">9</a></li>
-                                    <li><a href="#">10</a></li>
-                                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
-                                </ul>
-                                <form action="" class="form_inline">
-                                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-                                        <select name="" id="">
-                                            <option value="">10</option>
-                                            <option value="">20</option>
-                                            <option value="">30</option>
-                                            <option value="">40</option>
-                                        </select> 筆
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                  <!-- 開啟後分類區塊按鈕".filter_search_btn" 是手機版才會出現的btn -->
+                  <button type="button" class="filter_search_btn">
+                    <i class="i_filter"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="list_all">
+                <div class="list_block">
+                  <div class="list_num"><input type="checkbox" />1</div>
+                  <div class="function_btn">
+                    <button type="button" title="加入分類標籤">
+                      <i class="i_tag"></i>
+                      <span>加入分類標籤</span>
+                    </button>
+                    <button type="button" title="分享與匯出">
+                      <i class="i_share"></i>
+                      <span>分享與匯出</span>
+                    </button>
+                    <button type="button" title="取消收藏">
+                      <i class="i_bookmark_no"></i>
+                      <span>取消收藏</span>
+                    </button>
+                  </div>
+                  <div class="sort_icon">
+                    <div class="pic">
+                      <img src="images/icon_book.svg" alt="" />
                     </div>
-                </div>
-            </section>
-        </div>
-        <footer>
-            <div class="container">
-                <nav class="col">
+                    <div class="sort_name">書籍</div>
+                  </div>
+                  <div class="list_data">
+                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
                     <ul>
-                        <li>
-                            <a href="#">常用連結</a>
-                            <ul>
-                                <li><a href="#">圖書館首頁</a></li>
-                                <li><a href="#">最新消息</a></li>
-                                <li><a href="#">Facebook粉絲團</a></li>
-                                <li><a href="#">常見問題</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">服務項目</a>
-                            <ul>
-                                <li><a href="#">圖書借閱紀錄查詢</a></li>
-                                <li><a href="#">館際合作</a></li>
-                                <li><a href="#">各式申請表單</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">關於本館</a>
-                            <ul>
-                                <li><a href="#">交通資訊導引</a></li>
-                                <li><a href="#">準則與規範</a></li>
-                                <li><a href="#">網路隱私權政策</a></li>
-                                <li><a href="#">智慧財產權聲明</a></li>
-                            </ul>
-                        </li>
+                      <li>
+                        <div class="title">作者：</div>
+                        <div>Wong, Sau-ling C.</div>
+                      </li>
+                      <li>
+                        <div class="title">出版日期：</div>
+                        <div>2001</div>
+                      </li>
+                      <li>
+                        <div class="title">主題關鍵詞：</div>
+                        <ul class="keyword">
+                          <li><a href="#">Chinese literature</a></li>
+                          <li><a href="#">2000-2099</a></li>
+                          <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                          <li><a href="#">Short story</a></li>
+                          <li><a href="#">migrant identity</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="title">資料庫：</div>
+                        MLA International Bibilography
+                      </li>
                     </ul>
-                </nav>
-                <div class="col footer_info">
-                    <p class="copyright">
-                        Copyright © 2014 National Taipei University of Technology Library, All rights reserved.
-                    </p>
-                    <p>電話：02-2771-2171 # 3100 傳真：02-2776-2383 e-mail：library@ntut.edu.tw<br />
-                        地址：10608 臺北市大安區忠孝東路三段一號<br />
-                        開放時間：週一～六 8：30-22：00；週日 09:00-17:00
-                    </p>
+                    <button type="button" class="btn_normal">詳目</button>
+                    <button type="button" class="btn_normal">
+                      <img src="images/full_text_finder.png" alt="" />
+                      Full Text Finder
+                    </button>
+                  </div>
                 </div>
+                <div class="list_block">
+                  <div class="list_num"><input type="checkbox" />2</div>
+                  <div class="function_btn">
+                    <button type="button" title="加入分類標籤">
+                      <i class="i_tag"></i>
+                      <span>加入分類標籤</span>
+                    </button>
+                    <button type="button" title="分享與匯出">
+                      <i class="i_share"></i>
+                      <span>分享與匯出</span>
+                    </button>
+                    <button type="button" title="取消收藏">
+                      <i class="i_bookmark_no"></i>
+                      <span>取消收藏</span>
+                    </button>
+                  </div>
+                  <div class="sort_icon">
+                    <div class="pic">
+                      <img src="images/icon_book.svg" alt="" />
+                    </div>
+                    <div class="sort_name">書籍</div>
+                  </div>
+                  <div class="list_data">
+                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                    <ul>
+                      <li>
+                        <div class="title">作者：</div>
+                        <div>Wong, Sau-ling C.</div>
+                      </li>
+                      <li>
+                        <div class="title">出版日期：</div>
+                        <div>2001</div>
+                      </li>
+                      <li>
+                        <div class="title">主題關鍵詞：</div>
+                        <ul class="keyword">
+                          <li><a href="#">Chinese literature</a></li>
+                          <li><a href="#">2000-2099</a></li>
+                          <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                          <li><a href="#">Short story</a></li>
+                          <li><a href="#">migrant identity</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="title">資料庫：</div>
+                        MLA International Bibilography
+                      </li>
+                      <li>
+                        <div class="title">分類標籤：</div>
+                        <div class="tag_grp">
+                          <a href="#" class="tag">標籤一號</a>
+                          <a href="#" class="tag">標籤二號</a>
+                          <!-- click 編輯按鈕 則標籤(.tag) add classname "tag_edit" -->
+                          <button type="button" class="edit_tag"><i class="i_edit"></i>編輯</button>
+                        </div>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn_normal">詳目</button>
+                    <button type="button" class="btn_normal">
+                      <img src="images/full_text_finder.png" alt="" />
+                      Full Text Finder
+                    </button>
+                  </div>
+                </div>
+                <div class="list_block">
+                  <div class="list_num"><input type="checkbox" />3</div>
+                  <div class="function_btn">
+                    <button type="button" title="加入分類標籤">
+                      <i class="i_tag"></i>
+                      <span>加入分類標籤</span>
+                    </button>
+                    <button type="button" title="分享與匯出">
+                      <i class="i_share"></i>
+                      <span>分享與匯出</span>
+                    </button>
+                    <button type="button" title="取消收藏">
+                      <i class="i_bookmark_no"></i>
+                      <span>取消收藏</span>
+                    </button>
+                  </div>
+                  <div class="sort_icon">
+                    <div class="pic">
+                      <img src="images/icon_book.svg" alt="" />
+                    </div>
+                    <div class="sort_name">書籍</div>
+                  </div>
+                  <div class="list_data">
+                    <h3><a href="#">Global Vision and Locatedness: World Literature in Chinese</a></h3>
+                    <ul>
+                      <li>
+                        <div class="title">作者：</div>
+                        <div>Wong, Sau-ling C.</div>
+                      </li>
+                      <li>
+                        <div class="title">出版日期：</div>
+                        <div>2001</div>
+                      </li>
+                      <li>
+                        <div class="title">主題關鍵詞：</div>
+                        <ul class="keyword">
+                          <li><a href="#">Chinese literature</a></li>
+                          <li><a href="#">2000-2099</a></li>
+                          <li><a href="#">Wang Ruiyun (1958-)</a></li>
+                          <li><a href="#">Short story</a></li>
+                          <li><a href="#">migrant identity</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="title">資料庫：</div>
+                        MLA International Bibilography
+                      </li>
+                      <!-- 分類標籤 點擊“編輯”後的狀態 -->
+                      <li>
+                        <div class="title">分類標籤：</div>
+                        <div class="tag_grp">
+                          <a href="#" class="tag tag_edit">標籤一號</a>
+                          <a href="#" class="tag tag_edit">標籤二號</a>
+                          <button type="button" class="edit_tag"><i class="i_check"></i>確認</button>
+                        </div>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn_normal">詳目</button>
+                    <button type="button" class="btn_normal">
+                      <img src="images/full_text_finder.png" alt="" />
+                      Full Text Finder
+                    </button>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                  </ul>
+                  <form action="" class="form_inline">
+                    <div class="total">
+                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                      <select name="" id="">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                        <option value="">40</option>
+                      </select>
+                      筆
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-        </footer>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <div class="container">
+          <nav class="col">
+            <ul>
+              <li>
+                <a href="#">常用連結</a>
+                <ul>
+                  <li><a href="#">圖書館首頁</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">Facebook粉絲團</a></li>
+                  <li><a href="#">常見問題</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">服務項目</a>
+                <ul>
+                  <li><a href="#">圖書借閱紀錄查詢</a></li>
+                  <li><a href="#">館際合作</a></li>
+                  <li><a href="#">各式申請表單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">關於本館</a>
+                <ul>
+                  <li><a href="#">交通資訊導引</a></li>
+                  <li><a href="#">準則與規範</a></li>
+                  <li><a href="#">網路隱私權政策</a></li>
+                  <li><a href="#">智慧財產權聲明</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="col footer_info">
+            <p class="copyright">Copyright © 2014 National Taipei University of Technology Library, All rights reserved.</p>
+            <p>
+              電話：02-2771-2171 # 3100 傳真：02-2776-2383 e-mail：library@ntut.edu.tw<br />
+              地址：10608 臺北市大安區忠孝東路三段一號<br />
+              開放時間：週一～六 8：30-22：00；週日 09:00-17:00
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- 以下測試換色使用，實際套版請移除 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/changecolor.js"></script>
     <!-- 以上測試換色使用，實際套版請移除 -->
-</body>
-
+  </body>
 </html>
